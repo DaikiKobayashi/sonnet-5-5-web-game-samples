@@ -1,7 +1,7 @@
 {
  "effort": "max",
- "ranAt": "2026-09-29T06:56:40.931Z",
- "elapsedSec": 198.125,
+ "ranAt": "2026-09-29T07:44:55.823Z",
+ "elapsedSec": 148.422,
  "results": {
   "M1": {
    "pass": true,
@@ -77,7 +77,7 @@
   },
   "M17": {
    "pass": true,
-   "note": "復活: (1,1)・down・invincible=2.00s、無敵の長さ 2.02s(2.0±0.2)、無敵中の点滅(見た目の変化回数)20、無敵中に B の炎が当たっても生存=true、無敵中に敵へ接触しても生存=true、岩・敵の保持=true。 ※パワーアップ低下は M17b で確認"
+   "note": "復活: (1,1)・invincible=2.00s、無敵の長さ 2.02s(2.0±0.2)、無敵中の点滅(見た目の変化回数)20、無敵中に B の炎が当たっても生存=true、無敵中に敵へ接触しても生存=true、岩・敵の保持=true。 ※パワーアップ低下は M17b で確認"
   },
   "M18": {
    "pass": true,
@@ -85,7 +85,7 @@
   },
   "M17b": {
    "pass": true,
-   "note": "死亡時のパワーアップ低下: (爆弾3/range4/ブーツ2) → (2/3/1)(期待 2/3/1)、最小値 (1/2/0) からは → (1/2/0)(期待 1/2/0)"
+   "note": "復活の向き(入力なし)=down(期待 down)。死亡時のパワーアップ低下: (爆弾3/range4/ブーツ2) → (2/3/1)(期待 2/3/1)、最小値 (1/2/0) からは → (1/2/0)(期待 1/2/0)。復活後の無敵中の点滅(タイル中央の輝度の ON/OFF): 2.3 秒間に 32 回切替、半周期 66ms(仕様 62.5ms。半周期 ±20ms かつ 10 回以上で合格。輝度差が小さいと切替の検出漏れがあり得る)"
   },
   "M19": {
    "pass": true,
@@ -93,7 +93,7 @@
   },
   "M20": {
    "pass": true,
-   "note": "ステージ 4(倍率 1.10)・岩なしで 6 秒測定(経路長/時間の中央値 タイル/秒): slime 2.20(期待 2.20)、bat 3.51(期待 3.52)、ghost 2.63(期待 2.64)、golem 1.65(期待 1.65)。bat は slime の 1.60 倍(>1.3 で速いと判定)。グリッド線から外れたフレーム 0、岩ありで 8 秒間に敵が壁/岩のマスに入ったフレーム 0(移動した敵 7/7)。見た目の違いは目視(スクリーンショット)で別途確認"
+   "note": "ステージ 4(倍率 1.10)・岩なしで 6 秒測定(経路長/時間の中央値 タイル/秒): slime 2.20(期待 2.20)、bat 3.52(期待 3.52)、ghost 2.64(期待 2.64)、golem 1.65(期待 1.65)。bat は slime の 1.60 倍(>1.3 で速いと判定)。グリッド線から外れたフレーム 0、岩ありで 8 秒間に敵が壁/岩のマスに入ったフレーム 0(移動した敵 7/7)。見た目の違いは目視(スクリーンショット)で別途確認"
   },
   "M21": {
    "pass": true,
@@ -101,7 +101,7 @@
   },
   "M22": {
    "pass": true,
-   "note": "slime: hp/状態の遷移 1/A→0/D→gone、死亡演出→消滅 0.42s(0.4±0.15)、撃破時のスコア +100(期待 +100)、sfx enemyDie=true。 bat: hp/状態の遷移 1/A→0/D→gone、死亡演出→消滅 0.42s(0.4±0.15)、撃破時のスコア +200(期待 +200)、sfx enemyDie=true。 ghost: hp/状態の遷移 1/A→0/D→gone、死亡演出→消滅 0.41s(0.4±0.15)、撃破時のスコア +300(期待 +300)、sfx enemyDie=true。 golem: hp/状態の遷移 3/A→2/A→1/A→0/D→gone、死亡演出→消滅 0.42s(0.4±0.15)、撃破時のスコア +500(期待 +500)、sfx enemyDie=true hit=true "
+   "note": "slime: hp/状態の遷移 1/A→0/D→gone、死亡演出→消滅 0.42s(0.4±0.15)、撃破時のスコア +100(期待 +100)、sfx enemyDie=true。 bat: hp/状態の遷移 1/A→0/D→gone、死亡演出→消滅 0.41s(0.4±0.15)、撃破時のスコア +200(期待 +200)、sfx enemyDie=true。 ghost: hp/状態の遷移 1/A→0/D→gone、死亡演出→消滅 0.41s(0.4±0.15)、撃破時のスコア +300(期待 +300)、sfx enemyDie=true。 golem: hp/状態の遷移 3/A→2/A→1/A→0/D→gone、死亡演出→消滅 0.42s(0.4±0.15)、撃破時のスコア +500(期待 +500)、sfx enemyDie=true hit=true 。 ゴーレムの被弾後の点滅(タイル中央の輝度の ON/OFF): 切替 11 回、点滅を観測できた時間 0.7s(参考。0.8s 前後が仕様。切替 4 回以上で合格)"
   },
   "M24": {
    "pass": true,
@@ -189,11 +189,11 @@
   },
   "M28-auto": {
    "pass": true,
-   "note": "各ステージ対で、壁/柱/岩/床のうち最も違うタイルの RGB 距離の最小値 74(40 以上を目安)。タイル種別ごとの全ステージ対での最小距離 {\"wall\":26,\"pillar\":50,\"rock\":58,\"floorA\":63}。目視の最終判定は scrennshot(play-s1〜5.png)で行う"
+   "note": "各ステージ対で、壁/柱/岩/床のうち最も違うタイルの RGB 距離の最小値 75(40 以上を目安)。タイル種別ごとの全ステージ対での最小距離 {\"wall\":26,\"pillar\":50,\"rock\":58,\"floorA\":62}。目視の最終判定は scrennshot(play-s1〜5.png)で行う"
   },
   "M2": {
    "pass": true,
-   "note": "全検証セッション(タイトル→ステージ 1〜5→gameClear、gameOver→リトライ、R/Esc/一時停止、ランダム入力 1052 イベント)を通して console error・未処理例外・404・外部リクエストが 0 件"
+   "note": "全検証セッション(タイトル→ステージ 1〜5→gameClear、gameOver→リトライ、R/Esc/一時停止、ランダム入力 1048 イベント)を通して console error・未処理例外・404・外部リクエストが 0 件"
   },
   "M34": {
    "pass": true,
@@ -202,6 +202,14 @@
   "M40": {
    "pass": true,
    "note": "snapshot() の形式を 7 状態すべてで検証 OK、?debug=1 なしで __GAME__.debug は存在しない=true、?debug=1 で 10 関数すべて function=true、10 関数すべてが他の検証で実際に期待どおり動作=true。?stage=n で開始ステージ変更は M8/M31 で確認。"
+  },
+  "INFO-deathInput": {
+   "pass": true,
+   "note": "死亡演出中に→キーを押して離した場合: 復活直後の向き=down、復活 0.3 秒後の位置=(1,1)。押した入力が復活後に持ち越される(向きが down にならない/勝手に 1 歩進む)=false(情報。仕様は死亡中は移動不可・復活時は向き down)"
+  },
+  "INFO-ambient": {
+   "pass": true,
+   "note": "床の明るさの周辺/中央の比(ステージ 1: 0.844、ステージ 5: 1.065。0.92 未満でビネットありと判定)、中央床の輝度の時間変動係数(ステージ 1: 0、ステージ 5: 0。0.004 超で揺らぎありと判定)。ビネット=true 揺らぎ=false"
   }
  },
  "extra": {
@@ -222,16 +230,20 @@
    "fails": []
   },
   "moveSpeed": 4.478280340348892,
-  "warnings": 33,
+  "warnings": 89,
   "fuse": 2.501700000001118,
   "flameLife": 0.49809999999962745,
   "blinkInvincible": 20,
-  "invDur": 2.0159000000003724,
+  "invDur": 2.01610000000149,
   "ghostChase": {
    "ghost": 1,
    "slime": 0.3125
   },
-  "golemBlink": 2,
+  "golemBlink": {
+   "toggles": 11,
+   "blinkSpanSec": 0.7,
+   "hp": 2
+  },
   "enemyScoreChecked": true,
   "through": [
    {
@@ -432,13 +444,13 @@
      ],
      "rock": [
       76,
-      82,
+      83,
       115
      ],
      "floorA": [
       35,
-      114,
-      107
+      115,
+      108
      ],
      "floorB": [
       37,
@@ -463,14 +475,14 @@
       184
      ],
      "floorA": [
-      45,
-      108,
+      46,
+      109,
       169
      ],
      "floorB": [
-      46,
+      47,
       98,
-      145
+      146
      ]
     },
     "4": {
@@ -490,7 +502,7 @@
       36
      ],
      "floorA": [
-      93,
+      94,
       45,
       41
      ],
@@ -519,12 +531,12 @@
      "floorA": [
       31,
       25,
-      76
+      77
      ],
      "floorB": [
       35,
       28,
-      67
+      68
      ]
     }
    },
@@ -541,14 +553,14 @@
      "wall": 61,
      "pillar": 142,
      "rock": 123,
-     "floorA": 155
+     "floorA": 154
     },
     {
      "pair": "1-4",
      "wall": 39,
      "pillar": 129,
      "rock": 90,
-     "floorA": 123
+     "floorA": 122
     },
     {
      "pair": "1-5",
@@ -561,22 +573,22 @@
      "pair": "2-3",
      "wall": 29,
      "pillar": 53,
-     "rock": 88,
-     "floorA": 63
+     "rock": 87,
+     "floorA": 62
     },
     {
      "pair": "2-4",
      "wall": 43,
      "pillar": 104,
-     "rock": 89,
-     "floorA": 112
+     "rock": 90,
+     "floorA": 113
     },
     {
      "pair": "2-5",
      "wall": 26,
      "pillar": 101,
-     "rock": 67,
-     "floorA": 94
+     "rock": 68,
+     "floorA": 95
     },
     {
      "pair": "3-4",
@@ -597,32 +609,39 @@
      "wall": 28,
      "pillar": 50,
      "rock": 58,
-     "floorA": 74
+     "floorA": 75
     }
    ],
-   "stageMinPairMax": 74,
+   "stageMinPairMax": 75,
    "stagePerTypeMin": {
     "wall": 26,
     "pillar": 50,
     "rock": 58,
-    "floorA": 63
+    "floorA": 62
    },
    "bombBlink": {
-    "earlyTransitionsPer1_6s": 25,
-    "lateTransitionsPer0_6s": 5,
-    "earlyRate": 16.03,
-    "lateRate": 7.58
+    "earlyRate": 8.57,
+    "lateRate": 21.67,
+    "earlyFrames": 55,
+    "lateFrames": 17
    },
-   "playerIdleDistinct": 24,
-   "enemyIdleDistinct": {
-    "slime": 24,
-    "bat": 24,
-    "ghost": 24,
-    "golem": 24
+   "playerIdleFrames": 2,
+   "playerIdleFramesSensitive": 2,
+   "enemyIdleFrames": {
+    "slime": 4,
+    "bat": 7,
+    "ghost": 8,
+    "golem": 3
+   },
+   "enemyIdleFramesSensitive": {
+    "slime": 4,
+    "bat": 7,
+    "ghost": 8,
+    "golem": 3
    }
   },
   "fuzz": {
-   "events": 1052,
+   "events": 1048,
    "states": [
     "stageIntro",
     "paused",
@@ -630,6 +649,32 @@
    ],
    "finalState": "stageIntro",
    "issues": 0
+  },
+  "invincibleBlink": {
+   "toggles": 32,
+   "halfPeriodMs": 66.20000000111759,
+   "range": 27.835429687500067
+  },
+  "deathInputCarry": {
+   "facingAtRespawn": "down",
+   "colAfter300ms": 1,
+   "carried": false
+  },
+  "ambient": {
+   "1": {
+    "inner": 133.9,
+    "outer": 113,
+    "ratio": 0.844,
+    "flickerCV": 0,
+    "flickerRange": 0
+   },
+   "5": {
+    "inner": 29.9,
+    "outer": 31.9,
+    "ratio": 1.065,
+    "flickerCV": 0,
+    "flickerRange": 0
+   }
   }
  },
  "issues": [],

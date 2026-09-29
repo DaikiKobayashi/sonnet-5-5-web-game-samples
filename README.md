@@ -28,7 +28,7 @@ node scripts/build-site.mjs --serve   # http://localhost:8080
 
 | ゲーム | 概要 | 技術スタック | 仕様書 | 結果 |
 | --- | --- | --- | --- | --- |
-| (まだありません) | | | | |
+| [Dynamite Mole](https://daikikobayashi.github.io/sonnet-5-5-web-game-samples/games/dynamite-mole/) | ダイナマイトで岩を吹き飛ばし、洞窟の敵を倒して出口を目指すボンバーマン系のグリッドアクション(全 5 ステージ、敵 4 種) | Vanilla JS + Canvas 2D + Web Audio(依存・ビルドなし) | [`SPEC.md`](games/dynamite-mole/SPEC.md) | [`RESULTS.md`](games/dynamite-mole/RESULTS.md)(Must は 5 実装とも 40/40、Should は low 14/15・他 15/15) |
 
 ## ライセンス
 

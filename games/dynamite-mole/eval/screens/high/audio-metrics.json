@@ -1,0 +1,119 @@
+{
+ "bgm": {
+  "title": {
+   "peak": 0.182,
+   "rms": 0.0284,
+   "samples": 284672,
+   "state": "title",
+   "bgm": "title"
+  },
+  "stage1": {
+   "peak": 0.196,
+   "rms": 0.0307,
+   "samples": 374784,
+   "beat": {
+    "period": 0.49,
+    "r": 0.8383706219541394
+   },
+   "onsets": 3.53
+  },
+  "stage1_low": {
+   "peak": 0.189,
+   "rms": 0.032,
+   "samples": 372736,
+   "beat": {
+    "period": 0.38,
+    "r": 0.8046410902525837
+   },
+   "onsets": 4.37,
+   "simToNormal": 0.478
+  },
+  "stage2": {
+   "peak": 0.203,
+   "rms": 0.0293,
+   "samples": 372736,
+   "beat": {
+    "period": 1.11,
+    "r": 0.6401613132557308
+   }
+  },
+  "stage3": {
+   "peak": 0.188,
+   "rms": 0.0323,
+   "samples": 372736,
+   "beat": {
+    "period": 0.47000000000000003,
+    "r": 0.8227239824878539
+   }
+  },
+  "stage4": {
+   "peak": 0.177,
+   "rms": 0.0197,
+   "samples": 374784,
+   "beat": {
+    "period": 0.21,
+    "r": 0.8110023985131293
+   }
+  },
+  "stage5": {
+   "peak": 0.176,
+   "rms": 0.0279,
+   "samples": 374784,
+   "beat": {
+    "period": 1.3,
+    "r": 0.6276619265376586
+   }
+  }
+ },
+ "sfx": {
+  "start": {
+   "peak": 0.335,
+   "rms": 0.0238,
+   "samples": 75776,
+   "dur": 0.28
+  },
+  "bomb_with_bgm": {
+   "peak": 0.406,
+   "rms": 0.0368,
+   "samples": 149504,
+   "bgmPeak": 0.196
+  },
+  "stageClear": {
+   "peak": 0.358,
+   "rms": 0.0381,
+   "samples": 159744,
+   "dur": 1.94
+  },
+  "gameClear": {
+   "peak": 0.312,
+   "rms": 0.0452,
+   "samples": 223232,
+   "dur": 3.84
+  },
+  "gameOver": {
+   "peak": 0.336,
+   "rms": 0.0374,
+   "samples": 198656,
+   "dur": 2.86
+  }
+ },
+ "similarity": {
+  "title~stage1": 0.32,
+  "title~stage2": 0.21,
+  "title~stage3": 0.15,
+  "title~stage4": 0.3,
+  "title~stage5": 0.11,
+  "stage1~stage2": 0.16,
+  "stage1~stage3": 0.36,
+  "stage1~stage4": 0.45,
+  "stage1~stage5": 0.18,
+  "stage2~stage3": 0.12,
+  "stage2~stage4": 0.23,
+  "stage2~stage5": 0.14,
+  "stage3~stage4": 0.37,
+  "stage3~stage5": 0.13,
+  "stage4~stage5": 0.16
+ },
+ "stageClusters": 5,
+ "jingleSimilarity": 0.34
+}
