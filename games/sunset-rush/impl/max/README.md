@@ -145,7 +145,7 @@ Chromium 以外のブラウザ、実機のタッチ端末、実際のスピー�
 | 23 | 合格 | `setTime(2)` の約 2 秒後に `timeup`(`TIME UP` 目視)、約 2.5 秒後に `gameover`、`GAME OVER` / `REACHED STAGE 1` / `SCORE` / `BEST` を目視 |
 | 24 | 合格 | `warp(2950)`・200 km/h・↑ でゴール: `stageclear`、`score` +4001(`timeLeft` 30.78 なので 100×30+1000 = 4000 + 距離点 1)、パネルはゴールの 1.50 秒後(カウントアップ)。ゴールゲートとパネルを目視 |
 | 25 | 合格 | Enter で S2 `countdown`: `stage` = 2、`goalRemainingM` = 3594.2、`timeLeft` = 32、`trafficTotal` = 54、`score` 引き継ぎ |
-| 26 | 合格 | 画面平均色 S1 (165,117,126)、S2 (93,79,110)、S3 (59,53,89)+ネオン。S3 の `goalRemainingM` = 4194.2、`timeLeft` = 32。3 ステージのスクリーンショットを目視 |
+| 26 | 合格 | 画面平均色 S1 (167,117,126)、S2 (93,77,111)、S3 (59,53,89)+ネオン。S3 の `goalRemainingM` = 4194.2、`timeLeft` = 32。3 ステージのスクリーンショットを目視 |
 | 27 | 合格 | 総合スコア 36454 → S、31454 → A、26454 → B、6954 → C(閾値 33000/28000/23000)。エンディング画面を目視、Enter でタイトルへ |
 | 28 | 合格 | 走行 102.6 m で `score` = 102 |
 | 29 | 合格 | P と Esc の両方で一時停止・再開、`PAUSED` を目視、2 秒で `timeLeft`・`distanceM`・交通車の位置が不変、`R` で `countdown`、`Q` でタイトル |
