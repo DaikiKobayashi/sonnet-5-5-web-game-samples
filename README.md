@@ -2,36 +2,17 @@
 
 Sonnet 5.5 の実力を測るために、**モデルを固定して**さまざまなブラウザゲームを作るプロジェクトです。
 
-- 各ゲームは `games/<game-id>/` に置いた、ビルド不要・依存ゼロの静的 Web ページです。
+- ジャンル・ルール・技術スタックの選択は Sonnet 5.5 に任せています。
 - モデルの固定設定は [`.claude/settings.json`](.claude/settings.json) にあります。
-- 作業ルールは [`CLAUDE.md`](CLAUDE.md) を参照してください。
+- 作業ルールは [`CLAUDE.md`](CLAUDE.md)、評価メモの雛形は [`docs/game-notes-template.md`](docs/game-notes-template.md) を参照してください。
 
-## はじめかた
+## ゲーム一覧
 
-必要なもの: Node.js 20 以上(開発サーバーとスキャフォールド用。ゲーム自体は静的ファイルのみ)。
+各ゲームは `games/<game-id>/` にあり、遊び方・使ったプロンプト・技術スタックは各ディレクトリの README に書いてあります。
 
-```sh
-npm run dev
-# → http://localhost:8080 にゲーム一覧が表示されます
-```
-
-## 新しいゲームを追加する
-
-```sh
-npm run new -- my-game "ゲームのタイトル" "一行説明"
-```
-
-`games/my-game/` が雛形から作られ、`games/games.json` に登録されます。
-`main.js` を書き換えてゲームを作り、`README.md` の評価メモ(プロンプト・出来栄え)を埋めてください。
-
-## ディレクトリ構成
-
-```
-index.html        ゲーム一覧
-games/            ゲーム本体(_template は雛形)
-scripts/          開発サーバー・スキャフォールド
-.claude/          Claude Code のプロジェクト設定(モデル固定)
-```
+| ゲーム | 説明 | 技術スタック |
+| --- | --- | --- |
+| (まだありません) | | |
 
 ## ライセンス
 
