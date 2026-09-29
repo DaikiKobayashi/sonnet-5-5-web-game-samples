@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>SUNSET RUSH</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23231a5c'/%3E%3Ccircle cx='8' cy='8' r='6' fill='%23ffb040'/%3E%3Crect y='9' width='16' height='1' fill='%23231a5c'/%3E%3Crect y='11' width='16' height='2' fill='%23231a5c'/%3E%3Crect y='13' width='16' height='3' fill='%23e8405e'/%3E%3C/svg%3E">
+<style>
+  html, body {
+    margin: 0;
+    height: 100%;
+    background: #07050f;
+    overflow: hidden;
+    overscroll-behavior: none;
+  }
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #game {
+    width: min(100vw, calc(100vh * 16 / 9));
+    width: min(100vw, calc(100dvh * 16 / 9));
+    height: auto;
+    aspect-ratio: 16 / 9;
+    display: block;
+    background: #000;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+    outline: none;
+  }
+  /* タッチ操作ボタン(タッチ端末のみ) */
+  #touch { display: none; position: fixed; left: 0; top: 0; right: 0; bottom: 0; pointer-events: none; }
+  #touch.show { display: block; }
+  #touch .tbtn {
+    position: absolute;
+    bottom: max(14px, env(safe-area-inset-bottom));
+    width: clamp(58px, min(20vw, 24vh), 100px);
+    height: clamp(58px, min(20vw, 24vh), 100px);
+    border-radius: 22%;
+    background: rgba(255, 255, 255, 0.16);
+    border: 2px solid rgba(255, 255, 255, 0.45);
+    pointer-events: auto;
+    touch-action: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  #touch .tbtn.on { background: rgba(255, 224, 102, 0.45); border-color: rgba(255, 255, 255, 0.9); }
+  #touch .tbtn svg { width: 56%; height: 56%; fill: rgba(255, 255, 255, 0.85); pointer-events: none; }
+  #tc-left { left: 14px; }
+  #tc-right { left: calc(14px + clamp(58px, min(20vw, 24vh), 100px) + 12px); }
+  #tc-gas { right: 14px; }
+  #tc-brake { right: calc(14px + clamp(58px, min(20vw, 24vh), 100px) + 12px); }
+  #tc-pause {
+    position: absolute; top: 40%; left: 10px; width: 44px; height: 44px; border-radius: 10px;
+    background: rgba(255, 255, 255, 0.14); border: 2px solid rgba(255, 255, 255, 0.4); pointer-events: auto;
+    display: flex; align-items: center; justify-content: center; touch-action: none;
+  }
+  #tc-pause svg { width: 50%; height: 50%; fill: rgba(255, 255, 255, 0.85); }
+
+  /* アセットギャラリー(?gallery=1) */
+  body.gallery { display: block; height: auto; overflow: auto; background: #14101f; color: #e8e4ff;
+    font: 14px/1.4 ui-monospace, Menlo, Consolas, monospace; }
+  body.gallery #game, body.gallery #touch { display: none; }
+  #gallery { padding: 16px 20px 60px; }
+  #gallery h1 { font-size: 20px; margin: 0 0 4px; }
+  #gallery h2 { font-size: 15px; margin: 26px 0 8px; color: #ffd05a; border-bottom: 1px solid #3a3160; padding-bottom: 4px; }
+  #gallery .asset { display: inline-block; vertical-align: top; margin: 0 22px 18px 0; max-width: 100%; }
+  #gallery .asset .wrap { overflow-x: auto; max-width: 100%; }
+  #gallery canvas {
+    display: block;
+    image-rendering: pixelated;
+    background-color: #5a5470;
+    background-image: linear-gradient(45deg, #6a6484 25%, transparent 25%, transparent 75%, #6a6484 75%),
+      linear-gradient(45deg, #6a6484 25%, transparent 25%, transparent 75%, #6a6484 75%);
+    background-size: 16px 16px;
+    background-position: 0 0, 8px 8px;
+  }
+  #gallery .asset .id { margin-top: 4px; color: #b8b0e8; }
+  #gallery .sounds button {
+    margin: 0 8px 8px 0; padding: 8px 12px; font: inherit; color: #14101f; background: #ffd05a;
+    border: 0; border-radius: 4px; cursor: pointer;
+  }
+  #gallery .sounds button:hover { background: #ffe58a; }
+  #gallery .sounds button[data-sound-id="mute"] { background: #7cf5ff; }
+</style>
+</head>
+<body>
+<canvas id="game" width="640" height="360" tabindex="0"></canvas>
+<div id="touch">
+  <div class="tbtn" id="tc-left" aria-label="steer left"><svg viewBox="0 0 24 24"><path d="M17 3 L5 12 L17 21 Z"/></svg></div>
+  <div class="tbtn" id="tc-right" aria-label="steer right"><svg viewBox="0 0 24 24"><path d="M7 3 L19 12 L7 21 Z"/></svg></div>
+  <div class="tbtn" id="tc-brake" aria-label="brake"><svg viewBox="0 0 24 24"><path d="M3 7 L12 19 L21 7 Z"/></svg></div>
+  <div class="tbtn" id="tc-gas" aria-label="gas"><svg viewBox="0 0 24 24"><path d="M3 17 L12 5 L21 17 Z"/></svg></div>
+  <div id="tc-pause" aria-label="pause"><svg viewBox="0 0 24 24"><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg></div>
+</div>
+<script type="module" src="./js/main.js"></script>
+</body>
+</html>
