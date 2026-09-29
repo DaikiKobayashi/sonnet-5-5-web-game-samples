@@ -29,7 +29,7 @@ const PLAN = {
 (async () => {
   const effort = process.argv[2];
   if (!L.EFFORT_PORT[effort]) { console.error('effort を指定してください: low|medium|high|xhigh|max'); process.exit(2); }
-  const only = (process.argv.find((a) => a.startsWith('--only=')) || '--only=a,b,c,d,e,f,g').slice(7).split(',');
+  const only = (process.argv.find((a) => a.startsWith('--only=')) || '--only=a,b,c,d,e,f,h,g').slice(7).split(',');
   const outDir = (process.argv.find((a) => a.startsWith('--out=')) || '').slice(6) || path.join(__dirname, 'results');
   const testFilter = (process.argv.find((a) => a.startsWith('--fn=')) || '').slice(5);
   fs.mkdirSync(outDir, { recursive: true });

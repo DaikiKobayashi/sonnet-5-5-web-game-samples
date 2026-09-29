@@ -121,6 +121,7 @@ async function m5m6m7(env) {
   const i1 = await snap(p.page);
   await p.page.keyboard.up('ArrowRight');
   await waitState(p.page, 'playing', 6000);
+  await sleep(80); // 遷移ログ(20ms ポーリング)に反映されるのを待つ
   const tr = await p.page.evaluate(() => window.__trans);
   const tIn = tr.find((x) => x.s === 'stageIntro').t;
   const tPl = tr.find((x) => x.s === 'playing').t;

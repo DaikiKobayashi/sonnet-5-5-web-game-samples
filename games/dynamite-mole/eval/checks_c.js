@@ -218,23 +218,34 @@ async function m21(env) {
   await sleep(700);
   await dbg(env, page, 'teleport', 7, 5);
   await sleep(150);
-  const trials = [[12, 5], [2, 5], [7, 9], [7, 1], [5, 1], [9, 9], [13, 5], [1, 5]];
-  const res = [];
-  for (const [gc, gr] of trials) {
-    await dbg(env, page, 'spawnEnemy', 'ghost', gc, gr);
-    await startRec(page, { interval: 40 });
-    await sleep(3000);
-    const fr = await stopRec(page);
-    const g = (f) => f.enemies.find((e) => e.type === 'ghost' && e.alive);
-    const d = fr.map((f) => { const e = g(f); return e ? Math.abs(e.x - 7) + Math.abs(e.y - 5) : null; }).filter((x) => x !== null);
-    const d0 = d[0], dmin = Math.min(...d);
-    res.push({ start: `${gc},${gr}`, d0: +d0.toFixed(1), dmin: +dmin.toFixed(1), ok: dmin <= 1.5 || d0 - dmin >= 2 });
-    await dbg(env, page, 'killAllEnemies');
-    await sleep(600);
-  }
+  // プレイヤー(7,5)からのマンハッタン距離 3〜6 の非柱タイルから、固定シードで 16 か所
+  let seed = 7;
+  const rnd = () => { seed = (seed * 1664525 + 1013904223) >>> 0; return seed / 4294967296; };
+  const cand = [];
+  for (let r = 1; r <= 9; r++) for (let c = 1; c <= 13; c++) { const d = Math.abs(c - 7) + Math.abs(r - 5); if (d >= 3 && d <= 6 && !(r % 2 === 0 && c % 2 === 0)) cand.push([c, r, d]); }
+  const trials = [];
+  while (trials.length < 16) trials.push(cand.splice(Math.floor(rnd() * cand.length), 1)[0]);
+  const run = async (type) => {
+    const res = [];
+    for (const [gc, gr] of trials) {
+      await dbg(env, page, 'spawnEnemy', type, gc, gr);
+      await startRec(page, { interval: 40 });
+      await sleep(3000);
+      const fr = await stopRec(page);
+      const d = fr.map((f) => { const e = f.enemies.find((x) => x.type === type && x.alive); return e ? Math.abs(e.x - 7) + Math.abs(e.y - 5) : null; }).filter((x) => x !== null);
+      const d0 = d[0], dmin = Math.min(...d);
+      res.push({ start: `${gc},${gr}`, d0: +d0.toFixed(1), dmin: +dmin.toFixed(1), ok: dmin <= 1.5 || d0 - dmin >= 2 });
+      await dbg(env, page, 'killAllEnemies');
+      await sleep(600);
+    }
+    return res;
+  };
+  const g = await run('ghost');
+  const sl = await run('slime');
   await env.done(p);
-  const good = res.filter((r) => r.ok).length;
-  env.rec('M21', good >= 6, `ゴーストをプレイヤー(静止)から距離 4〜6 に出現させて 3 秒観察: ${good}/${res.length} 回で接近(最短距離 ≤1.5 か 2 以上縮小)。仕様の追跡は「逆走しない・25% 徘徊」なので確率的。${res.map((r) => `${r.start}:${r.d0}→${r.dmin}`).join(' ')}`);
+  const gr = g.filter((r) => r.ok).length / g.length, sr = sl.filter((r) => r.ok).length / sl.length;
+  env.extra.ghostChase = { ghost: gr, slime: sr };
+  env.rec('M21', gr >= 0.6 && gr >= sr + 0.25, `ゴーストとスライム(ランダム徘徊の基準線)を、静止したプレイヤーから距離 3〜6 の 16 か所に出現させて 3 秒観察し、接近(最短距離 ≤1.5 か 2 以上縮小)した割合: ゴースト ${g.filter((r) => r.ok).length}/16、スライム ${sl.filter((r) => r.ok).length}/16。ゴーストが 0.6 以上かつスライムより 0.25 以上高ければ「追跡して近づく」と判定。仕様の追跡は「逆走しない・25% 徘徊」なので確率的。ゴースト: ${g.map((r) => `${r.start}:${r.d0}→${r.dmin}`).join(' ')}`);
 }
 
 // 動けない敵(開始タイル (1,1) の 2 出口を爆弾でふさぐ)に炎を 1 回当てる。after があれば録画を止める前に実行する

@@ -98,6 +98,16 @@ function beatPeriod(a) {
   }
   return { period: best.lag * 0.01, r: best.r };
 }
+// 音の立ち上がり(オンセット)の 1 秒あたりの回数。テンポが上がれば増える
+function onsetRate(a) {
+  const e = envelope(a, 0.01);
+  const d = e.map((v, i) => (i >= 2 ? v - e[i - 2] : 0));
+  const mx = Math.max(...d);
+  if (mx <= 0) return 0;
+  let n = 0, last = -100;
+  for (let i = 2; i < d.length; i++) if (d[i] > mx * 0.3 && d[i] >= d[i - 1] && d[i] >= (d[i + 1] ?? 0) && i - last > 8) { n++; last = i; }
+  return n / (e.length * 0.01);
+}
 // 音の長さ: 立ち上がりからエンベロープが最大値の 3% を下回り続けるまで
 function soundDuration(a) {
   const e = envelope(a, 0.02);
@@ -136,11 +146,12 @@ async function audio(env) {
     out.bgm.stage1 = { ...sum(b1) };
     fps.stage1 = fingerprint(b1, 8);
     out.bgm.stage1.beat = beatPeriod(b1);
+    out.bgm.stage1.onsets = +onsetRate(b1).toFixed(2);
     // テンポアップ: 残り 25 秒
     await dbg(env, page, 'setTimeLeft', 25);
     await sleep(600);
     const b1low = await capture(page, 8500);
-    out.bgm.stage1_low = { ...sum(b1low), beat: beatPeriod(b1low), simToNormal: +corr(fps.stage1, fingerprint(b1low, 8)).toFixed(3) };
+    out.bgm.stage1_low = { ...sum(b1low), beat: beatPeriod(b1low), onsets: +onsetRate(b1low).toFixed(2), simToNormal: +corr(fps.stage1, fingerprint(b1low, 8)).toFixed(3) };
     await dbg(env, page, 'setTimeLeft', 120);
     await sleep(500);
     // 爆弾: place と explode(BGM 込みのピーク)
@@ -234,16 +245,16 @@ async function audio(env) {
   // ---- 判定 ----
   const bgmPeaks = Object.entries(out.bgm).filter(([k]) => !k.endsWith('_low')).map(([k, v]) => [k, v.peak]);
   const silent = Object.entries(out.bgm).filter(([, v]) => !(v.rms > 0.001)).map(([k]) => k);
-  const bgmOver = bgmPeaks.filter(([, v]) => v > 0.2 + 0.02).map(([k, v]) => `${k}=${v}`);
+  const bgmOver = bgmPeaks.filter(([, v]) => v > 0.2 * 1.05).map(([k, v]) => `${k}=${v}`);
   const jingles = ['start', 'stageClear', 'gameOver', 'gameClear'].filter((k) => out.sfx[k]);
   const jSilent = jingles.filter((k) => !(out.sfx[k].rms > 0.001));
-  const jOver = jingles.filter((k) => out.sfx[k].peak > 0.35 + 0.02).map((k) => `${k}=${out.sfx[k].peak}`);
+  const jOver = jingles.filter((k) => out.sfx[k].peak > 0.35 * 1.05).map((k) => `${k}=${out.sfx[k].peak}`);
   env.rec('AUDIO-level', silent.length === 0 && jSilent.length === 0 && bgmOver.length === 0 && jOver.length === 0, `出力を捕捉して測定(聴取はしていない)。BGM のピーク(仕様 0.2 以下): ${bgmPeaks.map(([k, v]) => `${k}=${v}`).join(' ')}。ジングルのピーク(仕様 0.35 以下)と長さ(目安 start ≤0.4s / stageClear 1.5〜2.5s / gameOver 2〜3s / gameClear 3〜4s): ${jingles.map((k) => `${k}=${out.sfx[k].peak}/${out.sfx[k].dur}s`).join(' ')}。無音の曲=${silent.join(',') || 'なし'}${bgmOver.length ? ' BGM 超過: ' + bgmOver.join(',') : ''}${jOver.length ? ' ジングル超過: ' + jOver.join(',') : ''}。爆弾(BGM 込み)ピーク ${out.sfx.bomb_with_bgm ? out.sfx.bomb_with_bgm.peak : '未取得'}`);
   const low = out.bgm.stage1_low, norm = out.bgm.stage1;
-  const tempoRatio = low && norm ? norm.beat.period / low.beat.period : null;
-  const tempoUp = low && (tempoRatio >= 1.1 || low.simToNormal < 0.9);
-  env.rec('AUDIO-bgm-variety', out.stageClusters >= 3, `ステージ 1〜5 の BGM のスペクトル時系列の相関から、別の曲とみなせる数(相関 0.9 以上を同一とみなす): ${out.stageClusters} 種。相関: ${Object.entries(sim).map(([k, v]) => `${k}=${v}`).join(' ')}`);
-  env.rec('AUDIO-tempo', !!tempoUp, `残り 25 秒時と通常時の BGM: 拍の周期 ${norm && norm.beat.period.toFixed(2)}s → ${low && low.beat.period.toFixed(2)}s(比 ${tempoRatio && tempoRatio.toFixed(2)})、スペクトルの相関 ${low && low.simToNormal}。周期比 1.1 以上または相関 0.9 未満ならテンポアップ/別アレンジと判定`);
+  const onsetRatio = low && norm && norm.onsets > 0 ? low.onsets / norm.onsets : null;
+  const tempoUp = onsetRatio !== null && onsetRatio >= 1.08;
+  env.rec('AUDIO-bgm-variety', out.stageClusters >= 3, `ステージ 1〜5 の BGM のスペクトル時系列(先頭 8 秒)の相関から、別の曲とみなせる数(相関 0.9 以上を同一とみなす): ${out.stageClusters} 種。相関: ${Object.entries(sim).map(([k, v]) => `${k}=${v}`).join(' ')}`);
+  env.rec('AUDIO-tempo', tempoUp, `残り 25 秒時と通常時の BGM の音の立ち上がり頻度: ${norm && norm.onsets}回/秒 → ${low && low.onsets}回/秒(比 ${onsetRatio && onsetRatio.toFixed(2)}、1.08 以上でテンポアップと判定)`);
   env.rec('AUDIO-gameclear-jingle', out.jingleSimilarity !== undefined && out.jingleSimilarity < 0.9, `stageClear と gameClear のジングルの相関 ${out.jingleSimilarity}(0.9 未満なら別の曲と判定)`);
   fs.writeFileSync(path.join(env.shotDir, 'audio-metrics.json'), JSON.stringify(out, null, 1));
 }

@@ -21,12 +21,13 @@ async function shouldA(env) {
     const ui = await page.evaluate(() => {
       const out = [];
       document.querySelectorAll('body *').forEach((el) => {
-        if (el.tagName === 'CANVAS' || el.tagName === 'SCRIPT' || el.tagName === 'STYLE') return;
+        if (['CANVAS', 'SCRIPT', 'STYLE'].includes(el.tagName) || el.children.length > 0) return; // 末端要素だけ
         const r = el.getBoundingClientRect();
-        if (r.width < 8 || r.height < 8 || getComputedStyle(el).visibility === 'hidden' || getComputedStyle(el).display === 'none') return;
+        const cs = getComputedStyle(el);
+        if (r.width < 8 || r.height < 8 || cs.visibility === 'hidden' || cs.display === 'none') return;
         const text = (el.innerText || '').trim().slice(0, 12);
-        const label = el.getAttribute('aria-label') || el.dataset.key || el.dataset.dir || el.id || '';
-        if (el.children.length > 4) return;
+        const label = el.getAttribute('aria-label') || el.dataset.key || el.dataset.dir || '';
+        if (!text && !label) return;
         out.push({ tag: el.tagName, text, label, x: r.x, y: r.y, w: r.width, h: r.height, cx: r.x + r.width / 2, cy: r.y + r.height / 2 });
       });
       return out;
@@ -34,7 +35,6 @@ async function shouldA(env) {
     const bomb = ui.find((e) => /BOMB/i.test(e.text + e.label));
     const pause = ui.find((e) => /PAUSE/i.test(e.text + e.label));
     const others = ui.filter((e) => e !== bomb && e !== pause && e.w < 120 && e.h < 120 && e.y > box.y + box.height - 20);
-    // 十字ボタン: 幾何(左端=Left、右端=Right、上=Up、下=Down)で割り当てる
     let dirs = null;
     if (others.length >= 4) {
       const c = others.slice().sort((a, b) => a.cx - b.cx);
