@@ -18,3 +18,6 @@ CLAUDE.local.md
 test-results/
 playwright-report/
 tmp/
+
+# git worktrees created for isolated subagents
+.claude/worktrees/
