@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>Dynamite Mole</title>
+<link rel="icon" href="./favicon.svg" type="image/svg+xml">
+<style>
+  html, body { margin: 0; padding: 0; width: 100%; height: 100%; background: #07050a; overflow: hidden; }
+  body { display: flex; flex-direction: column; align-items: center; justify-content: center; touch-action: none; user-select: none; -webkit-user-select: none; }
+  #game { image-rendering: pixelated; image-rendering: crisp-edges; image-rendering: pixelated; display: block; background: #000; }
+  #touch { display: none; width: 100%; height: 150px; box-sizing: border-box; padding: 8px 14px; align-items: center; justify-content: space-between; }
+  .pad { position: relative; width: 132px; height: 132px; }
+  .pad button, .act button { position: absolute; border: 3px solid #8a5a2a; background: #3a2a2c; color: #ffd23a; font: bold 14px monospace; border-radius: 8px; touch-action: none; }
+  .pad button.on, .act button.on { background: #8a5a2a; }
+  .pad [data-k=up] { left: 44px; top: 0; width: 44px; height: 44px; }
+  .pad [data-k=down] { left: 44px; top: 88px; width: 44px; height: 44px; }
+  .pad [data-k=left] { left: 0; top: 44px; width: 44px; height: 44px; }
+  .pad [data-k=right] { left: 88px; top: 44px; width: 44px; height: 44px; }
+  .act { position: relative; width: 132px; height: 132px; }
+  .act [data-k=bomb] { right: 0; top: 30px; width: 92px; height: 92px; border-radius: 50%; background: #7a2a1a; font-size: 16px; }
+  .act [data-k=pause] { right: 20px; top: 0; width: 72px; height: 26px; font-size: 11px; }
+  .pad button::after { content: ''; }
+</style>
+</head>
+<body>
+<canvas id="game" width="480" height="416"></canvas>
+<div id="touch">
+  <div class="pad">
+    <button data-k="up">UP</button><button data-k="left">LT</button><button data-k="right">RT</button><button data-k="down">DN</button>
+  </div>
+  <div class="act">
+    <button data-k="pause">PAUSE</button>
+    <button data-k="bomb">BOMB</button>
+  </div>
+</div>
+<script src="./font.js"></script>
+<script src="./level.js"></script>
+<script src="./art.js"></script>
+<script src="./audio.js"></script>
+<script src="./game.js"></script>
+</body>
+</html>
