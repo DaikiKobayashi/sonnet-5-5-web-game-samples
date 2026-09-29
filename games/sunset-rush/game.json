@@ -1,0 +1,7 @@
+{
+  "id": "sunset-rush",
+  "title": "SUNSET RUSH",
+  "description": "夕焼けを追いかけて海岸線から夜の街まで駆け抜ける、制限時間つきの疑似 3D アーケードレーサー。全 3 ステージ、チェックポイントで時間を延長、ランク S〜C。",
+  "stack": "Vanilla JS + Canvas 2D + Web Audio(依存・ビルドなし)",
+  "createdAt": "2026-09-29"
+}
