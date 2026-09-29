@@ -173,6 +173,34 @@ async function shots(env) {
     await env.done(p);
   });
 
+  // --- 爆弾・炎・プレイヤー・敵が、5 ステージすべての床の上で見分けられるか(M37 の目視用) ---
+  await step('flames', async () => {
+    const bombs = [], flames = [];
+    for (let n = 1; n <= 5; n++) {
+      const p = await env.open(`stage=${n}&seed=1&debug=1`, { tag: `flames s${n}` });
+      const page = p.page;
+      await startPlaying(page);
+      await dbg(env, page, 'godMode', true);
+      await dbg(env, page, 'setPowerups', { range: 3 });
+      await dbg(env, page, 'clearBlocks');
+      await dbg(env, page, 'teleport', 7, 5);
+      await sleep(200);
+      await L.press(page, 'Space');
+      await dbg(env, page, 'teleport', 8, 5);
+      await dbg(env, page, 'spawnEnemy', 'slime', 7, 3);
+      await dbg(env, page, 'spawnEnemy', 'bat', 5, 5);
+      await sleep(1100);
+      const crop = '{x: 7*32-64, y: 64+5*32-64, w: 224, h: 160}';
+      const b = await burst(page, { n: 1, interval: 10, crop });
+      await page.waitForFunction(() => window.__GAME__.snapshot().flames.length > 0, null, { timeout: 5000, polling: 'raf' });
+      const f = await burst(page, { n: 3, interval: 90, crop });
+      bombs.push({ url: b[0].url, crop: b[0].crop });
+      flames.push({ url: f[1].url, crop: f[1].crop });
+      await env.done(p);
+    }
+    save(env, 'stage-bomb-flame.png', await montage(env, [{ items: bombs }, { items: flames }], { scale: 1 }));
+  });
+
   // --- プレイヤー: 歩行(4 方向)・待機・死亡・復活 ---
   await step('player', async () => {
     const p = await env.open('debug=1&seed=1');

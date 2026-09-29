@@ -90,6 +90,7 @@ async function m16m17m18(env) {
   if (!survivedContact) { ok17 = false; notes.m17.push('無敵中の敵接触で死亡した/検証できず'); }
   // 無敵の長さと点滅
   const iInv0 = fr.findIndex((f, i) => i >= iR && f.player.invincible > 0);
+  void 0;
   const iInv1 = fr.findIndex((f, i) => i > iInv0 && iInv0 >= 0 && f.player.invincible === 0);
   let invDur = null, blink = null;
   if (iInv0 >= 0 && iInv1 > 0) {
@@ -110,26 +111,53 @@ async function m16m17m18(env) {
   env.extra.invDur = invDur;
 }
 
+// 復活後の無敵点滅を、プレイヤーのタイル中央の平均輝度の時系列から測る(色に依存しない。半周期と切替回数)
+async function blinkProbe(page, col, row) {
+  return page.evaluate(async ({ col, row }) => {
+    const g = document.querySelector('canvas').getContext('2d');
+    const out = [];
+    const t0 = performance.now();
+    while (performance.now() - t0 < 2300) {
+      const d = g.getImageData(col * 32 + 8, 64 + row * 32 + 8, 16, 16).data;
+      let s = 0;
+      for (let k = 0; k < d.length; k += 4) s += d[k] * 0.3 + d[k + 1] * 0.59 + d[k + 2] * 0.11;
+      out.push([performance.now() - t0, s / 256]);
+      await new Promise((r) => setTimeout(r, 8));
+    }
+    const vals = out.map((x) => x[1]);
+    const mid = (Math.min(...vals) + Math.max(...vals)) / 2;
+    const edges = [];
+    for (let i = 1; i < out.length; i++) if ((out[i][1] > mid) !== (out[i - 1][1] > mid)) edges.push(out[i][0]);
+    const gaps = edges.slice(1).map((t, i) => t - edges[i]).sort((a, b) => a - b);
+    return { toggles: edges.length, halfPeriodMs: gaps.length ? gaps[gaps.length >> 1] : null, range: Math.max(...vals) - Math.min(...vals) };
+  }, { col, row });
+}
+
 async function m17b(env) {
   const p = await env.open('debug=1&seed=1');
   const page = p.page;
   await startPlaying(page);
+  await dbg(env, page, 'killAllEnemies');
   await dbg(env, page, 'setLives', 5);
   await dbg(env, page, 'setPowerups', { maxBombs: 3, range: 4, boots: 2 });
-  await L.press(page, 'Space');
+  await sleep(600);
+  await L.tap(page, 'Space', 45);
   await page.waitForFunction(() => window.__GAME__.snapshot().player.alive === false, null, { timeout: 6000, polling: 16 });
   await page.waitForFunction(() => window.__GAME__.snapshot().player.alive === true, null, { timeout: 4000, polling: 16 });
   const a = await snap(page);
+  const blink = await blinkProbe(page, 1, 1); // 復活直後(無敵中)の 2.3 秒
   await dbg(env, page, 'setPowerups', { maxBombs: 1, range: 2, boots: 0 });
-  await L.press(page, 'Space');
+  await L.tap(page, 'Space', 45);
   await page.waitForFunction(() => window.__GAME__.snapshot().player.alive === false, null, { timeout: 6000, polling: 16 });
   await page.waitForFunction(() => window.__GAME__.snapshot().player.alive === true, null, { timeout: 4000, polling: 16 });
   const b = await snap(page);
   await env.done(p);
   const ok = a.player.maxBombs === 2 && a.player.range === 3 && a.player.boots === 1 && b.player.maxBombs === 1 && b.player.range === 2 && b.player.boots === 0;
+  const blinkOk = blink.toggles >= 10 && blink.halfPeriodMs !== null && Math.abs(blink.halfPeriodMs - 62.5) <= 20;
+  env.extra.invincibleBlink = blink;
   const prev = env.results.M17;
-  env.rec('M17b', ok, `死亡時のパワーアップ低下: (爆弾3/range4/ブーツ2) → (${a.player.maxBombs}/${a.player.range}/${a.player.boots})(期待 2/3/1)、最小値 (1/2/0) からは → (${b.player.maxBombs}/${b.player.range}/${b.player.boots})(期待 1/2/0)`);
-  if (prev && !ok) env.results.M17 = { pass: false, note: prev.note + ' / パワーアップ低下が仕様と異なる' };
+  env.rec('M17b', ok && blinkOk, `死亡時のパワーアップ低下: (爆弾3/range4/ブーツ2) → (${a.player.maxBombs}/${a.player.range}/${a.player.boots})(期待 2/3/1)、最小値 (1/2/0) からは → (${b.player.maxBombs}/${b.player.range}/${b.player.boots})(期待 1/2/0)。復活後の無敵中の点滅(タイル中央の輝度の ON/OFF): 2.3 秒間に ${blink.toggles} 回切替、半周期 ${blink.halfPeriodMs && blink.halfPeriodMs.toFixed(0)}ms(仕様 62.5ms。半周期 ±20ms かつ 10 回以上で合格。輝度差が小さいと切替の検出漏れがあり得る)`);
+  if (prev && !(ok && blinkOk)) env.results.M17 = { pass: false, note: prev.note + ' / パワーアップ低下または無敵点滅が仕様と異なる' };
 }
 
 async function m19(env) {
@@ -248,6 +276,44 @@ async function m21(env) {
   env.rec('M21', gr >= 0.6 && gr >= sr + 0.25, `ゴーストとスライム(ランダム徘徊の基準線)を、静止したプレイヤーから距離 3〜6 の 16 か所に出現させて 3 秒観察し、接近(最短距離 ≤1.5 か 2 以上縮小)した割合: ゴースト ${g.filter((r) => r.ok).length}/16、スライム ${sl.filter((r) => r.ok).length}/16。ゴーストが 0.6 以上かつスライムより 0.25 以上高ければ「追跡して近づく」と判定。仕様の追跡は「逆走しない・25% 徘徊」なので確率的。ゴースト: ${g.map((r) => `${r.start}:${r.d0}→${r.dmin}`).join(' ')}`);
 }
 
+// ゴーレムが炎を受けた直後の点滅(被弾後無敵 0.8 秒)を、ゴーレムのタイル中央の輝度の ON/OFF で測る
+async function golemBlink(env, page) {
+  await dbg(env, page, 'killAllEnemies');
+  await sleep(700);
+  await dbg(env, page, 'setPowerups', { maxBombs: 5, range: 2 });
+  await dbg(env, page, 'teleport', 2, 1);
+  await sleep(100);
+  await L.tap(page, 'Space', 45);
+  await dbg(env, page, 'teleport', 1, 2);
+  await L.tap(page, 'Space', 45);
+  await dbg(env, page, 'spawnEnemy', 'golem', 1, 1);
+  await sleep(200);
+  await page.waitForFunction(() => window.__GAME__.snapshot().flames.length > 0, null, { timeout: 5000, polling: 'raf' });
+  const r = await page.evaluate(async () => {
+    const g = document.querySelector('canvas').getContext('2d');
+    const out = [];
+    const t0 = performance.now();
+    while (performance.now() - t0 < 1400) {
+      const s = window.__GAME__.snapshot();
+      const e = s.enemies.find((x) => x.type === 'golem');
+      if (e) {
+        const d = g.getImageData(Math.max(0, Math.round(e.x * 32) + 8), 64 + Math.round(e.y * 32) + 8, 16, 16).data;
+        let sum = 0;
+        for (let k = 0; k < d.length; k += 4) sum += d[k] * 0.3 + d[k + 1] * 0.59 + d[k + 2] * 0.11;
+        out.push([performance.now() - t0, sum / 256, e.hp]);
+      }
+      await new Promise((r) => setTimeout(r, 10));
+    }
+    return out;
+  });
+  const vals = r.map((x) => x[1]);
+  const mid = (Math.min(...vals) + Math.max(...vals)) / 2;
+  const edges = [];
+  for (let i = 1; i < r.length; i++) if ((r[i][1] > mid) !== (r[i - 1][1] > mid)) edges.push(r[i][0]);
+  const span = edges.length ? (edges[edges.length - 1] - edges[0]) / 1000 : 0;
+  return { toggles: edges.length, blinkSpanSec: +span.toFixed(2), hp: r.length ? r[r.length - 1][2] : null };
+}
+
 // 動けない敵(開始タイル (1,1) の 2 出口を爆弾でふさぐ)に炎を 1 回当てる。after があれば録画を止める前に実行する
 async function pinTrial(env, page, type, after) {
   await dbg(env, page, 'killAllEnemies');
@@ -348,6 +414,11 @@ async function m22(env) {
     out.push(`${type}: hp/状態の遷移 ${keys.join('→')}、死亡演出→消滅 ${anim === null ? '?' : anim.toFixed(2) + 's'}(0.4±0.15)、撃破時のスコア +${delta}(期待 +${value[type]})、sfx enemyDie=${dieSfx}${type === 'golem' ? ` hit=${hitSfx} ` : ''}${okType ? '' : ' NG'}`);
     if (type === 'golem') env.extra.golemBlink = invBlink;
   }
+  const gb = await golemBlink(env, page);
+  env.extra.golemBlink = gb;
+  const blinkOk = gb.toggles >= 6 && gb.blinkSpanSec >= 0.4 && gb.blinkSpanSec <= 1.0;
+  if (!blinkOk) ok = false;
+  out.push(`ゴーレムの被弾後の点滅(タイル中央の輝度の ON/OFF): 切替 ${gb.toggles} 回、点滅していた時間 ${gb.blinkSpanSec}s(0.8s 前後、6 回以上で合格)${blinkOk ? '' : ' NG'}`);
   await env.done(p);
   env.rec('M22', ok, out.join('。 '));
   // M23 用に敵ごとのスコアも同時に取れたので記録
