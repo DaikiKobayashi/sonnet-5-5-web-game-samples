@@ -10,8 +10,8 @@ const C = require('./checks_c');
 const save = (env, name, url) => fs.writeFileSync(path.join(env.shotDir, name), Buffer.from(url.split(',')[1], 'base64'));
 
 // 連続キャプチャ(ページ内ループで、フレームのずれを抑える)。crop は s(snapshot)から {x,y,w,h} を返す式
-async function burst(page, { n, interval, crop }) {
-  return page.evaluate(async ({ n, interval, crop }) => {
+async function burst(page, { n, interval, crop, png = true, lum = false }) {
+  return page.evaluate(async ({ n, interval, crop, png, lum }) => {
     const cropFn = crop ? new Function('s', 'return (' + crop + ')') : null;
     const c = document.querySelector('canvas');
     const g2 = c.getContext('2d');
@@ -20,12 +20,34 @@ async function burst(page, { n, interval, crop }) {
     for (let i = 0; i < n; i++) {
       const s = window.__GAME__.snapshot();
       const cr = cropFn ? cropFn(s) : null;
-      out.push({ url: c.toDataURL('image/png'), crop: cr, h: cr ? hash(cr.x, cr.y, cr.w, cr.h) : null, state: s.state });
+      let l = null;
+      if (lum && cr) {
+        const d = g2.getImageData(cr.x, cr.y, cr.w, cr.h).data;
+        l = new Array(cr.w * cr.h);
+        for (let i = 0; i < l.length; i++) l[i] = Math.round(d[i * 4] * 0.3 + d[i * 4 + 1] * 0.59 + d[i * 4 + 2] * 0.11);
+      }
+      out.push({ url: png ? c.toDataURL('image/png') : null, crop: cr, h: cr ? hash(cr.x, cr.y, cr.w, cr.h) : null, lum: l, state: s.state, t: performance.now() });
       await new Promise((r) => setTimeout(r, interval));
     }
     return out;
-  }, { n, interval, crop });
+  }, { n, interval, crop, png, lum });
 }
+// 輝度配列の列を、画素差が小さいものを同じフレームとみなしてクラスタリングする(環境光・火の粉などの小さなノイズに強い)
+function clusterFrames(frames, { thr = 28, maxDiff = 14, minSize = 2 } = {}) {
+  const reps = [], counts = [], ids = [];
+  for (const f of frames) {
+    let id = -1;
+    for (let r = 0; r < reps.length; r++) {
+      let diff = 0;
+      for (let i = 0; i < f.length; i++) if (Math.abs(f[i] - reps[r][i]) > thr) { diff++; if (diff > maxDiff) break; }
+      if (diff <= maxDiff) { id = r; break; }
+    }
+    if (id < 0) { reps.push(f); counts.push(0); id = reps.length - 1; }
+    counts[id]++; ids.push(id);
+  }
+  return { frames: counts.filter((c) => c >= minSize).length, ids };
+}
+const clusterTransitions = (ids) => { let n = 0; for (let i = 1; i < ids.length; i++) if (ids[i] !== ids[i - 1]) n++; return n; };
 // 複数フレームの切り出しを 1 枚の PNG に並べる(別ページで合成)
 async function montage(env, rows, { scale = 3, gap = 2, label = true } = {}) {
   const page = await env.browser.newPage();
@@ -162,14 +184,54 @@ async function shots(env) {
     await L.press(page, 'Space');
     await dbg(env, page, 'teleport', 7, 3);
     const fr = await burst(page, { n: 42, interval: 60, crop: '(s.bombs.length ? {x: s.bombs[0].col*32, y: 64+s.bombs[0].row*32, w:32, h:32} : {x:0,y:0,w:32,h:32})' });
-    // 変化回数: 0〜1.6 秒 と 1.9〜2.5 秒
-    const early = fr.slice(0, 26).map((f) => f.h), late = fr.slice(31).map((f) => f.h);
-    const trans = (a) => { let n = 0; for (let i = 1; i < a.length; i++) if (a[i] !== a[i - 1]) n++; return n; };
-    metrics.bombBlink = { earlyTransitionsPer1_6s: trans(early), lateTransitionsPer0_6s: trans(late), earlyRate: +(trans(early) / 1.56).toFixed(2), lateRate: +(trans(late) / 0.66).toFixed(2) };
+    // 点滅速度の測定は、別の爆弾(PNG を作らず 25ms 間隔)で行う
     save(env, 'bomb-strip.png', await montage(env, [{ items: fr.slice(0, 21).map((f) => ({ url: f.url, crop: f.crop })) }, { items: fr.slice(21).map((f) => ({ url: f.url, crop: f.crop })) }], { scale: 3 }));
+    await page.waitForFunction(() => window.__GAME__.snapshot().bombs.length === 0, null, { timeout: 4000, polling: 50 });
+    await sleep(800);
+    await dbg(env, page, 'teleport', 7, 3);
+    await sleep(200);
+    await dbg(env, page, 'teleport', 7, 5);
+    await L.press(page, 'Space');
+    await dbg(env, page, 'teleport', 7, 3);
+    const bl = await burst(page, { n: 88, interval: 25, png: false, lum: true, crop: '(s.bombs.length ? {x: s.bombs[0].col*32+2, y: 64+s.bombs[0].row*32+2, w:28, h:28} : {x:34,y:98,w:28,h:28})' });
+    const t0b = bl[0].t;
+    const seg = (a, b) => bl.filter((f) => (f.t - t0b) / 1000 >= a && (f.t - t0b) / 1000 < b);
+    const ids = clusterFrames(bl.map((f) => f.lum), { minSize: 1 }).ids;
+    const early = ids.filter((_, i) => { const t = (bl[i].t - t0b) / 1000; return t >= 0.2 && t < 1.6; });
+    const late = ids.filter((_, i) => { const t = (bl[i].t - t0b) / 1000; return t >= 1.8 && t < 2.4; });
+    metrics.bombBlink = { earlyRate: +(clusterTransitions(early) / 1.4).toFixed(2), lateRate: +(clusterTransitions(late) / 0.6).toFixed(2), earlyFrames: early.length, lateFrames: late.length };
+    void seg;
     // 爆発の連続フレーム
+    await L.press(page, 'Space').catch(() => {});
     const ex = await burst(page, { n: 8, interval: 45 });
     save(env, 'explosion-strip.png', await montage(env, [{ items: ex.slice(0, 4).map((f) => ({ url: f.url, crop: { x: 0, y: 64, w: 480, h: 352 } })) }, { items: ex.slice(4).map((f) => ({ url: f.url, crop: { x: 0, y: 64, w: 480, h: 352 } })) }], { scale: 0.75 }));
+    await env.done(p);
+  });
+
+  // --- クリア演出(S13): 出口が開く瞬間・ステージクリア中のプレイヤーの連続フレーム ---
+  await step('clearfx', async () => {
+    const p = await env.open('debug=1&seed=1', { tag: 'clearfx' });
+    const page = p.page;
+    await startPlaying(page);
+    await dbg(env, page, 'godMode', true);
+    await dbg(env, page, 'clearBlocks');
+    const nb = await D.neighborOfExit(env, page);
+    await dbg(env, page, 'teleport', nb.c, nb.r);
+    await sleep(400);
+    const exCrop = '{x: Math.max(0, s.exit.col*32-16), y: 64+Math.max(0, s.exit.row*32-16), w: 64, h: 64}';
+    const openP = burst(page, { n: 14, interval: 55, crop: exCrop });
+    await sleep(60);
+    await dbg(env, page, 'killAllEnemies');
+    const openFrames = await openP;
+    await sleep(300);
+    const ex = (await snap(page)).exit;
+    const key = nb.c > ex.col ? 'ArrowLeft' : nb.c < ex.col ? 'ArrowRight' : nb.r > ex.row ? 'ArrowUp' : 'ArrowDown';
+    await page.keyboard.down(key);
+    await waitState(page, 'stageClear', 3000);
+    await page.keyboard.up(key);
+    const plCrop = '{x: Math.max(0, Math.round(s.player.x*32)-16), y: 64+Math.max(0, Math.round(s.player.y*32)-16), w: 64, h: 64}';
+    const clearFrames = await burst(page, { n: 20, interval: 100, crop: plCrop });
+    save(env, 'clearfx-strip.png', await montage(env, [{ items: openFrames.map((f) => ({ url: f.url, crop: f.crop })) }, { items: clearFrames.slice(0, 14).map((f) => ({ url: f.url, crop: f.crop })) }], { scale: 2 }));
     await env.done(p);
   });
 
@@ -215,9 +277,9 @@ async function shots(env) {
     // 待機(呼吸)
     await dbg(env, page, 'teleport', 1, 1);
     await sleep(200);
-    const idle = await burst(page, { n: 24, interval: 120, crop });
-    metrics.playerIdleDistinct = new Set(idle.map((f) => f.h)).size;
-    rows.push({ items: idle.slice(0, 16).map((f) => ({ url: f.url, crop: f.crop })) });
+    const idle = await burst(page, { n: 24, interval: 120, crop: '{x: 34, y: 98, w: 28, h: 28}', lum: true });
+    metrics.playerIdleFrames = clusterFrames(idle.map((f) => f.lum)).frames;
+    rows.push({ items: idle.slice(0, 16).map((f) => ({ url: f.url, crop: { x: 28, y: 92, w: 40, h: 40 } })) });
     const walk = async (key, from, n = 16) => {
       await dbg(env, page, 'teleport', from[0], from[1]);
       await sleep(250);
@@ -266,8 +328,8 @@ async function shots(env) {
       await L.tap(page, 'Space', 45);
       await dbg(env, page, 'spawnEnemy', type, 1, 1);
       await sleep(150);
-      const b = await burst(page, { n: 24, interval: 70, crop: '{x:32-2,y:96-2,w:36,h:36}' });
-      idleDistinct[type] = new Set(b.map((f) => f.h)).size;
+      const b = await burst(page, { n: 20, interval: 60, crop: '{x:34,y:98,w:28,h:28}', lum: true });
+      idleDistinct[type] = clusterFrames(b.map((f) => f.lum)).frames;
       rows.push({ items: b.slice(0, 16).map((f) => ({ url: f.url, crop: f.crop })) });
       await sleep(1000);
       if (type === 'golem') {
@@ -278,7 +340,7 @@ async function shots(env) {
       }
       await sleep(600);
     }
-    metrics.enemyIdleDistinct = idleDistinct;
+    metrics.enemyIdleFrames = idleDistinct;
     save(env, 'enemy-idle-strips.png', await montage(env, rows, { scale: 2 }));
     // ゴーストの追跡表現: 遠い(距離 > 6)/近い(距離 ≤ 6)
     await dbg(env, page, 'killAllEnemies');
