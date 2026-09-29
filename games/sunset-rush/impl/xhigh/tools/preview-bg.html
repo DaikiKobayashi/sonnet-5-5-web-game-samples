@@ -1,0 +1,30 @@
+<!doctype html>
+<html><body style="margin:0;background:#000">
+<canvas id="c" width="1280" height="1080"></canvas>
+<script type="module">
+import * as B from '../dist/js/art/backgrounds.js';
+const c = document.getElementById('c');
+const ctx = c.getContext('2d');
+ctx.imageSmoothingEnabled = false;
+const layers = [
+  [B.buildSky1, B.buildFar1, B.buildNear1, '#3aa88a'],
+  [B.buildSky2, B.buildFar2, B.buildNear2, '#2d7a4f'],
+  [B.buildSky3, B.buildFar3, B.buildNear3, '#101a2c'],
+];
+layers.forEach(([s, f, n, g], i) => {
+  const oy = i * 360;
+  ctx.fillStyle = g; ctx.fillRect(0, oy, 640, 360);
+  const sk = s().toCanvas(), fr = f().toCanvas(), nr = n().toCanvas();
+  ctx.drawImage(sk, 0, oy);
+  ctx.drawImage(fr, 0, oy + 180 - 96);
+  ctx.drawImage(nr, 0, oy + 180 - 56);
+  // 継ぎ目確認: 640 を 320 ずらして 2 枚並べた図
+  ctx.drawImage(sk, 640 - 320, oy);
+  ctx.drawImage(fr, 640 - 320, oy + 180 - 96);
+  ctx.drawImage(nr, 640 - 320, oy + 180 - 56);
+  ctx.drawImage(sk, 640 + 320, oy);
+  ctx.drawImage(fr, 640 + 320, oy + 180 - 96);
+  ctx.drawImage(nr, 640 + 320, oy + 180 - 56);
+});
+window.__done = true;
+</script></body></html>

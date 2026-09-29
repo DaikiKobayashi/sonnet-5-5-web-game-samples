@@ -1,0 +1,25 @@
+<!doctype html>
+<html><body style="margin:0;background:#556">
+<canvas id="c" width="900" height="600"></canvas>
+<script type="module">
+import { buildPlayerCar, buildSedan, buildTruck, buildSports } from '../dist/js/art/cars.js';
+const c = document.getElementById('c');
+const ctx = c.getContext('2d');
+ctx.imageSmoothingEnabled = false;
+ctx.fillStyle = '#6a6a7a';
+ctx.fillRect(0, 0, 900, 600);
+const Z = 5;
+let x = 10;
+const draw = (pix, x, y, z = Z) => { ctx.drawImage(pix.toCanvas(), x, y, pix.w * z, pix.h * z); };
+[[0, false, -1], [1, false, -1], [2, false, -1], [0, true, -1], [0, false, 0], [0, false, 1]].forEach((a, i) => {
+  draw(buildPlayerCar(...a), 10 + (i % 3) * 210, 10 + Math.floor(i / 3) * 120);
+});
+for (let v = 0; v < 3; v++) draw(buildSedan(v), 10 + v * 190, 260);
+for (let v = 0; v < 3; v++) draw(buildTruck(v), 10 + v * 230, 370);
+for (let v = 0; v < 4; v++) draw(buildSports(v), 10 + v * 200, 550, 2);
+draw(buildPlayerCar(0), 700, 10, 1);
+draw(buildSedan(0), 700, 40, 1);
+draw(buildTruck(0), 700, 70, 1);
+draw(buildSports(0), 700, 120, 1);
+window.__done = true;
+</script></body></html>

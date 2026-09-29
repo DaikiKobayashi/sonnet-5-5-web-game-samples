@@ -1,0 +1,23 @@
+<!doctype html>
+<html><body style="margin:0;background:#556">
+<canvas id="c" width="1200" height="760"></canvas>
+<script type="module">
+import * as R from '../dist/js/art/roadside.js';
+const c = document.getElementById('c');
+const ctx = c.getContext('2d');
+ctx.imageSmoothingEnabled = false;
+ctx.fillStyle = '#5a5a78';
+ctx.fillRect(0, 0, 1200, 760);
+const draw = (pix, x, y, z) => { ctx.drawImage(pix.toCanvas(), x, y, pix.w * z, pix.h * z); };
+const Z = 3;
+let x = 10;
+const row1 = [R.buildPalm, R.buildRock, R.buildShrub, R.buildBillboard, R.buildPine, R.buildBoulder, R.buildFern, R.buildSignpost];
+for (const f of row1) { const p = f(); draw(p, x, 10 + (88 - p.h) * Z, Z); x += p.w * Z + 10; }
+x = 10;
+const row2 = [R.buildLamp, R.buildNeon, R.buildBollard, R.buildBuilding, R.buildBuildingB];
+for (const f of row2) { const p = f(); draw(p, x, 300 + (128 - p.h) * 2, 2); x += p.w * 2 + 12; }
+draw(R.buildGateCheckpoint(), 10, 570, 2);
+draw(R.buildGateGoal(), 340, 570, 2);
+draw(R.buildGateStart(), 670, 570, 2);
+window.__done = true;
+</script></body></html>
