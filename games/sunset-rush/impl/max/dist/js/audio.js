@@ -50,11 +50,11 @@ export class AudioEngine {
     };
     this.master = mk(this.muted ? 0 : MASTER_GAIN, ctx.destination);
     const comp = ctx.createDynamicsCompressor();
-    comp.threshold.value = -14;
-    comp.knee.value = 14;
-    comp.ratio.value = 6;
-    comp.attack.value = 0.004;
-    comp.release.value = 0.18;
+    comp.threshold.value = -10;
+    comp.knee.value = 18;
+    comp.ratio.value = 4;
+    comp.attack.value = 0.003;
+    comp.release.value = 0.16;
     comp.connect(this.master);
     this.bgmBus = mk(BGM_GAIN, comp);
     this.sfxBus = mk(SFX_GAIN, comp);
@@ -101,7 +101,7 @@ export class AudioEngine {
     return this.ctx.currentTime;
   }
 
-  tone({ type = 'square', f0, f1 = null, t = this.now(), dur = 0.2, vol = 0.3, attack = 0.005, dest = this.sfxBus, cutoff = 0, detune = 0 }) {
+  tone({ type = 'square', f0, f1 = null, t = this.now(), dur = 0.2, vol = 0.3, attack = 0.005, dest = this.sfxBus, cutoff = 0, detune = 0, gate = false, tc = 0 }) {
     const ctx = this.ctx;
     const o = ctx.createOscillator();
     o.type = type;
@@ -111,7 +111,17 @@ export class AudioEngine {
     const g = ctx.createGain();
     g.gain.setValueAtTime(0.0001, t);
     g.gain.linearRampToValueAtTime(vol, t + attack);
-    g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+    if (gate) {
+      // held level with a short release: keeps the full nominal duration audible (beeps, blips)
+      const rel = Math.min(0.03, dur * 0.3);
+      g.gain.setValueAtTime(vol, t + dur - rel);
+      g.gain.linearRampToValueAtTime(0.0001, t + dur);
+    } else if (tc) {
+      g.gain.setValueAtTime(vol, t + attack + 0.02);
+      g.gain.setTargetAtTime(0, t + attack + 0.02, tc);
+    } else {
+      g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+    }
     let node = o;
     if (cutoff) {
       const lp = ctx.createBiquadFilter();
@@ -127,7 +137,7 @@ export class AudioEngine {
     return g;
   }
 
-  noise({ t = this.now(), dur = 0.2, type = 'lowpass', f0 = 2000, f1 = null, q = 0.7, vol = 0.4, dest = this.sfxBus, attack = 0.002 }) {
+  noise({ t = this.now(), dur = 0.2, type = 'lowpass', f0 = 2000, f1 = null, q = 0.7, vol = 0.4, dest = this.sfxBus, attack = 0.002, tc = 0 }) {
     const ctx = this.ctx;
     const s = ctx.createBufferSource();
     s.buffer = this.noiseBuf;
@@ -139,7 +149,12 @@ export class AudioEngine {
     const g = ctx.createGain();
     g.gain.setValueAtTime(0.0001, t);
     g.gain.linearRampToValueAtTime(vol, t + attack);
-    g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+    if (tc) {
+      g.gain.setValueAtTime(vol, t + attack + 0.02);
+      g.gain.setTargetAtTime(0, t + attack + 0.02, tc); // smooth tail that keeps the full duration audible
+    } else {
+      g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
+    }
     s.connect(f);
     f.connect(g);
     g.connect(dest);
@@ -149,7 +164,7 @@ export class AudioEngine {
 
   notes(list, wave = 'square', vol = 0.3, dest = this.sfxBus, t0 = this.now(), cutoff = 3400) {
     for (const [name, at, dur] of list) {
-      this.tone({ type: wave, f0: hz(midi(name)), t: t0 + at, dur: dur + 0.06, vol, attack: 0.006, dest, cutoff });
+      this.tone({ type: wave, f0: hz(midi(name)), t: t0 + at, dur: dur + 0.06, vol, attack: 0.006, dest, cutoff, gate: dur < 0.2 });
       this.tone({ type: 'triangle', f0: hz(midi(name)) * 2, t: t0 + at, dur: dur + 0.04, vol: vol * 0.35, attack: 0.006, dest });
     }
   }
@@ -160,35 +175,35 @@ export class AudioEngine {
     try {
       const t = this.now();
       switch (name) {
-        case 'beep': this.tone({ type: 'square', f0: 440, dur: 0.15, vol: 0.42, cutoff: 3000 }); break;
+        case 'beep': this.tone({ type: 'square', f0: 440, dur: 0.15, vol: 0.85, cutoff: 3000, gate: true }); break;
         case 'go':
-          this.tone({ type: 'square', f0: 880, dur: 0.4, vol: 0.42, cutoff: 3600 });
-          this.tone({ type: 'triangle', f0: 440, dur: 0.4, vol: 0.3 });
+          this.tone({ type: 'square', f0: 880, dur: 0.4, vol: 0.85, cutoff: 3600, gate: true });
+          this.tone({ type: 'triangle', f0: 440, dur: 0.4, vol: 0.6, gate: true });
           break;
-        case 'checkpoint': this.notes(JINGLES.checkpoint, 'square', 0.3); break;
+        case 'checkpoint': this.notes(JINGLES.checkpoint, 'square', 0.75); break;
         case 'crash':
-          this.noise({ dur: 0.42, type: 'lowpass', f0: 3600, f1: 180, q: 1.2, vol: 0.9 });
-          this.tone({ type: 'sine', f0: 150, f1: 42, dur: 0.4, vol: 0.9, attack: 0.003 });
-          this.tone({ type: 'sawtooth', f0: 90, f1: 38, dur: 0.3, vol: 0.28, cutoff: 500 });
+          this.noise({ dur: 0.5, type: 'lowpass', f0: 4200, f1: 220, q: 1.0, vol: 1.15, tc: 0.11 });
+          this.tone({ type: 'sine', f0: 170, f1: 44, dur: 0.45, vol: 1.5, attack: 0.003, tc: 0.13 });
+          this.tone({ type: 'sawtooth', f0: 95, f1: 40, dur: 0.4, vol: 0.55, cutoff: 600, tc: 0.1 });
           break;
         case 'goal':
-          this.notes(JINGLES.goal, 'sawtooth', 0.26, this.sfxBus, t, 3000);
-          this.noise({ t: t + 1.1, dur: 0.5, type: 'highpass', f0: 6000, vol: 0.05 });
+          this.notes(JINGLES.goal, 'sawtooth', 0.6, this.sfxBus, t, 3000);
+          this.noise({ t: t + 1.1, dur: 0.5, type: 'highpass', f0: 6000, vol: 0.08 });
           break;
-        case 'timeup': this.notes(JINGLES.timeup, 'sawtooth', 0.3, this.sfxBus, t, 1800); break;
+        case 'timeup': this.notes(JINGLES.timeup, 'sawtooth', 0.7, this.sfxBus, t, 1800); break;
         case 'menu':
-          this.tone({ type: 'square', f0: 660, f1: 1100, dur: 0.09, vol: 0.32, cutoff: 3600 });
+          this.tone({ type: 'square', f0: 660, f1: 1100, dur: 0.09, vol: 0.7, cutoff: 3600, gate: true });
           break;
         case 'overtake':
-          this.noise({ dur: 0.2, type: 'bandpass', f0: 700, f1: 3400, q: 1.4, vol: 0.28 });
-          this.tone({ type: 'triangle', f0: 1300, f1: 1900, dur: 0.09, vol: 0.14 });
+          this.noise({ dur: 0.22, type: 'bandpass', f0: 700, f1: 3400, q: 1.2, vol: 2.4, tc: 0.05 });
+          this.tone({ type: 'triangle', f0: 1300, f1: 1900, dur: 0.1, vol: 0.5, gate: true });
           break;
         case 'nearmiss':
-          this.tone({ type: 'square', f0: 1200, dur: 0.06, vol: 0.2, cutoff: 3600 });
-          this.tone({ type: 'square', f0: 1800, t: t + 0.07, dur: 0.12, vol: 0.2, cutoff: 3600 });
+          this.tone({ type: 'square', f0: 1200, dur: 0.06, vol: 0.5, cutoff: 3600, gate: true });
+          this.tone({ type: 'square', f0: 1800, t: t + 0.07, dur: 0.12, vol: 0.5, cutoff: 3600, gate: true });
           break;
-        case 'timewarn': this.tone({ type: 'square', f0: 1500, dur: 0.05, vol: 0.22, cutoff: 3600 }); break;
-        case 'jingle': this.notes(JINGLES.title, 'square', 0.26, this.sfxBus, t, 3200); break;
+        case 'timewarn': this.tone({ type: 'square', f0: 1500, dur: 0.06, vol: 0.6, cutoff: 3600, gate: true }); break;
+        case 'jingle': this.notes(JINGLES.title, 'square', 0.6, this.sfxBus, t, 3200); break;
         default: break;
       }
     } catch (e) { /* ignore */ }
@@ -216,10 +231,11 @@ export class AudioEngine {
       o.start();
       return o;
     };
-    const o1 = mk('sawtooth', 0.5);
-    const o2 = mk('square', 0.3);
-    const o3 = mk('sawtooth', 0.32, 11);
-    const o4 = mk('square', 0.12);
+    // internal oscillator mix is hot on purpose: the node gain below follows the spec (0.05 + 0.07 * sp)
+    const o1 = mk('sawtooth', 3.3);
+    const o2 = mk('square', 1.95);
+    const o3 = mk('sawtooth', 2.2, 11);
+    const o4 = mk('square', 0.83);
     lp.connect(out);
     out.connect(this.engineBus);
     this.engine = { o: [o1, o2, o3, o4], lp, out };
@@ -287,7 +303,7 @@ export class AudioEngine {
       this.off = { s, g, lfo };
     }
     const t = ctx.currentTime;
-    this.off.g.gain.setTargetAtTime(on ? 0.34 * (0.4 + 0.6 * sp) : 0, t, 0.05);
+    this.off.g.gain.setTargetAtTime(on ? 0.75 * (0.4 + 0.6 * sp) : 0, t, 0.05);
   }
 
   // ------------------------------------------------------------------ BGM sequencer
@@ -298,7 +314,7 @@ export class AudioEngine {
     const ctx = this.ctx;
     const song = SONGS[id];
     const out = ctx.createGain();
-    out.gain.value = 1;
+    out.gain.value = 1.4;
     out.connect(this.bgmBus);
     // lead bus with optional echo
     const lead = ctx.createGain();
@@ -567,6 +583,37 @@ export class AudioEngine {
     return t;
   }
 
+  // Verification helper (gallery page): renders one effect (or the engine at speed fraction `sp`) offline and
+  // returns peak / rms / audible duration.
+  static async measureSfx(name, seconds = 2.5, sp = 0.5) {
+    const rate = 44100;
+    const ctx = new window.OfflineAudioContext(2, Math.floor(rate * seconds), rate);
+    const eng = new AudioEngine({ muted: false });
+    eng.init(ctx);
+    if (name === 'engine') {
+      eng.startEngine();
+      eng.setEngine(60 + 140 * sp, sp);
+    } else if (name === 'offroad') {
+      eng.setOffroad(true, 0.8);
+    } else {
+      eng.sfx(name);
+    }
+    const buf = await ctx.startRendering();
+    const d = buf.getChannelData(0);
+    let peak = 0;
+    let sum = 0;
+    let last = 0;
+    for (let i = 0; i < d.length; i++) {
+      const a = Math.abs(d[i]);
+      if (a > peak) peak = a;
+      sum += d[i] * d[i];
+      if (a > 0.004) last = i;
+    }
+    let zc = 0;
+    for (let i = 1; i < d.length; i++) if ((d[i] >= 0) !== (d[i - 1] >= 0)) zc++;
+    return { name, peak, rms: Math.sqrt(sum / d.length), audibleSec: last / rate, zcHz: zc / 2 / seconds };
+  }
+
   // Offline render helper used by the verification page (gallery): schedules `seconds` of a BGM into an
   // OfflineAudioContext and resolves with basic level statistics.
   static async measureBgm(id, seconds = 20) {
@@ -579,6 +626,7 @@ export class AudioEngine {
     eng.bgm = id;
     const song = SONGS[id];
     const out = ctx.createGain();
+    out.gain.value = 1.4;
     out.connect(eng.bgmBus);
     const lead = ctx.createGain();
     lead.connect(out);
@@ -613,6 +661,14 @@ export class AudioEngine {
       if (a > peak) peak = a;
       sum += d[i] * d[i];
     }
-    return { id, peak, rms: Math.sqrt(sum / d.length), seconds };
+    // 50 ms RMS envelope of the first 8 s (used to eyeball the groove in the verification script)
+    const win = Math.floor(rate * 0.05);
+    const env = [];
+    for (let i = 0; i + win <= Math.min(d.length, rate * 8); i += win) {
+      let e = 0;
+      for (let k = 0; k < win; k++) e += d[i + k] * d[i + k];
+      env.push(Math.sqrt(e / win));
+    }
+    return { id, peak, rms: Math.sqrt(sum / d.length), seconds, env };
   }
 }

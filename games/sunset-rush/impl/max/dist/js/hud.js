@@ -88,6 +88,12 @@ export class Hud {
       default:
         break;
     }
+    // short colour flashes: white on crashes, gold on checkpoints
+    if (sim.flash && sim.flash.steps > 0 && (s === 'playing' || s === 'paused')) {
+      const k = sim.flash.steps / sim.flash.max;
+      ctx.fillStyle = sim.flash.kind === 'cp' ? `rgba(255,224,120,${0.28 * k})` : `rgba(255,255,255,${0.42 * k})`;
+      ctx.fillRect(0, 0, W, H);
+    }
     // fade in from black on major scene changes
     if (s === 'title' || s === 'countdown' || s === 'gameover' || s === 'ending') {
       const a = 1 - (sim.t - sim.sceneStartT) / 14;
@@ -127,8 +133,8 @@ export class Hud {
     T(ctx, '[M] SOUND ' + (sim.muted ? 'OFF' : 'ON'), 8, 346, 1, sim.muted ? '#ff9a9a' : '#c8ffd8');
     // speed
     const kmh = Math.round(sim.speed / KMH);
-    T(ctx, String(kmh), 600, 312, 4, kmh >= 250 ? '#ffb36a' : WHITE, 'right');
-    T(ctx, 'KM/H', 600, 344, 2, YEL, 'right');
+    T(ctx, String(kmh), 600, 316, 4, kmh >= 250 ? '#ffb36a' : WHITE, 'right');
+    T(ctx, 'KM/H', 600, 346, 2, YEL, 'right');
   }
 
   drawProgress(sim) {

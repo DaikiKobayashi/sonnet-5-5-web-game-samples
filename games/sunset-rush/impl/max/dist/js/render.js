@@ -5,22 +5,22 @@ import {
   W, H, HALF_W, HALF_H, HORIZON, SEG_LEN, ROAD_HALF, CAM_HEIGHT, CAM_DEPTH, PLAYER_Z, DRAW_DIST,
   MAX_SPEED, KMH, CAR_TYPES, lerp, clamp,
 } from './config.js';
-import { css, mix, rgbOf } from './pixel.js';
+import { css, mix, rgbOf, hash2 } from './pixel.js';
 import { drawText } from './font.js';
 
 // Per-stage colour scheme: [light band, dark band] pairs (SPEC 6.1)
 export const LOOKS = [
   {
     grass: [0xf2b878, 0xdf9d62], rumble: [0xf6efdc, 0xd8362c], road: [0x6e7190, 0x585b78], lane: 0xf6f0e0,
-    fog: 0xffc48a, ground: 0xe9aa6c, fogDensity: 2.6,
+    fog: 0xffc48a, ground: 0xe9aa6c, fogDensity: 2.6, spec: [0xfff0cc, 0xa86a3c, 0xff9a5a],
   },
   {
     grass: [0x36784c, 0x255b3b], rumble: [0xe8e0d0, 0x7a2e5c], road: [0x585a7c, 0x454766], lane: 0xf0e6b0,
-    fog: 0xa85a86, ground: 0x2d6844, fogDensity: 2.6,
+    fog: 0xa85a86, ground: 0x2d6844, fogDensity: 2.6, spec: [0x6cc27a, 0x143a26, 0xb4e89a],
   },
   {
     grass: [0x1f3158, 0x0e1a36], rumble: [0x38f0ff, 0xc0189e], road: [0x3a3e60, 0x22253f], lane: 0x9ff4ff,
-    fog: 0x3c1c6e, ground: 0x172646, fogDensity: 2.9,
+    fog: 0x3c1c6e, ground: 0x172646, fogDensity: 2.9, spec: [0x3a5490, 0x060c1c, 0x3ff0ff],
   },
 ];
 
@@ -62,6 +62,7 @@ export class Renderer {
             rumble: css(mix(look.rumble[b], look.fog, f)),
             road: css(mix(look.road[b], look.fog, f)),
             lane: css(mix(look.lane, look.fog, f)),
+            spec: look.spec.map((c) => css(mix(c, look.fog, Math.min(1, f * 1.25)))),
           });
         }
         table.push(bands);
@@ -103,7 +104,7 @@ export class Renderer {
     const course = sim.course;
     const segs = course.segments;
 
-    const shaking = sim.shake > 0;
+    const shaking = sim.shake > 0 && sim.scene !== 'paused';
     ctx.save();
     if (shaking) {
       const m = Math.ceil(sim.shake / 4);
@@ -155,7 +156,7 @@ export class Renderer {
         if (p2.sy >= maxY && p1.camZ > CAM_DEPTH) hidden++;
         continue;
       }
-      this.drawRoadSegment(seg, fogTable[n][seg.band], maxY);
+      this.drawRoadSegment(seg, fogTable[n][seg.band], maxY, n, si);
       if (p1.sy < maxY) maxY = p1.sy;
     }
     this.nDrawn = nDrawn;
@@ -213,7 +214,7 @@ export class Renderer {
   }
 
   // One road segment as horizontal runs (grass, rumble strips, road, lane markers)
-  drawRoadSegment(seg, pal, maxY) {
+  drawRoadSegment(seg, pal, maxY, n, si) {
     const ctx = this.ctx;
     const p1 = seg.p1, p2 = seg.p2;
     const y1 = p1.sy, y2 = p2.sy;
@@ -259,6 +260,28 @@ export class Renderer {
         l1 = Math.round(cx + off + lw);
         if (l1 <= l0) l1 = l0 + 1;
         ctx.fillRect(l0, y, l1 - l0, 1);
+      }
+    }
+    // ground texture: pebbles / grass tufts / distant lights that scroll with the road
+    if (n < 120) {
+      const idx = seg.index;
+      const cnt = n < 30 ? 7 : 6;
+      const spec = pal.spec;
+      for (let j = 0; j < cnt; j++) {
+        const h1 = hash2(idx, j, 11 + si);
+        const h2 = hash2(idx, j, 23 + si);
+        const h3 = hash2(idx, j, 37 + si);
+        const h4 = hash2(idx, j, 53 + si);
+        const y = yTop + Math.floor(h2 * (yBot - yTop));
+        const cx = cxA[y], w = wA[y];
+        const off = 1.22 + h3 * h3 * 3.4;
+        const x = cx + (h1 < 0.5 ? -1 : 1) * off * w;
+        if (x < -6 || x > W + 2) continue;
+        const sz = Math.max(1, Math.round(w * (0.014 + h4 * 0.034)));
+        const pick = h4 < 0.45 ? 0 : h4 < 0.92 ? 1 : 2;
+        ctx.fillStyle = spec[pick];
+        ctx.fillRect(Math.round(x), y, sz, Math.max(1, Math.round(sz * 0.4)));
+        if (pick === 0 && sz > 2) ctx.fillRect(Math.round(x) + 1, y - 1, sz - 2, 1);
       }
     }
   }
@@ -313,7 +336,7 @@ export class Renderer {
         const k = dw / spr.w;
         const gx = variantKey === 'f' ? dx + (spr.w - g.x) * k : dx + g.x * k;
         const r = Math.max(3, g.r * k);
-        ctx.globalAlpha = (g.dim ? 0.18 : 0.62) * fade;
+        ctx.globalAlpha = (g.dim ? 0.2 : 0.9) * fade;
         ctx.drawImage(A.glows[g.color], gx - r, dy + g.y * k - r, r * 2, r * 2);
       }
       ctx.globalAlpha = prevA;
@@ -328,7 +351,7 @@ export class Renderer {
     const prevOp = ctx.globalCompositeOperation;
     ctx.globalCompositeOperation = 'lighter';
     const flick = 0.92 + 0.08 * Math.sin(sim.t * 0.5);
-    for (const [top, alpha, spread] of [[214, 0.10, 34], [232, 0.13, 26], [256, 0.16, 18]]) {
+    for (const [top, alpha, spread] of [[210, 0.13, 36], [230, 0.17, 27], [256, 0.21, 19]]) {
       const g = ctx.createLinearGradient(0, 340, 0, top);
       g.addColorStop(0, `rgba(255,240,190,${alpha * 1.6 * flick})`);
       g.addColorStop(1, 'rgba(255,240,190,0)');

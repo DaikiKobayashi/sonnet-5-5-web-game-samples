@@ -33,6 +33,7 @@ export function startGallery() {
   window.__gallery = {
     assets: assets.list.map((s) => s.id),
     measureBgm: (id, seconds) => AudioEngine.measureBgm(id, seconds),
+    measureSfx: (name, seconds, sp) => AudioEngine.measureSfx(name, seconds, sp),
   };
 
   const main = document.createElement('main');

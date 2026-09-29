@@ -78,6 +78,7 @@ export class Sim {
     this.bg = { sky: 0, far: 0, near: 0 };
     this.fx = { smoke: [], sparks: [], dust: [], popups: [] };
     this.shake = 0;
+    this.flash = { steps: 0, max: 1, kind: 'crash' };
     this.crashAge = 999;
     this.smokeSpawned = 6;
     this.dustAcc = 0;
@@ -341,6 +342,7 @@ export class Sim {
       this.timeLeft += st.cpBonus;
       this.scoreF += SCORE_CHECKPOINT;
       this.banner = { steps: BANNER_STEPS, sec: st.cpBonus, total: BANNER_STEPS };
+      this.flash = { steps: 12, max: 12, kind: 'cp' };
       this.events.push({ type: 'checkpoint' });
     }
     if (pz >= this.course.goalZ) {
@@ -497,6 +499,7 @@ export class Sim {
     this.crashAge = 0;
     this.smokeSpawned = 0;
     this.shake = 18;
+    this.flash = { steps: 6, max: 6, kind: 'crash' };
     for (let i = 0; i < 9; i++) {
       const ang = Math.random() * Math.PI * 2;
       const sp = 1.2 + Math.random() * 2.2;
@@ -566,6 +569,7 @@ export class Sim {
       if (++p.age >= p.life) fx.popups.splice(i, 1);
     }
     if (this.shake > 0) this.shake--;
+    if (this.flash.steps > 0) this.flash.steps--;
   }
 
   updateBackground(curve, dpos) {

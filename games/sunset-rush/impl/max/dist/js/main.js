@@ -255,6 +255,7 @@ function startGame() {
       sim,
       audio,
       renderer,
+      hud,
     };
   }
 }
