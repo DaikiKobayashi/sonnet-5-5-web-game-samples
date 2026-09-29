@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>sprite sheet (dev tool)</title>
+<style>
+  body { margin: 0; background: #2a2a2a; color: #ddd; font: 12px monospace; }
+  canvas { image-rendering: pixelated; display: block; }
+</style>
+</head>
+<body>
+<canvas id="c" width="1400" height="1400"></canvas>
+<script src="../dist/js/util.js"></script>
+<script src="../dist/js/raster.js"></script>
+<script src="../dist/js/font.js"></script>
+<script src="../dist/js/sprites_mole.js"></script>
+<script src="../dist/js/sprites_enemy.js"></script>
+<script src="../dist/js/sprites_tiles.js"></script>
+<script src="../dist/js/sprites_ui.js"></script>
+<script>
+  /* Dev tool: renders generated sprites at a zoom. ?set=mole|enemy|tiles&z=4&bg=%23xxxxxx&theme=0..4 */
+  var q = new URLSearchParams(location.search);
+  var Z = parseInt(q.get('z') || '4', 10);
+  var c = document.getElementById('c');
+  var ctx = c.getContext('2d');
+  ctx.imageSmoothingEnabled = false;
+  var t0 = performance.now();
+  var bg = q.get('bg') || '#5a4632';
+  ctx.fillStyle = bg;
+  ctx.fillRect(0, 0, c.width, c.height);
+  var y = 4;
+  function row(list, bgc) {
+    var x = 4, h = 0;
+    list.forEach(function (cv) {
+      if (!cv) return;
+      if (bgc) { ctx.fillStyle = bgc; ctx.fillRect(x, y, cv.width * Z, cv.height * Z); }
+      ctx.drawImage(cv, x, y, cv.width * Z, cv.height * Z);
+      x += cv.width * Z + 4;
+      h = Math.max(h, cv.height * Z);
+    });
+    y += h + 4;
+  }
+  var set = q.get('set') || 'mole';
+  var pick = q.get('rows') ? q.get('rows').split(',').map(Number) : null;
+  var rows = [];
+  if (set === 'mole') {
+    var m = DM.buildMoleSprites();
+    rows = [m.down, m.up, m.left, m.right, m.die, m.joy.concat(m.idle.down, [DM.buildMoleIcon()])];
+  } else if (set === 'enemy') {
+    var e = DM.buildEnemySprites();
+    rows = [e.slime, e.bat, e.ghost, e.golem, e.golemFlash, e.death.slime.concat(e.death.bat), e.death.ghost.concat(e.death.golem)];
+  } else if (set === 'tiles' && DM.buildTileSprites) {
+    var th = q.get('theme') ? [parseInt(q.get('theme'), 10)] : [0, 1, 2, 3, 4];
+    var T = DM.buildTileSprites();
+    th.forEach(function (i) {
+      var t = T.themes[i];
+      rows.push(t.floor.concat([t.wall, t.pillar, t.rock]).concat(t.crumble));
+    });
+    rows.push([T.exit.closed].concat(T.exit.open, T.bomb, T.bombFlash));
+    ['c', 'h', 'v', 'l', 'r', 'u', 'd'].forEach(function (k) { rows.push(T.flame[k]); });
+    rows.push([].concat(T.item.fire, T.item.bomb, T.item.boots, T.item.life));
+  }
+  if (set === 'ui') {
+    DM.buildMoleSprites();
+    var U = DM.buildUiSprites();
+    ctx.drawImage(U.titleFar, -12, 0);
+    ctx.drawImage(U.titleMid, -12, 0);
+    ctx.drawImage(U.titleNear, 0, 0);
+    ctx.drawImage(U.logo, 20, 20);
+    ctx.drawImage(U.art.mole[0], 140, 150);
+    ctx.drawImage(U.art.bomb[1], 240, 150);
+    ctx.drawImage(U.hud, 500, 0);
+    ctx.drawImage(U.logo, 500, 100);
+    ctx.drawImage(U.vignette, 500, 240);
+    ctx.drawImage(U.light, 500, 600);
+    ctx.drawImage(U.glowWarm, 640, 600);
+  }
+  rows.forEach(function (r, i) { if (!pick || pick.indexOf(i) >= 0) row(r); });
+  document.title = 'built ' + Math.round(performance.now() - t0) + 'ms';
+</script>
+</body>
+</html>
