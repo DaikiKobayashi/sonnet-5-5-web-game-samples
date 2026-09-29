@@ -14,10 +14,13 @@ async function burst(page, { n, interval, crop }) {
   return page.evaluate(async ({ n, interval, crop }) => {
     const cropFn = crop ? new Function('s', 'return (' + crop + ')') : null;
     const c = document.querySelector('canvas');
+    const g2 = c.getContext('2d');
+    const hash = (x, y, w, h) => { const d = g2.getImageData(x, y, w, h).data; let hh = 2166136261; for (let i = 0; i < d.length; i++) { hh ^= d[i]; hh = Math.imul(hh, 16777619); } return hh >>> 0; };
     const out = [];
     for (let i = 0; i < n; i++) {
       const s = window.__GAME__.snapshot();
-      out.push({ url: c.toDataURL('image/png'), crop: cropFn ? cropFn(s) : null, state: s.state });
+      const cr = cropFn ? cropFn(s) : null;
+      out.push({ url: c.toDataURL('image/png'), crop: cr, h: cr ? hash(cr.x, cr.y, cr.w, cr.h) : null, state: s.state });
       await new Promise((r) => setTimeout(r, interval));
     }
     return out;
@@ -73,6 +76,7 @@ async function shots(env) {
   await step('title', async () => {
     const p = await env.open('debug=1&seed=1');
     const page = p.page;
+    await snap(page); // title
     const frames = await page.evaluate(async () => {
       const c = document.querySelector('canvas'); const g = c.getContext('2d');
       const hash = (x, y, w, h) => { const d = g.getImageData(x, y, w, h).data; let hh = 2166136261; for (let i = 0; i < d.length; i++) { hh ^= d[i]; hh = Math.imul(hh, 16777619); } return hh >>> 0; };
@@ -88,6 +92,7 @@ async function shots(env) {
     await L.press(page, 'Enter');
     await waitState(page, 'stageIntro', 3000);
     await sleep(900);
+    await snap(page); // stageIntro
     save(env, 'intro-1.png', await canvasPng(page));
     await env.done(p);
   });
@@ -158,7 +163,7 @@ async function shots(env) {
     await dbg(env, page, 'teleport', 7, 3);
     const fr = await burst(page, { n: 42, interval: 60, crop: '(s.bombs.length ? {x: s.bombs[0].col*32, y: 64+s.bombs[0].row*32, w:32, h:32} : {x:0,y:0,w:32,h:32})' });
     // 変化回数: 0〜1.6 秒 と 1.9〜2.5 秒
-    const early = fr.slice(0, 26).map((f) => f.url), late = fr.slice(31).map((f) => f.url);
+    const early = fr.slice(0, 26).map((f) => f.h), late = fr.slice(31).map((f) => f.h);
     const trans = (a) => { let n = 0; for (let i = 1; i < a.length; i++) if (a[i] !== a[i - 1]) n++; return n; };
     metrics.bombBlink = { earlyTransitionsPer1_6s: trans(early), lateTransitionsPer0_6s: trans(late), earlyRate: +(trans(early) / 1.56).toFixed(2), lateRate: +(trans(late) / 0.66).toFixed(2) };
     save(env, 'bomb-strip.png', await montage(env, [{ items: fr.slice(0, 21).map((f) => ({ url: f.url, crop: f.crop })) }, { items: fr.slice(21).map((f) => ({ url: f.url, crop: f.crop })) }], { scale: 3 }));
@@ -183,7 +188,7 @@ async function shots(env) {
     await dbg(env, page, 'teleport', 1, 1);
     await sleep(200);
     const idle = await burst(page, { n: 24, interval: 120, crop });
-    metrics.playerIdleDistinct = new Set(idle.map((f) => f.url)).size;
+    metrics.playerIdleDistinct = new Set(idle.map((f) => f.h)).size;
     rows.push({ items: idle.slice(0, 16).map((f) => ({ url: f.url, crop: f.crop })) });
     const walk = async (key, from, n = 16) => {
       await dbg(env, page, 'teleport', from[0], from[1]);
@@ -234,7 +239,7 @@ async function shots(env) {
       await dbg(env, page, 'spawnEnemy', type, 1, 1);
       await sleep(150);
       const b = await burst(page, { n: 24, interval: 70, crop: '{x:32-2,y:96-2,w:36,h:36}' });
-      idleDistinct[type] = new Set(b.map((f) => f.url)).size;
+      idleDistinct[type] = new Set(b.map((f) => f.h)).size;
       rows.push({ items: b.slice(0, 16).map((f) => ({ url: f.url, crop: f.crop })) });
       await sleep(1000);
       if (type === 'golem') {
@@ -277,6 +282,7 @@ async function shots(env) {
     await sleep(400);
     await L.press(page, 'KeyP');
     await sleep(250);
+    await snap(page); // paused
     save(env, 'paused.png', await canvasPng(page));
     await L.press(page, 'KeyP');
     await sleep(200);
@@ -291,6 +297,7 @@ async function shots(env) {
     await waitState(page, 'stageClear', 3000);
     await page.keyboard.up(key);
     await sleep(1200);
+    await snap(page); // stageClear
     save(env, 'stageclear.png', await canvasPng(page));
     // S13: スコアのカウントアップ(stageClear 中の SCORE 表示の値が複数あるか)
     await env.done(p);
@@ -300,6 +307,7 @@ async function shots(env) {
     await L.press(q.page, 'Space');
     await waitState(q.page, 'gameOver', 8000);
     await sleep(700);
+    await snap(q.page); // gameOver
     save(env, 'gameover.png', await canvasPng(q.page));
     await env.done(q);
     const r = await env.open('debug=1&seed=1&stage=5');
@@ -307,6 +315,7 @@ async function shots(env) {
     await waitState(r.page, 'playing', 5000);
     await D.playThrough(env, r.page, null, 5);
     await sleep(1200);
+    await snap(r.page); // gameClear
     save(env, 'gameclear.png', await canvasPng(r.page));
     await env.done(r);
   });

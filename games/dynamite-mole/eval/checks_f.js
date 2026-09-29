@@ -21,7 +21,9 @@ async function shouldA(env) {
     const ui = await page.evaluate(() => {
       const out = [];
       document.querySelectorAll('body *').forEach((el) => {
-        if (['CANVAS', 'SCRIPT', 'STYLE'].includes(el.tagName) || el.children.length > 0) return; // 末端要素だけ
+        // 末端要素、または <button> / role=button(中に非表示ラベルの span を持つ実装がある)
+        const isBtn = el.tagName === 'BUTTON' || el.getAttribute('role') === 'button';
+        if (['CANVAS', 'SCRIPT', 'STYLE'].includes(el.tagName) || (el.children.length > 0 && !isBtn)) return;
         const r = el.getBoundingClientRect();
         const cs = getComputedStyle(el);
         if (r.width < 8 || r.height < 8 || cs.visibility === 'hidden' || cs.display === 'none') return;
@@ -149,17 +151,17 @@ async function shouldA(env) {
     const page = p.page;
     await startPlaying(page);
     await dbg(env, page, 'godMode', true);
-    // TIME 表示帯(右上)の「明るい画素の平均色」が時間で変動するか(赤とピンク/白の点滅)
+    // HUD 全体(上 64px)の「赤い画素」の数が時間で変動するか(TIME の位置は実装ごとに違うので領域を決め打ちしない)
     const redVar = () => page.evaluate(async () => {
       const g = document.querySelector('canvas').getContext('2d');
-      const gs = [], rs = [];
+      const reds = [];
       for (let i = 0; i < 40; i++) {
-        const d = g.getImageData(330, 0, 150, 22).data; let n = 0, sg = 0, sr = 0;
-        for (let k = 0; k < d.length; k += 4) { const l = d[k] * 0.3 + d[k + 1] * 0.59 + d[k + 2] * 0.11; if (l > 90) { n++; sg += d[k + 1]; sr += d[k]; } }
-        gs.push(n ? sg / n : 0); rs.push(n ? sr / n : 0);
+        const d = g.getImageData(0, 0, 480, 64).data; let n = 0;
+        for (let k = 0; k < d.length; k += 4) if (d[k] > 170 && d[k + 1] < 120 && d[k + 2] < 120) n++;
+        reds.push(n);
         await new Promise((r) => setTimeout(r, 40));
       }
-      return { gMin: Math.min(...gs), gMax: Math.max(...gs), rMin: Math.min(...rs), rMax: Math.max(...rs) };
+      return { rMin: Math.min(...reds), rMax: Math.max(...reds) };
     });
     await dbg(env, page, 'setTimeLeft', 100);
     await sleep(200);
@@ -167,12 +169,12 @@ async function shouldA(env) {
     await dbg(env, page, 'setTimeLeft', 25);
     await sleep(200);
     const low = await redVar();
-    const flash = low.gMax - low.gMin >= 30 && normal.gMax - normal.gMin < 15;
+    const flash = low.rMax - low.rMin >= 30 && normal.rMax - normal.rMin < 12;
     await dbg(env, page, 'setTimeLeft', 9.5);
     await sleep(4200);
     const warnN = await page.evaluate(() => window.__sfx.filter((e) => e.name === 'warn').length);
     const warnOk = warnN >= 3 && warnN <= 6;
-    env.rec('S6', flash && warnOk, `TIME 30 秒以下で HUD 右上の明るい画素の平均 G 値が時間で変動(点滅): 100 秒時 ${normal.gMin.toFixed(0)}〜${normal.gMax.toFixed(0)}、25 秒時 ${low.gMin.toFixed(0)}〜${low.gMax.toFixed(0)}(R は ${low.rMin.toFixed(0)}〜${low.rMax.toFixed(0)})=${flash}、残り 10 秒以下の 4.2 秒間で warn が ${warnN} 回(1 秒ごとなら 3〜5 回)=${warnOk}`);
+    env.rec('S6', flash && warnOk, `TIME 30 秒以下で HUD 全体の赤い画素数が時間で変動(点滅): 100 秒時 ${normal.rMin}〜${normal.rMax} px、25 秒時 ${low.rMin}〜${low.rMax} px(変動 30px 以上かつ 100 秒時は 12px 未満で点滅と判定)=${flash}、残り 10 秒以下の 4.2 秒間で warn が ${warnN} 回(1 秒ごとなら 3〜5 回)=${warnOk}`);
     await env.done(p);
   }
 
