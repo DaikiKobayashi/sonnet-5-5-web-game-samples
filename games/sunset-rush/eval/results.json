@@ -1,0 +1,7200 @@
+{
+ "low": {
+  "objective": {
+   "launch": true,
+   "errorsWRoute": {
+    "console": 0,
+    "pageerror": 0,
+    "requestfailed": 0,
+    "external": 0,
+    "favicon": 0,
+    "warnings": 0
+   },
+   "errorsFavicon": 0,
+   "loadMs": 110.6,
+   "loadEventEndMs": 103.8,
+   "perf": {
+    "P1": {
+     "avgFps": 59.95,
+     "minFps": 59,
+     "windows": [
+      61,
+      60,
+      60,
+      59,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      59
+     ],
+     "maxIntervalMs": 41.2,
+     "p99IntervalMs": 18.9,
+     "cbAvgMs": 0.533,
+     "cbP95Ms": 1.4,
+     "cbMaxMs": 11.4,
+     "longtasks": 0,
+     "sceneAtEnd": "playing",
+     "crashes": 0
+    },
+    "P2": {
+     "avgFps": 60.1,
+     "minFps": 59,
+     "windows": [
+      60,
+      60,
+      61,
+      60,
+      59,
+      61,
+      60,
+      60,
+      60,
+      60
+     ],
+     "maxIntervalMs": 21.3,
+     "p99IntervalMs": 18.4,
+     "cbAvgMs": 0.56,
+     "cbP95Ms": 1.4,
+     "cbMaxMs": 3.5,
+     "longtasks": 0
+    },
+    "_ms": 35951
+   },
+   "mobile390": {
+    "title": [],
+    "play": []
+   },
+   "scale": {
+    "distFiles": 5,
+    "distBytes": 63427,
+    "srcLines": 1113,
+    "srcNonEmptyLines": 1068,
+    "outsideDistFiles": 1,
+    "perFile": {
+     "index.html": 21,
+     "js/assets.js": 352,
+     "js/audio.js": 116,
+     "js/gallery.js": 28,
+     "js/main.js": 596
+    }
+   },
+   "bRoute": {
+    "stages": {
+     "1": {
+      "clear": true,
+      "sec": 39.448,
+      "timeLeft": 26.55,
+      "crashes": 0,
+      "overtakes": 27,
+      "score": 9044
+     },
+     "2": {
+      "clear": true,
+      "sec": 53.815,
+      "timeLeft": 18.183,
+      "crashes": 1,
+      "overtakes": 62,
+      "score": 19329
+     },
+     "3": {
+      "clear": true,
+      "sec": 71.179,
+      "timeLeft": 4.817,
+      "crashes": 2,
+      "overtakes": 103,
+      "score": 30194
+     }
+    },
+    "final": {
+     "scene": "ending",
+     "score": 30194,
+     "rank": "A",
+     "crashes": 2,
+     "overtakes": 103
+    }
+   },
+   "b3": {
+    "final": {
+     "scene": "playing",
+     "score": 6197,
+     "rank": null,
+     "crashes": 1,
+     "overtakes": 33
+    }
+   },
+   "assets": {
+    "car_player": {
+     "frames": 3,
+     "size": "40x22",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "car_sedan": {
+     "frames": 1,
+     "size": "36x20",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "car_truck": {
+     "frames": 1,
+     "size": "44x34",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "car_sports": {
+     "frames": 1,
+     "size": "38x18",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_palm": {
+     "frames": 1,
+     "size": "40x72",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_rock": {
+     "frames": 1,
+     "size": "32x22",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_shrub": {
+     "frames": 1,
+     "size": "32x20",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_pine": {
+     "frames": 1,
+     "size": "40x88",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_boulder": {
+     "frames": 1,
+     "size": "40x28",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_fern": {
+     "frames": 1,
+     "size": "28x16",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_lamp": {
+     "frames": 1,
+     "size": "20x88",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_neon": {
+     "frames": 1,
+     "size": "56x52",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_building": {
+     "frames": 1,
+     "size": "64x128",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "gate_checkpoint": {
+     "frames": 1,
+     "size": "160x64",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "gate_goal": {
+     "frames": 1,
+     "size": "160x64",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "bg_sky_1": {
+     "frames": 1,
+     "size": "640x180",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "bg_sky_2": {
+     "frames": 1,
+     "size": "640x180",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "bg_sky_3": {
+     "frames": 1,
+     "size": "640x180",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "bg_far_1": {
+     "frames": 1,
+     "size": "640x96",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "bg_far_2": {
+     "frames": 1,
+     "size": "640x96",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "bg_far_3": {
+     "frames": 1,
+     "size": "640x96",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "logo_title": {
+     "frames": 1,
+     "size": "232x50",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "font_pixel": {
+     "frames": 52,
+     "size": "5x7",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "fx_smoke": {
+     "frames": 4,
+     "size": "12x12",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "bg_near_1": {
+     "frames": 1,
+     "size": "640x56",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "bg_near_2": {
+     "frames": 1,
+     "size": "640x56",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "bg_near_3": {
+     "frames": 1,
+     "size": "640x56",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_billboard": {
+     "frames": 1,
+     "size": "48x56",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_signpost": {
+     "frames": 1,
+     "size": "20x44",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_bollard": {
+     "frames": 1,
+     "size": "12x16",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_building_b": {
+     "frames": 1,
+     "size": "64x112",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "gate_start": {
+     "frames": 1,
+     "size": "160x64",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "car_player_brake": {
+     "frames": 3,
+     "size": "40x22",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "car_player_wheel": null,
+    "fx_dust": null,
+    "fx_spark": null
+   },
+   "sounds": {
+    "list": [
+     "bgm_1",
+     "bgm_2",
+     "bgm_3",
+     "sfx_engine",
+     "sfx_beep",
+     "sfx_go",
+     "sfx_checkpoint",
+     "sfx_crash",
+     "sfx_goal",
+     "sfx_timeup",
+     "sfx_menu",
+     "sfx_overtake",
+     "sfx_timewarn",
+     "mute"
+    ],
+    "snd": {
+     "bgm_1": {
+      "rms": 0.057282,
+      "peak": 0.175,
+      "sounded": true,
+      "errors": 0
+     },
+     "bgm_2": {
+      "rms": 0.061472,
+      "peak": 0.217,
+      "sounded": true,
+      "errors": 0
+     },
+     "bgm_3": {
+      "rms": 0.059191,
+      "peak": 0.227,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_engine": {
+      "rms": 0.054077,
+      "peak": 0.154,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_beep": {
+      "rms": 0.047649000000000004,
+      "peak": 0.113,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_go": {
+      "rms": 0.065843,
+      "peak": 0.116,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_checkpoint": {
+      "rms": 0.042828000000000005,
+      "peak": 0.102,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_crash": {
+      "rms": 0.062238,
+      "peak": 0.215,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_goal": {
+      "rms": 0.059919,
+      "peak": 0.169,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_timeup": {
+      "rms": 0.027444,
+      "peak": 0.085,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_menu": {
+      "rms": 0.027273,
+      "peak": 0.087,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_overtake": {
+      "rms": 0.018956,
+      "peak": 0.058,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_timewarn": {
+      "rms": 0.018137,
+      "peak": 0.073,
+      "sounded": true,
+      "errors": 0
+     }
+    },
+    "mute": {
+     "target": "bgm_1",
+     "rmsWhileMuted": 0,
+     "silent": true
+    },
+    "galleryErrors": {
+     "console": 0,
+     "pageerror": 0,
+     "requestfailed": 0,
+     "external": 0,
+     "favicon": 0,
+     "warnings": 0
+    }
+   }
+  },
+  "mustCount": {
+   "pass": 42,
+   "fail": 0,
+   "unmeasured": 0,
+   "pending": 0
+  },
+  "shouldCount": {
+   "pass": 11,
+   "fail": 7,
+   "unmeasured": 0,
+   "pending": 0
+  },
+  "must": {
+   "M01": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "sub": {
+      "console": 0,
+      "pageerror": 0,
+      "requestfailed": 0,
+      "external": 0,
+      "favicon": 0,
+      "warnings": 0
+     },
+     "root": {
+      "console": 0,
+      "pageerror": 0,
+      "requestfailed": 0,
+      "external": 0,
+      "favicon": 0,
+      "warnings": 0
+     },
+     "absRefs": []
+    }
+   },
+   "M02": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "ok": true,
+     "errors": {
+      "console": 0,
+      "pageerror": 0,
+      "requestfailed": 0,
+      "external": 0,
+      "favicon": 0,
+      "warnings": 0
+     }
+    }
+   },
+   "M03": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "390x844": {
+      "title": [],
+      "play": [],
+      "maxSizeOk": true
+     },
+     "1280x720": {
+      "title": [],
+      "play": [],
+      "maxSizeOk": true
+     },
+     "1920x1080": {
+      "title": [],
+      "play": [],
+      "maxSizeOk": true
+     },
+     "375x667": {
+      "title": [],
+      "play": [],
+      "maxSizeOk": true
+     }
+    }
+   },
+   "M04": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-m04-title-0.5s.png, compare/cmp-m04-press-enter-crop.png: ロゴ画像・PRESS ENTER の点滅・BEST・操作説明あり",
+    "data": {
+     "roadChanged_0_5vs1_5": 0.019,
+     "roadChanged_0_5vs0_75": 0.882
+    }
+   },
+   "M05": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "review-a-countdown.png(raw-m05-countdown-500/1500/2500): 3・2・1 と STAGE 1 / SEASIDE",
+    "data": {
+     "maxSpeed": 0,
+     "timeLeft": [
+      30,
+      30
+     ],
+     "space": true
+    }
+   },
+   "M06": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-m06-go-300.png に GO!、raw-m06-go-1200.png に GO! なし",
+    "data": {
+     "countdownSec": 3.009,
+     "timeLeftAt5s": 25
+    }
+   },
+   "M07": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "speedAt3s": 179.8,
+     "max": 300,
+     "seed": 7
+    }
+   },
+   "M08": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "decrease": 148.909,
+     "seed": 42
+    }
+   },
+   "M09": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "speedAt2s": 110.35,
+     "seed": 42
+    }
+   },
+   "M10": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "seq": [
+      0,
+      0.186,
+      -0.102,
+      0.002,
+      -0.126
+     ],
+     "zero": 0
+    }
+   },
+   "M11": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "xAt1s": -1.062
+    }
+   },
+   "M12": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-m12-offroad-1500.png: 自車が道路外(草/砂の面)",
+    "data": {
+     "speedAt3s": 74.693,
+     "x": [
+      1.05,
+      1.05
+     ],
+     "crashes": 0,
+     "ref0": 74.461
+    }
+   },
+   "M13": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "m13-s1-sheet.png, compare/cmp-m13-hills-horizon.png: 右/左カーブ、頂上手前で奥が隠れる、消失位置が地点ごとに変化",
+    "data": {}
+   },
+   "M14": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "run": {
+      "A": -9,
+      "B": -60,
+      "C": -60
+     },
+     "stop": {
+      "A": 0,
+      "B": 0,
+      "C": 0
+     }
+    }
+   },
+   "M15": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "compare/cmp-m15-zoom.png: 路肩 2 色交互・路面/草の明暗、隙間や別色の横線なし",
+    "data": {}
+   },
+   "M16": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "m16-b-s1-30s-sheet.png: sedan/truck/sports が車線上に出現、遠いほど小さい",
+    "data": {
+     "stageParam": [
+      36,
+      54,
+      72
+     ],
+     "wRoute": [
+      36,
+      54,
+      72
+     ]
+    }
+   },
+   "M17": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "events": [
+      50,
+      50,
+      50,
+      50
+     ],
+     "seed": 42,
+     "crashedCarOvertakes": 0
+    }
+   },
+   "M18": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "m18-crash-sheet.png: 自車の点滅と煙",
+    "data": {
+     "speedAfter": 60,
+     "crashesDelta": 1,
+     "invMs": 1200,
+     "invEndBy": "flag",
+     "duringInv": 0,
+     "afterInv": 1,
+     "pushX": -0.12,
+     "confirmInvuln": "ok"
+    }
+   },
+   "M19": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "m19-crash-sheet.png: 自車の点滅と煙",
+    "data": {
+     "speedAfter": 60,
+     "crashesDelta": 1,
+     "invMs": 1200,
+     "invEndBy": "flag",
+     "duringInv": 0,
+     "afterInv": 1,
+     "pushX": 1.68,
+     "confirmInvuln": "ok"
+    }
+   },
+   "M20": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "review-c-roadside.png(raw-m20-s*-*.png): 各ステージの solid 2 種と decor が両側に",
+    "data": {}
+   },
+   "M21": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "countdown": 0,
+     "paused": 0,
+     "stageclear": 0
+    }
+   },
+   "M22": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "review-e-cp.png: ゲートが道路をまたぐ、0.3/1.9 秒に CHECKPOINT! と +18 SEC、2.4 秒になし",
+    "data": {
+     "sec": 0.087,
+     "dTime": 17.983,
+     "dScore": 501,
+     "seed": 42
+    }
+   },
+   "M23": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-m23-timeup-500.png / raw-m23-gameover-500.png: TIME UP、GAME OVER / REACHED STAGE 1 / SCORE / BEST / ENTER: RETRY   ESC: TITLE",
+    "data": {
+     "toTimeup": 2.027,
+     "toGameover": 2.517
+    }
+   },
+   "M24": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-m24-clear-1200.png に GOAL!(パネルなし)、raw-m24-clear-1800.png と raw-w-s1-clear-1600.png にパネル 5 行、raw-m24-gate.png にゴールゲート",
+    "data": {
+     "dScore": 3601,
+     "expect": 3600,
+     "T0": 26.817,
+     "seed": 42
+    }
+   },
+   "M25": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "scene": "countdown",
+     "stage": 2,
+     "goalRemainingM": 3594.173,
+     "timeLeft": 32,
+     "trafficTotal": 54,
+     "score": 3644,
+     "scoreBefore": 3644,
+     "cp": 0
+    }
+   },
+   "M26": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-m26-s1/2/3-run2s.png: S1 橙〜桃、S2 紫〜藍、S3 黒〜濃紺+ネオン(数値条件も 3 つとも満たす)",
+    "data": {
+     "s3goal": 4194.172919227935,
+     "s3time": 32,
+     "color": {
+      "s1": {
+       "hue": 330.3,
+       "lum": 0.4274,
+       "neon": 0.07672
+      },
+      "s2": {
+       "hue": 257,
+       "lum": 0.2337,
+       "neon": 0.00014
+      },
+      "s3sky": {
+       "hue": 243.5,
+       "lum": 0.1934,
+       "neon": 0.05084
+      },
+      "s3neonFull": 0.05304,
+      "numeric": {
+       "s1": true,
+       "s2": true,
+       "s3": true
+      }
+     }
+    }
+   },
+   "M27": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-w-ending.png, compare/cmp-m27x-ending.png: ALL CLEAR!、スコア、ランク、BEST、PRESS ENTER",
+    "data": {
+     "score": 14633,
+     "rank": "C",
+     "expected": "C",
+     "bRank": "A",
+     "bScore": 30194
+    }
+   },
+   "M28": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-m28-paused-hud.png の SCORE 000570 = getState().score 570",
+    "data": {
+     "score": 570,
+     "dist": 470.139,
+     "ov": 2,
+     "diff": 0
+    }
+   },
+   "M29": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-m29-paused-KeyP.png / -Escape.png: PAUSED オーバーレイ",
+    "data": {
+     "KeyP": {
+      "paused": "paused",
+      "dTime": 0,
+      "dDist": 0,
+      "imgMad": 0,
+      "imgChanged": 0,
+      "resumed": "playing"
+     },
+     "Escape": {
+      "paused": "paused",
+      "dTime": 0,
+      "dDist": 0,
+      "imgMad": 0,
+      "imgChanged": 0,
+      "resumed": "playing"
+     },
+     "R": {
+      "scene": "countdown",
+      "stage": 1,
+      "score": 0
+     },
+     "Q": "title",
+     "_ms": 16118
+    }
+   },
+   "M30": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "playingBefore": 141,
+     "playing": {
+      "scene": "countdown",
+      "stage": 1,
+      "score": 0,
+      "overtakes": 0,
+      "crashes": 0
+     },
+     "pausedBefore": 94,
+     "paused": {
+      "scene": "countdown",
+      "stage": 1,
+      "score": 0,
+      "overtakes": 0,
+      "crashes": 0
+     },
+     "gameoverBefore": 103,
+     "gameoverR": {
+      "scene": "countdown",
+      "stage": 1,
+      "score": 0,
+      "overtakes": 0,
+      "crashes": 0
+     },
+     "gameoverEnter": {
+      "scene": "countdown",
+      "stage": 1,
+      "score": 0,
+      "overtakes": 0,
+      "crashes": 0
+     },
+     "gameoverEsc": "title",
+     "gameoverQ": "title",
+     "endingBefore": 14633,
+     "ending": {
+      "scene": "countdown",
+      "stage": 1,
+      "score": 0,
+      "overtakes": 0,
+      "crashes": 0
+     },
+     "stage2Before": 94,
+     "stage2": {
+      "scene": "countdown",
+      "stage": 2,
+      "score": 0,
+      "overtakes": 0,
+      "crashes": 0
+     },
+     "_ms": 72207
+    }
+   },
+   "M31": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-m31-sound-on.png / raw-m31-sound-off.png: [M] SOUND ON → OFF",
+    "data": {
+     "before": false,
+     "after": true,
+     "afterReload": true,
+     "ls": "{\"best\":0,\"muted\":true}",
+     "lsShape": true,
+     "mute1": true,
+     "mute1ls": null,
+     "_ms": 6567
+    }
+   },
+   "M32": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-m32-gameover-newbest.png(high は m32x-gameover-sheet.png。点滅のため): NEW BEST!、raw-m32-title-best.png の BEST",
+    "data": {
+     "score": 336,
+     "lsBest": 336,
+     "reload": 336,
+     "throwOk": true,
+     "throwErrors": {
+      "console": 0,
+      "pageerror": 0,
+      "requestfailed": 0,
+      "external": 0,
+      "favicon": 0,
+      "warnings": 0
+     }
+    }
+   },
+   "M33": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "raw-m33-hud.png: 全 HUD 要素あり。m33-timewarn-sheet.png: 残り 10 秒以下で赤く明滅",
+    "data": {}
+   },
+   "M34": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "checks": {
+      "stateNone": true,
+      "running": true,
+      "bgmCd": true,
+      "bgmPlay": true,
+      "bgmNull": true,
+      "hzCd": true,
+      "hz150": true,
+      "hz300": true,
+      "hzZero": true,
+      "mute": true
+     },
+     "hz": [
+      60,
+      129.65,
+      199.65,
+      0,
+      0
+     ],
+     "rms": [
+      0.06290888176101077,
+      0
+     ],
+     "peak": 0.2523975372314453,
+     "bgm": {
+      "cd": "bgm_1",
+      "pl": "bgm_1",
+      "sc": null,
+      "tu": null,
+      "ti": null
+     }
+    }
+   },
+   "M35": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "defaultPrevented": {
+      "ArrowUp": true,
+      "ArrowDown": true,
+      "ArrowLeft": true,
+      "ArrowRight": true,
+      "Space": true
+     },
+     "scrollY": 0,
+     "afterBlurScene": "playing",
+     "speedBefore": 42.75,
+     "speedAfter1s": 0,
+     "sceneDuring": "playing",
+     "repeatScene": "title",
+     "controlScene": "countdown",
+     "_ms": 7148
+    }
+   },
+   "M36": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "s1": {
+      "a": "f12639ce",
+      "b": "f12639ce",
+      "same": true,
+      "traffic": 36,
+      "rHash": "f12639ce"
+     },
+     "s2": {
+      "a": "156ec8bc",
+      "b": "156ec8bc",
+      "same": true,
+      "traffic": 54,
+      "rHash": null
+     },
+     "s3": {
+      "a": "539c2945",
+      "b": "539c2945",
+      "same": true,
+      "traffic": 72,
+      "rHash": null
+     },
+     "seed43": "ef17f1b7",
+     "seed43Differs": true,
+     "rSame": true,
+     "_ms": 7366
+    }
+   },
+   "M37": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "fps30": {
+      "fps": [
+       29.999,
+       30.038
+      ],
+      "timeLeftAt5s": 25.05,
+      "speedAt3s": 180.073
+     },
+     "fps144": {
+      "fps": [
+       143.419,
+       142.948
+      ],
+      "timeLeftAt5s": 24.998,
+      "speedAt3s": 179.167
+     }
+    }
+   },
+   "M38": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "compare/cmp-m38-font.png: A〜Z・0〜9 判読可",
+    "data": {
+     "missingAssets": [],
+     "missingSounds": [],
+     "silentSounds": []
+    }
+   },
+   "M39": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "compare/cmp-m39-player-frames.png(左/直進/右)、m16 シート(3 車種)、review-c(空・遠景・路側物)、review-e(ゲート)、m18 シート(煙)、タイトル(ロゴ)、全画面(文字)",
+    "data": {}
+   },
+   "M40": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "staticHits": [],
+     "runtime": {
+      "fill": 0,
+      "stroke": 0
+     }
+    }
+   },
+   "M41": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "ok": true,
+     "timerAfterR": {
+      "dt": 2000,
+      "dTime": 1.9999999999998863
+     },
+     "afterR": {
+      "stage": 1,
+      "score": 0,
+      "timeLeft": 30
+     }
+    }
+   },
+   "M42": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "m42-b-s1-60s-sheet.png, m42-b-s3-60s-sheet.png: 同一レーンの重なりなし",
+    "data": {}
+   }
+  },
+  "should": {
+   "S-01": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "raw-m13-s1-flat.png ほか: 遠くの道路・スプライトが地平線色に溶ける",
+    "data": {}
+   },
+   "S-02": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "near": true,
+     "shift": {
+      "A": -9,
+      "B": -60,
+      "C": -60
+     },
+     "rowBands": {
+      "100-120": -9,
+      "120-140": -30,
+      "140-160": -60,
+      "160-170": -60,
+      "170-178": -60
+     }
+    }
+   },
+   "S-03": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "s03-brake-compare.png: ブレーキ中だけランプ点灯",
+    "data": {
+     "galleryBrake": true
+    }
+   },
+   "S-04": {
+    "pass": false,
+    "auto": null,
+    "visual": false,
+    "note": "car_player_wheel なし(ギャラリーにも画面にもタイヤ/排気のアニメなし。s04-wheel-sheet.png)",
+    "data": {
+     "galleryWheel": false
+    }
+   },
+   "S-05": {
+    "pass": false,
+    "auto": null,
+    "visual": false,
+    "note": "m18-crash-sheet.png に火花・スピン/傾きなし。コードに 0.3 秒のシェイク処理はあるが、S05X の空の帯の横ずれ推定では衝突後 0.3 秒のずれが 0 フレーム(シェイクを検出できず)",
+    "data": {
+     "galleryspark": false,
+     "shakeFramesWithin300ms": 0,
+     "shakeFramesAfter350ms": 0
+    }
+   },
+   "S-06": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "compare/cmp-s06-280kmh-zoom.png / raw-s06-280kmh.png: 250 km/h 以上で速度線(low は 1px の短い線 12 本のみで弱い)",
+    "data": {}
+   },
+   "S-07": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "events": [
+      50,
+      70,
+      50,
+      50
+     ]
+    }
+   },
+   "S-08": {
+    "pass": false,
+    "auto": false,
+    "data": {
+     "buttons": [
+      "bgm_2",
+      "bgm_3",
+      "sfx_overtake",
+      "sfx_timewarn"
+     ],
+     "wRouteBgm": [
+      "bgm_1",
+      "bgm_2",
+      "bgm_3"
+     ],
+     "spect": {
+      "s1": {
+       "bgm": "bgm_1"
+      },
+      "s2": {
+       "bgm": "bgm_2"
+      },
+      "s3": {
+       "bgm": "bgm_3"
+      },
+      "_ms": 37030
+     }
+    }
+   },
+   "S-09": {
+    "pass": false,
+    "auto": false,
+    "data": {
+     "coarse": true,
+     "tapStart": true,
+     "gasButton": null,
+     "_ms": 4193
+    }
+   },
+   "S-10": {
+    "pass": false,
+    "auto": false,
+    "data": {
+     "sfx_offroad": false,
+     "fx_dust": false
+    }
+   },
+   "S-11": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "sfx_timewarn ボタンあり。残り 10 秒以下で整数秒が変わるたびに sfx_timewarn を鳴らすコードを確認。出力タップの RMS は BGM に埋もれて 1 秒周期を分離できず",
+    "data": {
+     "button": true
+    }
+   },
+   "S-12": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "review-c-roadside.png の S3: ヘッドライトの照射 / 街灯・ネオンの発光",
+    "data": {}
+   },
+   "S-13": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "raw-s13-overtake-100.png: 自車付近に +50",
+    "data": {}
+   },
+   "S-14": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "o7-gallery-cars.png に各車種 3 色、m16 シートで混在",
+    "data": {
+     "variants": [
+      "car_sedan:1",
+      "car_sedan_alt1:1",
+      "car_sedan_alt2:1",
+      "car_sports:1",
+      "car_sports_alt1:1",
+      "car_sports_alt2:1",
+      "car_truck:1",
+      "car_truck_alt1:1",
+      "car_truck_alt2:1"
+     ]
+    }
+   },
+   "S-15": {
+    "pass": false,
+    "auto": false,
+    "data": {
+     "blur": "playing",
+     "visibility": "playing"
+    }
+   },
+   "S-16": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "F で document.fullscreenElement が非 null、右下に FPS 表示",
+    "data": {
+     "fullscreen": true
+    }
+   },
+   "S-17": {
+    "pass": false,
+    "auto": true,
+    "visual": false,
+    "note": "gate_start はあるが、カウントダウンの信号ライト表示がない(review-a-countdown.png)",
+    "data": {
+     "gate_start": true
+    }
+   },
+   "S-18": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "S18X: タイトルロゴが縦に 3〜5 px 動く(浮遊)",
+    "data": {
+     "logoDy": [
+      0,
+      -1,
+      -2,
+      -3
+     ]
+    }
+   }
+  },
+  "subjective": {
+   "画づくり": {
+    "score": 3,
+    "basis": "全アセット判別でき S1/S2/S3 の色調ははっきり違う(review-c-roadside.png)。ただし自車・交通車が矩形主体で陰影が平板、S1 のヤシが十字形のシルエットで粗い(m13-s1-sheet.png)"
+   },
+   "アニメ・演出": {
+    "score": 4,
+    "basis": "Must の演出は揃い、フォグ・近景・ブレーキランプ・速度線(弱い)・ロゴの浮遊あり。タイヤアニメ・火花なし、シェイクは検出できず(S05X)、フェード・カウントアップなし"
+   },
+   "手触り": {
+    "score": 4,
+    "basis": "M07〜M12 の実測値はすべて仕様どおり、FPS 平均 59.95 / 最小 59。ボットで全ステージクリア(S1 残り 26.6 秒と余裕が大きい)。スレスレ得点あり、シェイクは検出できず"
+   },
+   "音": {
+    "score": 4,
+    "basis": "Must 9 音+bgm_2/3・overtake・timewarn(ギャラリーで全ボタン発音・エラー 0)。engineHz は仕様どおり、エンジンはのこぎり波+矩形波+LPF(速度で開く)。BGM は 128/138/150 BPM、8 小節、ベース+リード+ドラム。sfx_offroad と jingle_title なし。ピーク最大 0.25(音割れなし)"
+   },
+   "UI": {
+    "score": 3,
+    "basis": "HUD と各画面の文言は揃い読める(review-f-hud.png)。KM/H とタイトルの操作説明が拡大 1 で小さい。タッチ UI なし"
+   }
+  }
+ },
+ "medium": {
+  "objective": {
+   "launch": true,
+   "errorsWRoute": {
+    "console": 0,
+    "pageerror": 0,
+    "requestfailed": 0,
+    "external": 0,
+    "favicon": 0,
+    "warnings": 0
+   },
+   "errorsFavicon": 0,
+   "loadMs": 385.5,
+   "loadEventEndMs": 361.6,
+   "perf": {
+    "P1": {
+     "avgFps": 60.05,
+     "minFps": 60,
+     "windows": [
+      61,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60
+     ],
+     "maxIntervalMs": 23.6,
+     "p99IntervalMs": 18.6,
+     "cbAvgMs": 0.662,
+     "cbP95Ms": 1,
+     "cbMaxMs": 4.4,
+     "longtasks": 0,
+     "sceneAtEnd": "playing",
+     "crashes": 0
+    },
+    "P2": {
+     "avgFps": 60,
+     "minFps": 59,
+     "windows": [
+      61,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      59
+     ],
+     "maxIntervalMs": 22.8,
+     "p99IntervalMs": 18.9,
+     "cbAvgMs": 0.804,
+     "cbP95Ms": 1.2,
+     "cbMaxMs": 7.6,
+     "longtasks": 0
+    },
+    "_ms": 36364
+   },
+   "mobile390": {
+    "title": [],
+    "play": []
+   },
+   "scale": {
+    "distFiles": 7,
+    "distBytes": 91016,
+    "srcLines": 2073,
+    "srcNonEmptyLines": 1979,
+    "outsideDistFiles": 1,
+    "perFile": {
+     "index.html": 29,
+     "js/art.js": 677,
+     "js/audio.js": 240,
+     "js/course.js": 165,
+     "js/font.js": 115,
+     "js/gallery.js": 57,
+     "js/main.js": 790
+    }
+   },
+   "bRoute": {
+    "stages": {
+     "1": {
+      "clear": true,
+      "sec": 39.449,
+      "timeLeft": 26.55,
+      "crashes": 0,
+      "overtakes": 26,
+      "score": 8994
+     },
+     "2": {
+      "clear": true,
+      "sec": 55.431,
+      "timeLeft": 16.567,
+      "crashes": 1,
+      "overtakes": 62,
+      "score": 19109
+     },
+     "3": {
+      "clear": true,
+      "sec": 72.631,
+      "timeLeft": 3.367,
+      "crashes": 4,
+      "overtakes": 99,
+      "score": 29574
+     }
+    },
+    "final": {
+     "scene": "ending",
+     "score": 29574,
+     "rank": "A",
+     "crashes": 4,
+     "overtakes": 99
+    }
+   },
+   "b3": {
+    "final": {
+     "scene": "playing",
+     "score": 5896,
+     "rank": null,
+     "crashes": 3,
+     "overtakes": 30
+    }
+   },
+   "assets": {
+    "car_player": {
+     "frames": 3,
+     "size": "40x22",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "car_sedan": {
+     "frames": 1,
+     "size": "36x20",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "car_truck": {
+     "frames": 1,
+     "size": "44x34",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "car_sports": {
+     "frames": 1,
+     "size": "38x18",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_palm": {
+     "frames": 1,
+     "size": "40x72",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_rock": {
+     "frames": 1,
+     "size": "32x22",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_shrub": {
+     "frames": 1,
+     "size": "32x20",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_pine": {
+     "frames": 1,
+     "size": "40x88",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_boulder": {
+     "frames": 1,
+     "size": "40x28",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_fern": {
+     "frames": 1,
+     "size": "28x16",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_lamp": {
+     "frames": 1,
+     "size": "20x88",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_neon": {
+     "frames": 1,
+     "size": "56x52",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_building": {
+     "frames": 1,
+     "size": "64x128",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "gate_checkpoint": {
+     "frames": 1,
+     "size": "160x64",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "gate_goal": {
+     "frames": 1,
+     "size": "160x64",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "bg_sky_1": {
+     "frames": 1,
+     "size": "640x180",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "bg_sky_2": {
+     "frames": 1,
+     "size": "640x180",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "bg_sky_3": {
+     "frames": 1,
+     "size": "640x180",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "bg_far_1": {
+     "frames": 1,
+     "size": "640x96",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "bg_far_2": {
+     "frames": 1,
+     "size": "640x96",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "bg_far_3": {
+     "frames": 1,
+     "size": "640x96",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "logo_title": {
+     "frames": 1,
+     "size": "232x76",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "font_pixel": {
+     "frames": 52,
+     "size": "5x7",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "fx_smoke": {
+     "frames": 4,
+     "size": "12x12",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "bg_near_1": {
+     "frames": 1,
+     "size": "640x56",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "bg_near_2": {
+     "frames": 1,
+     "size": "640x56",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "bg_near_3": {
+     "frames": 1,
+     "size": "640x56",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_billboard": {
+     "frames": 1,
+     "size": "48x56",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_signpost": {
+     "frames": 1,
+     "size": "20x44",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_bollard": {
+     "frames": 1,
+     "size": "12x16",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_building_b": {
+     "frames": 1,
+     "size": "64x112",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "gate_start": {
+     "frames": 1,
+     "size": "160x64",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "car_player_brake": {
+     "frames": 3,
+     "size": "40x22",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "car_player_wheel": null,
+    "fx_dust": {
+     "frames": 3,
+     "size": "8x8",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "fx_spark": {
+     "frames": 3,
+     "size": "6x6",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    }
+   },
+   "sounds": {
+    "list": [
+     "bgm_1",
+     "bgm_2",
+     "bgm_3",
+     "sfx_engine",
+     "sfx_beep",
+     "sfx_go",
+     "sfx_checkpoint",
+     "sfx_crash",
+     "sfx_goal",
+     "sfx_timeup",
+     "sfx_menu",
+     "sfx_overtake",
+     "sfx_offroad",
+     "sfx_timewarn",
+     "jingle_title",
+     "mute"
+    ],
+    "snd": {
+     "bgm_1": {
+      "rms": 0.045420999999999996,
+      "peak": 0.148,
+      "sounded": true,
+      "errors": 0
+     },
+     "bgm_2": {
+      "rms": 0.041415999999999994,
+      "peak": 0.147,
+      "sounded": true,
+      "errors": 0
+     },
+     "bgm_3": {
+      "rms": 0.041748,
+      "peak": 0.226,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_engine": {
+      "rms": 0.011388,
+      "peak": 0.022,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_beep": {
+      "rms": 0.044255,
+      "peak": 0.113,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_go": {
+      "rms": 0.06733199999999999,
+      "peak": 0.165,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_checkpoint": {
+      "rms": 0.034826,
+      "peak": 0.088,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_crash": {
+      "rms": 0.063432,
+      "peak": 0.258,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_goal": {
+      "rms": 0.036264000000000005,
+      "peak": 0.083,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_timeup": {
+      "rms": 0.062568,
+      "peak": 0.255,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_menu": {
+      "rms": 0.027517,
+      "peak": 0.087,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_overtake": {
+      "rms": 0.013640000000000001,
+      "peak": 0.076,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_offroad": {
+      "rms": 0.018222000000000002,
+      "peak": 0.057,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_timewarn": {
+      "rms": 0.016368999999999998,
+      "peak": 0.072,
+      "sounded": true,
+      "errors": 0
+     },
+     "jingle_title": {
+      "rms": 0.029206,
+      "peak": 0.074,
+      "sounded": true,
+      "errors": 0
+     }
+    },
+    "mute": {
+     "target": "bgm_1",
+     "rmsWhileMuted": 0,
+     "silent": true
+    },
+    "galleryErrors": {
+     "console": 0,
+     "pageerror": 0,
+     "requestfailed": 0,
+     "external": 0,
+     "favicon": 0,
+     "warnings": 0
+    }
+   }
+  },
+  "mustCount": {
+   "pass": 42,
+   "fail": 0,
+   "unmeasured": 0,
+   "pending": 0
+  },
+  "shouldCount": {
+   "pass": 17,
+   "fail": 1,
+   "unmeasured": 0,
+   "pending": 0
+  },
+  "must": {
+   "M01": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "sub": {
+      "console": 0,
+      "pageerror": 0,
+      "requestfailed": 0,
+      "external": 0,
+      "favicon": 0,
+      "warnings": 0
+     },
+     "root": {
+      "console": 0,
+      "pageerror": 0,
+      "requestfailed": 0,
+      "external": 0,
+      "favicon": 0,
+      "warnings": 0
+     },
+     "absRefs": []
+    }
+   },
+   "M02": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "ok": true,
+     "errors": {
+      "console": 0,
+      "pageerror": 0,
+      "requestfailed": 0,
+      "external": 0,
+      "favicon": 0,
+      "warnings": 0
+     }
+    }
+   },
+   "M03": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "390x844": {
+      "title": [],
+      "play": [],
+      "maxSizeOk": true
+     },
+     "1280x720": {
+      "title": [],
+      "play": [],
+      "maxSizeOk": true
+     },
+     "1920x1080": {
+      "title": [],
+      "play": [],
+      "maxSizeOk": true
+     },
+     "375x667": {
+      "title": [],
+      "play": [],
+      "maxSizeOk": true
+     }
+    }
+   },
+   "M04": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-m04-title-0.5s.png, compare/cmp-m04-press-enter-crop.png: ロゴ画像・PRESS ENTER の点滅・BEST・操作説明あり",
+    "data": {
+     "roadChanged_0_5vs1_5": 0.125,
+     "roadChanged_0_5vs0_75": 0.89
+    }
+   },
+   "M05": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "review-a-countdown.png(raw-m05-countdown-500/1500/2500): 3・2・1 と STAGE 1 / SEASIDE",
+    "data": {
+     "maxSpeed": 0,
+     "timeLeft": [
+      30,
+      30
+     ],
+     "space": true
+    }
+   },
+   "M06": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-m06-go-300.png に GO!、raw-m06-go-1200.png に GO! なし",
+    "data": {
+     "countdownSec": 2.996,
+     "timeLeftAt5s": 24.999
+    }
+   },
+   "M07": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "speedAt3s": 179.982,
+     "max": 300,
+     "seed": 7
+    }
+   },
+   "M08": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "decrease": 148.476,
+     "seed": 42
+    }
+   },
+   "M09": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "speedAt2s": 110.477,
+     "seed": 42
+    }
+   },
+   "M10": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "seq": [
+      0,
+      0.186,
+      -0.102,
+      0.006,
+      -0.116
+     ],
+     "zero": 0
+    }
+   },
+   "M11": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "xAt1s": -1.057
+    }
+   },
+   "M12": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-m12-offroad-1500.png: 自車が道路外(草/砂の面)",
+    "data": {
+     "speedAt3s": 74.518,
+     "x": [
+      1.05,
+      1.05
+     ],
+     "crashes": 0,
+     "ref0": 74.431
+    }
+   },
+   "M13": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "m13-s1-sheet.png, compare/cmp-m13-hills-horizon.png: 右/左カーブ、頂上手前で奥が隠れる、消失位置が地点ごとに変化",
+    "data": {}
+   },
+   "M14": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "run": {
+      "A": -9,
+      "B": -31,
+      "C": -62
+     },
+     "stop": {
+      "A": 0,
+      "B": 0,
+      "C": 0
+     }
+    }
+   },
+   "M15": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "compare/cmp-m15-zoom.png: 路肩 2 色交互・路面/草の明暗、隙間や別色の横線なし",
+    "data": {}
+   },
+   "M16": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "m16-b-s1-30s-sheet.png: sedan/truck/sports が車線上に出現、遠いほど小さい",
+    "data": {
+     "stageParam": [
+      36,
+      54,
+      72
+     ],
+     "wRoute": [
+      36,
+      54,
+      72
+     ]
+    }
+   },
+   "M17": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "events": [
+      50,
+      50,
+      50,
+      50
+     ],
+     "seed": 42,
+     "crashedCarOvertakes": 0
+    }
+   },
+   "M18": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "m18-crash-sheet.png: 自車の点滅と煙",
+    "data": {
+     "speedAfter": 60,
+     "crashesDelta": 1,
+     "invMs": 1201,
+     "invEndBy": "flag",
+     "duringInv": 0,
+     "afterInv": 1,
+     "pushX": 0.12,
+     "confirmInvuln": "ok"
+    }
+   },
+   "M19": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "m19-crash-sheet.png: 自車の点滅と煙",
+    "data": {
+     "speedAfter": 60,
+     "crashesDelta": 1,
+     "invMs": 1200,
+     "invEndBy": "flag",
+     "duringInv": 0,
+     "afterInv": 1,
+     "pushX": 1.92,
+     "confirmInvuln": "ok"
+    }
+   },
+   "M20": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "review-c-roadside.png(raw-m20-s*-*.png): 各ステージの solid 2 種と decor が両側に",
+    "data": {}
+   },
+   "M21": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "countdown": 0,
+     "paused": 0,
+     "stageclear": 0
+    }
+   },
+   "M22": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "review-e-cp.png: ゲートが道路をまたぐ、0.3/1.9 秒に CHECKPOINT! と +18 SEC、2.4 秒になし",
+    "data": {
+     "sec": 0.09,
+     "dTime": 17.983,
+     "dScore": 501,
+     "seed": 42
+    }
+   },
+   "M23": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-m23-timeup-500.png / raw-m23-gameover-500.png: TIME UP、GAME OVER / REACHED STAGE 1 / SCORE / BEST / ENTER: RETRY   ESC: TITLE",
+    "data": {
+     "toTimeup": 2.029,
+     "toGameover": 2.517
+    }
+   },
+   "M24": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-m24-clear-1200.png に GOAL!(パネルなし)、raw-m24-clear-1800.png と raw-w-s1-clear-1600.png にパネル 5 行、raw-m24-gate.png にゴールゲート",
+    "data": {
+     "dScore": 3601,
+     "expect": 3600,
+     "T0": 26.833,
+     "seed": 42
+    }
+   },
+   "M25": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "scene": "countdown",
+     "stage": 2,
+     "goalRemainingM": 3594.173,
+     "timeLeft": 32,
+     "trafficTotal": 54,
+     "score": 3644,
+     "scoreBefore": 3644,
+     "cp": 0
+    }
+   },
+   "M26": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-m26-s1/2/3-run2s.png: S1 橙〜桃、S2 紫〜藍、S3 黒〜濃紺+ネオン。数値条件は S1 の空の色相が 302〜308°(紫寄り)で 320〜360°/0〜50° を外れたが、上空の紫帯の影響で、目視では夕焼けの橙〜桃が支配的なため目視を優先(EVAL §2 M26)",
+    "data": {
+     "s3goal": 4194.172919227935,
+     "s3time": 32,
+     "color": {
+      "s1": {
+       "hue": 305.6,
+       "lum": 0.3803,
+       "neon": 0.07888
+      },
+      "s2": {
+       "hue": 246.6,
+       "lum": 0.206,
+       "neon": 0
+      },
+      "s3sky": {
+       "hue": 233.2,
+       "lum": 0.1509,
+       "neon": 0.02401
+      },
+      "s3neonFull": 0.03334,
+      "numeric": {
+       "s1": false,
+       "s2": true,
+       "s3": true
+      }
+     }
+    }
+   },
+   "M27": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-w-ending.png, compare/cmp-m27x-ending.png: ALL CLEAR!、スコア、ランク、BEST、PRESS ENTER",
+    "data": {
+     "score": 14633,
+     "rank": "C",
+     "expected": "C",
+     "bRank": "A",
+     "bScore": 29574
+    }
+   },
+   "M28": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-m28-paused-hud.png の SCORE 000570 = getState().score 570",
+    "data": {
+     "score": 570,
+     "dist": 470.139,
+     "ov": 2,
+     "diff": 0
+    }
+   },
+   "M29": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-m29-paused-KeyP.png / -Escape.png: PAUSED オーバーレイ",
+    "data": {
+     "KeyP": {
+      "paused": "paused",
+      "dTime": 0,
+      "dDist": 0,
+      "imgMad": 0.433,
+      "imgChanged": 0.014,
+      "resumed": "playing"
+     },
+     "Escape": {
+      "paused": "paused",
+      "dTime": 0,
+      "dDist": 0,
+      "imgMad": 0.417,
+      "imgChanged": 0.014,
+      "resumed": "playing"
+     },
+     "R": {
+      "scene": "countdown",
+      "stage": 1,
+      "score": 0
+     },
+     "Q": "title",
+     "_ms": 16257
+    }
+   },
+   "M30": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "playingBefore": 140,
+     "playing": {
+      "scene": "countdown",
+      "stage": 1,
+      "score": 0,
+      "overtakes": 0,
+      "crashes": 0
+     },
+     "pausedBefore": 94,
+     "paused": {
+      "scene": "countdown",
+      "stage": 1,
+      "score": 0,
+      "overtakes": 0,
+      "crashes": 0
+     },
+     "gameoverBefore": 103,
+     "gameoverR": {
+      "scene": "countdown",
+      "stage": 1,
+      "score": 0,
+      "overtakes": 0,
+      "crashes": 0
+     },
+     "gameoverEnter": {
+      "scene": "countdown",
+      "stage": 1,
+      "score": 0,
+      "overtakes": 0,
+      "crashes": 0
+     },
+     "gameoverEsc": "title",
+     "gameoverQ": "title",
+     "endingBefore": 14633,
+     "ending": {
+      "scene": "countdown",
+      "stage": 1,
+      "score": 0,
+      "overtakes": 0,
+      "crashes": 0
+     },
+     "stage2Before": 94,
+     "stage2": {
+      "scene": "countdown",
+      "stage": 2,
+      "score": 0,
+      "overtakes": 0,
+      "crashes": 0
+     },
+     "_ms": 72735
+    }
+   },
+   "M31": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-m31-sound-on.png / raw-m31-sound-off.png: [M] SOUND ON → OFF",
+    "data": {
+     "before": false,
+     "after": true,
+     "afterReload": true,
+     "ls": "{\"best\":0,\"muted\":true}",
+     "lsShape": true,
+     "mute1": true,
+     "mute1ls": null,
+     "_ms": 6518
+    }
+   },
+   "M32": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-m32-gameover-newbest.png(high は m32x-gameover-sheet.png。点滅のため): NEW BEST!、raw-m32-title-best.png の BEST",
+    "data": {
+     "score": 336,
+     "lsBest": 336,
+     "reload": 336,
+     "throwOk": true,
+     "throwErrors": {
+      "console": 0,
+      "pageerror": 0,
+      "requestfailed": 0,
+      "external": 0,
+      "favicon": 0,
+      "warnings": 0
+     }
+    }
+   },
+   "M33": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "raw-m33-hud.png: 全 HUD 要素あり。m33-timewarn-sheet.png: 残り 10 秒以下で赤く明滅(medium は赤と白の交互で明滅)",
+    "data": {}
+   },
+   "M34": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "checks": {
+      "stateNone": true,
+      "running": true,
+      "bgmCd": true,
+      "bgmPlay": true,
+      "bgmNull": true,
+      "hzCd": true,
+      "hz150": true,
+      "hz300": true,
+      "hzZero": true,
+      "mute": true
+     },
+     "hz": [
+      60,
+      129.65,
+      199.65,
+      0,
+      0
+     ],
+     "rms": [
+      0.045279441565685745,
+      0
+     ],
+     "peak": 0.2039363980293274,
+     "bgm": {
+      "cd": "bgm_1",
+      "pl": "bgm_1",
+      "sc": null,
+      "tu": null,
+      "ti": null
+     }
+    }
+   },
+   "M35": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "defaultPrevented": {
+      "ArrowUp": true,
+      "ArrowDown": true,
+      "ArrowLeft": true,
+      "ArrowRight": true,
+      "Space": true
+     },
+     "scrollY": 0,
+     "afterBlurScene": "paused",
+     "speedBefore": 42.75,
+     "speedAfter1s": 0,
+     "sceneDuring": "playing",
+     "repeatScene": "title",
+     "controlScene": "countdown",
+     "_ms": 7711
+    }
+   },
+   "M36": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "s1": {
+      "a": "e5b98627",
+      "b": "e5b98627",
+      "same": true,
+      "traffic": 36,
+      "rHash": "e5b98627"
+     },
+     "s2": {
+      "a": "ed022e02",
+      "b": "ed022e02",
+      "same": true,
+      "traffic": 54,
+      "rHash": null
+     },
+     "s3": {
+      "a": "e7b7aac0",
+      "b": "e7b7aac0",
+      "same": true,
+      "traffic": 72,
+      "rHash": null
+     },
+     "seed43": "89560ed0",
+     "seed43Differs": true,
+     "rSame": true,
+     "_ms": 8657
+    }
+   },
+   "M37": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "fps30": {
+      "fps": [
+       29.998,
+       30
+      ],
+      "timeLeftAt5s": 24.967,
+      "speedAt3s": 181
+     },
+     "fps144": {
+      "fps": [
+       143.353,
+       143.408
+      ],
+      "timeLeftAt5s": 25,
+      "speedAt3s": 179.37
+     }
+    }
+   },
+   "M38": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "compare/cmp-m38-font.png: A〜Z・0〜9 判読可",
+    "data": {
+     "missingAssets": [],
+     "missingSounds": [],
+     "silentSounds": []
+    }
+   },
+   "M39": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "compare/cmp-m39-player-frames.png(左/直進/右)、m16 シート(3 車種)、review-c(空・遠景・路側物)、review-e(ゲート)、m18 シート(煙)、タイトル(ロゴ)、全画面(文字)",
+    "data": {}
+   },
+   "M40": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "staticHits": [],
+     "runtime": {
+      "fill": 0,
+      "stroke": 0
+     }
+    }
+   },
+   "M41": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "ok": true,
+     "timerAfterR": {
+      "dt": 2012,
+      "dTime": 2.016666666666552
+     },
+     "afterR": {
+      "stage": 1,
+      "score": 0,
+      "timeLeft": 30
+     }
+    }
+   },
+   "M42": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "m42-b-s1-60s-sheet.png, m42-b-s3-60s-sheet.png: 同一レーンの重なりなし",
+    "data": {}
+   }
+  },
+  "should": {
+   "S-01": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "raw-m13-s1-flat.png ほか: 遠くの道路・スプライトが地平線色に溶ける",
+    "data": {}
+   },
+   "S-02": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "near": true,
+     "shift": {
+      "A": -9,
+      "B": -31,
+      "C": -62
+     },
+     "rowBands": {
+      "100-120": -9,
+      "120-140": -31,
+      "140-160": -31,
+      "160-170": -62,
+      "170-178": -62
+     }
+    }
+   },
+   "S-03": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "s03-brake-compare.png: ブレーキ中だけランプ点灯",
+    "data": {
+     "galleryBrake": true
+    }
+   },
+   "S-04": {
+    "pass": false,
+    "auto": null,
+    "visual": false,
+    "note": "car_player_wheel なし(README でも未実装と記載。s04-wheel-sheet.png)",
+    "data": {
+     "galleryWheel": false
+    }
+   },
+   "S-05": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "m18-crash-sheet.png に火花。S05X で衝突後 0.3 秒に 8 フレームの横ずれ(シェイク)",
+    "data": {
+     "galleryspark": true,
+     "shakeFramesWithin300ms": 8,
+     "shakeFramesAfter350ms": 0
+    }
+   },
+   "S-06": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "compare/cmp-s06-280kmh-zoom.png / raw-s06-280kmh.png: 250 km/h 以上で速度線",
+    "data": {}
+   },
+   "S-07": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "events": [
+      50,
+      70,
+      50,
+      70
+     ]
+    }
+   },
+   "S-08": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "buttons": [
+      "bgm_2",
+      "bgm_3",
+      "sfx_overtake",
+      "sfx_offroad",
+      "sfx_timewarn",
+      "jingle_title"
+     ],
+     "wRouteBgm": [
+      "bgm_1",
+      "bgm_2",
+      "bgm_3"
+     ],
+     "spect": {
+      "s1": {
+       "bgm": "bgm_1"
+      },
+      "s2": {
+       "bgm": "bgm_2"
+      },
+      "s3": {
+       "bgm": "bgm_3"
+      },
+      "_ms": 37332
+     }
+    }
+   },
+   "S-09": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "coarse": true,
+     "tapStart": true,
+     "gasButton": {
+      "x": 340,
+      "y": 794,
+      "w": 76
+     },
+     "speeds": [
+      0,
+      60,
+      17
+     ],
+     "accelWhilePressed": true,
+     "stopsAfterRelease": true,
+     "_ms": 6539
+    }
+   },
+   "S-10": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "sfx_offroad": true,
+     "fx_dust": true
+    }
+   },
+   "S-11": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "sfx_timewarn ボタンあり。残り 10 秒以下で整数秒が変わるたびに sfx_timewarn を鳴らすコードを確認。出力タップの RMS は BGM に埋もれて 1 秒周期を分離できず",
+    "data": {
+     "button": true
+    }
+   },
+   "S-12": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "review-c-roadside.png の S3: ヘッドライトの照射 / 街灯・ネオンの発光",
+    "data": {}
+   },
+   "S-13": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "raw-s13-overtake-100.png: 自車付近に +50",
+    "data": {}
+   },
+   "S-14": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "o7-gallery-cars.png に各車種 3 色、m16 シートで混在",
+    "data": {
+     "variants": [
+      "car_sedan:1",
+      "car_truck:1",
+      "car_sports:1",
+      "car_sedan_v1:1",
+      "car_sedan_v2:1",
+      "car_truck_v1:1",
+      "car_truck_v2:1",
+      "car_sports_v1:1",
+      "car_sports_v2:1"
+     ]
+    }
+   },
+   "S-15": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "blur": "paused",
+     "visibility": "paused"
+    }
+   },
+   "S-16": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "F で document.fullscreenElement が非 null、右下に FPS 表示",
+    "data": {
+     "fullscreen": true
+    }
+   },
+   "S-17": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "review-a-countdown.png: スタートゲート、信号ライト(3 灯が順に点灯)、GO!",
+    "data": {
+     "gate_start": true
+    }
+   },
+   "S-18": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "S18X: タイトルロゴが縦に 3〜5 px 動く(浮遊)",
+    "data": {
+     "logoDy": [
+      -1,
+      -2,
+      -3,
+      0,
+      1
+     ]
+    }
+   }
+  },
+  "subjective": {
+   "画づくり": {
+    "score": 4,
+    "basis": "太陽のハロー・海・島の遠景、S2 の月と松林、S3 のネオン・月(review-c-roadside.png)。輪郭と陰影が揃い統一感がある。自車の後ろ姿はやや単純"
+   },
+   "アニメ・演出": {
+    "score": 4,
+    "basis": "フォグ・近景・ブレーキランプ・火花・シェイク・速度線・遷移の暗転フェード・ロゴの浮遊。タイヤアニメとカウントアップなし"
+   },
+   "手触り": {
+    "score": 4,
+    "basis": "M07〜M12 は仕様どおり、FPS 平均 60.05 / 最小 60。ボットで全クリア(S1 残り 26.6 秒)。スレスレ得点・シェイクあり"
+   },
+   "音": {
+    "score": 5,
+    "basis": "Must+Should の音がすべてボタンで発音(エラー 0)。エンジンは 3 発振器(saw/square/tri)+LPF を速度で開く。BGM は 128/138/150 BPM でリード波形も曲ごとに変更(8 小節)。スペクトログラム(compare/cmp-s08-spectrograms.png)で曲ごとの違いが見える。ピーク最大 0.20"
+   },
+   "UI": {
+    "score": 4,
+    "basis": "HUD・パネル・ゲームオーバーの文言が揃い色分けされている。タッチボタンあり(s09-touch-play.png)。debug=1 では FPS 表示が KM/H に重なる(EVAL §6-10 により減点しない)"
+   }
+  }
+ },
+ "high": {
+  "objective": {
+   "launch": true,
+   "errorsWRoute": {
+    "console": 0,
+    "pageerror": 0,
+    "requestfailed": 0,
+    "external": 0,
+    "favicon": 0,
+    "warnings": 0
+   },
+   "errorsFavicon": 0,
+   "loadMs": 423.9,
+   "loadEventEndMs": 71.9,
+   "perf": {
+    "P1": {
+     "avgFps": 60.05,
+     "minFps": 60,
+     "windows": [
+      60,
+      60,
+      60,
+      61,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60
+     ],
+     "maxIntervalMs": 23.2,
+     "p99IntervalMs": 19.6,
+     "cbAvgMs": 1.36,
+     "cbP95Ms": 2.1,
+     "cbMaxMs": 15.8,
+     "longtasks": 0,
+     "sceneAtEnd": "playing",
+     "crashes": 0
+    },
+    "P2": {
+     "avgFps": 57.8,
+     "minFps": 37,
+     "windows": [
+      60,
+      61,
+      60,
+      59,
+      37,
+      61,
+      60,
+      60,
+      60,
+      60
+     ],
+     "maxIntervalMs": 316.6,
+     "p99IntervalMs": 18.9,
+     "cbAvgMs": 1.084,
+     "cbP95Ms": 1.6,
+     "cbMaxMs": 5.7,
+     "longtasks": 1
+    },
+    "_ms": 36342
+   },
+   "mobile390": {
+    "title": [],
+    "play": []
+   },
+   "scale": {
+    "distFiles": 16,
+    "distBytes": 121649,
+    "srcLines": 3109,
+    "srcNonEmptyLines": 2988,
+    "outsideDistFiles": 1,
+    "perFile": {
+     "index.html": 48,
+     "js/assets.js": 193,
+     "js/audio.js": 335,
+     "js/backgrounds.js": 266,
+     "js/boot.js": 146,
+     "js/const.js": 30,
+     "js/course.js": 80,
+     "js/font.js": 136,
+     "js/gallery.js": 101,
+     "js/game.js": 539,
+     "js/main.js": 8,
+     "js/pix.js": 73,
+     "js/render.js": 499,
+     "js/sprites_cars.js": 248,
+     "js/sprites_scenery.js": 379,
+     "js/util.js": 28
+    }
+   },
+   "bRoute": {
+    "stages": {
+     "1": {
+      "clear": true,
+      "sec": 39.448,
+      "timeLeft": 26.55,
+      "crashes": 0,
+      "overtakes": 26,
+      "score": 8994
+     },
+     "2": {
+      "clear": true,
+      "sec": 55.431,
+      "timeLeft": 16.567,
+      "crashes": 1,
+      "overtakes": 62,
+      "score": 19109
+     },
+     "3": {
+      "clear": true,
+      "sec": 72.631,
+      "timeLeft": 3.367,
+      "crashes": 4,
+      "overtakes": 99,
+      "score": 29574
+     }
+    },
+    "final": {
+     "scene": "ending",
+     "score": 29574,
+     "rank": "A",
+     "crashes": 4,
+     "overtakes": 99
+    }
+   },
+   "b3": {
+    "final": {
+     "scene": "playing",
+     "score": 5918,
+     "rank": null,
+     "crashes": 3,
+     "overtakes": 30
+    }
+   },
+   "assets": {
+    "car_player": {
+     "frames": 3,
+     "size": "40x22",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "car_sedan": {
+     "frames": 1,
+     "size": "36x20",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "car_truck": {
+     "frames": 1,
+     "size": "44x34",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "car_sports": {
+     "frames": 1,
+     "size": "38x18",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_palm": {
+     "frames": 1,
+     "size": "40x72",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_rock": {
+     "frames": 1,
+     "size": "32x22",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_shrub": {
+     "frames": 1,
+     "size": "32x20",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_pine": {
+     "frames": 1,
+     "size": "40x88",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_boulder": {
+     "frames": 1,
+     "size": "40x28",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_fern": {
+     "frames": 1,
+     "size": "28x16",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_lamp": {
+     "frames": 1,
+     "size": "20x88",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_neon": {
+     "frames": 1,
+     "size": "56x52",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_building": {
+     "frames": 1,
+     "size": "64x128",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "gate_checkpoint": {
+     "frames": 1,
+     "size": "160x64",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "gate_goal": {
+     "frames": 1,
+     "size": "160x64",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "bg_sky_1": {
+     "frames": 1,
+     "size": "640x180",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "bg_sky_2": {
+     "frames": 1,
+     "size": "640x180",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "bg_sky_3": {
+     "frames": 1,
+     "size": "640x180",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "bg_far_1": {
+     "frames": 1,
+     "size": "640x96",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "bg_far_2": {
+     "frames": 1,
+     "size": "640x96",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "bg_far_3": {
+     "frames": 1,
+     "size": "640x96",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "logo_title": {
+     "frames": 1,
+     "size": "256x112",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "font_pixel": {
+     "frames": 52,
+     "size": "5x7",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "fx_smoke": {
+     "frames": 4,
+     "size": "12x12",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "bg_near_1": {
+     "frames": 1,
+     "size": "640x56",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "bg_near_2": {
+     "frames": 1,
+     "size": "640x56",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "bg_near_3": {
+     "frames": 1,
+     "size": "640x56",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_billboard": {
+     "frames": 1,
+     "size": "48x56",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_signpost": {
+     "frames": 1,
+     "size": "20x44",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_bollard": {
+     "frames": 1,
+     "size": "12x16",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_building_b": {
+     "frames": 1,
+     "size": "64x112",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "gate_start": {
+     "frames": 1,
+     "size": "160x64",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "car_player_brake": {
+     "frames": 3,
+     "size": "40x22",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "car_player_wheel": {
+     "frames": 6,
+     "size": "40x22",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "fx_dust": {
+     "frames": 3,
+     "size": "8x8",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "fx_spark": {
+     "frames": 3,
+     "size": "6x6",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    }
+   },
+   "sounds": {
+    "list": [
+     "bgm_1",
+     "bgm_2",
+     "bgm_3",
+     "sfx_engine",
+     "sfx_beep",
+     "sfx_go",
+     "sfx_checkpoint",
+     "sfx_crash",
+     "sfx_goal",
+     "sfx_timeup",
+     "sfx_menu",
+     "sfx_overtake",
+     "sfx_offroad",
+     "sfx_timewarn",
+     "jingle_title",
+     "jingle_clear",
+     "mute"
+    ],
+    "snd": {
+     "bgm_1": {
+      "rms": 0.03504,
+      "peak": 0.1,
+      "sounded": true,
+      "errors": 0
+     },
+     "bgm_2": {
+      "rms": 0.044724,
+      "peak": 0.139,
+      "sounded": true,
+      "errors": 0
+     },
+     "bgm_3": {
+      "rms": 0.04904,
+      "peak": 0.199,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_engine": {
+      "rms": 0.016201,
+      "peak": 0.033,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_beep": {
+      "rms": 0.082281,
+      "peak": 0.114,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_go": {
+      "rms": 0.086816,
+      "peak": 0.16,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_checkpoint": {
+      "rms": 0.087128,
+      "peak": 0.19,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_crash": {
+      "rms": 0.164553,
+      "peak": 0.466,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_goal": {
+      "rms": 0.07309099999999999,
+      "peak": 0.143,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_timeup": {
+      "rms": 0.036551,
+      "peak": 0.095,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_menu": {
+      "rms": 0.068981,
+      "peak": 0.096,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_overtake": {
+      "rms": 0.030258,
+      "peak": 0.072,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_offroad": {
+      "rms": 0.026371,
+      "peak": 0.081,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_timewarn": {
+      "rms": 0.027615999999999998,
+      "peak": 0.076,
+      "sounded": true,
+      "errors": 0
+     },
+     "jingle_title": {
+      "rms": 0.070437,
+      "peak": 0.153,
+      "sounded": true,
+      "errors": 0
+     },
+     "jingle_clear": {
+      "rms": 0.074837,
+      "peak": 0.151,
+      "sounded": true,
+      "errors": 0
+     }
+    },
+    "mute": {
+     "target": "bgm_1",
+     "rmsWhileMuted": 0,
+     "silent": true
+    },
+    "galleryErrors": {
+     "console": 0,
+     "pageerror": 0,
+     "requestfailed": 0,
+     "external": 0,
+     "favicon": 0,
+     "warnings": 0
+    }
+   }
+  },
+  "mustCount": {
+   "pass": 42,
+   "fail": 0,
+   "unmeasured": 0,
+   "pending": 0
+  },
+  "shouldCount": {
+   "pass": 17,
+   "fail": 1,
+   "unmeasured": 0,
+   "pending": 0
+  },
+  "must": {
+   "M01": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "sub": {
+      "console": 0,
+      "pageerror": 0,
+      "requestfailed": 0,
+      "external": 0,
+      "favicon": 0,
+      "warnings": 0
+     },
+     "root": {
+      "console": 0,
+      "pageerror": 0,
+      "requestfailed": 0,
+      "external": 0,
+      "favicon": 0,
+      "warnings": 0
+     },
+     "absRefs": []
+    }
+   },
+   "M02": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "ok": true,
+     "errors": {
+      "console": 0,
+      "pageerror": 0,
+      "requestfailed": 0,
+      "external": 0,
+      "favicon": 0,
+      "warnings": 0
+     }
+    }
+   },
+   "M03": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "390x844": {
+      "title": [],
+      "play": [],
+      "maxSizeOk": true
+     },
+     "1280x720": {
+      "title": [],
+      "play": [],
+      "maxSizeOk": true
+     },
+     "1920x1080": {
+      "title": [],
+      "play": [],
+      "maxSizeOk": true
+     },
+     "375x667": {
+      "title": [],
+      "play": [],
+      "maxSizeOk": true
+     }
+    }
+   },
+   "M04": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-m04-title-0.5s.png, compare/cmp-m04-press-enter-crop.png: ロゴ画像・PRESS ENTER の点滅・BEST・操作説明あり",
+    "data": {
+     "roadChanged_0_5vs1_5": 0.026,
+     "roadChanged_0_5vs0_75": 0.879
+    }
+   },
+   "M05": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "review-a-countdown.png(raw-m05-countdown-500/1500/2500): 3・2・1 と STAGE 1 / SEASIDE",
+    "data": {
+     "maxSpeed": 0,
+     "timeLeft": [
+      30,
+      30
+     ],
+     "space": true
+    }
+   },
+   "M06": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-m06-go-300.png に GO!、raw-m06-go-1200.png に GO! なし",
+    "data": {
+     "countdownSec": 2.986,
+     "timeLeftAt5s": 25
+    }
+   },
+   "M07": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "speedAt3s": 179.803,
+     "max": 300,
+     "seed": 7
+    }
+   },
+   "M08": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "decrease": 149.606,
+     "seed": 42
+    }
+   },
+   "M09": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "speedAt2s": 110.457,
+     "seed": 42
+    }
+   },
+   "M10": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "seq": [
+      0,
+      0.186,
+      -0.102,
+      0.002,
+      -0.121
+     ],
+     "zero": 0
+    }
+   },
+   "M11": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "xAt1s": -1.058
+    }
+   },
+   "M12": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-m12-offroad-1500.png: 自車が道路外(草/砂の面)",
+    "data": {
+     "speedAt3s": 74.655,
+     "x": [
+      1.05,
+      1.05
+     ],
+     "crashes": 0,
+     "ref0": 74.369
+    }
+   },
+   "M13": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "m13-s1-sheet.png, compare/cmp-m13-hills-horizon.png: 右/左カーブ、頂上手前で奥が隠れる、消失位置が地点ごとに変化",
+    "data": {}
+   },
+   "M14": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "run": {
+      "A": -9,
+      "B": -31,
+      "C": -31
+     },
+     "stop": {
+      "A": 0,
+      "B": 0,
+      "C": 0
+     }
+    }
+   },
+   "M15": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "compare/cmp-m15-zoom.png: 路肩 2 色交互・路面/草の明暗、隙間や別色の横線なし",
+    "data": {}
+   },
+   "M16": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "m16-b-s1-30s-sheet.png: sedan/truck/sports が車線上に出現、遠いほど小さい",
+    "data": {
+     "stageParam": [
+      36,
+      54,
+      72
+     ],
+     "wRoute": [
+      36,
+      54,
+      72
+     ]
+    }
+   },
+   "M17": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "events": [
+      50,
+      50,
+      50,
+      50
+     ],
+     "seed": 42,
+     "crashedCarOvertakes": 0
+    }
+   },
+   "M18": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "m18-crash-sheet.png: 自車の点滅と煙",
+    "data": {
+     "speedAfter": 60,
+     "crashesDelta": 1,
+     "invMs": 1199,
+     "invEndBy": "flag",
+     "duringInv": 0,
+     "afterInv": 1,
+     "pushX": 0.12,
+     "confirmInvuln": "ok"
+    }
+   },
+   "M19": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "m19-crash-sheet.png: 自車の点滅と煙",
+    "data": {
+     "speedAfter": 60,
+     "crashesDelta": 1,
+     "invMs": 1200,
+     "invEndBy": "flag",
+     "duringInv": 0,
+     "afterInv": 1,
+     "pushX": 1.68,
+     "confirmInvuln": "ok"
+    }
+   },
+   "M20": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "review-c-roadside.png(raw-m20-s*-*.png): 各ステージの solid 2 種と decor が両側に",
+    "data": {}
+   },
+   "M21": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "countdown": 0,
+     "paused": 0,
+     "stageclear": 0
+    }
+   },
+   "M22": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "review-e-cp.png: ゲートが道路をまたぐ、0.3/1.9 秒に CHECKPOINT! と +18 SEC、2.4 秒になし",
+    "data": {
+     "sec": 0.086,
+     "dTime": 17.983,
+     "dScore": 501,
+     "seed": 42
+    }
+   },
+   "M23": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-m23-timeup-500.png / raw-m23-gameover-500.png: TIME UP、GAME OVER / REACHED STAGE 1 / SCORE / BEST / ENTER: RETRY   ESC: TITLE",
+    "data": {
+     "toTimeup": 2.025,
+     "toGameover": 2.5
+    }
+   },
+   "M24": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-m24-clear-1200.png に GOAL!(パネルなし)、raw-m24-clear-1800.png と raw-w-s1-clear-1600.png にパネル 5 行、raw-m24-gate.png にゴールゲート",
+    "data": {
+     "dScore": 3601,
+     "expect": 3600,
+     "T0": 26.833,
+     "seed": 42
+    }
+   },
+   "M25": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "scene": "countdown",
+     "stage": 2,
+     "goalRemainingM": 3594.173,
+     "timeLeft": 32,
+     "trafficTotal": 54,
+     "score": 3644,
+     "scoreBefore": 3644,
+     "cp": 0
+    }
+   },
+   "M26": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-m26-s1/2/3-run2s.png: S1 橙〜桃、S2 紫〜藍、S3 黒〜濃紺+ネオン",
+    "data": {
+     "s3goal": 4194.172919227935,
+     "s3time": 32,
+     "color": {
+      "s1": {
+       "hue": 324.4,
+       "lum": 0.4531,
+       "neon": 0.02803
+      },
+      "s2": {
+       "hue": 253.5,
+       "lum": 0.2298,
+       "neon": 0.00155
+      },
+      "s3sky": {
+       "hue": 235.1,
+       "lum": 0.2029,
+       "neon": 0.01561
+      },
+      "s3neonFull": 0.03553,
+      "numeric": {
+       "s1": true,
+       "s2": true,
+       "s3": true
+      }
+     }
+    }
+   },
+   "M27": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-w-ending.png, compare/cmp-m27x-ending.png: ALL CLEAR!、スコア、ランク、BEST、PRESS ENTER",
+    "data": {
+     "score": 14633,
+     "rank": "C",
+     "expected": "C",
+     "bRank": "A",
+     "bScore": 29574
+    }
+   },
+   "M28": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-m28-paused-hud.png の SCORE 000570 = getState().score 570",
+    "data": {
+     "score": 570,
+     "dist": 470.139,
+     "ov": 2,
+     "diff": 0
+    }
+   },
+   "M29": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-m29-paused-KeyP.png / -Escape.png: PAUSED オーバーレイ",
+    "data": {
+     "KeyP": {
+      "paused": "paused",
+      "dTime": 0,
+      "dDist": 0,
+      "imgMad": 0.469,
+      "imgChanged": 0.017,
+      "resumed": "playing"
+     },
+     "Escape": {
+      "paused": "paused",
+      "dTime": 0,
+      "dDist": 0,
+      "imgMad": 0.452,
+      "imgChanged": 0.017,
+      "resumed": "playing"
+     },
+     "R": {
+      "scene": "countdown",
+      "stage": 1,
+      "score": 0
+     },
+     "Q": "title",
+     "_ms": 16313
+    }
+   },
+   "M30": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "playingBefore": 141,
+     "playing": {
+      "scene": "countdown",
+      "stage": 1,
+      "score": 0,
+      "overtakes": 0,
+      "crashes": 0
+     },
+     "pausedBefore": 94,
+     "paused": {
+      "scene": "countdown",
+      "stage": 1,
+      "score": 0,
+      "overtakes": 0,
+      "crashes": 0
+     },
+     "gameoverBefore": 103,
+     "gameoverR": {
+      "scene": "countdown",
+      "stage": 1,
+      "score": 0,
+      "overtakes": 0,
+      "crashes": 0
+     },
+     "gameoverEnter": {
+      "scene": "countdown",
+      "stage": 1,
+      "score": 0,
+      "overtakes": 0,
+      "crashes": 0
+     },
+     "gameoverEsc": "title",
+     "gameoverQ": "title",
+     "endingBefore": 14633,
+     "ending": {
+      "scene": "countdown",
+      "stage": 1,
+      "score": 0,
+      "overtakes": 0,
+      "crashes": 0
+     },
+     "stage2Before": 94,
+     "stage2": {
+      "scene": "countdown",
+      "stage": 2,
+      "score": 0,
+      "overtakes": 0,
+      "crashes": 0
+     },
+     "_ms": 72799
+    }
+   },
+   "M31": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-m31-sound-on.png / raw-m31-sound-off.png: [M] SOUND ON → OFF",
+    "data": {
+     "before": false,
+     "after": true,
+     "afterReload": true,
+     "ls": "{\"best\":0,\"muted\":true}",
+     "lsShape": true,
+     "mute1": true,
+     "mute1ls": null,
+     "_ms": 6636
+    }
+   },
+   "M32": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-m32-gameover-newbest.png(high は m32x-gameover-sheet.png。点滅のため): NEW BEST!、raw-m32-title-best.png の BEST",
+    "data": {
+     "score": 336,
+     "lsBest": 336,
+     "reload": 336,
+     "throwOk": true,
+     "throwErrors": {
+      "console": 0,
+      "pageerror": 0,
+      "requestfailed": 0,
+      "external": 0,
+      "favicon": 0,
+      "warnings": 0
+     }
+    }
+   },
+   "M33": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "raw-m33-hud.png: 全 HUD 要素あり。m33-timewarn-sheet.png: 残り 10 秒以下で赤く明滅",
+    "data": {}
+   },
+   "M34": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "checks": {
+      "stateNone": true,
+      "running": true,
+      "bgmCd": true,
+      "bgmPlay": true,
+      "bgmNull": true,
+      "hzCd": true,
+      "hz150": true,
+      "hz300": true,
+      "hzZero": true,
+      "mute": true
+     },
+     "hz": [
+      60,
+      129.65,
+      199.65,
+      0,
+      0
+     ],
+     "rms": [
+      0.0391485051261397,
+      0
+     ],
+     "peak": 0.1200757771730423,
+     "bgm": {
+      "cd": "bgm_1",
+      "pl": "bgm_1",
+      "sc": null,
+      "tu": null,
+      "ti": null
+     }
+    }
+   },
+   "M35": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "defaultPrevented": {
+      "ArrowUp": true,
+      "ArrowDown": true,
+      "ArrowLeft": true,
+      "ArrowRight": true,
+      "Space": true
+     },
+     "scrollY": 0,
+     "afterBlurScene": "playing",
+     "speedBefore": 42.75,
+     "speedAfter1s": 0,
+     "sceneDuring": "playing",
+     "repeatScene": "title",
+     "controlScene": "countdown",
+     "_ms": 7832
+    }
+   },
+   "M36": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "s1": {
+      "a": "dc15c15a",
+      "b": "dc15c15a",
+      "same": true,
+      "traffic": 36,
+      "rHash": "dc15c15a"
+     },
+     "s2": {
+      "a": "83277370",
+      "b": "83277370",
+      "same": true,
+      "traffic": 54,
+      "rHash": null
+     },
+     "s3": {
+      "a": "a5ec2a84",
+      "b": "a5ec2a84",
+      "same": true,
+      "traffic": 72,
+      "rHash": null
+     },
+     "seed43": "7d54578b",
+     "seed43Differs": true,
+     "rSame": true,
+     "_ms": 8860
+    }
+   },
+   "M37": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "fps30": {
+      "fps": [
+       30,
+       30.024
+      ],
+      "timeLeftAt5s": 24.967,
+      "speedAt3s": 183
+     },
+     "fps144": {
+      "fps": [
+       143.278,
+       143.369
+      ],
+      "timeLeftAt5s": 24.999,
+      "speedAt3s": 180.174
+     }
+    }
+   },
+   "M38": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "compare/cmp-m38-font.png: A〜Z・0〜9 判読可",
+    "data": {
+     "missingAssets": [],
+     "missingSounds": [],
+     "silentSounds": []
+    }
+   },
+   "M39": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "compare/cmp-m39-player-frames.png(左/直進/右)、m16 シート(3 車種)、review-c(空・遠景・路側物)、review-e(ゲート)、m18 シート(煙)、タイトル(ロゴ)、全画面(文字)",
+    "data": {}
+   },
+   "M40": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "staticHits": [],
+     "runtime": {
+      "fill": 0,
+      "stroke": 0
+     }
+    }
+   },
+   "M41": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "ok": true,
+     "timerAfterR": {
+      "dt": 2012.5999999996275,
+      "dTime": 2.016666666666552
+     },
+     "afterR": {
+      "stage": 1,
+      "score": 0,
+      "timeLeft": 30
+     }
+    }
+   },
+   "M42": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "m42-b-s1-60s-sheet.png, m42-b-s3-60s-sheet.png: 同一レーンの重なりなし",
+    "data": {}
+   }
+  },
+  "should": {
+   "S-01": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "raw-m13-s1-flat.png ほか: 遠くの道路・スプライトが地平線色に溶ける",
+    "data": {}
+   },
+   "S-02": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "near": true,
+     "shift": {
+      "A": -9,
+      "B": -31,
+      "C": -31
+     },
+     "rowBands": {
+      "100-120": -9,
+      "120-140": -31,
+      "140-160": -31,
+      "160-170": -62,
+      "170-178": -71
+     }
+    }
+   },
+   "S-03": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "s03-brake-compare.png: ブレーキ中だけランプ点灯",
+    "data": {
+     "galleryBrake": true
+    }
+   },
+   "S-04": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "s04z-tire-zoom-sheet.png: タイヤのトレッド模様が約 0.1 秒周期で 2 フレーム切り替わる",
+    "data": {
+     "galleryWheel": true
+    }
+   },
+   "S-05": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "m18-crash-sheet.png に火花と自車の傾き。S05X で 4 フレームの横ずれ",
+    "data": {
+     "galleryspark": true,
+     "shakeFramesWithin300ms": 4,
+     "shakeFramesAfter350ms": 0
+    }
+   },
+   "S-06": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "compare/cmp-s06-280kmh-zoom.png / raw-s06-280kmh.png: 250 km/h 以上で速度線",
+    "data": {}
+   },
+   "S-07": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "events": [
+      50,
+      70,
+      50,
+      70
+     ]
+    }
+   },
+   "S-08": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "buttons": [
+      "bgm_2",
+      "bgm_3",
+      "sfx_overtake",
+      "sfx_offroad",
+      "sfx_timewarn",
+      "jingle_title"
+     ],
+     "wRouteBgm": [
+      "bgm_1",
+      "bgm_2",
+      "bgm_3"
+     ],
+     "spect": {
+      "s1": {
+       "bgm": "bgm_1"
+      },
+      "s2": {
+       "bgm": "bgm_2"
+      },
+      "s3": {
+       "bgm": "bgm_3"
+      },
+      "_ms": 37260
+     }
+    }
+   },
+   "S-09": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "coarse": true,
+     "tapStart": true,
+     "gasButton": {
+      "x": 354.859375,
+      "y": 495.578125,
+      "w": 54.6875
+     },
+     "speeds": [
+      0,
+      60,
+      17
+     ],
+     "accelWhilePressed": true,
+     "stopsAfterRelease": true,
+     "_ms": 6539
+    }
+   },
+   "S-10": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "sfx_offroad": true,
+     "fx_dust": true
+    }
+   },
+   "S-11": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "sfx_timewarn ボタンあり。残り 10 秒以下で整数秒が変わるたびに sfx_timewarn を鳴らすコードを確認。出力タップの RMS は BGM に埋もれて 1 秒周期を分離できず",
+    "data": {
+     "button": true
+    }
+   },
+   "S-12": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "review-c-roadside.png の S3: ヘッドライトの照射 / 街灯・ネオンの発光",
+    "data": {}
+   },
+   "S-13": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "raw-s13-overtake-100.png: 自車付近に +50",
+    "data": {}
+   },
+   "S-14": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "o7-gallery-cars.png に各車種 3 色、m16 シートで混在",
+    "data": {
+     "variants": [
+      "car_sedan:1",
+      "car_sedan_v1:1",
+      "car_sedan_v2:1",
+      "car_truck:1",
+      "car_truck_v1:1",
+      "car_truck_v2:1",
+      "car_sports:1",
+      "car_sports_v1:1",
+      "car_sports_v2:1"
+     ]
+    }
+   },
+   "S-15": {
+    "pass": false,
+    "auto": false,
+    "data": {
+     "blur": "playing",
+     "visibility": "paused"
+    }
+   },
+   "S-16": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "F で document.fullscreenElement が非 null、右下に FPS 表示",
+    "data": {
+     "fullscreen": true
+    }
+   },
+   "S-17": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "review-a-countdown.png: スタートゲート、信号ライト(3 灯が順に点灯)、GO!",
+    "data": {
+     "gate_start": true
+    }
+   },
+   "S-18": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "S18X: タイトルロゴが縦に 3〜5 px 動く(浮遊)",
+    "data": {
+     "logoDy": [
+      0,
+      -1,
+      -2,
+      -3
+     ]
+    }
+   }
+  },
+  "subjective": {
+   "画づくり": {
+    "score": 4,
+    "basis": "海のきらめき・山並み・S3 の街灯のグロー(review-c-roadside.png)。統一感は高い。S1 の草が緑で、仕様の配色(橙・桃・青緑)とはややずれる"
+   },
+   "アニメ・演出": {
+    "score": 4,
+    "basis": "フォグ・近景・ブレーキランプ・タイヤアニメ・火花と傾き・速度線・夜のグロー・ロゴの浮遊。遷移フェードとカウントアップなし(README も同様)"
+   },
+   "手触り": {
+    "score": 4,
+    "basis": "M07〜M12 は仕様どおり、P1 の FPS 平均 60.05 / 最小 60(タイトル P2 は最小 37 の落ち込みが 1 回)。ボットで全クリア。スレスレ・シェイクあり"
+   },
+   "音": {
+    "score": 5,
+    "basis": "Must+Should の音すべて(エラー 0)。エンジンは 2 発振器+LPF を速度で開く。BGM 128/138/152 BPM、16 小節、S3 はアルペジオ主体(コード)。ピーク最大 0.12"
+   },
+   "UI": {
+    "score": 4,
+    "basis": "HUD の要素・色分けが整い、NEW BEST は点滅。タイトルは操作説明の帯つき。タッチボタン(一時停止ボタン含む)あり"
+   }
+  }
+ },
+ "xhigh": {
+  "objective": {
+   "launch": true,
+   "errorsWRoute": {
+    "console": 0,
+    "pageerror": 0,
+    "requestfailed": 0,
+    "external": 0,
+    "favicon": 0,
+    "warnings": 0
+   },
+   "errorsFavicon": 0,
+   "loadMs": 219.7,
+   "loadEventEndMs": 218.7,
+   "perf": {
+    "P1": {
+     "avgFps": 59.5,
+     "minFps": 53,
+     "windows": [
+      60,
+      60,
+      61,
+      60,
+      59,
+      60,
+      61,
+      60,
+      60,
+      60,
+      60,
+      53,
+      57,
+      60,
+      59,
+      60,
+      60,
+      60,
+      60,
+      60
+     ],
+     "maxIntervalMs": 132.9,
+     "p99IntervalMs": 20,
+     "cbAvgMs": 1.387,
+     "cbP95Ms": 2,
+     "cbMaxMs": 10.6,
+     "longtasks": 0,
+     "sceneAtEnd": "playing",
+     "crashes": 0
+    },
+    "P2": {
+     "avgFps": 60,
+     "minFps": 59,
+     "windows": [
+      60,
+      60,
+      61,
+      59,
+      61,
+      60,
+      60,
+      60,
+      60,
+      59
+     ],
+     "maxIntervalMs": 21.5,
+     "p99IntervalMs": 18.6,
+     "cbAvgMs": 1.721,
+     "cbP95Ms": 2.4,
+     "cbMaxMs": 4.7,
+     "longtasks": 0
+    },
+    "_ms": 36240
+   },
+   "mobile390": {
+    "title": [],
+    "play": []
+   },
+   "scale": {
+    "distFiles": 20,
+    "distBytes": 173267,
+    "srcLines": 4952,
+    "srcNonEmptyLines": 4562,
+    "outsideDistFiles": 17,
+    "perFile": {
+     "index.html": 106,
+     "js/art/backgrounds.js": 478,
+     "js/art/cars.js": 261,
+     "js/art/roadside.js": 463,
+     "js/art/ui.js": 205,
+     "js/assets.js": 90,
+     "js/audio.js": 311,
+     "js/constants.js": 119,
+     "js/course.js": 50,
+     "js/font.js": 176,
+     "js/gallery.js": 109,
+     "js/game.js": 603,
+     "js/hud.js": 324,
+     "js/input.js": 84,
+     "js/main.js": 321,
+     "js/music.js": 346,
+     "js/pix.js": 294,
+     "js/render.js": 470,
+     "js/util.js": 42,
+     "js/world.js": 100
+    }
+   },
+   "bRoute": {
+    "stages": {
+     "1": {
+      "clear": true,
+      "sec": 39.448,
+      "timeLeft": 26.55,
+      "crashes": 0,
+      "overtakes": 26,
+      "score": 8994
+     },
+     "2": {
+      "clear": true,
+      "sec": 55.433,
+      "timeLeft": 16.567,
+      "crashes": 1,
+      "overtakes": 62,
+      "score": 19109
+     },
+     "3": {
+      "clear": true,
+      "sec": 72.631,
+      "timeLeft": 3.367,
+      "crashes": 4,
+      "overtakes": 99,
+      "score": 29574
+     }
+    },
+    "final": {
+     "scene": "ending",
+     "score": 29574,
+     "rank": "A",
+     "crashes": 4,
+     "overtakes": 99
+    }
+   },
+   "b3": {
+    "final": {
+     "scene": "playing",
+     "score": 5928,
+     "rank": null,
+     "crashes": 3,
+     "overtakes": 30
+    }
+   },
+   "assets": {
+    "car_player": {
+     "frames": 3,
+     "size": "40x22",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "car_sedan": {
+     "frames": 1,
+     "size": "36x20",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "car_truck": {
+     "frames": 1,
+     "size": "44x34",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "car_sports": {
+     "frames": 1,
+     "size": "38x18",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_palm": {
+     "frames": 1,
+     "size": "40x72",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_rock": {
+     "frames": 1,
+     "size": "32x22",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_shrub": {
+     "frames": 1,
+     "size": "32x20",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_pine": {
+     "frames": 1,
+     "size": "40x88",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_boulder": {
+     "frames": 1,
+     "size": "40x28",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_fern": {
+     "frames": 1,
+     "size": "28x16",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_lamp": {
+     "frames": 1,
+     "size": "20x88",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_neon": {
+     "frames": 1,
+     "size": "56x52",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_building": {
+     "frames": 1,
+     "size": "64x128",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "gate_checkpoint": {
+     "frames": 1,
+     "size": "160x64",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "gate_goal": {
+     "frames": 1,
+     "size": "160x64",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "bg_sky_1": {
+     "frames": 1,
+     "size": "640x180",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "bg_sky_2": {
+     "frames": 1,
+     "size": "640x180",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "bg_sky_3": {
+     "frames": 1,
+     "size": "640x180",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "bg_far_1": {
+     "frames": 1,
+     "size": "640x96",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "bg_far_2": {
+     "frames": 1,
+     "size": "640x96",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "bg_far_3": {
+     "frames": 1,
+     "size": "640x96",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "logo_title": {
+     "frames": 1,
+     "size": "240x72",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "font_pixel": {
+     "frames": 52,
+     "size": "5x7",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "fx_smoke": {
+     "frames": 4,
+     "size": "12x12",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "bg_near_1": {
+     "frames": 1,
+     "size": "640x56",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "bg_near_2": {
+     "frames": 1,
+     "size": "640x56",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "bg_near_3": {
+     "frames": 1,
+     "size": "640x56",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_billboard": {
+     "frames": 1,
+     "size": "48x56",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_signpost": {
+     "frames": 1,
+     "size": "20x44",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_bollard": {
+     "frames": 1,
+     "size": "12x16",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_building_b": {
+     "frames": 1,
+     "size": "64x112",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "gate_start": {
+     "frames": 1,
+     "size": "160x64",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "car_player_brake": {
+     "frames": 3,
+     "size": "40x22",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "car_player_wheel": {
+     "frames": 6,
+     "size": "40x22",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "fx_dust": {
+     "frames": 3,
+     "size": "8x8",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "fx_spark": {
+     "frames": 3,
+     "size": "6x6",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    }
+   },
+   "sounds": {
+    "list": [
+     "bgm_1",
+     "bgm_2",
+     "bgm_3",
+     "sfx_engine",
+     "sfx_beep",
+     "sfx_go",
+     "sfx_checkpoint",
+     "sfx_crash",
+     "sfx_goal",
+     "sfx_timeup",
+     "sfx_menu",
+     "sfx_overtake",
+     "sfx_offroad",
+     "sfx_timewarn",
+     "jingle_title",
+     "jingle_clear",
+     "mute"
+    ],
+    "snd": {
+     "bgm_1": {
+      "rms": 0.10855,
+      "peak": 0.264,
+      "sounded": true,
+      "errors": 0
+     },
+     "bgm_2": {
+      "rms": 0.07502800000000001,
+      "peak": 0.246,
+      "sounded": true,
+      "errors": 0
+     },
+     "bgm_3": {
+      "rms": 0.099345,
+      "peak": 0.299,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_engine": {
+      "rms": 0.015493,
+      "peak": 0.034,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_beep": {
+      "rms": 0.187388,
+      "peak": 0.265,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_go": {
+      "rms": 0.206953,
+      "peak": 0.292,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_checkpoint": {
+      "rms": 0.13614400000000002,
+      "peak": 0.366,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_crash": {
+      "rms": 0.25604000000000005,
+      "peak": 0.525,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_goal": {
+      "rms": 0.091902,
+      "peak": 0.164,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_timeup": {
+      "rms": 0.110343,
+      "peak": 0.344,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_menu": {
+      "rms": 0.151321,
+      "peak": 0.213,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_overtake": {
+      "rms": 0.122303,
+      "peak": 0.226,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_offroad": {
+      "rms": 0.023256,
+      "peak": 0.082,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_timewarn": {
+      "rms": 0.108653,
+      "peak": 0.179,
+      "sounded": true,
+      "errors": 0
+     },
+     "jingle_title": {
+      "rms": 0.075499,
+      "peak": 0.113,
+      "sounded": true,
+      "errors": 0
+     },
+     "jingle_clear": {
+      "rms": 0.091679,
+      "peak": 0.192,
+      "sounded": true,
+      "errors": 0
+     }
+    },
+    "mute": {
+     "target": "bgm_1",
+     "rmsWhileMuted": 0,
+     "silent": true
+    },
+    "galleryErrors": {
+     "console": 0,
+     "pageerror": 0,
+     "requestfailed": 0,
+     "external": 0,
+     "favicon": 0,
+     "warnings": 0
+    }
+   }
+  },
+  "mustCount": {
+   "pass": 42,
+   "fail": 0,
+   "unmeasured": 0,
+   "pending": 0
+  },
+  "shouldCount": {
+   "pass": 17,
+   "fail": 1,
+   "unmeasured": 0,
+   "pending": 0
+  },
+  "must": {
+   "M01": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "sub": {
+      "console": 0,
+      "pageerror": 0,
+      "requestfailed": 0,
+      "external": 0,
+      "favicon": 0,
+      "warnings": 0
+     },
+     "root": {
+      "console": 0,
+      "pageerror": 0,
+      "requestfailed": 0,
+      "external": 0,
+      "favicon": 0,
+      "warnings": 0
+     },
+     "absRefs": []
+    }
+   },
+   "M02": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "ok": true,
+     "errors": {
+      "console": 0,
+      "pageerror": 0,
+      "requestfailed": 0,
+      "external": 0,
+      "favicon": 0,
+      "warnings": 0
+     }
+    }
+   },
+   "M03": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "390x844": {
+      "title": [],
+      "play": [],
+      "maxSizeOk": true
+     },
+     "1280x720": {
+      "title": [],
+      "play": [],
+      "maxSizeOk": true
+     },
+     "1920x1080": {
+      "title": [],
+      "play": [],
+      "maxSizeOk": true
+     },
+     "375x667": {
+      "title": [],
+      "play": [],
+      "maxSizeOk": true
+     }
+    }
+   },
+   "M04": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-m04-title-0.5s.png, compare/cmp-m04-press-enter-crop.png: ロゴ画像・PRESS ENTER の点滅・BEST・操作説明あり",
+    "data": {
+     "roadChanged_0_5vs1_5": 0.208,
+     "roadChanged_0_5vs0_75": 0.534
+    }
+   },
+   "M05": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "review-a-countdown.png(raw-m05-countdown-500/1500/2500): 3・2・1 と STAGE 1 / SEASIDE",
+    "data": {
+     "maxSpeed": 0,
+     "timeLeft": [
+      30,
+      30
+     ],
+     "space": true
+    }
+   },
+   "M06": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-m06-go-300.png に GO!、raw-m06-go-1200.png に GO! なし",
+    "data": {
+     "countdownSec": 2.987,
+     "timeLeftAt5s": 25
+    }
+   },
+   "M07": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "speedAt3s": 179.685,
+     "max": 300,
+     "seed": 7
+    }
+   },
+   "M08": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "decrease": 148.811,
+     "seed": 42
+    }
+   },
+   "M09": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "speedAt2s": 110.395,
+     "seed": 42
+    }
+   },
+   "M10": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "seq": [
+      0,
+      0.186,
+      -0.111,
+      -0.008,
+      -0.135
+     ],
+     "zero": 0
+    }
+   },
+   "M11": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "xAt1s": -1.055
+    }
+   },
+   "M12": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-m12-offroad-1500.png: 自車が道路外(草/砂の面)",
+    "data": {
+     "speedAt3s": 74.632,
+     "x": [
+      1.05,
+      1.05
+     ],
+     "crashes": 0,
+     "ref0": 74.833
+    }
+   },
+   "M13": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "m13-s1-sheet.png, compare/cmp-m13-hills-horizon.png: 右/左カーブ、頂上手前で奥が隠れる、消失位置が地点ごとに変化",
+    "data": {}
+   },
+   "M14": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "run": {
+      "A": -9,
+      "B": -29,
+      "C": -29
+     },
+     "stop": {
+      "A": 0,
+      "B": 0,
+      "C": 0
+     }
+    }
+   },
+   "M15": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "compare/cmp-m15-zoom.png: 路肩 2 色交互・路面/草の明暗、隙間や別色の横線なし",
+    "data": {}
+   },
+   "M16": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "m16-b-s1-30s-sheet.png: sedan/truck/sports が車線上に出現、遠いほど小さい",
+    "data": {
+     "stageParam": [
+      36,
+      54,
+      72
+     ],
+     "wRoute": [
+      36,
+      54,
+      72
+     ]
+    }
+   },
+   "M17": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "events": [
+      50,
+      50,
+      50,
+      50
+     ],
+     "seed": 42,
+     "crashedCarOvertakes": 0
+    }
+   },
+   "M18": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "m18-crash-sheet.png: 自車の点滅と煙",
+    "data": {
+     "speedAfter": 60,
+     "crashesDelta": 1,
+     "invMs": 1200,
+     "invEndBy": "flag",
+     "duringInv": 0,
+     "afterInv": 1,
+     "pushX": 0.12,
+     "confirmInvuln": "ok"
+    }
+   },
+   "M19": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "m19-crash-sheet.png: 自車の点滅と煙",
+    "data": {
+     "speedAfter": 60,
+     "crashesDelta": 1,
+     "invMs": 1200,
+     "invEndBy": "flag",
+     "duringInv": 0,
+     "afterInv": 2,
+     "pushX": 1.68,
+     "confirmInvuln": "ok"
+    }
+   },
+   "M20": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "review-c-roadside.png(raw-m20-s*-*.png): 各ステージの solid 2 種と decor が両側に",
+    "data": {}
+   },
+   "M21": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "countdown": 0,
+     "paused": 0,
+     "stageclear": 0
+    }
+   },
+   "M22": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "review-e-cp.png: ゲートが道路をまたぐ、0.3/1.9 秒に CHECKPOINT! と +18 SEC、2.4 秒になし(1.9 秒はフェードアウト中で薄いが判読可)",
+    "data": {
+     "sec": 0.088,
+     "dTime": 17.983,
+     "dScore": 501,
+     "seed": 42
+    }
+   },
+   "M23": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-m23-timeup-500.png / raw-m23-gameover-500.png: TIME UP、GAME OVER / REACHED STAGE 1 / SCORE / BEST / ENTER: RETRY   ESC: TITLE",
+    "data": {
+     "toTimeup": 2.013,
+     "toGameover": 2.497
+    }
+   },
+   "M24": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-m24-clear-1200.png に GOAL!(パネルなし)、raw-m24-clear-1800.png と raw-w-s1-clear-1600.png にパネル 5 行、raw-m24-gate.png にゴールゲート",
+    "data": {
+     "dScore": 3601,
+     "expect": 3600,
+     "T0": 26.833,
+     "seed": 42
+    }
+   },
+   "M25": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "scene": "countdown",
+     "stage": 2,
+     "goalRemainingM": 3594.173,
+     "timeLeft": 32,
+     "trafficTotal": 54,
+     "score": 3644,
+     "scoreBefore": 3644,
+     "cp": 0
+    }
+   },
+   "M26": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-m26-s1/2/3-run2s.png: S1 橙〜桃、S2 紫〜藍、S3 黒〜濃紺+ネオン。数値条件は S1 の空の色相が 302〜308°(紫寄り)で 320〜360°/0〜50° を外れたが、上空の紫帯の影響で、目視では夕焼けの橙〜桃が支配的なため目視を優先(EVAL §2 M26)",
+    "data": {
+     "s3goal": 4194.172919227935,
+     "s3time": 32,
+     "color": {
+      "s1": {
+       "hue": 307.9,
+       "lum": 0.4096,
+       "neon": 0.11653
+      },
+      "s2": {
+       "hue": 246.3,
+       "lum": 0.2311,
+       "neon": 0
+      },
+      "s3sky": {
+       "hue": 246.5,
+       "lum": 0.1818,
+       "neon": 0.0271
+      },
+      "s3neonFull": 0.04093,
+      "numeric": {
+       "s1": false,
+       "s2": true,
+       "s3": true
+      }
+     }
+    }
+   },
+   "M27": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-w-ending.png, compare/cmp-m27x-ending.png: ALL CLEAR!、スコア、ランク、BEST、PRESS ENTER",
+    "data": {
+     "score": 14633,
+     "rank": "C",
+     "expected": "C",
+     "bRank": "A",
+     "bScore": 29574
+    }
+   },
+   "M28": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-m28-paused-hud.png の SCORE 000570 = getState().score 570",
+    "data": {
+     "score": 570,
+     "dist": 470.139,
+     "ov": 2,
+     "diff": 0
+    }
+   },
+   "M29": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-m29-paused-KeyP.png / -Escape.png: PAUSED オーバーレイ",
+    "data": {
+     "KeyP": {
+      "paused": "paused",
+      "dTime": 0,
+      "dDist": 0,
+      "imgMad": 0,
+      "imgChanged": 0,
+      "resumed": "playing"
+     },
+     "Escape": {
+      "paused": "paused",
+      "dTime": 0,
+      "dDist": 0,
+      "imgMad": 0,
+      "imgChanged": 0,
+      "resumed": "playing"
+     },
+     "R": {
+      "scene": "countdown",
+      "stage": 1,
+      "score": 0
+     },
+     "Q": "title",
+     "_ms": 16272
+    }
+   },
+   "M30": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "playingBefore": 141,
+     "playing": {
+      "scene": "countdown",
+      "stage": 1,
+      "score": 0,
+      "overtakes": 0,
+      "crashes": 0
+     },
+     "pausedBefore": 94,
+     "paused": {
+      "scene": "countdown",
+      "stage": 1,
+      "score": 0,
+      "overtakes": 0,
+      "crashes": 0
+     },
+     "gameoverBefore": 103,
+     "gameoverR": {
+      "scene": "countdown",
+      "stage": 1,
+      "score": 0,
+      "overtakes": 0,
+      "crashes": 0
+     },
+     "gameoverEnter": {
+      "scene": "countdown",
+      "stage": 1,
+      "score": 0,
+      "overtakes": 0,
+      "crashes": 0
+     },
+     "gameoverEsc": "title",
+     "gameoverQ": "title",
+     "endingBefore": 14633,
+     "ending": {
+      "scene": "countdown",
+      "stage": 1,
+      "score": 0,
+      "overtakes": 0,
+      "crashes": 0
+     },
+     "stage2Before": 94,
+     "stage2": {
+      "scene": "countdown",
+      "stage": 2,
+      "score": 0,
+      "overtakes": 0,
+      "crashes": 0
+     },
+     "_ms": 72431
+    }
+   },
+   "M31": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-m31-sound-on.png / raw-m31-sound-off.png: [M] SOUND ON → OFF",
+    "data": {
+     "before": false,
+     "after": true,
+     "afterReload": true,
+     "ls": "{\"best\":0,\"muted\":true}",
+     "lsShape": true,
+     "mute1": true,
+     "mute1ls": null,
+     "_ms": 6346
+    }
+   },
+   "M32": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-m32-gameover-newbest.png(high は m32x-gameover-sheet.png。点滅のため): NEW BEST!、raw-m32-title-best.png の BEST",
+    "data": {
+     "score": 336,
+     "lsBest": 336,
+     "reload": 336,
+     "throwOk": true,
+     "throwErrors": {
+      "console": 0,
+      "pageerror": 0,
+      "requestfailed": 0,
+      "external": 0,
+      "favicon": 0,
+      "warnings": 0
+     }
+    }
+   },
+   "M33": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "raw-m33-hud.png: 全 HUD 要素あり。m33-timewarn-sheet.png: 残り 10 秒以下で赤く明滅",
+    "data": {}
+   },
+   "M34": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "checks": {
+      "stateNone": true,
+      "running": true,
+      "bgmCd": true,
+      "bgmPlay": true,
+      "bgmNull": true,
+      "hzCd": true,
+      "hz150": true,
+      "hz300": true,
+      "hzZero": true,
+      "mute": true
+     },
+     "hz": [
+      60,
+      129.65,
+      199.65,
+      0,
+      0
+     ],
+     "rms": [
+      0.12059660698739597,
+      0
+     ],
+     "peak": 0.31305748224258423,
+     "bgm": {
+      "cd": "bgm_1",
+      "pl": "bgm_1",
+      "sc": null,
+      "tu": null,
+      "ti": null
+     }
+    }
+   },
+   "M35": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "defaultPrevented": {
+      "ArrowUp": true,
+      "ArrowDown": true,
+      "ArrowLeft": true,
+      "ArrowRight": true,
+      "Space": true
+     },
+     "scrollY": 0,
+     "afterBlurScene": "playing",
+     "speedBefore": 43,
+     "speedAfter1s": 0,
+     "sceneDuring": "playing",
+     "repeatScene": "title",
+     "controlScene": "countdown",
+     "_ms": 8064
+    }
+   },
+   "M36": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "s1": {
+      "a": "6bb1973880589c5f",
+      "b": "6bb1973880589c5f",
+      "same": true,
+      "traffic": 36,
+      "rHash": "6bb1973880589c5f"
+     },
+     "s2": {
+      "a": "70d3217b54352712",
+      "b": "70d3217b54352712",
+      "same": true,
+      "traffic": 54,
+      "rHash": null
+     },
+     "s3": {
+      "a": "1555ba8cf400d4bb",
+      "b": "1555ba8cf400d4bb",
+      "same": true,
+      "traffic": 72,
+      "rHash": null
+     },
+     "seed43": "ef40c7d48bdff659",
+     "seed43Differs": true,
+     "rSame": true,
+     "_ms": 8596
+    }
+   },
+   "M37": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "fps30": {
+      "fps": [
+       29.993,
+       29.999
+      ],
+      "timeLeftAt5s": 25,
+      "speedAt3s": 182
+     },
+     "fps144": {
+      "fps": [
+       143.18,
+       143.298
+      ],
+      "timeLeftAt5s": 25.001,
+      "speedAt3s": 179.345
+     }
+    }
+   },
+   "M38": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "compare/cmp-m38-font.png: A〜Z・0〜9 判読可",
+    "data": {
+     "missingAssets": [],
+     "missingSounds": [],
+     "silentSounds": []
+    }
+   },
+   "M39": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "compare/cmp-m39-player-frames.png(左/直進/右)、m16 シート(3 車種)、review-c(空・遠景・路側物)、review-e(ゲート)、m18 シート(煙)、タイトル(ロゴ)、全画面(文字)",
+    "data": {}
+   },
+   "M40": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "staticHits": [],
+     "runtime": {
+      "fill": 0,
+      "stroke": 0
+     }
+    }
+   },
+   "M41": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "ok": true,
+     "timerAfterR": {
+      "dt": 2010.5999999996275,
+      "dTime": 2.016666666666552
+     },
+     "afterR": {
+      "stage": 1,
+      "score": 0,
+      "timeLeft": 30
+     }
+    }
+   },
+   "M42": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "m42-b-s1-60s-sheet.png, m42-b-s3-60s-sheet.png: 同一レーンの重なりなし",
+    "data": {}
+   }
+  },
+  "should": {
+   "S-01": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "raw-m13-s1-flat.png ほか: 遠くの道路・スプライトが地平線色に溶ける",
+    "data": {}
+   },
+   "S-02": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "near": true,
+     "shift": {
+      "A": -9,
+      "B": -29,
+      "C": -29
+     },
+     "rowBands": {
+      "100-120": -9,
+      "120-140": -9,
+      "140-160": -29,
+      "160-170": -30,
+      "170-178": -62
+     }
+    }
+   },
+   "S-03": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "s03-brake-compare.png: ブレーキ中だけランプ点灯",
+    "data": {
+     "galleryBrake": true
+    }
+   },
+   "S-04": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "s04z-tire-zoom-sheet.png: タイヤのトレッド模様が約 0.1 秒周期で 2 フレーム切り替わる",
+    "data": {
+     "galleryWheel": true
+    }
+   },
+   "S-05": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "m18-crash-sheet.png に火花。S05X で 10 フレームの横ずれ",
+    "data": {
+     "galleryspark": true,
+     "shakeFramesWithin300ms": 10,
+     "shakeFramesAfter350ms": 0
+    }
+   },
+   "S-06": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "compare/cmp-s06-280kmh-zoom.png / raw-s06-280kmh.png: 250 km/h 以上で速度線",
+    "data": {}
+   },
+   "S-07": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "events": [
+      50,
+      70,
+      50,
+      70
+     ]
+    }
+   },
+   "S-08": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "buttons": [
+      "bgm_2",
+      "bgm_3",
+      "sfx_overtake",
+      "sfx_offroad",
+      "sfx_timewarn",
+      "jingle_title"
+     ],
+     "wRouteBgm": [
+      "bgm_1",
+      "bgm_2",
+      "bgm_3"
+     ],
+     "spect": {
+      "s1": {
+       "bgm": "bgm_1"
+      },
+      "s2": {
+       "bgm": "bgm_2"
+      },
+      "s3": {
+       "bgm": "bgm_3"
+      },
+      "_ms": 37006
+     }
+    }
+   },
+   "S-09": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "coarse": true,
+     "tapStart": true,
+     "gasButton": {
+      "x": 335,
+      "y": 789,
+      "w": 82
+     },
+     "speeds": [
+      0,
+      60,
+      17
+     ],
+     "accelWhilePressed": true,
+     "stopsAfterRelease": true,
+     "_ms": 6419
+    }
+   },
+   "S-10": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "sfx_offroad": true,
+     "fx_dust": true
+    }
+   },
+   "S-11": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "sfx_timewarn ボタンあり。残り 10 秒以下で整数秒が変わるたびに sfx_timewarn を鳴らすコードを確認。出力タップの RMS は BGM に埋もれて 1 秒周期を分離できず",
+    "data": {
+     "button": true
+    }
+   },
+   "S-12": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "review-c-roadside.png の S3: ヘッドライトの照射 / 街灯・ネオンの発光",
+    "data": {}
+   },
+   "S-13": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "raw-s13-overtake-100.png: 自車付近に +50",
+    "data": {}
+   },
+   "S-14": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "o7-gallery-cars.png に各車種 3 色、m16 シートで混在",
+    "data": {
+     "variants": [
+      "car_sedan:1",
+      "car_truck:1",
+      "car_sports:1",
+      "car_sedan_variants:3",
+      "car_truck_variants:3",
+      "car_sports_variants:3"
+     ]
+    }
+   },
+   "S-15": {
+    "pass": false,
+    "auto": false,
+    "data": {
+     "blur": "playing",
+     "visibility": "paused"
+    }
+   },
+   "S-16": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "F で document.fullscreenElement が非 null、右下に FPS 表示",
+    "data": {
+     "fullscreen": true
+    }
+   },
+   "S-17": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "review-a-countdown.png: スタートゲート、信号ライト(3 灯が順に点灯)、GO!",
+    "data": {
+     "gate_start": true
+    }
+   },
+   "S-18": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "S18X: タイトルロゴが縦に 3〜5 px 動く(浮遊)",
+    "data": {
+     "logoDy": [
+      -1,
+      -2,
+      -3,
+      0,
+      1
+     ]
+    }
+   }
+  },
+  "subjective": {
+   "画づくり": {
+    "score": 5,
+    "basis": "ディザの空と太陽、水平線のきらめき、BEACH 看板、S3 の窓明かり・HOTEL/NEON の発光・月(review-c-roadside.png)。自車のテールランプや車体の陰影まで作り込み、どの画面も完成品の見栄え"
+   },
+   "アニメ・演出": {
+    "score": 5,
+    "basis": "フォグ・近景・ブレーキ・タイヤ・火花・シェイク・速度線・シーン切替のフェード・ステージ名やバナーのフェードアウト・エンディングの粒子・夜のグロー。カウントアップはなし"
+   },
+   "手触り": {
+    "score": 4,
+    "basis": "M07〜M12 は仕様どおり。P1 の FPS 平均 59.5 / 最小 53、最長フレーム間隔 133 ms が 1 回。ボットで全クリア。スレスレ・シェイクあり"
+   },
+   "音": {
+    "score": 5,
+    "basis": "Must+Should の音すべて(エラー 0)。エンジンは 3 発振器+LPF(Q 2.2)を速度で開く。BGM は 126/138/152 BPM、16 小節のコード進行つき。ピーク最大 0.31"
+   },
+   "UI": {
+    "score": 5,
+    "basis": "HUD・パネル・エンディング(TOTAL SCORE 表記)まで整い、タイトルは帯で可読性を確保。タッチボタンあり、390 幅でも崩れなし"
+   }
+  }
+ },
+ "max": {
+  "objective": {
+   "launch": true,
+   "errorsWRoute": {
+    "console": 0,
+    "pageerror": 0,
+    "requestfailed": 0,
+    "external": 0,
+    "favicon": 0,
+    "warnings": 0
+   },
+   "errorsFavicon": 0,
+   "loadMs": 196.6,
+   "loadEventEndMs": 195.5,
+   "perf": {
+    "P1": {
+     "avgFps": 60,
+     "minFps": 59,
+     "windows": [
+      60,
+      60,
+      61,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      60,
+      59
+     ],
+     "maxIntervalMs": 21.5,
+     "p99IntervalMs": 18.6,
+     "cbAvgMs": 0.96,
+     "cbP95Ms": 1.4,
+     "cbMaxMs": 4.1,
+     "longtasks": 0,
+     "sceneAtEnd": "playing",
+     "crashes": 0
+    },
+    "P2": {
+     "avgFps": 60,
+     "minFps": 59,
+     "windows": [
+      60,
+      60,
+      61,
+      60,
+      60,
+      59,
+      61,
+      60,
+      60,
+      59
+     ],
+     "maxIntervalMs": 22.3,
+     "p99IntervalMs": 20.1,
+     "cbAvgMs": 0.994,
+     "cbP95Ms": 1.6,
+     "cbMaxMs": 6,
+     "longtasks": 0
+    },
+    "_ms": 36175
+   },
+   "mobile390": {
+    "title": [],
+    "play": []
+   },
+   "scale": {
+    "distFiles": 21,
+    "distBytes": 205463,
+    "srcLines": 5707,
+    "srcNonEmptyLines": 5323,
+    "outsideDistFiles": 30,
+    "perFile": {
+     "index.html": 84,
+     "js/art/backgrounds.js": 435,
+     "js/art/cars.js": 352,
+     "js/art/roadside.js": 500,
+     "js/art/ui.js": 285,
+     "js/assets.js": 160,
+     "js/audio.js": 674,
+     "js/config.js": 155,
+     "js/course.js": 60,
+     "js/font.js": 170,
+     "js/gallery.js": 156,
+     "js/hud.js": 349,
+     "js/input.js": 104,
+     "js/main.js": 263,
+     "js/music.js": 162,
+     "js/pixel.js": 450,
+     "js/render.js": 486,
+     "js/rng.js": 48,
+     "js/sim.js": 646,
+     "js/storage.js": 24,
+     "js/world.js": 144
+    }
+   },
+   "bRoute": {
+    "stages": {
+     "1": {
+      "clear": true,
+      "sec": 39.448,
+      "timeLeft": 26.55,
+      "crashes": 0,
+      "overtakes": 27,
+      "score": 9044
+     },
+     "2": {
+      "clear": true,
+      "sec": 53.832,
+      "timeLeft": 18.167,
+      "crashes": 1,
+      "overtakes": 62,
+      "score": 19330
+     },
+     "3": {
+      "clear": true,
+      "sec": 71.176,
+      "timeLeft": 4.817,
+      "crashes": 2,
+      "overtakes": 103,
+      "score": 30195
+     }
+    },
+    "final": {
+     "scene": "ending",
+     "score": 30195,
+     "rank": "A",
+     "crashes": 2,
+     "overtakes": 103
+    }
+   },
+   "b3": {
+    "final": {
+     "scene": "playing",
+     "score": 6231,
+     "rank": null,
+     "crashes": 1,
+     "overtakes": 33
+    }
+   },
+   "assets": {
+    "car_player": {
+     "frames": 3,
+     "size": "40x22",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "car_sedan": {
+     "frames": 1,
+     "size": "36x20",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "car_truck": {
+     "frames": 1,
+     "size": "44x34",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "car_sports": {
+     "frames": 1,
+     "size": "38x18",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_palm": {
+     "frames": 1,
+     "size": "40x72",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_rock": {
+     "frames": 1,
+     "size": "32x22",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_shrub": {
+     "frames": 1,
+     "size": "32x20",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_pine": {
+     "frames": 1,
+     "size": "40x88",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_boulder": {
+     "frames": 1,
+     "size": "40x28",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_fern": {
+     "frames": 1,
+     "size": "28x16",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_lamp": {
+     "frames": 1,
+     "size": "20x88",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_neon": {
+     "frames": 1,
+     "size": "56x52",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_building": {
+     "frames": 1,
+     "size": "64x128",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "gate_checkpoint": {
+     "frames": 1,
+     "size": "160x64",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "gate_goal": {
+     "frames": 1,
+     "size": "160x64",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "bg_sky_1": {
+     "frames": 1,
+     "size": "640x180",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "bg_sky_2": {
+     "frames": 1,
+     "size": "640x180",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "bg_sky_3": {
+     "frames": 1,
+     "size": "640x180",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "bg_far_1": {
+     "frames": 1,
+     "size": "640x96",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "bg_far_2": {
+     "frames": 1,
+     "size": "640x96",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "bg_far_3": {
+     "frames": 1,
+     "size": "640x96",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "logo_title": {
+     "frames": 1,
+     "size": "232x64",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "font_pixel": {
+     "frames": 52,
+     "size": "5x7",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "fx_smoke": {
+     "frames": 4,
+     "size": "12x12",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "bg_near_1": {
+     "frames": 1,
+     "size": "640x56",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "bg_near_2": {
+     "frames": 1,
+     "size": "640x56",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "bg_near_3": {
+     "frames": 1,
+     "size": "640x56",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_billboard": {
+     "frames": 1,
+     "size": "48x56",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_signpost": {
+     "frames": 1,
+     "size": "20x44",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_bollard": {
+     "frames": 1,
+     "size": "12x16",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "rs_building_b": {
+     "frames": 1,
+     "size": "64x112",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "gate_start": {
+     "frames": 1,
+     "size": "160x64",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "car_player_brake": {
+     "frames": 3,
+     "size": "40x22",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "car_player_wheel": {
+     "frames": 6,
+     "size": "40x22",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "fx_dust": {
+     "frames": 3,
+     "size": "8x8",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    },
+    "fx_spark": {
+     "frames": 3,
+     "size": "6x6",
+     "nativeMatch": true,
+     "drawn": true,
+     "label": true
+    }
+   },
+   "sounds": {
+    "list": [
+     "bgm_1",
+     "bgm_2",
+     "bgm_3",
+     "sfx_engine",
+     "sfx_beep",
+     "sfx_go",
+     "sfx_checkpoint",
+     "sfx_crash",
+     "sfx_goal",
+     "sfx_timeup",
+     "sfx_menu",
+     "sfx_overtake",
+     "sfx_offroad",
+     "sfx_timewarn",
+     "jingle_title",
+     "mute"
+    ],
+    "snd": {
+     "bgm_1": {
+      "rms": 0.123556,
+      "peak": 0.328,
+      "sounded": true,
+      "errors": 0
+     },
+     "bgm_2": {
+      "rms": 0.103688,
+      "peak": 0.299,
+      "sounded": true,
+      "errors": 0
+     },
+     "bgm_3": {
+      "rms": 0.10648,
+      "peak": 0.391,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_engine": {
+      "rms": 0.03564,
+      "peak": 0.074,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_beep": {
+      "rms": 0.231747,
+      "peak": 0.329,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_go": {
+      "rms": 0.238937,
+      "peak": 0.431,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_checkpoint": {
+      "rms": 0.24032499999999998,
+      "peak": 0.506,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_crash": {
+      "rms": 0.26943700000000004,
+      "peak": 0.649,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_goal": {
+      "rms": 0.127728,
+      "peak": 0.41,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_timeup": {
+      "rms": 0.12639799999999998,
+      "peak": 0.35,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_menu": {
+      "rms": 0.188773,
+      "peak": 0.394,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_overtake": {
+      "rms": 0.12658,
+      "peak": 0.391,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_offroad": {
+      "rms": 0.029318999999999998,
+      "peak": 0.137,
+      "sounded": true,
+      "errors": 0
+     },
+     "sfx_timewarn": {
+      "rms": 0.160589,
+      "peak": 0.241,
+      "sounded": true,
+      "errors": 0
+     },
+     "jingle_title": {
+      "rms": 0.214578,
+      "peak": 0.452,
+      "sounded": true,
+      "errors": 0
+     }
+    },
+    "mute": {
+     "target": "bgm_1",
+     "rmsWhileMuted": 0,
+     "silent": true
+    },
+    "galleryErrors": {
+     "console": 0,
+     "pageerror": 0,
+     "requestfailed": 0,
+     "external": 0,
+     "favicon": 0,
+     "warnings": 0
+    }
+   }
+  },
+  "mustCount": {
+   "pass": 42,
+   "fail": 0,
+   "unmeasured": 0,
+   "pending": 0
+  },
+  "shouldCount": {
+   "pass": 18,
+   "fail": 0,
+   "unmeasured": 0,
+   "pending": 0
+  },
+  "must": {
+   "M01": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "sub": {
+      "console": 0,
+      "pageerror": 0,
+      "requestfailed": 0,
+      "external": 0,
+      "favicon": 0,
+      "warnings": 0
+     },
+     "root": {
+      "console": 0,
+      "pageerror": 0,
+      "requestfailed": 0,
+      "external": 0,
+      "favicon": 0,
+      "warnings": 0
+     },
+     "absRefs": []
+    }
+   },
+   "M02": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "ok": true,
+     "errors": {
+      "console": 0,
+      "pageerror": 0,
+      "requestfailed": 0,
+      "external": 0,
+      "favicon": 0,
+      "warnings": 0
+     }
+    }
+   },
+   "M03": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "390x844": {
+      "title": [],
+      "play": [],
+      "maxSizeOk": true
+     },
+     "1280x720": {
+      "title": [],
+      "play": [],
+      "maxSizeOk": true
+     },
+     "1920x1080": {
+      "title": [],
+      "play": [],
+      "maxSizeOk": true
+     },
+     "375x667": {
+      "title": [],
+      "play": [],
+      "maxSizeOk": true
+     }
+    }
+   },
+   "M04": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-m04-title-0.5s.png, compare/cmp-m04-press-enter-crop.png: ロゴ画像・PRESS ENTER の点滅・BEST・操作説明あり(max の PRESS ENTER は完全に消えず alpha 0.22 に減光する明滅)",
+    "data": {
+     "roadChanged_0_5vs1_5": 0.022,
+     "roadChanged_0_5vs0_75": 0.836
+    }
+   },
+   "M05": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "review-a-countdown.png(raw-m05-countdown-500/1500/2500): 3・2・1 と STAGE 1 / SEASIDE",
+    "data": {
+     "maxSpeed": 0,
+     "timeLeft": [
+      30,
+      30
+     ],
+     "space": true
+    }
+   },
+   "M06": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-m06-go-300.png に GO!、raw-m06-go-1200.png に GO! なし",
+    "data": {
+     "countdownSec": 3.015,
+     "timeLeftAt5s": 25
+    }
+   },
+   "M07": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "speedAt3s": 179.76,
+     "max": 300,
+     "seed": 7
+    }
+   },
+   "M08": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "decrease": 148.694,
+     "seed": 42
+    }
+   },
+   "M09": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "speedAt2s": 110.465,
+     "seed": 42
+    }
+   },
+   "M10": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "seq": [
+      0,
+      0.186,
+      -0.092,
+      0.011,
+      -0.112
+     ],
+     "zero": 0
+    }
+   },
+   "M11": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "xAt1s": -1.056
+    }
+   },
+   "M12": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-m12-offroad-1500.png: 自車が道路外(草/砂の面)",
+    "data": {
+     "speedAt3s": 74.376,
+     "x": [
+      1.05,
+      1.05
+     ],
+     "crashes": 0,
+     "ref0": 74.746
+    }
+   },
+   "M13": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "m13-s1-sheet.png, compare/cmp-m13-hills-horizon.png: 右/左カーブ、頂上手前で奥が隠れる、消失位置が地点ごとに変化",
+    "data": {}
+   },
+   "M14": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "run": {
+      "A": -9,
+      "B": -29,
+      "C": -30
+     },
+     "stop": {
+      "A": 0,
+      "B": 0,
+      "C": 0
+     }
+    }
+   },
+   "M15": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "compare/cmp-m15-zoom.png: 路肩 2 色交互・路面/草の明暗、隙間や別色の横線なし",
+    "data": {}
+   },
+   "M16": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "m16-b-s1-30s-sheet.png: sedan/truck/sports が車線上に出現、遠いほど小さい",
+    "data": {
+     "stageParam": [
+      36,
+      54,
+      72
+     ],
+     "wRoute": [
+      36,
+      54,
+      72
+     ]
+    }
+   },
+   "M17": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "events": [
+      50,
+      50,
+      50,
+      50
+     ],
+     "seed": 42,
+     "crashedCarOvertakes": 0
+    }
+   },
+   "M18": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "m18-crash-sheet.png: 自車の点滅と煙",
+    "data": {
+     "speedAfter": 60,
+     "crashesDelta": 1,
+     "invMs": 1200,
+     "invEndBy": "recrash",
+     "duringInv": 0,
+     "afterInv": 2,
+     "pushX": -0.12,
+     "confirmInvuln": "ok"
+    }
+   },
+   "M19": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "m19-crash-sheet.png: 自車の点滅と煙",
+    "data": {
+     "speedAfter": 60,
+     "crashesDelta": 1,
+     "invMs": 1200,
+     "invEndBy": "flag",
+     "duringInv": 0,
+     "afterInv": 1,
+     "pushX": 1.68,
+     "confirmInvuln": "ok"
+    }
+   },
+   "M20": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "review-c-roadside.png(raw-m20-s*-*.png): 各ステージの solid 2 種と decor が両側に",
+    "data": {}
+   },
+   "M21": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "countdown": 0,
+     "paused": 0,
+     "stageclear": 0
+    }
+   },
+   "M22": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "review-e-cp.png: ゲートが道路をまたぐ、0.3/1.9 秒に CHECKPOINT! と +18 SEC、2.4 秒になし(1.9 秒はフェードアウト中で薄いが判読可)",
+    "data": {
+     "sec": 0.085,
+     "dTime": 17.983,
+     "dScore": 501,
+     "seed": 42
+    }
+   },
+   "M23": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-m23-timeup-500.png / raw-m23-gameover-500.png: TIME UP、GAME OVER / REACHED STAGE 1 / SCORE / BEST / ENTER: RETRY   ESC: TITLE",
+    "data": {
+     "toTimeup": 2.026,
+     "toGameover": 2.5
+    }
+   },
+   "M24": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-m24-clear-1200.png に GOAL!(パネルなし)、raw-m24-clear-1800.png と raw-w-s1-clear-1600.png にパネル 5 行、raw-m24-gate.png にゴールゲート",
+    "data": {
+     "dScore": 3601,
+     "expect": 3600,
+     "T0": 26.817,
+     "seed": 42
+    }
+   },
+   "M25": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "scene": "countdown",
+     "stage": 2,
+     "goalRemainingM": 3594.173,
+     "timeLeft": 32,
+     "trafficTotal": 54,
+     "score": 3644,
+     "scoreBefore": 3644,
+     "cp": 0
+    }
+   },
+   "M26": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-m26-s1/2/3-run2s.png: S1 橙〜桃、S2 紫〜藍、S3 黒〜濃紺+ネオン。数値条件は S1 の空の色相が 302〜308°(紫寄り)で 320〜360°/0〜50° を外れたが、上空の紫帯の影響で、目視では夕焼けの橙〜桃が支配的なため目視を優先(EVAL §2 M26)",
+    "data": {
+     "s3goal": 4194.172919227935,
+     "s3time": 32,
+     "color": {
+      "s1": {
+       "hue": 302.5,
+       "lum": 0.4016,
+       "neon": 0.15829
+      },
+      "s2": {
+       "hue": 260.2,
+       "lum": 0.2209,
+       "neon": 0
+      },
+      "s3sky": {
+       "hue": 244.2,
+       "lum": 0.1388,
+       "neon": 0.00773
+      },
+      "s3neonFull": 0.02819,
+      "numeric": {
+       "s1": false,
+       "s2": true,
+       "s3": true
+      }
+     }
+    }
+   },
+   "M27": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-w-ending.png, compare/cmp-m27x-ending.png: ALL CLEAR!、スコア、ランク、BEST、PRESS ENTER",
+    "data": {
+     "score": 14633,
+     "rank": "C",
+     "expected": "C",
+     "bRank": "A",
+     "bScore": 30195
+    }
+   },
+   "M28": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-m28-paused-hud.png の SCORE 000570 = getState().score 570",
+    "data": {
+     "score": 570,
+     "dist": 470.139,
+     "ov": 2,
+     "diff": 0
+    }
+   },
+   "M29": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-m29-paused-KeyP.png / -Escape.png: PAUSED オーバーレイ",
+    "data": {
+     "KeyP": {
+      "paused": "paused",
+      "dTime": 0,
+      "dDist": 0,
+      "imgMad": 0,
+      "imgChanged": 0,
+      "resumed": "playing"
+     },
+     "Escape": {
+      "paused": "paused",
+      "dTime": 0,
+      "dDist": 0,
+      "imgMad": 0,
+      "imgChanged": 0,
+      "resumed": "playing"
+     },
+     "R": {
+      "scene": "countdown",
+      "stage": 1,
+      "score": 0
+     },
+     "Q": "title",
+     "_ms": 16256
+    }
+   },
+   "M30": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "playingBefore": 141,
+     "playing": {
+      "scene": "countdown",
+      "stage": 1,
+      "score": 0,
+      "overtakes": 0,
+      "crashes": 0
+     },
+     "pausedBefore": 94,
+     "paused": {
+      "scene": "countdown",
+      "stage": 1,
+      "score": 0,
+      "overtakes": 0,
+      "crashes": 0
+     },
+     "gameoverBefore": 103,
+     "gameoverR": {
+      "scene": "countdown",
+      "stage": 1,
+      "score": 0,
+      "overtakes": 0,
+      "crashes": 0
+     },
+     "gameoverEnter": {
+      "scene": "countdown",
+      "stage": 1,
+      "score": 0,
+      "overtakes": 0,
+      "crashes": 0
+     },
+     "gameoverEsc": "title",
+     "gameoverQ": "title",
+     "endingBefore": 14633,
+     "ending": {
+      "scene": "countdown",
+      "stage": 1,
+      "score": 0,
+      "overtakes": 0,
+      "crashes": 0
+     },
+     "stage2Before": 94,
+     "stage2": {
+      "scene": "countdown",
+      "stage": 2,
+      "score": 0,
+      "overtakes": 0,
+      "crashes": 0
+     },
+     "_ms": 72492
+    }
+   },
+   "M31": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-m31-sound-on.png / raw-m31-sound-off.png: [M] SOUND ON → OFF",
+    "data": {
+     "before": false,
+     "after": true,
+     "afterReload": true,
+     "ls": "{\"best\":0,\"muted\":true}",
+     "lsShape": true,
+     "mute1": true,
+     "mute1ls": null,
+     "_ms": 6398
+    }
+   },
+   "M32": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "raw-m32-gameover-newbest.png(high は m32x-gameover-sheet.png。点滅のため): NEW BEST!、raw-m32-title-best.png の BEST",
+    "data": {
+     "score": 337,
+     "lsBest": 337,
+     "reload": 337,
+     "throwOk": true,
+     "throwErrors": {
+      "console": 0,
+      "pageerror": 0,
+      "requestfailed": 0,
+      "external": 0,
+      "favicon": 0,
+      "warnings": 0
+     }
+    }
+   },
+   "M33": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "raw-m33-hud.png: 全 HUD 要素あり。m33-timewarn-sheet.png: 残り 10 秒以下で赤く明滅",
+    "data": {}
+   },
+   "M34": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "checks": {
+      "stateNone": true,
+      "running": true,
+      "bgmCd": true,
+      "bgmPlay": true,
+      "bgmNull": true,
+      "hzCd": true,
+      "hz150": true,
+      "hz300": true,
+      "hzZero": true,
+      "mute": true
+     },
+     "hz": [
+      60,
+      129.65,
+      199.65,
+      0,
+      0
+     ],
+     "rms": [
+      0.14195167639812173,
+      0
+     ],
+     "peak": 0.4089915454387665,
+     "bgm": {
+      "cd": "bgm_1",
+      "pl": "bgm_1",
+      "sc": null,
+      "tu": null,
+      "ti": null
+     }
+    }
+   },
+   "M35": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "defaultPrevented": {
+      "ArrowUp": true,
+      "ArrowDown": true,
+      "ArrowLeft": true,
+      "ArrowRight": true,
+      "Space": true
+     },
+     "scrollY": 0,
+     "afterBlurScene": "paused",
+     "speedBefore": 42.75,
+     "speedAfter1s": 0,
+     "sceneDuring": "playing",
+     "repeatScene": "title",
+     "controlScene": "countdown",
+     "_ms": 7483
+    }
+   },
+   "M36": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "s1": {
+      "a": "3de2ac79",
+      "b": "3de2ac79",
+      "same": true,
+      "traffic": 36,
+      "rHash": "3de2ac79"
+     },
+     "s2": {
+      "a": "4c82a1a0",
+      "b": "4c82a1a0",
+      "same": true,
+      "traffic": 54,
+      "rHash": null
+     },
+     "s3": {
+      "a": "c3e64a19",
+      "b": "c3e64a19",
+      "same": true,
+      "traffic": 72,
+      "rHash": null
+     },
+     "seed43": "e2b5d278",
+     "seed43Differs": true,
+     "rSame": true,
+     "_ms": 8156
+    }
+   },
+   "M37": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "fps30": {
+      "fps": [
+       29.999,
+       30
+      ],
+      "timeLeftAt5s": 24.967,
+      "speedAt3s": 183
+     },
+     "fps144": {
+      "fps": [
+       143.074,
+       143.56
+      ],
+      "timeLeftAt5s": 25.001,
+      "speedAt3s": 179.558
+     }
+    }
+   },
+   "M38": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "compare/cmp-m38-font.png: A〜Z・0〜9 判読可",
+    "data": {
+     "missingAssets": [],
+     "missingSounds": [],
+     "silentSounds": []
+    }
+   },
+   "M39": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "compare/cmp-m39-player-frames.png(左/直進/右)、m16 シート(3 車種)、review-c(空・遠景・路側物)、review-e(ゲート)、m18 シート(煙)、タイトル(ロゴ)、全画面(文字)",
+    "data": {}
+   },
+   "M40": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "staticHits": [],
+     "runtime": {
+      "fill": 0,
+      "stroke": 0
+     }
+    }
+   },
+   "M41": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "ok": true,
+     "timerAfterR": {
+      "dt": 2013.5,
+      "dTime": 2.016666666666552
+     },
+     "afterR": {
+      "stage": 1,
+      "score": 0,
+      "timeLeft": 30
+     }
+    }
+   },
+   "M42": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "m42-b-s1-60s-sheet.png, m42-b-s3-60s-sheet.png: 同一レーンの重なりなし",
+    "data": {}
+   }
+  },
+  "should": {
+   "S-01": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "raw-m13-s1-flat.png ほか: 遠くの道路・スプライトが地平線色に溶ける",
+    "data": {}
+   },
+   "S-02": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "near": true,
+     "shift": {
+      "A": -9,
+      "B": -29,
+      "C": -30
+     },
+     "rowBands": {
+      "100-120": -9,
+      "120-140": -9,
+      "140-160": -30,
+      "160-170": -30,
+      "170-178": -60
+     }
+    }
+   },
+   "S-03": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "s03-brake-compare.png: ブレーキ中だけランプ点灯",
+    "data": {
+     "galleryBrake": true
+    }
+   },
+   "S-04": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "s04z-tire-zoom-sheet.png: タイヤのトレッド模様が約 0.1 秒周期で 2 フレーム切り替わる",
+    "data": {
+     "galleryWheel": true
+    }
+   },
+   "S-05": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "m18-crash-sheet.png に火花と白フラッシュ。S05X で 13 フレームの横ずれ",
+    "data": {
+     "galleryspark": true,
+     "shakeFramesWithin300ms": 13,
+     "shakeFramesAfter350ms": 0
+    }
+   },
+   "S-06": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "compare/cmp-s06-280kmh-zoom.png / raw-s06-280kmh.png: 250 km/h 以上で速度線",
+    "data": {}
+   },
+   "S-07": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "events": [
+      50,
+      70,
+      50,
+      50
+     ]
+    }
+   },
+   "S-08": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "buttons": [
+      "bgm_2",
+      "bgm_3",
+      "sfx_overtake",
+      "sfx_offroad",
+      "sfx_timewarn",
+      "jingle_title"
+     ],
+     "wRouteBgm": [
+      "bgm_1",
+      "bgm_2",
+      "bgm_3"
+     ],
+     "spect": {
+      "s1": {
+       "bgm": "bgm_1"
+      },
+      "s2": {
+       "bgm": "bgm_2"
+      },
+      "s3": {
+       "bgm": "bgm_3"
+      },
+      "_ms": 37006
+     }
+    }
+   },
+   "S-09": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "coarse": true,
+     "tapStart": true,
+     "gasButton": {
+      "x": 336,
+      "y": 790,
+      "w": 80
+     },
+     "speeds": [
+      0,
+      60,
+      17
+     ],
+     "accelWhilePressed": true,
+     "stopsAfterRelease": true,
+     "_ms": 6414
+    }
+   },
+   "S-10": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "sfx_offroad": true,
+     "fx_dust": true
+    }
+   },
+   "S-11": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "sfx_timewarn ボタンあり。残り 10 秒以下で整数秒が変わるたびに sfx_timewarn を鳴らすコードを確認。出力タップの RMS は BGM に埋もれて 1 秒周期を分離できず",
+    "data": {
+     "button": true
+    }
+   },
+   "S-12": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "review-c-roadside.png の S3: ヘッドライトの照射 / 街灯・ネオンの発光",
+    "data": {}
+   },
+   "S-13": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "raw-s13-overtake-100.png: 自車付近に +50",
+    "data": {}
+   },
+   "S-14": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "o7-gallery-cars.png に各車種 3 色、m16 シートで混在",
+    "data": {
+     "variants": [
+      "car_sedan:1",
+      "car_sedan_v2:1",
+      "car_sedan_v3:1",
+      "car_truck:1",
+      "car_truck_v2:1",
+      "car_truck_v3:1",
+      "car_sports:1",
+      "car_sports_v2:1",
+      "car_sports_v3:1"
+     ]
+    }
+   },
+   "S-15": {
+    "pass": true,
+    "auto": true,
+    "data": {
+     "blur": "paused",
+     "visibility": "paused"
+    }
+   },
+   "S-16": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "F で document.fullscreenElement が非 null、右下に FPS 表示",
+    "data": {
+     "fullscreen": true
+    }
+   },
+   "S-17": {
+    "pass": true,
+    "auto": true,
+    "visual": true,
+    "note": "review-a-countdown.png: スタートゲート、信号ライト(3 灯が順に点灯)、GO!",
+    "data": {
+     "gate_start": true
+    }
+   },
+   "S-18": {
+    "pass": true,
+    "auto": null,
+    "visual": true,
+    "note": "S18X: タイトルロゴが縦に 3〜5 px 動く(浮遊)",
+    "data": {
+     "logoDy": [
+      0,
+      -1,
+      -2,
+      -3,
+      -4,
+      -5
+     ]
+    }
+   }
+  },
+  "subjective": {
+   "画づくり": {
+    "score": 5,
+    "basis": "砂浜と SURF 看板、細かいヤシ、ディザの空と太陽、S2 の山並みと松林、S3 の月と HOTEL/NEON(review-c-roadside.png)。自車はナンバープレートまで描き込み、全画面が完成品の見栄え"
+   },
+   "アニメ・演出": {
+    "score": 5,
+    "basis": "フォグ・近景・ブレーキ・タイヤ・火花・白フラッシュ・シェイク・速度線・リザルトのカウントアップ(review-d-clear.png)・フェード・ロゴの輝き・夜のグロー"
+   },
+   "手触り": {
+    "score": 4,
+    "basis": "M07〜M12 は仕様どおり、FPS 平均 60 / 最小 59。ボットで全クリア。スレスレ・シェイクあり"
+   },
+   "音": {
+    "score": 5,
+    "basis": "Must+Should の音すべて(エラー 0)。BGM 128/138/152 BPM、16 小節、ディレイ(付点 8 分)つき。エンジンは複数発振器+フィルタ。ピーク最大 0.41"
+   },
+   "UI": {
+    "score": 5,
+    "basis": "HUD・パネル(カウントアップ)・ゲームオーバーの配色が整い読みやすい。タッチボタンはアクセル緑・ブレーキ赤で区別。390 幅でも崩れなし"
+   }
+  }
+ }
+}

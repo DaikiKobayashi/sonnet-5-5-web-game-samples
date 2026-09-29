@@ -1,0 +1,7 @@
+max M13 9.4s 
+max M14 8.3s 
+max M22 9.3s 
+max M24 8.9s 
+max M27X 37.2s 
+max M32X 13.7s 
+max S04Z 6.4s 

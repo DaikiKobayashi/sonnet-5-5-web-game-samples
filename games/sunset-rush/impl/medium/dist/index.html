@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>SUNSET RUSH</title>
+<link rel="icon" href="data:,">
+<style>
+  html, body { margin: 0; height: 100%; background: #07060d; overflow: hidden; }
+  body { display: flex; align-items: center; justify-content: center; }
+  #game { width: min(100vw, calc(100vh * 16 / 9)); aspect-ratio: 16 / 9; image-rendering: pixelated; image-rendering: crisp-edges; display: block; background: #000; touch-action: none; }
+  #touch { display: none; position: fixed; left: 0; right: 0; bottom: 0; height: 0; pointer-events: none; }
+  #touch button { position: fixed; bottom: 12px; width: 76px; height: 76px; border-radius: 16px; border: 2px solid rgba(255,255,255,.55); background: rgba(255,255,255,.18); pointer-events: auto; touch-action: none; padding: 0; }
+  #touch svg { width: 44px; height: 44px; fill: rgba(255,255,255,.85); }
+  #tl { left: 12px; } #tr { left: 100px; } #tg { right: 12px; } #tb { right: 100px; }
+  @media (pointer: coarse) { #touch { display: block; } }
+</style>
+</head>
+<body>
+<canvas id="game" width="640" height="360"></canvas>
+<div id="touch">
+  <button id="tl" aria-label="left"><svg viewBox="0 0 24 24"><path d="M15 4 5 12l10 8z"/></svg></button>
+  <button id="tr" aria-label="right"><svg viewBox="0 0 24 24"><path d="M9 4l10 8-10 8z"/></svg></button>
+  <button id="tb" aria-label="brake"><svg viewBox="0 0 24 24"><path d="M4 9l8 10 8-10z"/></svg></button>
+  <button id="tg" aria-label="gas"><svg viewBox="0 0 24 24"><path d="M4 15l8-10 8 10z"/></svg></button>
+</div>
+<script type="module" src="./js/main.js"></script>
+</body>
+</html>
