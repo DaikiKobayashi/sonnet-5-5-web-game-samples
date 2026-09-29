@@ -1,0 +1,21 @@
+const { launch, open, state, sleep, waitScene } = require('./lib.cjs');
+const OUT = process.argv[2];
+(async () => {
+  const browser = await launch();
+  const { page, log } = await open(browser, 'debug=1&seed=42&mute=1');
+  await sleep(600);
+  console.log('state', JSON.stringify(await state(page)));
+  await page.screenshot({ path: OUT + '/t_title.png' });
+  await sleep(1400);
+  await page.screenshot({ path: OUT + '/t_title2.png' });
+  await page.keyboard.press('Enter');
+  await sleep(700);
+  await page.screenshot({ path: OUT + '/t_count.png' });
+  await waitScene(page, 'playing');
+  await page.keyboard.down('ArrowUp');
+  await sleep(2500);
+  await page.screenshot({ path: OUT + '/t_play.png' });
+  console.log('state', JSON.stringify(await state(page)));
+  console.log('errors', JSON.stringify(log.errors), 'bad', JSON.stringify(log.bad), 'failed', JSON.stringify(log.failed));
+  await browser.close();
+})().catch((e) => { console.error(e); process.exit(1); });

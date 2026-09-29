@@ -1,0 +1,6 @@
+{
+  "name": "sunset-rush-max",
+  "private": true,
+  "type": "module",
+  "description": "Dev-only marker so Node can import dist/js as ES modules for the unit tests. The game itself has zero dependencies and no build step."
+}
