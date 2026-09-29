@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>SUNSET RUSH</title>
+<link rel="icon" href="data:,">
+<style>
+  html, body { margin: 0; padding: 0; height: 100%; background: #07060d; overflow: hidden; }
+  body { display: flex; align-items: center; justify-content: center; touch-action: none; -webkit-user-select: none; user-select: none; }
+  #stage { position: relative; width: min(100vw, calc(100vh * 16 / 9)); aspect-ratio: 16 / 9; }
+  #game { display: block; width: 100%; height: 100%; image-rendering: pixelated; image-rendering: crisp-edges; background: #000; }
+  #touch { position: absolute; inset: 0; pointer-events: none; display: none; }
+  #touch.on { display: block; }
+  .tb { position: absolute; pointer-events: auto; width: 13%; aspect-ratio: 1; border-radius: 22%; background: rgba(255,255,255,0.18); border: 2px solid rgba(255,255,255,0.45); display: flex; align-items: center; justify-content: center; touch-action: none; }
+  .tb.down { background: rgba(255,200,120,0.5); }
+  .tb svg { width: 55%; height: 55%; fill: rgba(255,255,255,0.85); }
+  #tl { left: 2%; bottom: 4%; } #tr { left: 17%; bottom: 4%; }
+  #tg { right: 2%; bottom: 4%; } #tk { right: 17%; bottom: 4%; }
+  #tp { right: 2%; top: 18%; width: 8%; }
+  /* gallery */
+  body.gallery { display: block; overflow: auto; height: auto; background: #1b1d2e; color: #e8e8f4; font-family: monospace; touch-action: auto; user-select: text; }
+  body.gallery #stage { display: none; }
+  #app { display: none; }
+  body.gallery #app { display: block; padding: 16px; }
+  #app h1 { font-size: 20px; } #app h2 { font-size: 16px; margin-top: 28px; border-bottom: 1px solid #444; }
+  .grid { display: flex; flex-wrap: wrap; gap: 16px; }
+  .grid figure { margin: 0; max-width: 100%; } .grid figcaption { font-size: 12px; margin-top: 4px; }
+  .sounds { display: flex; flex-wrap: wrap; gap: 8px; }
+  .sounds button { font-family: monospace; padding: 8px 12px; background: #2c3050; color: #fff; border: 1px solid #667; cursor: pointer; }
+  .sounds button.on { background: #b8542a; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <canvas id="game" width="640" height="360"></canvas>
+  <div id="touch">
+    <div class="tb" id="tl" data-k="left"><svg viewBox="0 0 24 24"><path d="M15 3 L5 12 L15 21 L15 15 L21 15 L21 9 L15 9 Z"/></svg></div>
+    <div class="tb" id="tr" data-k="right"><svg viewBox="0 0 24 24"><path d="M9 3 L19 12 L9 21 L9 15 L3 15 L3 9 L9 9 Z"/></svg></div>
+    <div class="tb" id="tk" data-k="brake"><svg viewBox="0 0 24 24"><path d="M12 21 L3 9 L9 9 L9 3 L15 3 L15 9 L21 9 Z"/></svg></div>
+    <div class="tb" id="tg" data-k="gas"><svg viewBox="0 0 24 24"><path d="M12 3 L21 15 L15 15 L15 21 L9 21 L9 15 L3 15 Z"/></svg></div>
+    <div class="tb" id="tp" data-k="pause"><svg viewBox="0 0 24 24"><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg></div>
+  </div>
+</div>
+<div id="app"></div>
+<script type="module" src="./js/main.js"></script>
+</body>
+</html>
