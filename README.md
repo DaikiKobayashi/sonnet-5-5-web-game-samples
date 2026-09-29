@@ -6,11 +6,12 @@ Sonnet 5.5 の実力を測るために、**モデルを固定して**さまざ�
 
 1. **仕様書**: Sonnet 5.5 の `xhigh` で 1 本書く(`games/<game-id>/SPEC.md`)。ジャンル・ルール・技術スタックも Sonnet 5.5 が決めます。
 2. **実装**: その仕様書を、`low` / `medium` / `high` / `xhigh` / `max` の 5 段階の effort でそれぞれ実装する(`games/<game-id>/impl/<effort>/`)。
-3. **評価**: ブラウザで実際に動かして、受け入れ基準の達成度などを比較する(`games/<game-id>/RESULTS.md`)。
+3. **評価**: **Opus 5.5** が、実装を見る前に評価計画を立て(`EVAL.md`)、ブラウザで実測して比較する(`eval/`、`RESULTS.md`)。
+   作り手(Sonnet 5.5)と評価者を分けています。
 
 ピクセルアートや効果音などの**アセットも、effort ごとにゼロから作らせて完全に分けています**。何が出来上がるかを見比べられます。
 
-モデルと effort の固定は [`.claude/settings.json`](.claude/settings.json) と [`.claude/agents/`](.claude/agents/) にあります。
+制作側のモデルと effort の固定は [`.claude/settings.json`](.claude/settings.json) と [`.claude/agents/`](.claude/agents/) にあります。
 作業手順は [`CLAUDE.md`](CLAUDE.md)、結果の書式は [`docs/results-template.md`](docs/results-template.md) を参照してください。
 
 ## 遊ぶ(GitHub Pages)
