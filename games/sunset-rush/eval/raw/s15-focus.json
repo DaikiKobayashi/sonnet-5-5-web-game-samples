@@ -1,0 +1,32 @@
+{
+ "low": {
+  "hasFocusBefore": true,
+  "hasFocus": true,
+  "hidden": false,
+  "scene": "playing"
+ },
+ "medium": {
+  "hasFocusBefore": true,
+  "hasFocus": true,
+  "hidden": false,
+  "scene": "playing"
+ },
+ "high": {
+  "hasFocusBefore": true,
+  "hasFocus": true,
+  "hidden": false,
+  "scene": "playing"
+ },
+ "xhigh": {
+  "hasFocusBefore": true,
+  "hasFocus": true,
+  "hidden": false,
+  "scene": "playing"
+ },
+ "max": {
+  "hasFocusBefore": true,
+  "hasFocus": true,
+  "hidden": false,
+  "scene": "playing"
+ }
+}

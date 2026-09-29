@@ -1,0 +1,5 @@
+medium M13 9.7s 
+medium M14 8.4s 
+medium M22 9.6s 
+medium M24 9.1s 
+medium M27X 37.3s 
