@@ -1,0 +1,7 @@
+{
+  "id": "dynamite-mole",
+  "title": "Dynamite Mole",
+  "description": "ダイナマイトで岩を吹き飛ばし、洞窟の敵を倒して出口を目指す、ボンバーマン系のグリッドアクション。全 5 ステージ、敵 4 種、アイテム 4 種。",
+  "stack": "Vanilla JS + Canvas 2D + Web Audio(依存・ビルドなし)",
+  "createdAt": "2026-09-29"
+}
