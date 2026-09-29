@@ -208,6 +208,29 @@ async function shots(env) {
     await env.done(p);
   });
 
+  // --- 岩が壊れる瞬間(S3: 岩の破片・火花などのパーティクル) ---
+  await step('rockbreak', async () => {
+    const p = await env.open('debug=1&seed=1', { tag: 'rockbreak' });
+    const page = p.page;
+    await startPlaying(page);
+    await dbg(env, page, 'godMode', true);
+    await dbg(env, page, 'killAllEnemies');
+    await sleep(700);
+    const s0 = await snap(page);
+    const rocks = s0.grid.flatMap((row, r) => row.split('').map((ch, c) => (ch === 'S' ? { col: c, row: r } : null))).filter(Boolean);
+    const spot = D.findBombSpot(s0.grid, rocks, 2);
+    const hit = spot.sim.broken[0].split(',').map(Number);
+    await dbg(env, page, 'teleport', spot.c, spot.r);
+    await sleep(200);
+    await L.press(page, 'Space');
+    await dbg(env, page, 'teleport', spot.c === 13 ? 11 : spot.c + (spot.c > 7 ? -2 : 2) * 0, spot.r);
+    await page.waitForFunction(() => window.__GAME__.snapshot().flames.length > 0, null, { timeout: 5000, polling: 'raf' });
+    const cx = Math.max(0, Math.min(480 - 128, hit[0] * 32 + 16 - 64)), cy = Math.max(64, Math.min(416 - 128, 64 + hit[1] * 32 + 16 - 64));
+    const fr = await burst(page, { n: 14, interval: 35, crop: `{x:${cx}, y:${cy}, w:128, h:128}` });
+    save(env, 'rockbreak-strip.png', await montage(env, [{ items: fr.slice(0, 7).map((f) => ({ url: f.url, crop: f.crop })) }, { items: fr.slice(7).map((f) => ({ url: f.url, crop: f.crop })) }], { scale: 1.5 }));
+    await env.done(p);
+  });
+
   // --- クリア演出(S13): 出口が開く瞬間・ステージクリア中のプレイヤーの連続フレーム ---
   await step('clearfx', async () => {
     const p = await env.open('debug=1&seed=1', { tag: 'clearfx' });
@@ -279,6 +302,7 @@ async function shots(env) {
     await sleep(200);
     const idle = await burst(page, { n: 24, interval: 120, crop: '{x: 34, y: 98, w: 28, h: 28}', lum: true });
     metrics.playerIdleFrames = clusterFrames(idle.map((f) => f.lum)).frames;
+    metrics.playerIdleFramesSensitive = clusterFrames(idle.map((f) => f.lum), { thr: 12, maxDiff: 6 }).frames;
     rows.push({ items: idle.slice(0, 16).map((f) => ({ url: f.url, crop: { x: 28, y: 92, w: 40, h: 40 } })) });
     const walk = async (key, from, n = 16) => {
       await dbg(env, page, 'teleport', from[0], from[1]);
@@ -316,6 +340,8 @@ async function shots(env) {
     await startPlaying(page);
     await dbg(env, page, 'godMode', true);
     const idleDistinct = {};
+    const idleSens = {};
+    const deathRows = [];
     const rows = [];
     for (const type of ['slime', 'bat', 'ghost', 'golem']) {
       await dbg(env, page, 'killAllEnemies');
@@ -330,7 +356,14 @@ async function shots(env) {
       await sleep(150);
       const b = await burst(page, { n: 20, interval: 60, crop: '{x:34,y:98,w:28,h:28}', lum: true });
       idleDistinct[type] = clusterFrames(b.map((f) => f.lum)).frames;
+      idleSens[type] = clusterFrames(b.map((f) => f.lum), { thr: 12, maxDiff: 6 }).frames;
       rows.push({ items: b.slice(0, 16).map((f) => ({ url: f.url, crop: f.crop })) });
+      if (type !== 'golem') {
+        // 敵の死亡エフェクト(A08): 爆発直後から連続フレーム
+        await page.waitForFunction(() => window.__GAME__.snapshot().flames.length > 0, null, { timeout: 4000, polling: 'raf' }).catch(() => {});
+        const dth = await burst(page, { n: 10, interval: 50, crop: '{x:16,y:80,w:64,h:64}' });
+        deathRows.push({ items: dth.map((f) => ({ url: f.url, crop: f.crop })) });
+      }
       await sleep(1000);
       if (type === 'golem') {
         // 被弾の連続フレーム(爆発直後から追従)
@@ -341,6 +374,8 @@ async function shots(env) {
       await sleep(600);
     }
     metrics.enemyIdleFrames = idleDistinct;
+    metrics.enemyIdleFramesSensitive = idleSens;
+    if (deathRows.length) save(env, 'enemy-death-strip.png', await montage(env, deathRows, { scale: 1.5 }));
     save(env, 'enemy-idle-strips.png', await montage(env, rows, { scale: 2 }));
     // ゴーストの追跡表現: 遠い(距離 > 6)/近い(距離 ≤ 6)
     await dbg(env, page, 'killAllEnemies');

@@ -224,4 +224,50 @@ async function shouldA(env) {
   }
 }
 
-module.exports = { shouldA, shouldB: async () => {} };
+// ---- S12: 環境光(ビネット・たいまつの揺らぎ)。中央と周辺の床の明るさの比、時間的なゆらぎを測る ----
+async function shouldB(env) {
+  const out = {};
+  for (const stage of [1, 5]) {
+    const p = await env.open(`stage=${stage}&seed=1&debug=1`, { tag: `S12 s${stage}` });
+    const page = p.page;
+    await startPlaying(page);
+    await dbg(env, page, 'godMode', true);
+    await dbg(env, page, 'clearBlocks');
+    await dbg(env, page, 'killAllEnemies');
+    await sleep(1000);
+    out[stage] = await page.evaluate(async () => {
+      const g = document.querySelector('canvas').getContext('2d');
+      const med = (a) => a.slice().sort((x, y) => x - y)[a.length >> 1];
+      const tileLum = (c, r) => {
+        const d = g.getImageData(c * 32 + 8, 64 + r * 32 + 8, 16, 16).data; const l = [];
+        for (let k = 0; k < d.length; k += 4) l.push(d[k] * 0.3 + d[k + 1] * 0.59 + d[k + 2] * 0.11);
+        return med(l);
+      };
+      const inner = [], outer = [];
+      for (let r = 1; r <= 9; r++) for (let c = 1; c <= 13; c++) {
+        if (r % 2 === 0 && c % 2 === 0) continue; // 柱
+        const dist = Math.hypot(c - 7, r - 5);
+        if (dist <= 3) inner.push(tileLum(c, r)); else if (dist >= 6.5) outer.push(tileLum(c, r));
+      }
+      const mean = (a) => a.reduce((x, y) => x + y, 0) / a.length;
+      // 時間的なゆらぎ: 中央付近の床 3x3 タイルの平均輝度を 3 秒間サンプル
+      const series = [];
+      const t0 = performance.now();
+      while (performance.now() - t0 < 3000) {
+        let sum = 0, n = 0;
+        for (let c = 6; c <= 8; c++) for (let r = 4; r <= 6; r++) { if (r % 2 === 0 && c % 2 === 0) continue; sum += tileLum(c, r); n++; }
+        series.push(sum / n);
+        await new Promise((r) => setTimeout(r, 50));
+      }
+      const m = mean(series), sd = Math.sqrt(mean(series.map((v) => (v - m) ** 2)));
+      return { inner: +mean(inner).toFixed(1), outer: +mean(outer).toFixed(1), ratio: +(mean(outer) / mean(inner)).toFixed(3), flickerCV: +(sd / m).toFixed(4), flickerRange: +(Math.max(...series) - Math.min(...series)).toFixed(2) };
+    });
+    await env.done(p);
+  }
+  env.extra.ambient = out;
+  const vig = Object.values(out).some((o) => o.ratio < 0.92);
+  const flick = Object.values(out).some((o) => o.flickerCV > 0.004);
+  env.rec('INFO-ambient', vig || flick, `床の明るさの周辺/中央の比(ステージ 1: ${out[1].ratio}、ステージ 5: ${out[5].ratio}。0.92 未満でビネットありと判定)、中央床の輝度の時間変動係数(ステージ 1: ${out[1].flickerCV}、ステージ 5: ${out[5].flickerCV}。0.004 超で揺らぎありと判定)。ビネット=${vig} 揺らぎ=${flick}`);
+}
+
+module.exports = { shouldA, shouldB };
