@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Web Game Samples</title>
+    <link rel="icon" href="data:," />
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #f6f7fb;
+        --fg: #1b1e28;
+        --muted: #667085;
+        --card: #ffffff;
+        --border: #e2e5ee;
+        --accent: #0d9488;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #12141a;
+          --fg: #e8eaf0;
+          --muted: #8b90a0;
+          --card: #1b1e28;
+          --border: #2a2e3b;
+          --accent: #5eead4;
+        }
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--fg);
+        font-family: system-ui, -apple-system, 'Hiragino Sans', 'Noto Sans JP', sans-serif;
+      }
+      main { width: min(100% - 32px, 960px); margin: 0 auto; padding: 40px 0; }
+      h1 { margin: 0 0 4px; font-size: 1.75rem; }
+      .lead { margin: 0 0 32px; color: var(--muted); }
+      ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px;
+           grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+      a.card { display: block; height: 100%; padding: 16px; color: inherit; text-decoration: none;
+               background: var(--card); border: 1px solid var(--border); border-radius: 12px; }
+      a.card:hover, a.card:focus-visible { border-color: var(--accent); outline: none; }
+      .card h2 { margin: 0 0 6px; font-size: 1.05rem; }
+      .card p { margin: 0; color: var(--muted); font-size: 0.9rem; }
+      .empty { color: var(--muted); }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Web Game Samples</h1>
+      <p class="lead">Sonnet 5.5 で作ったブラウザゲームの一覧</p>
+      <ul id="list"></ul>
+      <p id="empty" class="empty" hidden>まだゲームがありません。</p>
+    </main>
+    <script>
+      (async () => {
+        const list = document.getElementById('list');
+        const empty = document.getElementById('empty');
+        try {
+          const res = await fetch('games/games.json');
+          if (!res.ok) throw new Error(res.status);
+          const games = await res.json();
+          if (!games.length) empty.hidden = false;
+          for (const g of games) {
+            const li = document.createElement('li');
+            const a = document.createElement('a');
+            a.className = 'card';
+            a.href = `games/${g.id}/`;
+            const h2 = document.createElement('h2');
+            h2.textContent = g.title;
+            const p = document.createElement('p');
+            p.textContent = g.description || '';
+            a.append(h2, p);
+            li.append(a);
+            list.append(li);
+          }
+        } catch {
+          empty.textContent = 'ゲーム一覧を読み込めませんでした。`npm run dev` で起動してください。';
+          empty.hidden = false;
+        }
+      })();
+    </script>
+  </body>
+</html>
