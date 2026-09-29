@@ -81,7 +81,27 @@ export function startGallery() {
 
   // ---- images
   const box = main.querySelector('#images');
-  for (const spr of assets.list) {
+  const GROUPS = [
+    ['Cars (player, traffic and colour variants)', ['car', 'traffic']],
+    ['Roadside objects', ['roadside']],
+    ['Gates', ['gate']],
+    ['Backgrounds (sky / far / near, stages 1-3)', ['bg']],
+    ['Logo, bitmap font and effects', ['ui', 'font', 'fx']],
+  ];
+  const ordered = [];
+  for (const [title, kinds] of GROUPS) {
+    let group = assets.list.filter((a) => kinds.includes(a.kind));
+    if (kinds[0] === 'bg') group = group.slice().sort((a, b) => a.id.localeCompare(b.id));
+    ordered.push({ title, group });
+  }
+  const flat = [];
+  for (const g of ordered) for (const spr of g.group) flat.push({ spr, first: spr === g.group[0] ? g.title : null });
+  for (const { spr, first } of flat) {
+    if (first) {
+      const h = document.createElement('h3');
+      h.textContent = first;
+      box.appendChild(h);
+    }
     const frames = spr.frames;
     const fw = spr.w;
     const fh = spr.h;

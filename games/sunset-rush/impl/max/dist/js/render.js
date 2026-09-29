@@ -199,6 +199,8 @@ export class Renderer {
       const cars = seg.cars;
       for (let k = 0; k < cars.length; k++) {
         const c = cars[k];
+        // attract mode has no player car: never draw a car the camera is about to drive through
+        if (sim.scene === 'title' && n < 12 && Math.abs(c.x - sim.playerX) < 0.4) continue;
         const ct = CAR_TYPES[c.type];
         const spr = A.get(c.variant === 0 ? ct.id : ct.id + '_v' + (c.variant + 1));
         this.drawSprite(spr, spr.canvas, 0, c.z, c.x, seg, lvl, fogRgb, st, night, 'n', true);

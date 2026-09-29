@@ -228,35 +228,41 @@ export class Sim {
   }
 
   autopilot() {
-    // Attract mode: pick the emptiest lane and glide toward it.
+    // Attract mode: the camera drives itself. Every lane is scored by the time until we would reach its nearest
+    // car (closing-speed based, capped), minus a small cost per lane crossed. The target only changes when another
+    // lane is clearly better, so the glide between lanes does not flip-flop.
     const pz = this.pos + PLAYER_Z;
-    let cur = 1;
-    let bestD = 9;
+    const nearest = (x) => {
+      let n = 1;
+      let bd = 9;
+      for (let l = 0; l < 3; l++) { const d = Math.abs(LANE_X[l] - x); if (d < bd) { bd = d; n = l; } }
+      return n;
+    };
+    const here = nearest(this.playerX);
+    let target = nearest(this.autoTargetX);
+    const tt = [6, 6, 6];
     for (let l = 0; l < 3; l++) {
-      const d = Math.abs(LANE_X[l] - this.autoTargetX);
-      if (d < bestD) { bestD = d; cur = l; }
-    }
-    const free = [0, 0, 0];
-    for (let l = 0; l < 3; l++) {
-      let f = 24000;
       for (const c of this.lanes[l]) {
         if (c.gone) continue;
         const rel = c.z - pz;
-        if (rel > -2500 && rel < f) f = rel;
-      }
-      free[l] = f;
-    }
-    let target = cur;
-    if (free[cur] < 9000) {
-      let bestF = free[cur];
-      for (let l = 0; l < 3; l++) {
-        if (Math.abs(l - cur) > 1) continue;
-        if (free[l] > bestF + 3000) { bestF = free[l]; target = l; }
+        if (rel < -900) continue; // well behind us
+        const closing = Math.max(400, TITLE_SPEED - c.eff);
+        const t = Math.max(0, rel - 900) / closing;
+        if (t < tt[l]) tt[l] = t;
       }
     }
+    const score = [0, 0, 0];
+    for (let l = 0; l < 3; l++) {
+      score[l] = tt[l] - 0.5 * Math.abs(l - here);
+      // a lane change must not cut across a lane that a car reaches while we are still crossing it
+      for (let m = Math.min(l, here) + 1; m < Math.max(l, here); m++) if (tt[m] < 1.6) score[l] = -99;
+    }
+    let best = target;
+    for (let l = 0; l < 3; l++) if (score[l] > score[best] + 1.0) best = l;
+    target = best;
     this.autoTargetX = LANE_X[target];
     const diff = this.autoTargetX - this.playerX;
-    this.playerX += clamp(diff, -0.012, 0.012);
+    this.playerX += clamp(diff, -0.02, 0.02);
     this.steerDir = Math.abs(diff) > 0.04 ? Math.sign(diff) : 0;
     this.braking = false;
     this.offroad = false;

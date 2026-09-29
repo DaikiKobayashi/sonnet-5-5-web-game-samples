@@ -180,28 +180,105 @@ groups.flow = async (browser) => {
     return { pass: p, info: `paused: ${a.timeLeft}->${b.timeLeft} dist ${a.distanceM.toFixed(2)}->${b.distanceM.toFixed(2)}; stageclear: ${d.timeLeft}->${e.timeLeft}` };
   });
 
-  await T('22', 'checkpoint: +18 s, +500 score, count 1, banner CHECKPOINT!/+18 SEC, gate visible', async () => {
+  await T('22', 'checkpoint: warp(990) + 200 km/h + Up -> within ~1 s: +18 s, +500 score, count 1, banner ~2 s, gate visible', async () => {
+    const { page, context } = await newGame(browser);
+    await startPlaying(page);
+    // gate visibility (separate view, standing still before the gate)
+    await page.evaluate(() => { const d = window.__game.debug; d.sim.traffic.forEach((c) => (c.hit = true)); d.warp(940); d.setSpeedKmh(0); });
+    await sleep(250);
+    await page.screenshot({ path: `${OUT}/gate_checkpoint_approach.png` });
+    // the spec procedure
+    await page.keyboard.down('ArrowUp');
+    const r = await page.evaluate(async () => {
+      const d = window.__game.debug;
+      d.setTime(30);
+      const before = window.__game.getState();
+      d.warp(990);
+      d.setSpeedKmh(200);
+      const t0 = performance.now();
+      let after = null, bannerAt = null, bannerGone = null;
+      await new Promise((resolve) => {
+        const tick = () => {
+          const s = window.__game.getState();
+          const el = performance.now() - t0;
+          if (!after && s.checkpointsPassed === 1) after = { ...s, ms: el };
+          if (after && bannerAt === null && d.sim.banner) bannerAt = el;
+          if (bannerAt !== null && bannerGone === null && !d.sim.banner) bannerGone = el;
+          if (bannerGone !== null || el > 4500) return resolve();
+          requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      });
+      return { before, after, bannerAt, bannerGone };
+    });
+    await page.keyboard.up('ArrowUp');
+    await context.close();
+    const { before, after } = r;
+    if (!after) return { pass: false, info: 'checkpoint not reached within 4.5 s' };
+    const dScore = after.score - before.score; // warp itself adds no score; only the few metres driven + the 500 bonus
+    const bannerMs = r.bannerGone - r.bannerAt;
+    return { pass: after.ms < 1000 && after.checkpointsPassed === 1 && after.timeLeft > before.timeLeft + 17.5 && dScore >= 500 && dScore <= 512 && bannerMs > 1800 && bannerMs < 2200, info: `passed after ${Math.round(after.ms)} ms: timeLeft ${f2(before.timeLeft)} -> ${f2(after.timeLeft)}, score +${dScore} (500 bonus + ${dScore - 500} distance), banner visible ${Math.round(bannerMs)} ms` };
+  });
+
+  await T('22b', 'checkpoint banner text is on screen (CHECKPOINT! / +18 SEC pixels present)', async () => {
     const { page, context } = await newGame(browser);
     await startPlaying(page);
     await page.keyboard.down('ArrowUp');
-    await page.evaluate(() => { const d = window.__game.debug; d.warp(940); d.setSpeedKmh(200); d.setTime(30); });
-    for (const c of await page.evaluate(() => window.__game.debug.sim.traffic.map((c) => c.id))) { /* no-op */ }
+    await page.evaluate(() => { const d = window.__game.debug; d.sim.traffic.forEach((c) => (c.hit = true)); d.setTime(30); d.warp(990); d.setSpeedKmh(200); });
+    await waitScene(page, 'playing', 1000);
+    for (let i = 0; i < 40; i++) { if ((await state(page)).checkpointsPassed === 1) break; await sleep(25); }
     await sleep(250);
-    await page.screenshot({ path: `${OUT}/gate_checkpoint_approach.png` });
-    const before = await state(page);
-    let after = before;
-    for (let i = 0; i < 40 && after.checkpointsPassed === 0; i++) { await sleep(50); after = await state(page); }
-    await sleep(300);
+    const d = await px(page, 160, 96, 320, 44);
+    let yellow = 0, cyan = 0;
+    for (let i = 0; i < d.length; i += 4) { if (d[i] > 240 && d[i + 1] > 220 && d[i + 2] < 200) yellow++; }
+    const d2 = await px(page, 240, 128, 160, 22);
+    for (let i = 0; i < d2.length; i += 4) { if (d2[i] < 130 && d2[i + 1] > 220 && d2[i + 2] > 230) cyan++; }
     await page.screenshot({ path: `${OUT}/checkpoint_banner.png` });
-    after = await state(page);
-    await sleep(2200);
-    await page.screenshot({ path: `${OUT}/checkpoint_after2s.png` });
     await page.keyboard.up('ArrowUp');
     await context.close();
-    const dScore = after.score - before.score;
-    const dDist = after.distanceM - before.distanceM; // 1 pt per metre also accrues meanwhile
-    const bonus = dScore - dDist;
-    return { pass: after.checkpointsPassed === 1 && after.timeLeft > before.timeLeft + 15 && bonus >= 498 && bonus <= 503, info: `time ${f2(before.timeLeft)} -> ${f2(after.timeLeft)} (elapsed ~${f2(before.timeLeft + 18 - after.timeLeft)} s), score +${dScore} = ${f2(dDist)} distance + ${f2(bonus)} bonus, checkpoints=${after.checkpointsPassed}` };
+    return { pass: yellow > 150 && cyan > 60, info: `banner pixels: CHECKPOINT! yellow=${yellow}, +18 SEC cyan=${cyan}` };
+  });
+
+  await T('24', 'goal: warp(2950) + 200 km/h + Up -> stageclear, +100*floor(time)+1000, panel after 1.5 s, gate visible', async () => {
+    const { page, context } = await newGame(browser);
+    await startPlaying(page);
+    await page.evaluate(() => { const d = window.__game.debug; d.sim.traffic.forEach((c) => (c.hit = true)); d.sim.roadside.forEach((o) => (o.hit = true)); d.warp(2900); d.setSpeedKmh(0); });
+    await sleep(250);
+    await page.screenshot({ path: `${OUT}/gate_goal_approach.png` });
+    await page.keyboard.down('ArrowUp');
+    const r = await page.evaluate(async () => {
+      const d = window.__game.debug;
+      d.setTime(31.5);
+      d.warp(2950);
+      d.setSpeedKmh(200);
+      return await new Promise((resolve) => {
+        const t0 = performance.now();
+        let prev = window.__game.getState();
+        let panelAt = null, gotoClear = null;
+        const tick = () => {
+          const s = window.__game.getState();
+          const el = performance.now() - t0;
+          if (!gotoClear && s.scene === 'stageclear') gotoClear = { pre: prev, post: s, ms: el };
+          if (gotoClear && panelAt === null && d.sim.sceneT >= 90) panelAt = el - gotoClear.ms;
+          if (panelAt !== null || el > 6000) return resolve({ gotoClear, panelAt });
+          prev = s;
+          requestAnimationFrame(tick);
+        };
+        requestAnimationFrame(tick);
+      });
+    });
+    await sleep(700);
+    await page.screenshot({ path: `${OUT}/goal_panel.png` });
+    const panel = await px(page, 140, 90, 360, 6);
+    let gold = 0;
+    for (let i = 0; i < panel.length; i += 4) if (panel[i] > 240 && panel[i + 1] > 200 && panel[i + 2] < 120) gold++;
+    await page.keyboard.up('ArrowUp');
+    await context.close();
+    if (!r.gotoClear) return { pass: false, info: 'no stageclear' };
+    const { pre, post } = r.gotoClear;
+    const gain = post.score - pre.score;
+    const bonus = 100 * Math.floor(post.timeLeft) + 1000;
+    return { pass: gain >= bonus && gain <= bonus + 6 && r.panelAt > 1400 && r.panelAt < 1700 && gold > 20, info: `score ${pre.score} -> ${post.score} (+${gain}; expected ${bonus} + a few distance points), timeLeft=${f2(post.timeLeft)}, panel ${Math.round(r.panelAt)} ms after the goal, panel border px=${gold}` };
   });
 
   await T('23', 'time up: TIME UP then gameover 2.5 s later with GAME OVER/REACHED STAGE 1/SCORE/BEST', async () => {
