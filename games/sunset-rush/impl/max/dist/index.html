@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0a0716">
+<title>SUNSET RUSH</title>
+<link rel="icon" href="data:,">
+<style>
+  html, body { margin: 0; padding: 0; height: 100%; background: #07050f; overflow: hidden; }
+  body { overscroll-behavior: none; -webkit-user-select: none; user-select: none; -webkit-tap-highlight-color: transparent; }
+  #stage { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; }
+  #stage[hidden] { display: none; }
+  #game {
+    display: block;
+    width: min(100vw, calc(100vh * 16 / 9));
+    height: auto;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    touch-action: none;
+    outline: none;
+  }
+  @supports (height: 100dvh) {
+    #game { width: min(100vw, calc(100dvh * 16 / 9)); }
+  }
+
+  /* on-screen controls, shown only on touch devices ((pointer: coarse)) */
+  #touch { position: fixed; inset: 0; pointer-events: none; z-index: 5; }
+  #touch[hidden] { display: none; }
+  .tgroup { position: absolute; bottom: max(14px, env(safe-area-inset-bottom)); display: flex; gap: 12px; pointer-events: none; }
+  .tgroup.l { left: max(14px, env(safe-area-inset-left)); }
+  .tgroup.r { right: max(14px, env(safe-area-inset-right)); }
+  .tbtn {
+    pointer-events: auto; touch-action: none;
+    width: 76px; height: 76px; border-radius: 18px;
+    background: rgba(20, 12, 44, 0.42); border: 2px solid rgba(255, 255, 255, 0.5);
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.25);
+  }
+  .tbtn svg { width: 46px; height: 46px; fill: rgba(255, 255, 255, 0.85); pointer-events: none; }
+  .tbtn.gas { background: rgba(40, 150, 70, 0.42); }
+  .tbtn.brake { background: rgba(180, 40, 50, 0.42); }
+  .tbtn.on { background: rgba(255, 210, 70, 0.6); border-color: #fff; }
+
+  /* asset gallery (?gallery=1) */
+  .gallery-mode, .gallery-mode body { overflow: auto; height: auto; background: #120d24; }
+  #gallery { font-family: ui-monospace, Menlo, Consolas, monospace; color: #e8e0ff; padding: 20px 24px 60px; max-width: 1320px; margin: 0 auto; }
+  #gallery h1 { font-size: 22px; margin: 0 0 6px; color: #ffd94a; }
+  #gallery h2 { font-size: 17px; margin: 26px 0 10px; color: #63ecff; border-bottom: 1px solid #3b2c66; padding-bottom: 4px; }
+  #gallery .lead { margin: 0 0 8px; color: #b9aee0; font-size: 13px; }
+  #gallery h3 { font-size: 15px; margin: 26px 0 12px; color: #ffb36a; }
+  #sounds { display: flex; flex-wrap: wrap; gap: 8px; }
+  #sounds button { font: inherit; font-size: 13px; padding: 7px 12px; color: #fff; background: #3b2a78; border: 1px solid #8a6aff; border-radius: 6px; cursor: pointer; }
+  #sounds button:hover { background: #5a3fc0; }
+  #images figure { margin: 0 0 22px; }
+  #images canvas {
+    display: block; max-width: 100%;
+    image-rendering: pixelated;
+    background-color: #2a2340;
+    background-image: linear-gradient(45deg, #322a4c 25%, transparent 25%, transparent 75%, #322a4c 75%), linear-gradient(45deg, #322a4c 25%, transparent 25%, transparent 75%, #322a4c 75%);
+    background-size: 16px 16px; background-position: 0 0, 8px 8px;
+    border: 1px solid #5a4a90;
+  }
+  #images figcaption { margin-top: 6px; font-size: 13px; color: #b9aee0; }
+  #images figcaption code { color: #ffd94a; font-size: 14px; }
+</style>
+</head>
+<body>
+<div id="stage"><canvas id="game" width="640" height="360" aria-label="SUNSET RUSH game screen"></canvas></div>
+<div id="touch" hidden>
+  <div class="tgroup l">
+    <div class="tbtn" data-btn="left" aria-label="steer left"><svg viewBox="0 0 24 24"><path d="M15.5 3 6 12l9.5 9V3z"/></svg></div>
+    <div class="tbtn" data-btn="right" aria-label="steer right"><svg viewBox="0 0 24 24"><path d="M8.5 3 18 12l-9.5 9V3z"/></svg></div>
+  </div>
+  <div class="tgroup r">
+    <div class="tbtn brake" data-btn="brake" aria-label="brake"><svg viewBox="0 0 24 24"><path d="M3 8.5 12 18l9-9.5H3z"/></svg></div>
+    <div class="tbtn gas" data-btn="gas" aria-label="accelerate"><svg viewBox="0 0 24 24"><path d="M3 15.5 12 6l9 9.5H3z"/></svg></div>
+  </div>
+</div>
+<script type="module" src="./js/main.js"></script>
+</body>
+</html>
