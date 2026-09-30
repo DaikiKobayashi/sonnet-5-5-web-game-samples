@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Dynamite Mole</title>
+<link rel="icon" href="./favicon.svg" type="image/svg+xml">
+<style>
+  html, body { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background: #0b0709; }
+  body { display: flex; flex-direction: column; align-items: center; justify-content: center; touch-action: none; -webkit-user-select: none; user-select: none; }
+  #game { display: block; image-rendering: pixelated; image-rendering: crisp-edges; background: #000; outline: none; }
+  #touch { display: none; width: 100%; max-width: 520px; height: 170px; box-sizing: border-box; padding: 8px 14px; justify-content: space-between; align-items: center; flex-shrink: 0; }
+  #touch .pad { position: relative; width: 150px; height: 150px; }
+  #touch button { position: absolute; border: 2px solid #8a6a3a; background: #2a2026; color: #f8e8c8; font: bold 13px monospace; border-radius: 8px; touch-action: none; padding: 0; box-shadow: 0 4px 0 #120a0e; }
+  #touch button.on { background: #6a4a2a; transform: translateY(3px); box-shadow: 0 1px 0 #120a0e; }
+  #touch .pad button { width: 50px; height: 50px; }
+  #touch .up { left: 50px; top: 0; } #touch .down { left: 50px; top: 100px; }
+  #touch .left { left: 0; top: 50px; } #touch .right { left: 100px; top: 50px; }
+  #touch .mid { position: relative; width: 80px; height: 150px; }
+  #touch .mid button { width: 72px; height: 36px; left: 4px; top: 6px; }
+  #touch .act { position: relative; width: 110px; height: 150px; }
+  #touch .act button { width: 96px; height: 96px; border-radius: 50%; left: 7px; top: 27px; background: #7a1e1a; border-color: #ff8a2a; font-size: 18px; }
+  #touch .act button.on { background: #b03a2a; }
+  .lbl { display: block; margin: 0 auto; image-rendering: pixelated; pointer-events: none; }
+  .arrow { display: inline-block; width: 0; height: 0; border: 9px solid transparent; }
+  .up .arrow { border-bottom-color: #f8c83a; margin-top: -9px; }
+  .down .arrow { border-top-color: #f8c83a; margin-top: 9px; }
+  .left .arrow { border-right-color: #f8c83a; margin-left: -9px; }
+  .right .arrow { border-left-color: #f8c83a; margin-left: 9px; }
+</style>
+</head>
+<body>
+<canvas id="game" width="480" height="416"></canvas>
+<div id="touch">
+  <div class="pad">
+    <button class="up" data-code="ArrowUp" aria-label="up"><span class="arrow"></span></button>
+    <button class="left" data-code="ArrowLeft" aria-label="left"><span class="arrow"></span></button>
+    <button class="right" data-code="ArrowRight" aria-label="right"><span class="arrow"></span></button>
+    <button class="down" data-code="ArrowDown" aria-label="down"><span class="arrow"></span></button>
+  </div>
+  <div class="mid"><button data-code="KeyP" aria-label="pause"><canvas class="lbl" data-text="PAUSE"></canvas></button></div>
+  <div class="act"><button data-code="Space" aria-label="bomb"><canvas class="lbl" data-text="BOMB"></canvas></button></div>
+</div>
+<script src="./js/core.js"></script>
+<script src="./js/font.js"></script>
+<script src="./js/art.js"></script>
+<script src="./js/audio.js"></script>
+<script src="./js/game.js"></script>
+<script src="./js/render.js"></script>
+<script src="./js/main.js"></script>
+</body>
+</html>
