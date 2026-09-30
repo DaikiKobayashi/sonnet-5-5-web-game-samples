@@ -1,7 +1,8 @@
 // Builds the GitHub Pages site into _site/:
 //   /                          home: pick a game
-//   /games/<game-id>/          pick which effort to open
-//   /games/<game-id>/<effort>/ the implementation (copied from games/<game-id>/impl/<effort>/dist/)
+//   /games/<game-id>/            pick which model / effort to open
+//   /games/<game-id>/<variant>/  the implementation (copied from games/<game-id>/impl/<variant>/dist/)
+// Variant ids: low / medium / high / xhigh / max (Sonnet 5.5, by effort), opus-medium, fable-high (reference runs).
 //
 // Usage: node scripts/build-site.mjs [--root <dir>] [--out <dir>] [--serve] [--port 8080]
 // Zero dependencies. All generated links are relative so the site works under /<repo>/ on Pages.
@@ -10,12 +11,18 @@ import { createServer } from 'node:http';
 import { extname, join, normalize, resolve, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const EFFORTS = [
-  { id: 'low', ja: '低' },
-  { id: 'medium', ja: '中' },
-  { id: 'high', ja: '高' },
-  { id: 'xhigh', ja: '超高' },
-  { id: 'max', ja: '最大' },
+const VARIANTS = [
+  { id: 'low', model: 'Sonnet 5.5', effort: 'low', group: 'sonnet' },
+  { id: 'medium', model: 'Sonnet 5.5', effort: 'medium', group: 'sonnet' },
+  { id: 'high', model: 'Sonnet 5.5', effort: 'high', group: 'sonnet' },
+  { id: 'xhigh', model: 'Sonnet 5.5', effort: 'xhigh', group: 'sonnet' },
+  { id: 'max', model: 'Sonnet 5.5', effort: 'max', group: 'sonnet' },
+  { id: 'opus-medium', model: 'Opus 5.5', effort: 'medium', group: 'other' },
+  { id: 'fable-high', model: 'Fable 5.1', effort: 'high', group: 'other' },
+];
+const GROUPS = [
+  { id: 'sonnet', title: 'Sonnet 5.5(effort 別)' },
+  { id: 'other', title: '他のモデル(デフォルトの effort・参考)' },
 ];
 
 const argv = process.argv.slice(2);
@@ -50,7 +57,7 @@ async function discoverGames() {
     const dir = join(gamesDir, entry.name);
     const meta = await readJson(join(dir, 'game.json'));
     const efforts = [];
-    for (const e of EFFORTS) {
+    for (const e of VARIANTS) {
       const dist = join(dir, 'impl', e.id, 'dist');
       efforts.push({
         ...e,
@@ -90,6 +97,7 @@ a.card:hover,a.card:focus-visible{border-color:var(--accent);outline:none}
 .card h2{margin:0 0 6px;font-size:1.1rem}.card p{margin:0 0 10px;color:var(--muted);font-size:.9rem}
 .meta{display:flex;flex-wrap:wrap;gap:6px;font-size:.78rem;color:var(--muted)}
 .tag{padding:2px 8px;border:1px solid var(--border);border-radius:999px}
+h3{margin:20px 0 10px;font-size:.95rem;color:var(--muted)}
 .efforts{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
 .btn{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:76px;padding:12px;border-radius:12px;text-decoration:none;font-weight:700;font-size:1.1rem;background:var(--accent);color:var(--accent-fg);border:1px solid var(--accent)}
 .btn small{font-weight:400;font-size:.78rem;opacity:.85}
@@ -123,7 +131,7 @@ function homePage(games) {
       return `<li><a class="card" href="games/${esc(g.id)}/">
 <h2>${esc(g.title)}</h2>
 ${g.description ? `<p>${esc(g.description)}</p>` : ''}
-<div class="meta">${g.stack ? `<span class="tag">${esc(g.stack)}</span>` : ''}<span class="tag">${n} / ${EFFORTS.length} effort</span></div>
+<div class="meta">${g.stack ? `<span class="tag">${esc(g.stack)}</span>` : ''}<span class="tag">${n} / ${VARIANTS.length} 実装</span></div>
 </a></li>`;
     })
     .join('\n');
@@ -131,27 +139,30 @@ ${g.description ? `<p>${esc(g.description)}</p>` : ''}
     title: 'Web Game Samples',
     css: 'site.css',
     body: `<h1>Web Game Samples</h1>
-<p class="lead">Sonnet 5.5 が同じ仕様書から、effort を変えて作ったブラウザゲームの比較です。遊びたいゲームを選んでください。</p>
+<p class="lead">同じ仕様書から、モデルと effort を変えて作ったブラウザゲームの比較です。遊びたいゲームを選んでください。</p>
 ${games.length ? `<ul class="cards">\n${cards}\n</ul>` : '<p class="empty">まだゲームがありません。</p>'}
 <footer><a href="${esc(REPO_URL)}">GitHub リポジトリ</a></footer>`,
   });
 }
 
 function gamePage(g) {
-  const buttons = g.efforts
-    .map((e) =>
-      e.available
-        ? `<a class="btn" href="${e.id}/">${e.id}<small>${e.ja}</small></a>`
-        : `<span class="btn off" aria-disabled="true">${e.id}<small>未実装</small></span>`,
-    )
-    .join('\n');
+  const button = (e) =>
+    e.available
+      ? `<a class="btn" href="${e.id}/">${e.effort}<small>${e.model}</small></a>`
+      : `<span class="btn off" aria-disabled="true">${e.effort}<small>${e.model} ・ 未実装</small></span>`;
+  const buttons = GROUPS.map(
+    (grp) => `<h3>${esc(grp.title)}</h3>
+<div class="efforts">
+${g.efforts.filter((e) => e.group === grp.id).map(button).join('\n')}
+</div>`,
+  ).join('\n');
   const blob = (p) => `${REPO_URL}/blob/main/games/${encodeURIComponent(g.id)}/${p}`;
   const links = [
     g.hasSpec && `<li><a href="${blob('SPEC.md')}">仕様書 (SPEC.md)</a></li>`,
     g.hasResults && `<li><a href="${blob('RESULTS.md')}">比較結果 (RESULTS.md)</a></li>`,
     ...g.efforts
       .filter((e) => e.hasSource)
-      .map((e) => `<li><a href="${REPO_URL}/tree/main/games/${encodeURIComponent(g.id)}/impl/${e.id}">${e.id} のソース</a></li>`),
+      .map((e) => `<li><a href="${REPO_URL}/tree/main/games/${encodeURIComponent(g.id)}/impl/${e.id}">${e.model} / ${e.effort} のソース</a></li>`),
   ].filter(Boolean);
   return page({
     title: `${g.title} | Web Game Samples`,
@@ -159,10 +170,8 @@ function gamePage(g) {
     body: `<a class="back" href="../../">← ゲーム一覧に戻る</a>
 <h1>${esc(g.title)}</h1>
 <p class="lead">${esc(g.description)}${g.stack ? ` <span class="tag">${esc(g.stack)}</span>` : ''}</p>
-<h2>どの effort で作ったものを開きますか?</h2>
-<div class="efforts">
+<h2>どのモデル・effort で作ったものを開きますか?</h2>
 ${buttons}
-</div>
 <p class="empty">ゲームから戻るには、ブラウザの「戻る」を使ってください。</p>
 ${links.length ? `<h2>関連リンク</h2>\n<ul class="links">\n${links.join('\n')}\n</ul>` : ''}`,
   });

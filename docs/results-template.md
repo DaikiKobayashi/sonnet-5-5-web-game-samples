@@ -17,36 +17,42 @@
 
 `tokens` / `tool uses` / `所要時間` は、実装担当の完了通知に含まれる usage の値。
 
-| effort | 起動する | 受け入れ基準 Must | 受け入れ基準 Should | コンソールエラー | tokens | tool uses | 所要時間 | 実装 |
+| variant | 起動する | 受け入れ基準 Must | 受け入れ基準 Should | コンソールエラー | tokens | tool uses | 所要時間 | 実装 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | low | | /N | /M | | | | | [`impl/low`](impl/low/) |
 | medium | | /N | /M | | | | | [`impl/medium`](impl/medium/) |
 | high | | /N | /M | | | | | [`impl/high`](impl/high/) |
 | xhigh | | /N | /M | | | | | [`impl/xhigh`](impl/xhigh/) |
 | max | | /N | /M | | | | | [`impl/max`](impl/max/) |
+| opus-medium(Opus 5.5・参考) | | /N | /M | | | | | [`impl/opus-medium`](impl/opus-medium/) |
+| fable-high(Fable 5.1・参考) | | /N | /M | | | | | [`impl/fable-high`](impl/fable-high/) |
 
 「起動する」「受け入れ基準」は、実装担当の自己申告ではなく、**評価担当がブラウザで実測した結果**を書く。
 `EVAL.md` の計画から外れた点(測れなかった項目・手順の変更)は、この下に理由を書く。
 
 ### 客観指標(実測)
 
-| effort | 平均 FPS | 最小 FPS | ロード時間 | ファイル数 | dist サイズ | モバイル幅の崩れ |
+| variant | 平均 FPS | 最小 FPS | ロード時間 | ファイル数 | dist サイズ | モバイル幅の崩れ |
 | --- | --- | --- | --- | --- | --- | --- |
 | low | | | | | | |
 | medium | | | | | | |
 | high | | | | | | |
 | xhigh | | | | | | |
 | max | | | | | | |
+| opus-medium | | | | | | |
+| fable-high | | | | | | |
 
 ### 主観評価(1〜5、根拠はスクリーンショット。ルーブリックは `EVAL.md`)
 
-| effort | 画づくり | アニメ・演出 | 手触り | 音 | UI |
+| variant | 画づくり | アニメ・演出 | 手触り | 音 | UI |
 | --- | --- | --- | --- | --- | --- |
 | low | | | | | |
 | medium | | | | | |
 | high | | | | | |
 | xhigh | | | | | |
 | max | | | | | |
+| opus-medium | | | | | |
+| fable-high | | | | | |
 
 ## 所見
 
@@ -58,11 +64,15 @@
 - コード品質(構造・読みやすさ・テスト):
 - 仕様の解釈の違い:
 
-### effort による差
+### effort による差(Sonnet 5.5)
 
 - 差が出た点 / 出なかった点:
 - effort を上げる価値があった項目:
 - 自己申告と実測のズレ(自己チェックの正直さ):
+
+### 他モデル(デフォルト effort)との違い
+
+(参考。優劣の断定はしない。Opus 5.5 = medium、Fable 5.1 = high)
 
 ### 仕様書の問題点
 
