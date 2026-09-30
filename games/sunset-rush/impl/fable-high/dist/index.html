@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>SUNSET RUSH</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%232e1a54'/%3E%3Ccircle cx='8' cy='9' r='5' fill='%23ffb347'/%3E%3Crect y='10' width='16' height='6' fill='%23d8443e'/%3E%3C/svg%3E">
+<style>
+  html, body { margin: 0; padding: 0; height: 100%; overflow: hidden; background: #0b0810; }
+  body { display: flex; align-items: center; justify-content: center; touch-action: none; }
+  #stage { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; }
+  canvas#game {
+    width: min(100vw, calc(100vh * 16 / 9));
+    height: auto;
+    aspect-ratio: 16 / 9;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    background: #0b0810;
+    display: block;
+  }
+  #touch { position: fixed; inset: 0; pointer-events: none; }
+  #touch .btn {
+    position: absolute; width: 64px; height: 64px; border-radius: 50%;
+    background: rgba(255, 255, 255, 0.18); border: 2px solid rgba(255, 255, 255, 0.45);
+    pointer-events: auto; touch-action: none; user-select: none; -webkit-user-select: none;
+  }
+  #touch .btn.on { background: rgba(255, 200, 80, 0.5); }
+  #touch .btn::after { content: ''; position: absolute; left: 50%; top: 50%; border: 14px solid transparent; }
+  #touch .left { left: 16px; bottom: 24px; }
+  #touch .right { left: 96px; bottom: 24px; }
+  #touch .brake { right: 96px; bottom: 24px; }
+  #touch .gas { right: 16px; bottom: 24px; }
+  #touch .left::after { border-right-color: #fff; transform: translate(-70%, -50%); }
+  #touch .right::after { border-left-color: #fff; transform: translate(-30%, -50%); }
+  #touch .gas::after { border-bottom-color: #fff; transform: translate(-50%, -70%); }
+  #touch .brake::after { border-top-color: #fff; transform: translate(-50%, -30%); }
+  #gallery { display: none; }
+  body.gallery { display: block; overflow: auto; height: auto; background: #14101c; color: #f0e8d8; font-family: monospace; }
+  body.gallery #stage, body.gallery #touch { display: none; }
+  body.gallery #gallery { display: block; padding: 16px; }
+  body.gallery h1 { font-size: 20px; }
+  body.gallery .asset { display: inline-block; vertical-align: top; margin: 8px; padding: 8px; background: #221a2e; border: 1px solid #443858; }
+  body.gallery .asset canvas { display: block; image-rendering: pixelated; background: #302840; max-width: 100%; }
+  body.gallery .asset .label { margin-top: 4px; font-size: 12px; }
+  body.gallery button { margin: 4px; padding: 6px 10px; font-family: monospace; background: #443858; color: #fff; border: 1px solid #806aa0; cursor: pointer; }
+</style>
+</head>
+<body>
+  <div id="stage"><canvas id="game" width="640" height="360"></canvas></div>
+  <div id="touch" hidden>
+    <div class="btn left" data-key="ArrowLeft"></div>
+    <div class="btn right" data-key="ArrowRight"></div>
+    <div class="btn brake" data-key="ArrowDown"></div>
+    <div class="btn gas" data-key="ArrowUp"></div>
+  </div>
+  <div id="gallery"></div>
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
