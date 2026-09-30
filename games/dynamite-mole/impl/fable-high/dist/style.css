@@ -1,0 +1,63 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #0b0810;
+  overflow: hidden;
+  touch-action: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+#wrap {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#game {
+  display: block;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  background: #0b0810;
+}
+#touch {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  height: 150px;
+  margin-top: 8px;
+  flex: 0 0 auto;
+}
+#touch[hidden] { display: none; }
+.tb {
+  position: absolute;
+  border: 2px solid #f5c542;
+  border-radius: 8px;
+  background: #2a2430;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  touch-action: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 0 #16121c;
+}
+.tb.down { background: #6a4a20; transform: translateY(2px); box-shadow: none; }
+.tb canvas { image-rendering: pixelated; }
+.pad { position: absolute; left: 10px; top: 0; width: 138px; height: 138px; }
+.pad .tb { width: 44px; height: 44px; }
+.pad .up { left: 47px; top: 0; }
+.pad .left { left: 0; top: 47px; }
+.pad .right { left: 94px; top: 47px; }
+.pad .down { left: 47px; top: 94px; }
+.tb.bomb { right: 12px; top: 40px; width: 86px; height: 86px; border-radius: 50%; border-color: #ff6a5a; }
+.tb.pause { left: 50%; top: 0; width: 80px; height: 36px; margin-left: -40px; }
+.arrow { width: 0; height: 0; border: 9px solid transparent; }
+.a-up { border-bottom-color: #f5c542; margin-top: -9px; }
+.a-down { border-top-color: #f5c542; margin-bottom: -9px; }
+.a-left { border-right-color: #f5c542; margin-left: -9px; }
+.a-right { border-left-color: #f5c542; margin-right: -9px; }
