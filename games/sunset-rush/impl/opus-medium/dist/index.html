@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>SUNSET RUSH</title>
+<link rel="icon" href="data:,">
+<style>
+  html, body { margin: 0; padding: 0; background: #07050d; overflow: hidden; height: 100%; }
+  body { display: flex; align-items: center; justify-content: center; }
+  #game {
+    display: block;
+    width: min(100vw, calc(100vh * 16 / 9));
+    height: min(100vh, calc(100vw * 9 / 16));
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    background: #000;
+    touch-action: none;
+  }
+  #touch { position: fixed; left: 0; right: 0; bottom: 0; height: 0; pointer-events: none; }
+  .tb { position: fixed; bottom: 12px; width: 64px; height: 64px; border-radius: 12px; background: rgba(255,255,255,0.18);
+        border: 2px solid rgba(255,255,255,0.4); pointer-events: auto; touch-action: none; display: flex; align-items: center; justify-content: center; }
+  .tb i { width: 0; height: 0; display: block; }
+  .tb-left { left: 12px; } .tb-right { left: 88px; }
+  .tb-brake { right: 88px; } .tb-gas { right: 12px; }
+  .tb-left i { border-top: 14px solid transparent; border-bottom: 14px solid transparent; border-right: 20px solid rgba(255,255,255,0.85); }
+  .tb-right i { border-top: 14px solid transparent; border-bottom: 14px solid transparent; border-left: 20px solid rgba(255,255,255,0.85); }
+  .tb-gas i { border-left: 14px solid transparent; border-right: 14px solid transparent; border-bottom: 20px solid rgba(120,255,140,0.9); }
+  .tb-brake i { border-left: 14px solid transparent; border-right: 14px solid transparent; border-top: 20px solid rgba(255,120,120,0.9); }
+  body.gallery { display: block; overflow: auto; color: #eee; font-family: monospace; }
+  #gallery { padding: 16px; }
+  #gallery .item { margin: 12px 0; overflow-x: auto; }
+  #gallery canvas { image-rendering: pixelated; background: repeating-conic-gradient(#2a2a3a 0 25%, #1c1c28 0 50%) 0 0 / 16px 16px; display: block; }
+  #gallery .label { margin-top: 4px; font-size: 13px; }
+  #gallery .sounds button { margin: 4px; padding: 6px 10px; font-family: monospace; }
+</style>
+</head>
+<body>
+<canvas id="game" width="640" height="360"></canvas>
+<script type="module" src="./js/main.js"></script>
+</body>
+</html>
