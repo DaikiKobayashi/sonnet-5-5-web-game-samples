@@ -30,8 +30,11 @@ node scripts/build-site.mjs --serve   # http://localhost:8080
 
 | ゲーム | 概要 | 技術スタック | 仕様書 | 結果 |
 | --- | --- | --- | --- | --- |
-| [Dynamite Mole](https://daikikobayashi.github.io/sonnet-5-5-web-game-samples/games/dynamite-mole/) | ダイナマイトで岩を吹き飛ばし、洞窟の敵を倒して出口を目指すボンバーマン系のグリッドアクション(全 5 ステージ、敵 4 種) | Vanilla JS + Canvas 2D + Web Audio(依存・ビルドなし) | [`SPEC.md`](games/dynamite-mole/SPEC.md) | [`RESULTS.md`](games/dynamite-mole/RESULTS.md)(Must は 5 実装とも 40/40、Should は low 14/15・他 15/15) |
-| [SUNSET RUSH](https://daikikobayashi.github.io/sonnet-5-5-web-game-samples/games/sunset-rush/) | 夕焼けを追いかけて海岸線から夜の街まで駆け抜ける、制限時間つきの疑似 3D アーケードレーサー(全 3 ステージ、チェックポイントで時間延長、ランク S〜C) | Vanilla JS + Canvas 2D + Web Audio(依存・ビルドなし) | [`SPEC.md`](games/sunset-rush/SPEC.md) | [`RESULTS.md`](games/sunset-rush/RESULTS.md)(Must は 5 実装とも 42/42、Should は low 11/18・medium / high / xhigh 17/18・max 18/18) |
+| [Dynamite Mole](https://daikikobayashi.github.io/sonnet-5-5-web-game-samples/games/dynamite-mole/) | ダイナマイトで岩を吹き飛ばし、洞窟の敵を倒して出口を目指すボンバーマン系のグリッドアクション(全 5 ステージ、敵 4 種) | Vanilla JS + Canvas 2D + Web Audio(依存・ビルドなし) | [`SPEC.md`](games/dynamite-mole/SPEC.md) | [`RESULTS.md`](games/dynamite-mole/RESULTS.md)(Must は 5 実装とも 40/40、Should は low 14/15・他 15/15。参考実装は `opus-medium` / `fable-high` とも Must 40/40・Should 14/15) |
+| [SUNSET RUSH](https://daikikobayashi.github.io/sonnet-5-5-web-game-samples/games/sunset-rush/) | 夕焼けを追いかけて海岸線から夜の街まで駆け抜ける、制限時間つきの疑似 3D アーケードレーサー(全 3 ステージ、チェックポイントで時間延長、ランク S〜C) | Vanilla JS + Canvas 2D + Web Audio(依存・ビルドなし) | [`SPEC.md`](games/sunset-rush/SPEC.md) | [`RESULTS.md`](games/sunset-rush/RESULTS.md)(Must は 5 実装とも 42/42、Should は low 11/18・medium / high / xhigh 17/18・max 18/18。参考実装は `opus-medium` が Must 42/42・Should 18/18、`fable-high` が Must 42/42・Should 17/18) |
+
+参考実装(`opus-medium` / `fable-high`)は別枠で、モデル間の優劣を断定するものではありません。
+また、2 つのゲームは評価の枠組みが違う(`sunset-rush` は評価担当が先に評価計画を固定、`dynamite-mole` は評価計画なし)ため、結果を同じ物差しで比べないでください。
 
 ## ライセンス
 
