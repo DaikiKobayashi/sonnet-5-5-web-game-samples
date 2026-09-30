@@ -3,7 +3,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const EFFORTS = ['low', 'medium', 'high', 'xhigh', 'max'];
+const EFFORTS = ['low', 'medium', 'high', 'xhigh', 'max', 'opus-medium', 'fable-high']; // 末尾 2 つは参考実装
 const dir = path.join(__dirname, 'results');
 const manual = fs.existsSync(path.join(__dirname, 'manual.json')) ? JSON.parse(fs.readFileSync(path.join(__dirname, 'manual.json'), 'utf8')) : {};
 

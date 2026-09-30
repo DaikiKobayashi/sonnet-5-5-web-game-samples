@@ -4,7 +4,8 @@ const fs = require('fs');
 const path = require('path');
 const { chromium } = require('playwright');
 
-const EFFORTS = ['low', 'medium', 'high', 'xhigh', 'max'];
+// 引数で variant を絞れる(例: node sheets.js opus-medium fable-high)。引数なしは従来どおり既存 5 実装
+const EFFORTS = process.argv.length > 2 ? process.argv.slice(2) : ['low', 'medium', 'high', 'xhigh', 'max'];
 const SHEETS = {
   'sheet-a.png': { files: ['title-0.png', 'intro-1.png', 'play-s1.png', 'play-s2.png', 'play-s3.png', 'play-s4.png', 'play-s5.png', 'entities.png'], cols: 4, scale: 0.5 },
   'sheet-b.png': { files: ['exit-open.png', 'stageclear.png', 'gameover.png', 'gameclear.png', 'paused.png', 'death-frame.png'], cols: 3, scale: 0.5 },

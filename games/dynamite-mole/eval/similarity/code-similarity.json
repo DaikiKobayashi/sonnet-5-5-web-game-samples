@@ -1,0 +1,1827 @@
+{
+ "variants": [
+  "low",
+  "medium",
+  "high",
+  "xhigh",
+  "max",
+  "opus-medium",
+  "fable-high"
+ ],
+ "note": "一致率は「A の特徴のうち B にもある割合」。existingPairs* は既存 5 実装どうし(20 の有向ペア)の値",
+ "hashMatchesAcrossVariants": {},
+ "hashMatchesInvolvingRefs": {},
+ "fileCounts": {
+  "low": 7,
+  "medium": 8,
+  "high": 11,
+  "xhigh": 18,
+  "max": 40,
+  "opus-medium": 10,
+  "fable-high": 11
+ },
+ "lines": {
+  "low": {
+   "medium": 0.0191,
+   "high": 0.0059,
+   "xhigh": 0.0015,
+   "max": 0.0015,
+   "opus-medium": 0.0059,
+   "fable-high": 0.0059
+  },
+  "medium": {
+   "low": 0.012,
+   "high": 0.0267,
+   "xhigh": 0.035,
+   "max": 0.0378,
+   "opus-medium": 0.0535,
+   "fable-high": 0.047
+  },
+  "high": {
+   "low": 0.0026,
+   "medium": 0.0188,
+   "xhigh": 0.0311,
+   "max": 0.0337,
+   "opus-medium": 0.0273,
+   "fable-high": 0.035
+  },
+  "xhigh": {
+   "low": 0.0004,
+   "medium": 0.0162,
+   "high": 0.0205,
+   "max": 0.0453,
+   "opus-medium": 0.0419,
+   "fable-high": 0.0351
+  },
+  "max": {
+   "low": 0.0004,
+   "medium": 0.0154,
+   "high": 0.0196,
+   "xhigh": 0.0399,
+   "opus-medium": 0.0339,
+   "fable-high": 0.041
+  },
+  "opus-medium": {
+   "low": 0.0028,
+   "medium": 0.0403,
+   "high": 0.0292,
+   "xhigh": 0.0681,
+   "max": 0.0625,
+   "fable-high": 0.0549
+  },
+  "fable-high": {
+   "low": 0.0027,
+   "medium": 0.0339,
+   "high": 0.0359,
+   "xhigh": 0.0544,
+   "max": 0.0724,
+   "opus-medium": 0.0525
+  }
+ },
+ "linesNoSpec": {
+  "low": {
+   "medium": 0.0191,
+   "high": 0.0059,
+   "xhigh": 0.0015,
+   "max": 0.0015,
+   "opus-medium": 0.0059,
+   "fable-high": 0.0059
+  },
+  "medium": {
+   "low": 0.012,
+   "high": 0.0267,
+   "xhigh": 0.035,
+   "max": 0.0378,
+   "opus-medium": 0.0535,
+   "fable-high": 0.047
+  },
+  "high": {
+   "low": 0.0026,
+   "medium": 0.0188,
+   "xhigh": 0.0311,
+   "max": 0.0337,
+   "opus-medium": 0.0273,
+   "fable-high": 0.035
+  },
+  "xhigh": {
+   "low": 0.0004,
+   "medium": 0.0162,
+   "high": 0.0205,
+   "max": 0.0453,
+   "opus-medium": 0.0419,
+   "fable-high": 0.0351
+  },
+  "max": {
+   "low": 0.0004,
+   "medium": 0.0154,
+   "high": 0.0196,
+   "xhigh": 0.0399,
+   "opus-medium": 0.0339,
+   "fable-high": 0.041
+  },
+  "opus-medium": {
+   "low": 0.0028,
+   "medium": 0.0403,
+   "high": 0.0292,
+   "xhigh": 0.0681,
+   "max": 0.0625,
+   "fable-high": 0.0549
+  },
+  "fable-high": {
+   "low": 0.0027,
+   "medium": 0.0339,
+   "high": 0.0359,
+   "xhigh": 0.0545,
+   "max": 0.0724,
+   "opus-medium": 0.0525
+  }
+ },
+ "grams": {
+  "low": {
+   "medium": 0.0737,
+   "high": 0.0304,
+   "xhigh": 0.0317,
+   "max": 0.0385,
+   "opus-medium": 0.0399,
+   "fable-high": 0.0352
+  },
+  "medium": {
+   "low": 0.0578,
+   "high": 0.0584,
+   "xhigh": 0.0512,
+   "max": 0.0646,
+   "opus-medium": 0.0775,
+   "fable-high": 0.0597
+  },
+  "high": {
+   "low": 0.018,
+   "medium": 0.044,
+   "xhigh": 0.0396,
+   "max": 0.0555,
+   "opus-medium": 0.0549,
+   "fable-high": 0.0546
+  },
+  "xhigh": {
+   "low": 0.0133,
+   "medium": 0.0275,
+   "high": 0.0282,
+   "max": 0.0454,
+   "opus-medium": 0.0449,
+   "fable-high": 0.0345
+  },
+  "max": {
+   "low": 0.013,
+   "medium": 0.0278,
+   "high": 0.0316,
+   "xhigh": 0.0363,
+   "opus-medium": 0.0336,
+   "fable-high": 0.0395
+  },
+  "opus-medium": {
+   "low": 0.0266,
+   "medium": 0.0659,
+   "high": 0.0619,
+   "xhigh": 0.0712,
+   "max": 0.0665,
+   "fable-high": 0.0636
+  },
+  "fable-high": {
+   "low": 0.0244,
+   "medium": 0.0528,
+   "high": 0.0641,
+   "xhigh": 0.0569,
+   "max": 0.0814,
+   "opus-medium": 0.0662
+  }
+ },
+ "gramsNoSpec": {
+  "low": {
+   "medium": 0.0741,
+   "high": 0.0306,
+   "xhigh": 0.0319,
+   "max": 0.0387,
+   "opus-medium": 0.0402,
+   "fable-high": 0.0354
+  },
+  "medium": {
+   "low": 0.0588,
+   "high": 0.0566,
+   "xhigh": 0.052,
+   "max": 0.0657,
+   "opus-medium": 0.0786,
+   "fable-high": 0.0607
+  },
+  "high": {
+   "low": 0.0184,
+   "medium": 0.0429,
+   "xhigh": 0.0405,
+   "max": 0.0566,
+   "opus-medium": 0.0552,
+   "fable-high": 0.0559
+  },
+  "xhigh": {
+   "low": 0.0136,
+   "medium": 0.028,
+   "high": 0.0287,
+   "max": 0.0462,
+   "opus-medium": 0.0456,
+   "fable-high": 0.0351
+  },
+  "max": {
+   "low": 0.0131,
+   "medium": 0.0281,
+   "high": 0.0319,
+   "xhigh": 0.0367,
+   "opus-medium": 0.034,
+   "fable-high": 0.04
+  },
+  "opus-medium": {
+   "low": 0.0271,
+   "medium": 0.0668,
+   "high": 0.0618,
+   "xhigh": 0.0721,
+   "max": 0.0675,
+   "fable-high": 0.0646
+  },
+  "fable-high": {
+   "low": 0.0246,
+   "medium": 0.0532,
+   "high": 0.0645,
+   "xhigh": 0.0572,
+   "max": 0.0819,
+   "opus-medium": 0.0665
+  }
+ },
+ "agrams": {
+  "low": {
+   "medium": 0.1637,
+   "high": 0.0896,
+   "xhigh": 0.115,
+   "max": 0.1237,
+   "opus-medium": 0.1357,
+   "fable-high": 0.1225
+  },
+  "medium": {
+   "low": 0.1295,
+   "high": 0.1093,
+   "xhigh": 0.1306,
+   "max": 0.1476,
+   "opus-medium": 0.1517,
+   "fable-high": 0.1399
+  },
+  "high": {
+   "low": 0.0538,
+   "medium": 0.0829,
+   "xhigh": 0.0883,
+   "max": 0.1042,
+   "opus-medium": 0.0993,
+   "fable-high": 0.0959
+  },
+  "xhigh": {
+   "low": 0.0507,
+   "medium": 0.0727,
+   "high": 0.0648,
+   "max": 0.1222,
+   "opus-medium": 0.1056,
+   "fable-high": 0.08
+  },
+  "max": {
+   "low": 0.0439,
+   "medium": 0.0663,
+   "high": 0.0617,
+   "xhigh": 0.0985,
+   "opus-medium": 0.0831,
+   "fable-high": 0.0841
+  },
+  "opus-medium": {
+   "low": 0.0935,
+   "medium": 0.1321,
+   "high": 0.1139,
+   "xhigh": 0.1651,
+   "max": 0.1611,
+   "fable-high": 0.1389
+  },
+  "fable-high": {
+   "low": 0.0901,
+   "medium": 0.1299,
+   "high": 0.1174,
+   "xhigh": 0.1335,
+   "max": 0.1741,
+   "opus-medium": 0.1482
+  }
+ },
+ "agramsNoSpec": {
+  "low": {
+   "medium": 0.1767,
+   "high": 0.0929,
+   "xhigh": 0.122,
+   "max": 0.1317,
+   "opus-medium": 0.1425,
+   "fable-high": 0.1277
+  },
+  "medium": {
+   "low": 0.1335,
+   "high": 0.0983,
+   "xhigh": 0.1286,
+   "max": 0.1476,
+   "opus-medium": 0.1456,
+   "fable-high": 0.1399
+  },
+  "high": {
+   "low": 0.0529,
+   "medium": 0.0741,
+   "xhigh": 0.0818,
+   "max": 0.0993,
+   "opus-medium": 0.0921,
+   "fable-high": 0.0943
+  },
+  "xhigh": {
+   "low": 0.0516,
+   "medium": 0.072,
+   "high": 0.0607,
+   "max": 0.1245,
+   "opus-medium": 0.1059,
+   "fable-high": 0.08
+  },
+  "max": {
+   "low": 0.045,
+   "medium": 0.0668,
+   "high": 0.0596,
+   "xhigh": 0.1006,
+   "opus-medium": 0.0844,
+   "fable-high": 0.0863
+  },
+  "opus-medium": {
+   "low": 0.0932,
+   "medium": 0.1261,
+   "high": 0.1057,
+   "xhigh": 0.1637,
+   "max": 0.1615,
+   "fable-high": 0.1397
+  },
+  "fable-high": {
+   "low": 0.0859,
+   "medium": 0.1246,
+   "high": 0.1114,
+   "xhigh": 0.1272,
+   "max": 0.1699,
+   "opus-medium": 0.1438
+  }
+ },
+ "colors": {
+  "low": {
+   "medium": 0.1146,
+   "high": 0.0637,
+   "xhigh": 0.1019,
+   "max": 0.0828,
+   "opus-medium": 0.0573,
+   "fable-high": 0.0318
+  },
+  "medium": {
+   "low": 0.0804,
+   "high": 0.058,
+   "xhigh": 0.0714,
+   "max": 0.067,
+   "opus-medium": 0.0536,
+   "fable-high": 0.0134
+  },
+  "high": {
+   "low": 0.0369,
+   "medium": 0.048,
+   "xhigh": 0.0812,
+   "max": 0.0554,
+   "opus-medium": 0.0517,
+   "fable-high": 0.0406
+  },
+  "xhigh": {
+   "low": 0.0418,
+   "medium": 0.0418,
+   "high": 0.0574,
+   "max": 0.0548,
+   "opus-medium": 0.0653,
+   "fable-high": 0.0366
+  },
+  "max": {
+   "low": 0.0266,
+   "medium": 0.0307,
+   "high": 0.0307,
+   "xhigh": 0.043,
+   "opus-medium": 0.0266,
+   "fable-high": 0.0184
+  },
+  "opus-medium": {
+   "low": 0.0367,
+   "medium": 0.049,
+   "high": 0.0571,
+   "xhigh": 0.102,
+   "max": 0.0531,
+   "fable-high": 0.0286
+  },
+  "fable-high": {
+   "low": 0.0234,
+   "medium": 0.014,
+   "high": 0.0514,
+   "xhigh": 0.0654,
+   "max": 0.0421,
+   "opus-medium": 0.0327
+  }
+ },
+ "lits": {
+  "low": {
+   "medium": 0.3061,
+   "high": 0.3673,
+   "xhigh": 0.3673,
+   "max": 0.3673,
+   "opus-medium": 0.3673,
+   "fable-high": 0.3673
+  },
+  "medium": {
+   "low": 0.3191,
+   "high": 0.3404,
+   "xhigh": 0.3404,
+   "max": 0.3404,
+   "opus-medium": 0.3404,
+   "fable-high": 0.3404
+  },
+  "high": {
+   "low": 0.3158,
+   "medium": 0.2807,
+   "xhigh": 0.3509,
+   "max": 0.3509,
+   "opus-medium": 0.3684,
+   "fable-high": 0.3333
+  },
+  "xhigh": {
+   "low": 0.1698,
+   "medium": 0.1509,
+   "high": 0.1887,
+   "max": 0.2075,
+   "opus-medium": 0.1981,
+   "fable-high": 0.1887
+  },
+  "max": {
+   "low": 0.5806,
+   "medium": 0.5161,
+   "high": 0.6452,
+   "xhigh": 0.7097,
+   "opus-medium": 0.6774,
+   "fable-high": 0.6452
+  },
+  "opus-medium": {
+   "low": 0.2278,
+   "medium": 0.2025,
+   "high": 0.2658,
+   "xhigh": 0.2658,
+   "max": 0.2658,
+   "fable-high": 0.2532
+  },
+  "fable-high": {
+   "low": 0.0833,
+   "medium": 0.0741,
+   "high": 0.088,
+   "xhigh": 0.0926,
+   "max": 0.0926,
+   "opus-medium": 0.0926
+  }
+ },
+ "summary": {
+  "lines": {
+   "existingPairsMin": 0.0004,
+   "existingPairsMedian": 0.0191,
+   "existingPairsMax": 0.0453,
+   "refToExistingMax": {
+    "opus-medium": [
+     0.0681,
+     "xhigh"
+    ],
+    "fable-high": [
+     0.0724,
+     "max"
+    ]
+   },
+   "existingToRefMax": {
+    "opus-medium": [
+     0.0535,
+     "medium"
+    ],
+    "fable-high": [
+     0.047,
+     "medium"
+    ]
+   },
+   "refToRef": {
+    "opus-medium": 0.0549,
+    "fable-high": 0.0525
+   }
+  },
+  "linesNoSpec": {
+   "existingPairsMin": 0.0004,
+   "existingPairsMedian": 0.0191,
+   "existingPairsMax": 0.0453,
+   "refToExistingMax": {
+    "opus-medium": [
+     0.0681,
+     "xhigh"
+    ],
+    "fable-high": [
+     0.0724,
+     "max"
+    ]
+   },
+   "existingToRefMax": {
+    "opus-medium": [
+     0.0535,
+     "medium"
+    ],
+    "fable-high": [
+     0.047,
+     "medium"
+    ]
+   },
+   "refToRef": {
+    "opus-medium": 0.0549,
+    "fable-high": 0.0525
+   }
+  },
+  "grams": {
+   "existingPairsMin": 0.013,
+   "existingPairsMedian": 0.0385,
+   "existingPairsMax": 0.0737,
+   "refToExistingMax": {
+    "opus-medium": [
+     0.0712,
+     "xhigh"
+    ],
+    "fable-high": [
+     0.0814,
+     "max"
+    ]
+   },
+   "existingToRefMax": {
+    "opus-medium": [
+     0.0775,
+     "medium"
+    ],
+    "fable-high": [
+     0.0597,
+     "medium"
+    ]
+   },
+   "refToRef": {
+    "opus-medium": 0.0636,
+    "fable-high": 0.0662
+   }
+  },
+  "gramsNoSpec": {
+   "existingPairsMin": 0.0131,
+   "existingPairsMedian": 0.0387,
+   "existingPairsMax": 0.0741,
+   "refToExistingMax": {
+    "opus-medium": [
+     0.0721,
+     "xhigh"
+    ],
+    "fable-high": [
+     0.0819,
+     "max"
+    ]
+   },
+   "existingToRefMax": {
+    "opus-medium": [
+     0.0786,
+     "medium"
+    ],
+    "fable-high": [
+     0.0607,
+     "medium"
+    ]
+   },
+   "refToRef": {
+    "opus-medium": 0.0646,
+    "fable-high": 0.0665
+   }
+  },
+  "agrams": {
+   "existingPairsMin": 0.0439,
+   "existingPairsMedian": 0.0985,
+   "existingPairsMax": 0.1637,
+   "refToExistingMax": {
+    "opus-medium": [
+     0.1651,
+     "xhigh"
+    ],
+    "fable-high": [
+     0.1741,
+     "max"
+    ]
+   },
+   "existingToRefMax": {
+    "opus-medium": [
+     0.1517,
+     "medium"
+    ],
+    "fable-high": [
+     0.1399,
+     "medium"
+    ]
+   },
+   "refToRef": {
+    "opus-medium": 0.1389,
+    "fable-high": 0.1482
+   }
+  },
+  "agramsNoSpec": {
+   "existingPairsMin": 0.045,
+   "existingPairsMedian": 0.0983,
+   "existingPairsMax": 0.1767,
+   "refToExistingMax": {
+    "opus-medium": [
+     0.1637,
+     "xhigh"
+    ],
+    "fable-high": [
+     0.1699,
+     "max"
+    ]
+   },
+   "existingToRefMax": {
+    "opus-medium": [
+     0.1456,
+     "medium"
+    ],
+    "fable-high": [
+     0.1399,
+     "medium"
+    ]
+   },
+   "refToRef": {
+    "opus-medium": 0.1397,
+    "fable-high": 0.1438
+   }
+  },
+  "colors": {
+   "existingPairsMin": 0.0266,
+   "existingPairsMedian": 0.0574,
+   "existingPairsMax": 0.1146,
+   "refToExistingMax": {
+    "opus-medium": [
+     0.102,
+     "xhigh"
+    ],
+    "fable-high": [
+     0.0654,
+     "xhigh"
+    ]
+   },
+   "existingToRefMax": {
+    "opus-medium": [
+     0.0653,
+     "xhigh"
+    ],
+    "fable-high": [
+     0.0406,
+     "high"
+    ]
+   },
+   "refToRef": {
+    "opus-medium": 0.0286,
+    "fable-high": 0.0327
+   }
+  },
+  "lits": {
+   "existingPairsMin": 0.1509,
+   "existingPairsMedian": 0.3404,
+   "existingPairsMax": 0.7097,
+   "refToExistingMax": {
+    "opus-medium": [
+     0.2658,
+     "xhigh"
+    ],
+    "fable-high": [
+     0.0926,
+     "xhigh"
+    ]
+   },
+   "existingToRefMax": {
+    "opus-medium": [
+     0.6774,
+     "max"
+    ],
+    "fable-high": [
+     0.6452,
+     "max"
+    ]
+   },
+   "refToRef": {
+    "opus-medium": 0.2532,
+    "fable-high": 0.0926
+   }
+  }
+ },
+ "examples": {
+  "opus-medium": {
+   "low": {
+    "commonLinesNoSpec": 4,
+    "longestCommonLinesNoSpec": [
+     "<link rel=\"icon\" href=\"./favicon.svg\" type=\"image/svg+xml\">",
+     "<canvas id=\"game\" width=\"480\" height=\"416\"></canvas>",
+     "requestAnimationFrame(frame);",
+     "<title>Dynamite Mole</title>"
+    ],
+    "commonGramsNoSpec": 913,
+    "sampleCommonGramsNoSpec": [
+     "! DOCTYPE html > < html lang = \"en\" > < head",
+     "! e . moving ) { if ( e . wait >",
+     "\"./favicon.svg\" type = \"image/svg+xml\" > < style > html , body {",
+     "\"416\" > < / canvas > < div id = \"touch\" >",
+     "\"480\" height = \"416\" > < / canvas > < div id",
+     "\"en\" > < head > < meta charset = \"utf-8\" > <",
+     "\"game\" width = \"480\" height = \"416\" > < / canvas >",
+     "\"icon\" href = \"./favicon.svg\" type = \"image/svg+xml\" > < style > html",
+     "\"image/svg+xml\" > < style > html , body { margin : 0",
+     "# touch { display : none ; width : 100 % ;",
+     "% 2 = = = 0 & & c % 2 =",
+     "& & Math . abs ( c - 1 ) + Math",
+     "& & flameAt ( Math . round ( e . x )",
+     "& Math . abs ( c - 1 ) + Math .",
+     "& flameAt ( Math . round ( e . x ) ,"
+    ],
+    "commonColors": [
+     "#000000",
+     "#3a2412",
+     "#8a6a3a",
+     "#c8a060",
+     "#ff5a4a",
+     "#ff8a1a",
+     "#ffd23a",
+     "#ffd27a",
+     "#ffffff"
+    ],
+    "commonLits": [
+     "CLEAR BONUS +",
+     "CRYSTAL VEIN",
+     "DYNAMITE MOLE",
+     "ENTER  PLAY AGAIN",
+     "ENTER  RETRY",
+     "ESC    TITLE",
+     "M              SOUND",
+     "MUSHROOM GROTTO",
+     "PRESS ENTER TO START",
+     "R              RESTART",
+     "REACHED STAGE ",
+     "SHALLOW TUNNELS",
+     "THE DEEP DARK",
+     "TIME BONUS +",
+     "YOU ESCAPED THE MINE"
+    ]
+   },
+   "medium": {
+    "commonLinesNoSpec": 58,
+    "longestCommonLinesNoSpec": [
+     "{ name: 'SHALLOW TUNNELS', density: 0.40, enemies: { slime: 3, bat: 0, ghost: 0, golem: 0 }, mult: 1.00, time: 150 },",
+     "{ name: 'MUSHROOM GROTTO', density: 0.42, enemies: { slime: 3, bat: 2, ghost: 0, golem: 0 }, mult: 1.00, time: 150 },",
+     "for (i = G.popups.length - 1; i >= 0; i--) { G.popups[i].t += dt; if (G.popups[i].t >= 0.8) G.popups.splice(i, 1); }",
+     "{ name: 'THE DEEP DARK', density: 0.48, enemies: { slime: 0, bat: 3, ghost: 3, golem: 2 }, mult: 1.15, time: 180 }",
+     "{ name: 'CRYSTAL VEIN', density: 0.45, enemies: { slime: 2, bat: 2, ghost: 2, golem: 0 }, mult: 1.05, time: 165 },",
+     "{ name: 'LAVA DEPTHS', density: 0.45, enemies: { slime: 2, bat: 2, ghost: 2, golem: 1 }, mult: 1.10, time: 180 },",
+     "bombs: G.bombs.map(function (b) { return { col: b.col, row: b.row, timeLeft: b.timeLeft, range: b.range }; }),",
+     "var lines = ['ARROWS / WASD MOVE', 'SPACE / Z BOMB', 'P / ESC PAUSE', 'R RESTART', 'M SOUND'];",
+     "col: Math.round(p.x), row: Math.round(p.y), x: p.x, y: p.y, facing: p.facing, alive: p.alive,",
+     "G.bombs = []; G.flames = []; G.items = []; G.crumbles = []; G.particles = []; G.popups = [];",
+     "exit: { col: G.exit.col, row: G.exit.row, revealed: G.exit.revealed, open: G.exit.open },",
+     "if (G.state === 'playing' || G.state === 'paused') return 'stage' + G.stage;",
+     "b.addEventListener('contextmenu', function (e) { e.preventDefault(); });",
+     "<link rel=\"icon\" href=\"./favicon.svg\" type=\"image/svg+xml\">",
+     "var AC = window.AudioContext || window.webkitAudioContext;"
+    ],
+    "commonGramsNoSpec": 2253,
+    "sampleCommonGramsNoSpec": [
+     "! = = G . lastWarn ) { G . lastWarn =",
+     "! DOCTYPE html > < html lang = \"en\" > < head",
+     "! e . alive ) continue ; var dx = e .",
+     "! p . alive ) return ; p . alive = false",
+     "\"./favicon.svg\" type = \"image/svg+xml\" > < style > html , body {",
+     "\"416\" > < / canvas > < div id = \"touch\" >",
+     "\"480\" height = \"416\" > < / canvas > < div id",
+     "\"en\" > < head > < meta charset = \"utf-8\" > <",
+     "\"game\" width = \"480\" height = \"416\" > < / canvas >",
+     "\"icon\" href = \"./favicon.svg\" type = \"image/svg+xml\" > < style > html",
+     "\"image/svg+xml\" > < style > html , body { margin : 0",
+     "# touch { display : none ; width : 100 % ;",
+     "% 2 = = = 0 & & c % 2 =",
+     "& & G . bombs [ i ] . row = =",
+     "& & G . exit . row = = = r )"
+    ],
+    "commonColors": [
+     "#000000",
+     "#8a6a3a",
+     "#e8dcc8",
+     "#ff3a3a",
+     "#ff5a4a",
+     "#ff7a5a",
+     "#ff8a1a",
+     "#ff9a7a",
+     "#ffd23a",
+     "#ffe27a",
+     "#fff0a0",
+     "#ffffff"
+    ],
+    "commonLits": [
+     " + G.stage + ",
+     "CRYSTAL VEIN",
+     "DYNAMITE MOLE",
+     "ESC    TITLE",
+     "M              SOUND",
+     "MUSHROOM GROTTO",
+     "PRESS ENTER TO START",
+     "R              RESTART",
+     "REACHED STAGE ",
+     "SHALLOW TUNNELS",
+     "THE DEEP DARK",
+     "TIME BONUS +",
+     "YOU ESCAPED THE MINE",
+     "dynamiteMole.hiScore",
+     "dynamiteMole.muted"
+    ]
+   },
+   "high": {
+    "commonLinesNoSpec": 42,
+    "longestCommonLinesNoSpec": [
+     "if (G.exit.open && G.exit.revealed && p.alive && Math.round(p.x) === G.exit.col && Math.round(p.y) === G.exit.row) {",
+     "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\">",
+     "exit: { col: G.exit.col, row: G.exit.row, revealed: G.exit.revealed, open: G.exit.open },",
+     "if (x >= 0 && y >= 0 && x < this.w && y < this.h) this.d[y * this.w + x] = c;",
+     "else if (it.type === 'bomb') p.maxBombs = Math.min(5, p.maxBombs + 1);",
+     "if (G.exitFlash > 0) G.exitFlash = Math.max(0, G.exitFlash - dt);",
+     "else if (it.type === 'boots') p.boots = Math.min(3, p.boots + 1);",
+     "else if (it.type === 'life') G.lives = Math.min(5, G.lives + 1);",
+     "if (it.type === 'fire') p.range = Math.min(6, p.range + 1);",
+     "g.gain.exponentialRampToValueAtTime(0.0001, t0 + dur);",
+     "if (G.shake > 0) G.shake = Math.max(0, G.shake - dt);",
+     "return ((t ^ (t >>> 14)) >>> 0) / 4294967296;",
+     "ctx.globalCompositeOperation = 'source-over';",
+     "if (s === 'gameOver' || s === 'gameClear') {",
+     "t ^= t + Math.imul(t ^ (t >>> 7), t | 61);"
+    ],
+    "commonGramsNoSpec": 2085,
+    "sampleCommonGramsNoSpec": [
+     "! = = undefined ) p . boots = Math . max",
+     "! = = undefined ) p . maxBombs = Math . max",
+     "! = = undefined ) p . range = Math . max",
+     "! DOCTYPE html > < html lang = \"en\" > < head",
+     "! d ) { e . wait = 0.3 ; continue ;",
+     "! p . alive ) return ; p . alive = false",
+     "\"en\" > < head > < meta charset = \"utf-8\" > <",
+     "\"utf-8\" > < meta name = \"viewport\" content = \"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\" > <",
+     "\"viewport\" content = \"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\" > < title > Dynamite Mole < /",
+     "\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\" > < title > Dynamite Mole < / title > <",
+     "# game { display : block ; image - rendering : pixelated",
+     "% 2 = = = 0 & & c % 2 =",
+     "% ; height : 100 % ; overflow : hidden ; background",
+     "& & / ^ - ? \\ d + $ / .",
+     "& & G . exit . revealed & & p . alive"
+    ],
+    "commonColors": [
+     "#000000",
+     "#3a3a44",
+     "#8a8a96",
+     "#9af0ff",
+     "#c8b8a0",
+     "#ff5a4a",
+     "#ff8a1a",
+     "#ffb0a0",
+     "#ffd23a",
+     "#ffe27a",
+     "#fff0a0",
+     "#fff6c8",
+     "#fffbe0",
+     "#ffffff"
+    ],
+    "commonLits": [
+     " + G.stage + ",
+     "................",
+     "...bBBBBBBBBb...",
+     "CLEAR BONUS +",
+     "CRYSTAL VEIN",
+     "DYNAMITE MOLE",
+     "ENTER  PLAY AGAIN",
+     "ENTER  RETRY",
+     "ESC    TITLE",
+     "M              SOUND",
+     "MUSHROOM GROTTO",
+     "PRESS ENTER TO START",
+     "R              RESTART",
+     "REACHED STAGE ",
+     "SHALLOW TUNNELS"
+    ]
+   },
+   "xhigh": {
+    "commonLinesNoSpec": 98,
+    "longestCommonLinesNoSpec": [
+     "{ name: 'CRYSTAL VEIN', density: 0.45, enemies: { slime: 2, bat: 2, ghost: 2, golem: 0 }, mult: 1.05, time: 165 },",
+     "{ name: 'THE DEEP DARK', density: 0.48, enemies: { slime: 0, bat: 3, ghost: 3, golem: 2 }, mult: 1.15, time: 180 }",
+     "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\">",
+     "var lines = ['ARROWS / WASD MOVE', 'SPACE / Z BOMB', 'P / ESC PAUSE', 'R RESTART', 'M SOUND'];",
+     "if (code === 'Enter' || code === 'Space' || code === 'KeyR') startRun();",
+     "else if (it.type === 'bomb') p.maxBombs = Math.min(5, p.maxBombs + 1);",
+     "if (p.invincible > 0) p.invincible = Math.max(0, p.invincible - dt);",
+     "else if (it.type === 'boots') p.boots = Math.min(3, p.boots + 1);",
+     "else if (it.type === 'life') G.lives = Math.min(5, G.lives + 1);",
+     "document.addEventListener('visibilitychange', function () {",
+     "if (it.type === 'fire') p.range = Math.min(6, p.range + 1);",
+     "var AC = window.AudioContext || window.webkitAudioContext;",
+     "A.sfxLog.push({ name: name, time: performance.now() });",
+     "canvas.addEventListener('pointerdown', function (e) {",
+     "if (code === 'Enter' || code === 'Space') startRun();"
+    ],
+    "commonGramsNoSpec": 2432,
+    "sampleCommonGramsNoSpec": [
+     "! = = c | | it . row ! = =",
+     "! d ) { e . wait = 0.3 ; continue ;",
+     "! e . alive ) continue ; var dx = e .",
+     "! e . alive ) return ; e . hp = 0",
+     "! p . alive ) return ; p . alive = false",
+     "\"./js/game.js\" > < / script > < script src = \"./js/render.js\" >",
+     "\"./js/main.js\" > < / script > < / body > < /",
+     "\"./js/render.js\" > < / script > < script src = \"./js/main.js\" >",
+     "\"en\" > < head > < meta charset = \"utf-8\" > <",
+     "\"utf-8\" > < meta name = \"viewport\" content = \"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\" > <",
+     "% 60 ; return m + ':' + ( ss < 10",
+     "& & Math . abs ( c - 1 ) + Math",
+     "& & Math . floor ( p . invincible / 0.0625 )",
+     "& & c < DM . COLS & & r < DM",
+     "& & p . invincible < = 0 & & ! G"
+    ],
+    "commonColors": [
+     "#000000",
+     "#3a3a44",
+     "#5a3618",
+     "#5a3a20",
+     "#5a3a22",
+     "#5a4030",
+     "#6a4a2a",
+     "#8a5a2e",
+     "#9a6a3a",
+     "#9af0ff",
+     "#c8a060",
+     "#e0a860",
+     "#e8b830",
+     "#f4e6ff",
+     "#ff2a3a",
+     "#ff5a4a",
+     "#ff7a1c",
+     "#ff8a2a",
+     "#ffb070",
+     "#ffd0d0",
+     "#ffd23a",
+     "#fff0a0",
+     "#fff6c8",
+     "#fffbe0",
+     "#ffffff"
+    ],
+    "commonLits": [
+     " + G.stage + ",
+     "CLEAR BONUS +",
+     "CRYSTAL VEIN",
+     "DYNAMITE MOLE",
+     "ENTER  PLAY AGAIN",
+     "ENTER  RETRY",
+     "ESC    TITLE",
+     "M              SOUND",
+     "MUSHROOM GROTTO",
+     "PRESS ENTER TO START",
+     "R              RESTART",
+     "REACHED STAGE ",
+     "SHALLOW TUNNELS",
+     "THE DEEP DARK",
+     "TIME BONUS +"
+    ]
+   },
+   "max": {
+    "commonLinesNoSpec": 90,
+    "longestCommonLinesNoSpec": [
+     "bombs: G.bombs.map(function (b) { return { col: b.col, row: b.row, timeLeft: b.timeLeft, range: b.range }; }),",
+     "return { type: e.type, col: Math.round(e.x), row: Math.round(e.y), x: e.x, y: e.y, hp: e.hp, alive: e.alive };",
+     "function pad6(n) { var s = String(Math.max(0, Math.floor(n))); while (s.length < 6) s = '0' + s; return s; }",
+     "var lines = ['ARROWS / WASD MOVE', 'SPACE / Z BOMB', 'P / ESC PAUSE', 'R RESTART', 'M SOUND'];",
+     "exit: { col: G.exit.col, row: G.exit.row, revealed: G.exit.revealed, open: G.exit.open },",
+     "if (x >= 0 && y >= 0 && x < this.w && y < this.h) this.d[y * this.w + x] = c;",
+     "G.popups.push({ x: x, y: y, text: text, t: 0, color: color || '#ffffff' });",
+     "if (e.alive && flameAt(Math.round(e.x), Math.round(e.y))) damageEnemy(e);",
+     "b.addEventListener('contextmenu', function (e) { e.preventDefault(); });",
+     "for (var i = 0; i < G.enemies.length; i++) if (G.enemies[i].alive) n++;",
+     "try { b.setPointerCapture(e.pointerId); } catch (err) { /* ignore */ }",
+     "return { grid: grid, enemies: enemies, exit: exit, hidden: hidden };",
+     "for (var y = 0; y < this.h; y++) for (var x = 0; x < this.w; x++) {",
+     "ArrowLeft: 'left', KeyA: 'left', ArrowRight: 'right', KeyD: 'right'",
+     "else if (it.type === 'life') G.lives = Math.min(5, G.lives + 1);"
+    ],
+    "commonGramsNoSpec": 2278,
+    "sampleCommonGramsNoSpec": [
+     "! = = c | | it . row ! = =",
+     "! = = r ) continue ; G . items . splice",
+     "! = = undefined & & / ^ - ? \\ d",
+     "! DOCTYPE html > < html lang = \"en\" > < head",
+     "! e . alive ) continue ; var dx = e .",
+     "\"./js/audio.js\" > < / script > < script src = \"./js/game.js\" >",
+     "\"en\" > < head > < meta charset = \"utf-8\" > <",
+     "# game { display : block ; image - rendering : pixelated",
+     "% 2 = = = 0 & & c % 2 =",
+     "% ; height : 100 % ; overflow : hidden ; background",
+     "& & / ^ - ? \\ d + $ / .",
+     "& & / ^ \\ d + $ / . test (",
+     "& & G . exit . row = = = r )",
+     "& & Math . abs ( c - 1 ) + Math",
+     "& & c % 2 = = = 0 ) ; }"
+    ],
+    "commonColors": [
+     "#000000",
+     "#5a3a20",
+     "#ff3a3a",
+     "#ff5a4a",
+     "#ff8a1a",
+     "#ffb050",
+     "#ffd0d0",
+     "#ffd23a",
+     "#ffd27a",
+     "#ffe04a",
+     "#fff0a0",
+     "#fffbe0",
+     "#ffffff"
+    ],
+    "commonLits": [
+     " + G.stage + ",
+     "CLEAR BONUS +",
+     "CRYSTAL VEIN",
+     "DYNAMITE MOLE",
+     "ENTER  PLAY AGAIN",
+     "ENTER  RETRY",
+     "ESC    TITLE",
+     "M              SOUND",
+     "MUSHROOM GROTTO",
+     "PRESS ENTER TO START",
+     "R              RESTART",
+     "REACHED STAGE ",
+     "SHALLOW TUNNELS",
+     "THE DEEP DARK",
+     "TIME BONUS +"
+    ]
+   },
+   "fable-high": {
+    "commonLinesNoSpec": 79,
+    "longestCommonLinesNoSpec": [
+     "bombs: G.bombs.map(function (b) { return { col: b.col, row: b.row, timeLeft: b.timeLeft, range: b.range }; }),",
+     "for (var i = 0; i < G.bombs.length; i++) if (G.bombs[i].col === c && G.bombs[i].row === r) return G.bombs[i];",
+     "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\">",
+     "var lines = ['ARROWS / WASD MOVE', 'SPACE / Z BOMB', 'P / ESC PAUSE', 'R RESTART', 'M SOUND'];",
+     "items: G.items.map(function (it) { return { type: it.type, col: it.col, row: it.row }; }),",
+     "exit: { col: G.exit.col, row: G.exit.row, revealed: G.exit.revealed, open: G.exit.open },",
+     "if (p.invincible > 0 && Math.floor(p.invincible / 0.0625) % 2 === 1) return;",
+     "for (var i = 0; i < G.enemies.length; i++) if (G.enemies[i].alive) n++;",
+     "function pick(arr) { return arr[Math.floor(G.rng() * arr.length)]; }",
+     "if (G.exitFlash > 0) G.exitFlash = Math.max(0, G.exitFlash - dt);",
+     "if (G.exit.col === c && G.exit.row === r) G.exit.revealed = true;",
+     "document.addEventListener('visibilitychange', function () {",
+     "var AC = window.AudioContext || window.webkitAudioContext;",
+     "g.gain.exponentialRampToValueAtTime(0.0001, t0 + dur);",
+     "canvas.addEventListener('pointerdown', function (e) {"
+    ],
+    "commonGramsNoSpec": 2178,
+    "sampleCommonGramsNoSpec": [
+     "! = = null & & params . seed ! = =",
+     "! = = undefined & & / ^ - ? \\ d",
+     "! DOCTYPE html > < html lang = \"en\" > < head",
+     "! p . alive ) return ; p . alive = false",
+     "\"./js/game.js\" > < / script > < script src = \"./js/render.js\" >",
+     "\"./js/main.js\" > < / script > < / body > < /",
+     "\"./js/render.js\" > < / script > < script src = \"./js/main.js\" >",
+     "\"480\" height = \"416\" > < / canvas > < div id",
+     "\"en\" > < head > < meta charset = \"utf-8\" > <",
+     "\"game\" width = \"480\" height = \"416\" > < / canvas >",
+     "\"utf-8\" > < meta name = \"viewport\" content = \"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\" > <",
+     "\"viewport\" content = \"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\" > < title > Dynamite Mole < /",
+     "\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\" > < title > Dynamite Mole < / title > <",
+     "# game { display : block ; image - rendering : pixelated",
+     "% 2 = = = 0 & & c % 2 ="
+    ],
+    "commonColors": [
+     "#5fd35a",
+     "#8a5a2e",
+     "#b0b0c0",
+     "#e8e0d0",
+     "#ffb0a0",
+     "#fff6a0",
+     "#ffffff"
+    ],
+    "commonLits": [
+     " + G.stage + ",
+     "CLEAR BONUS +",
+     "CRYSTAL VEIN",
+     "DYNAMITE MOLE",
+     "ENTER  PLAY AGAIN",
+     "ENTER  RETRY",
+     "ESC    TITLE",
+     "M              SOUND",
+     "MUSHROOM GROTTO",
+     "PRESS ENTER TO START",
+     "R              RESTART",
+     "REACHED STAGE ",
+     "SHALLOW TUNNELS",
+     "THE DEEP DARK",
+     "TIME BONUS +"
+    ]
+   }
+  },
+  "fable-high": {
+   "low": {
+    "commonLinesNoSpec": 4,
+    "longestCommonLinesNoSpec": [
+     "<canvas id=\"game\" width=\"480\" height=\"416\"></canvas>",
+     "/* ---------- enemies ---------- */",
+     "/* ---------- input ---------- */",
+     "<title>Dynamite Mole</title>"
+    ],
+    "commonGramsNoSpec": 805,
+    "sampleCommonGramsNoSpec": [
+     "! DOCTYPE html > < html lang = \"en\" > < head",
+     "\"480\" height = \"416\" > < / canvas > < div id",
+     "\"en\" > < head > < meta charset = \"utf-8\" > <",
+     "\"game\" width = \"480\" height = \"416\" > < / canvas >",
+     "% 2 = = = 0 & & c % 2 =",
+     "& & Math . abs ( c - 1 ) + Math",
+     "& & c < COLS & & r < ROWS ; }",
+     "& & r > = 0 & & c < COLS &",
+     "& Math . abs ( c - 1 ) + Math .",
+     "& c < COLS & & r < ROWS ; } function",
+     "& r > = 0 & & c < COLS & &",
+     "'1,1' : 1 , '2,1' : 1 , '3,1' : 1 ,",
+     "'1,2' : 1 , '1,3' : 1 , '3,2' : 1 ,",
+     "'1,3' : 1 , '3,2' : 1 , '2,3' : 1 }",
+     "'2,1' : 1 , '3,1' : 1 , '1,2' : 1 ,"
+    ],
+    "commonColors": [
+     "#4a3520",
+     "#e8f0ff",
+     "#ffb0b0",
+     "#fff2a0",
+     "#ffffff"
+    ],
+    "commonLits": [
+     "CLEAR BONUS +",
+     "CRYSTAL VEIN",
+     "DYNAMITE MOLE",
+     "ENTER  PLAY AGAIN",
+     "ENTER  RETRY",
+     "ESC    TITLE",
+     "M              SOUND",
+     "MUSHROOM GROTTO",
+     "PRESS ENTER TO START",
+     "R              RESTART",
+     "REACHED STAGE ",
+     "SHALLOW TUNNELS",
+     "THE DEEP DARK",
+     "TIME BONUS +",
+     "YOU ESCAPED THE MINE"
+    ]
+   },
+   "medium": {
+    "commonLinesNoSpec": 51,
+    "longestCommonLinesNoSpec": [
+     "enemies: G.enemies.map(function (e) { return { type: e.type, col: Math.round(e.x), row: Math.round(e.y), x: e.x, y: e.y, hp: e.hp, alive: e.alive }; }),",
+     "bombs: G.bombs.map(function (b) { return { col: b.col, row: b.row, timeLeft: b.timeLeft, range: b.range }; }),",
+     "flames: G.flames.map(function (f) { return { col: f.col, row: f.row, timeLeft: f.timeLeft }; }),",
+     "return r === 0 || r === ROWS - 1 || c === 0 || c === COLS - 1 || (r % 2 === 0 && c % 2 === 0);",
+     "var lines = ['ARROWS / WASD MOVE', 'SPACE / Z BOMB', 'P / ESC PAUSE', 'R RESTART', 'M SOUND'];",
+     "exit: { col: G.exit.col, row: G.exit.row, revealed: G.exit.revealed, open: G.exit.open },",
+     "var SAFE = { '1,1': 1, '2,1': 1, '3,1': 1, '1,2': 1, '1,3': 1, '3,2': 1, '2,3': 1 };",
+     "q.life -= dt; q.x += q.vx * dt; q.y += q.vy * dt; q.vy += q.g * dt;",
+     "var OPP = { up: 'down', down: 'up', left: 'right', right: 'left' };",
+     "var AC = window.AudioContext || window.webkitAudioContext;",
+     "else if (opts.align === 'right') x = Math.round(x - w);",
+     "if (opts.align === 'center') x = Math.round(x - w / 2);",
+     "for (r = 0; r < ROWS; r++) for (c = 0; c < COLS; c++) {",
+     "<canvas id=\"game\" width=\"480\" height=\"416\"></canvas>",
+     "G.rng = Level.mulberry32((G.seed ^ 0xC0FFEE) >>> 0);"
+    ],
+    "commonGramsNoSpec": 1740,
+    "sampleCommonGramsNoSpec": [
+     "! DOCTYPE html > < html lang = \"en\" > < head",
+     "! G . exit . open & & aliveEnemies ( ) =",
+     "! e . alive ) { e . deathT - = dt",
+     "! p . alive ) return ; p . alive = false",
+     "\"480\" height = \"416\" > < / canvas > < div id",
+     "\"en\" > < head > < meta charset = \"utf-8\" > <",
+     "\"game\" width = \"480\" height = \"416\" > < / canvas >",
+     "% 2 = = = 0 & & c % 2 =",
+     "% 4 ] ; else if ( e . type = =",
+     "& & G . bombs [ i ] . row = =",
+     "& & G . exit . row = = = r )",
+     "& & Math . abs ( c - 1 ) + Math",
+     "& & aliveEnemies ( ) = = = 0 ) { G",
+     "& & c % 2 = = = 0 ) ; }",
+     "& & c < COLS & & r < ROWS ; }"
+    ],
+    "commonColors": [
+     "#e8f0ff",
+     "#fff2a0",
+     "#ffffff"
+    ],
+    "commonLits": [
+     " + G.stage + ",
+     "CRYSTAL VEIN",
+     "DYNAMITE MOLE",
+     "ESC    TITLE",
+     "M              SOUND",
+     "MUSHROOM GROTTO",
+     "PRESS ENTER TO START",
+     "R              RESTART",
+     "REACHED STAGE ",
+     "SHALLOW TUNNELS",
+     "THE DEEP DARK",
+     "TIME BONUS +",
+     "YOU ESCAPED THE MINE",
+     "dynamiteMole.hiScore",
+     "dynamiteMole.muted"
+    ]
+   },
+   "high": {
+    "commonLinesNoSpec": 54,
+    "longestCommonLinesNoSpec": [
+     "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\">",
+     "exit: { col: G.exit.col, row: G.exit.row, revealed: G.exit.revealed, open: G.exit.open },",
+     "'4': ['...#.', '..##.', '.#.#.', '#..#.', '#####', '...#.', '...#.'],",
+     "'7': ['#####', '....#', '...#.', '..#..', '.#...', '.#...', '.#...'],",
+     "'6': ['.###.', '#....', '#....', '####.', '#...#', '#...#', '.###.'],",
+     "'3': ['####.', '....#', '....#', '.###.', '....#', '....#', '####.'],",
+     "'0': ['.###.', '#...#', '#..##', '#.#.#', '##..#', '#...#', '.###.'],",
+     "'2': ['.###.', '#...#', '....#', '...#.', '..#..', '.#...', '#####'],",
+     "'8': ['.###.', '#...#', '#...#', '.###.', '#...#', '#...#', '.###.'],",
+     "'1': ['..#..', '.##..', '..#..', '..#..', '..#..', '..#..', '.###.'],",
+     "'9': ['.###.', '#...#', '#...#', '.####', '....#', '....#', '.###.'],",
+     "if (G.exitFlash > 0) G.exitFlash = Math.max(0, G.exitFlash - dt);",
+     "else if (opts.align === 'right') x = Math.round(x - w);",
+     "if (opts.align === 'center') x = Math.round(x - w / 2);",
+     "g.gain.exponentialRampToValueAtTime(0.0001, t0 + dur);"
+    ],
+    "commonGramsNoSpec": 2111,
+    "sampleCommonGramsNoSpec": [
+     "! DOCTYPE html > < html lang = \"en\" > < head",
+     "! G . exit . open & & aliveEnemies ( ) =",
+     "! e . alive ) { e . deathT - = dt",
+     "! p . alive ) return ; p . alive = false",
+     "\"'\" : [ '..#..' , '..#..' , '.#...' , '.....' , '.....'",
+     "\"en\" > < head > < meta charset = \"utf-8\" > <",
+     "\"utf-8\" > < meta name = \"viewport\" content = \"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\" > <",
+     "\"viewport\" content = \"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\" > < title > Dynamite Mole < /",
+     "\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\" > < title > Dynamite Mole < / title > <",
+     "# game { display : block ; image - rendering : pixelated",
+     "% 2 = = = 0 & & c % 2 =",
+     "% 4 ] ; else if ( e . type = =",
+     "& & / ^ - ? \\ d + $ / .",
+     "& & Math . abs ( c - 1 ) + Math",
+     "& & aliveEnemies ( ) = = = 0 ) { G"
+    ],
+    "commonColors": [
+     "#4a3438",
+     "#d0f4ff",
+     "#ff6a1a",
+     "#ffb020",
+     "#ffb030",
+     "#ffb0a0",
+     "#ffe070",
+     "#fff27a",
+     "#fff2a0",
+     "#fff8c0",
+     "#ffffff"
+    ],
+    "commonLits": [
+     " + G.stage + ",
+     "CLEAR BONUS +",
+     "CRYSTAL VEIN",
+     "DYNAMITE MOLE",
+     "ENTER  PLAY AGAIN",
+     "ENTER  RETRY",
+     "ESC    TITLE",
+     "M              SOUND",
+     "MUSHROOM GROTTO",
+     "PRESS ENTER TO START",
+     "R              RESTART",
+     "REACHED STAGE ",
+     "SHALLOW TUNNELS",
+     "THE DEEP DARK",
+     "TIME BONUS +"
+    ]
+   },
+   "xhigh": {
+    "commonLinesNoSpec": 82,
+    "longestCommonLinesNoSpec": [
+     "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\">",
+     "var lines = ['ARROWS / WASD MOVE', 'SPACE / Z BOMB', 'P / ESC PAUSE', 'R RESTART', 'M SOUND'];",
+     "var SAFE = { '1,1': 1, '2,1': 1, '3,1': 1, '1,2': 1, '1,3': 1, '3,2': 1, '2,3': 1 };",
+     "if (['fire', 'bomb', 'boots', 'life'].indexOf(type) < 0) return false;",
+     "document.addEventListener('visibilitychange', function () {",
+     "var AC = window.AudioContext || window.webkitAudioContext;",
+     "for (i = 0; i < G.popups.length; i++) G.popups[i].t += dt;",
+     "if (G.shakeT > 0) G.shakeT = Math.max(0, G.shakeT - dt);",
+     "canvas.addEventListener('pointerdown', function (e) {",
+     "ctx.fillRect(Math.round(fx), Math.round(fy), 2, 2);",
+     "window.addEventListener('keydown', function (e) {",
+     "var touchEl = document.getElementById('touch');",
+     "window.addEventListener('keyup', function (e) {",
+     "btn.addEventListener('pointercancel', release);",
+     "return ((t ^ (t >>> 14)) >>> 0) / 4294967296;"
+    ],
+    "commonGramsNoSpec": 1873,
+    "sampleCommonGramsNoSpec": [
+     "! e . alive ) { e . deathT - = dt",
+     "! m ) return 440 ; var n = NOTE_IDX [ m",
+     "! p . alive ) return ; p . alive = false",
+     "\"./js/audio.js\" > < / script > < script src = \"./js/level.js\" >",
+     "\"./js/game.js\" > < / script > < script src = \"./js/render.js\" >",
+     "\"./js/level.js\" > < / script > < script src = \"./js/game.js\" >",
+     "\"./js/main.js\" > < / script > < / body > < /",
+     "\"./js/render.js\" > < / script > < script src = \"./js/main.js\" >",
+     "\"en\" > < head > < meta charset = \"utf-8\" > <",
+     "\"utf-8\" > < meta name = \"viewport\" content = \"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\" > <",
+     "# b ] ? ) ( - ? \\ d ) $",
+     "$ / . exec ( name ) ; if ( ! m",
+     "% ; background : # 0 b0810 ; overflow : hidden ;",
+     "& & Math . abs ( c - 1 ) + Math",
+     "& & Math . floor ( p . invincible / 0.0625 )"
+    ],
+    "commonColors": [
+     "#0b0810",
+     "#2a1a10",
+     "#3ef0ff",
+     "#8a5a2e",
+     "#c060ff",
+     "#c9a070",
+     "#e8f0ff",
+     "#ff6a5a",
+     "#ff8a20",
+     "#ffd23c",
+     "#fff2a0",
+     "#fff3a0",
+     "#fff6c0",
+     "#ffffff"
+    ],
+    "commonLits": [
+     " + G.stage + ",
+     "CLEAR BONUS +",
+     "CRYSTAL VEIN",
+     "DYNAMITE MOLE",
+     "ENTER  PLAY AGAIN",
+     "ENTER  RETRY",
+     "ESC    TITLE",
+     "M              SOUND",
+     "MUSHROOM GROTTO",
+     "PRESS ENTER TO START",
+     "R              RESTART",
+     "REACHED STAGE ",
+     "SHALLOW TUNNELS",
+     "THE DEEP DARK",
+     "TIME BONUS +"
+    ]
+   },
+   "max": {
+    "commonLinesNoSpec": 109,
+    "longestCommonLinesNoSpec": [
+     "var DIRS = { up: { dx: 0, dy: -1 }, down: { dx: 0, dy: 1 }, left: { dx: -1, dy: 0 }, right: { dx: 1, dy: 0 } };",
+     "bombs: G.bombs.map(function (b) { return { col: b.col, row: b.row, timeLeft: b.timeLeft, range: b.range }; }),",
+     "flames: G.flames.map(function (f) { return { col: f.col, row: f.row, timeLeft: f.timeLeft }; }),",
+     "return r === 0 || r === ROWS - 1 || c === 0 || c === COLS - 1 || (r % 2 === 0 && c % 2 === 0);",
+     "var lines = ['ARROWS / WASD MOVE', 'SPACE / Z BOMB', 'P / ESC PAUSE', 'R RESTART', 'M SOUND'];",
+     "exit: { col: G.exit.col, row: G.exit.row, revealed: G.exit.revealed, open: G.exit.open },",
+     "var SAFE = { '1,1': 1, '2,1': 1, '3,1': 1, '1,2': 1, '1,3': 1, '3,2': 1, '2,3': 1 };",
+     "for (var i = 0; i < G.enemies.length; i++) if (G.enemies[i].alive) n++;",
+     "'U': ['#...#', '#...#', '#...#', '#...#', '#...#', '#...#', '.###.'],",
+     "'T': ['#####', '..#..', '..#..', '..#..', '..#..', '..#..', '..#..'],",
+     "'X': ['#...#', '#...#', '.#.#.', '..#..', '.#.#.', '#...#', '#...#'],",
+     "'L': ['#....', '#....', '#....', '#....', '#....', '#....', '#####'],",
+     "'J': ['..###', '...#.', '...#.', '...#.', '...#.', '#..#.', '.##..'],",
+     "'M': ['#...#', '##.##', '#.#.#', '#.#.#', '#...#', '#...#', '#...#'],",
+     "'P': ['####.', '#...#', '#...#', '####.', '#....', '#....', '#....'],"
+    ],
+    "commonGramsNoSpec": 2680,
+    "sampleCommonGramsNoSpec": [
+     "! = = undefined & & / ^ - ? \\ d",
+     "! DOCTYPE html > < html lang = \"en\" > < head",
+     "! G . exit . open & & aliveEnemies ( ) =",
+     "! e . alive ) { e . deathT - = dt",
+     "\"en\" > < head > < meta charset = \"utf-8\" > <",
+     "# b ] ? ) ( - ? \\ d ) $",
+     "# game { display : block ; image - rendering : pixelated",
+     "$ / . exec ( name ) ; if ( ! m",
+     "% 2 = = = 0 & & c % 2 =",
+     "& & / ^ - ? \\ d + $ / .",
+     "& & G . exit . row = = = r )",
+     "& & G . rng ( ) > = 0.2 ) return",
+     "& & Math . abs ( c - 1 ) + Math",
+     "& & aliveEnemies ( ) = = = 0 ) { G",
+     "& & c % 2 = = = 0 ) ; }"
+    ],
+    "commonColors": [
+     "#7a4a22",
+     "#ff3030",
+     "#ff6a1a",
+     "#ff9a30",
+     "#ffb0b0",
+     "#ffe070",
+     "#fff2a0",
+     "#fff6c0",
+     "#ffffff"
+    ],
+    "commonLits": [
+     " + G.stage + ",
+     "CLEAR BONUS +",
+     "CRYSTAL VEIN",
+     "DYNAMITE MOLE",
+     "ENTER  PLAY AGAIN",
+     "ENTER  RETRY",
+     "ESC    TITLE",
+     "M              SOUND",
+     "MUSHROOM GROTTO",
+     "PRESS ENTER TO START",
+     "R              RESTART",
+     "REACHED STAGE ",
+     "SHALLOW TUNNELS",
+     "THE DEEP DARK",
+     "TIME BONUS +"
+    ]
+   },
+   "opus-medium": {
+    "commonLinesNoSpec": 79,
+    "longestCommonLinesNoSpec": [
+     "bombs: G.bombs.map(function (b) { return { col: b.col, row: b.row, timeLeft: b.timeLeft, range: b.range }; }),",
+     "for (var i = 0; i < G.bombs.length; i++) if (G.bombs[i].col === c && G.bombs[i].row === r) return G.bombs[i];",
+     "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\">",
+     "var lines = ['ARROWS / WASD MOVE', 'SPACE / Z BOMB', 'P / ESC PAUSE', 'R RESTART', 'M SOUND'];",
+     "items: G.items.map(function (it) { return { type: it.type, col: it.col, row: it.row }; }),",
+     "exit: { col: G.exit.col, row: G.exit.row, revealed: G.exit.revealed, open: G.exit.open },",
+     "if (p.invincible > 0 && Math.floor(p.invincible / 0.0625) % 2 === 1) return;",
+     "for (var i = 0; i < G.enemies.length; i++) if (G.enemies[i].alive) n++;",
+     "function pick(arr) { return arr[Math.floor(G.rng() * arr.length)]; }",
+     "if (G.exitFlash > 0) G.exitFlash = Math.max(0, G.exitFlash - dt);",
+     "if (G.exit.col === c && G.exit.row === r) G.exit.revealed = true;",
+     "document.addEventListener('visibilitychange', function () {",
+     "var AC = window.AudioContext || window.webkitAudioContext;",
+     "g.gain.exponentialRampToValueAtTime(0.0001, t0 + dur);",
+     "canvas.addEventListener('pointerdown', function (e) {"
+    ],
+    "commonGramsNoSpec": 2178,
+    "sampleCommonGramsNoSpec": [
+     "! = = null & & params . seed ! = =",
+     "! = = undefined & & / ^ - ? \\ d",
+     "! DOCTYPE html > < html lang = \"en\" > < head",
+     "! p . alive ) return ; p . alive = false",
+     "\"./js/game.js\" > < / script > < script src = \"./js/render.js\" >",
+     "\"./js/main.js\" > < / script > < / body > < /",
+     "\"./js/render.js\" > < / script > < script src = \"./js/main.js\" >",
+     "\"480\" height = \"416\" > < / canvas > < div id",
+     "\"en\" > < head > < meta charset = \"utf-8\" > <",
+     "\"game\" width = \"480\" height = \"416\" > < / canvas >",
+     "\"utf-8\" > < meta name = \"viewport\" content = \"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\" > <",
+     "\"viewport\" content = \"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\" > < title > Dynamite Mole < /",
+     "\"width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no\" > < title > Dynamite Mole < / title > <",
+     "# game { display : block ; image - rendering : pixelated",
+     "% 2 = = = 0 & & c % 2 ="
+    ],
+    "commonColors": [
+     "#5fd35a",
+     "#8a5a2e",
+     "#b0b0c0",
+     "#e8e0d0",
+     "#ffb0a0",
+     "#fff6a0",
+     "#ffffff"
+    ],
+    "commonLits": [
+     " + G.stage + ",
+     "CLEAR BONUS +",
+     "CRYSTAL VEIN",
+     "DYNAMITE MOLE",
+     "ENTER  PLAY AGAIN",
+     "ENTER  RETRY",
+     "ESC    TITLE",
+     "M              SOUND",
+     "MUSHROOM GROTTO",
+     "PRESS ENTER TO START",
+     "R              RESTART",
+     "REACHED STAGE ",
+     "SHALLOW TUNNELS",
+     "THE DEEP DARK",
+     "TIME BONUS +"
+    ]
+   }
+  }
+ },
+ "featureSizes": {
+  "low": {
+   "lines": 679,
+   "grams": 22858,
+   "agrams": 20695,
+   "colors": 157,
+   "lits": 49,
+   "gramsNoSpec": 22730,
+   "agramsNoSpec": 16528,
+   "linesNoSpec": 679
+  },
+  "medium": {
+   "lines": 1085,
+   "grams": 29130,
+   "agrams": 26151,
+   "colors": 224,
+   "lits": 47,
+   "gramsNoSpec": 28678,
+   "agramsNoSpec": 21882,
+   "linesNoSpec": 1085
+  },
+  "high": {
+   "lines": 1541,
+   "grams": 38640,
+   "agrams": 34466,
+   "colors": 271,
+   "lits": 57,
+   "gramsNoSpec": 37787,
+   "agramsNoSpec": 29013,
+   "linesNoSpec": 1541
+  },
+  "xhigh": {
+   "lines": 2339,
+   "grams": 54277,
+   "agrams": 46956,
+   "colors": 383,
+   "lits": 106,
+   "gramsNoSpec": 53298,
+   "agramsNoSpec": 39079,
+   "linesNoSpec": 2339
+  },
+  "max": {
+   "lines": 2658,
+   "grams": 67853,
+   "agrams": 58239,
+   "colors": 488,
+   "lits": 31,
+   "gramsNoSpec": 67072,
+   "agramsNoSpec": 48371,
+   "linesNoSpec": 2658
+  },
+  "opus-medium": {
+   "lines": 1439,
+   "grams": 34270,
+   "agrams": 30034,
+   "colors": 245,
+   "lits": 79,
+   "gramsNoSpec": 33740,
+   "agramsNoSpec": 25267,
+   "linesNoSpec": 1439
+  },
+  "fable-high": {
+   "lines": 1506,
+   "grams": 32925,
+   "agrams": 28152,
+   "colors": 214,
+   "lits": 216,
+   "gramsNoSpec": 32733,
+   "agramsNoSpec": 24562,
+   "linesNoSpec": 1505
+  }
+ },
+ "longestCommonTokenRun": {
+  "pairs": {
+   "low|medium": {
+    "tokens": 105,
+    "text": "( seed ) { var s = seed > > > 0 ; return function ( ) { s = ( s + 0x6D2B79F5 ) > > > 0 ; var t = s ; t = Math . imul ( t ^ ( t > > > 15 ) , t | 1 ) ; t ^ = t + Math . imul ( t ^ ( t > > > 7 ) , t | 61 ) ; return ( ( t ^ ( t > > > 14 ) ) > > > 0 ) / 4294967296 ; } ; } var"
+   },
+   "low|high": {
+    "tokens": 71,
+    "text": "; t = Math . imul ( t ^ ( t > > > 15 ) , t | 1 ) ; t ^ = t + Math . imul ( t ^ ( t > > > 7 ) , t | 61 ) ; return ( ( t ^ ( t > > > 14 ) ) > > > 0 ) / 4294967296 ; } ; } function"
+   },
+   "low|xhigh": {
+    "tokens": 80,
+    "text": ") > > > 0 ; var t = s ; t = Math . imul ( t ^ ( t > > > 15 ) , t | 1 ) ; t ^ = t + Math . imul ( t ^ ( t > > > 7 ) , t | 61 ) ; return ( ( t ^ ( t > > > 14 ) ) > > > 0 ) / 4294967296 ; } ; }"
+   },
+   "low|max": {
+    "tokens": 69,
+    "text": "enemies . map ( function ( e ) { return { type : e . type , col : Math . round ( e . x ) , row : Math . round ( e . y ) , x : e . x , y : e . y , hp : e . hp , alive : e . alive } ; } ) , items :"
+   },
+   "low|opus-medium": {
+    "tokens": 70,
+    "text": "; t = Math . imul ( t ^ ( t > > > 15 ) , t | 1 ) ; t ^ = t + Math . imul ( t ^ ( t > > > 7 ) , t | 61 ) ; return ( ( t ^ ( t > > > 14 ) ) > > > 0 ) / 4294967296 ; } ; }"
+   },
+   "low|fable-high": {
+    "tokens": 112,
+    "text": ") ; return o ; } function rng ( seed ) { var s = seed > > > 0 ; return function ( ) { s = ( s + 0x6D2B79F5 ) > > > 0 ; var t = s ; t = Math . imul ( t ^ ( t > > > 15 ) , t | 1 ) ; t ^ = t + Math . imul ( t ^ ( t > > > 7 ) , t | 61 ) ; return ( ( t ^ ( t > > > 14 ) ) > > > 0 ) / 4294967296 ; } ; }"
+   },
+   "medium|high": {
+    "tokens": 70,
+    "text": "; t = Math . imul ( t ^ ( t > > > 15 ) , t | 1 ) ; t ^ = t + Math . imul ( t ^ ( t > > > 7 ) , t | 61 ) ; return ( ( t ^ ( t > > > 14 ) ) > > > 0 ) / 4294967296 ; } ; }"
+   },
+   "medium|xhigh": {
+    "tokens": 80,
+    "text": ") > > > 0 ; var t = s ; t = Math . imul ( t ^ ( t > > > 15 ) , t | 1 ) ; t ^ = t + Math . imul ( t ^ ( t > > > 7 ) , t | 61 ) ; return ( ( t ^ ( t > > > 14 ) ) > > > 0 ) / 4294967296 ; } ; }"
+   },
+   "medium|max": {
+    "tokens": 254,
+    "text": "( ) } , bombs : G . bombs . map ( function ( b ) { return { col : b . col , row : b . row , timeLeft : b . timeLeft , range : b . range } ; } ) , flames : G . flames . map ( function ( f ) { return { col : f . col , row : f . row , timeLeft : f . timeLeft } ; } ) , enemies : G . enemies . map ( function ( e ) { return { type : e . type , col : Math . round ( e . x ) , row : Math . round ( e . y ) "
+   },
+   "medium|opus-medium": {
+    "tokens": 194,
+    "text": "STAGES = [ { name : 'SHALLOW TUNNELS' , density : 0.40 , enemies : { slime : 3 , bat : 0 , ghost : 0 , golem : 0 } , mult : 1.00 , time : 150 } , { name : 'MUSHROOM GROTTO' , density : 0.42 , enemies : { slime : 3 , bat : 2 , ghost : 0 , golem : 0 } , mult : 1.00 , time : 150 } , { name : 'CRYSTAL VEIN' , density : 0.45 , enemies : { slime : 2 , bat : 2 , ghost : 2 , golem : 0 } , mult : 1.05 , ti"
+   },
+   "medium|fable-high": {
+    "tokens": 164,
+    "text": ") } , bombs : G . bombs . map ( function ( b ) { return { col : b . col , row : b . row , timeLeft : b . timeLeft , range : b . range } ; } ) , flames : G . flames . map ( function ( f ) { return { col : f . col , row : f . row , timeLeft : f . timeLeft } ; } ) , enemies : G . enemies . map ( function ( e ) { return { type : e . type , col : Math . round ( e . x ) , row : Math . round ( e . y ) , "
+   },
+   "high|xhigh": {
+    "tokens": 119,
+    "text": "; if ( it . type = = = 'fire' ) p . range = Math . min ( 6 , p . range + 1 ) ; else if ( it . type = = = 'bomb' ) p . maxBombs = Math . min ( 5 , p . maxBombs + 1 ) ; else if ( it . type = = = 'boots' ) p . boots = Math . min ( 3 , p . boots + 1 ) ; else if ( it . type = = = 'life' ) G . lives = Math . min ( 5 , G . lives + 1 ) ; G . score + = 50 ;"
+   },
+   "high|max": {
+    "tokens": 74,
+    "text": ": [ '#####' , '....#' , '...#.' , '..#..' , '.#...' , '#....' , '#####' ] , '0' : [ '.###.' , '#...#' , '#..##' , '#.#.#' , '##..#' , '#...#' , '.###.' ] , '1' : [ '..#..' , '.##..' , '..#..' , '..#..' , '..#..' , '..#..' , '.###.' ] , '2' : [ '.###.' , '#...#' , '....#' , '...#.' , '..#..' , '.#...' , '#####' ] , '3' : ["
+   },
+   "high|opus-medium": {
+    "tokens": 112,
+    "text": "; if ( it . type = = = 'fire' ) p . range = Math . min ( 6 , p . range + 1 ) ; else if ( it . type = = = 'bomb' ) p . maxBombs = Math . min ( 5 , p . maxBombs + 1 ) ; else if ( it . type = = = 'boots' ) p . boots = Math . min ( 3 , p . boots + 1 ) ; else if ( it . type = = = 'life' ) G . lives = Math . min ( 5 , G . lives + 1 ) ;"
+   },
+   "high|fable-high": {
+    "tokens": 155,
+    "text": "] , '6' : [ '.###.' , '#....' , '#....' , '####.' , '#...#' , '#...#' , '.###.' ] , '7' : [ '#####' , '....#' , '...#.' , '..#..' , '.#...' , '.#...' , '.#...' ] , '8' : [ '.###.' , '#...#' , '#...#' , '.###.' , '#...#' , '#...#' , '.###.' ] , '9' : [ '.###.' , '#...#' , '#...#' , '.####' , '....#' , '....#' , '.###.' ] , ':' : [ '.....' , '..#..' , '..#..' , '.....' , '..#..' , '..#..' , '.....' "
+   },
+   "xhigh|max": {
+    "tokens": 98,
+    "text": "% 2 = = = 0 ) ; } DM . isFixedWall = isWall ; var SAFE = { '1,1' : 1 , '2,1' : 1 , '3,1' : 1 , '1,2' : 1 , '1,3' : 1 , '3,2' : 1 , '2,3' : 1 } ; DM . generateLevel = function ( seed , stage ) { var def = DM . STAGES [ stage - 1 ] ; var rng = DM . mulberry32 ( ( ( seed > > > 0 ) + stage * 7919 ) > > > 0 ) ; var"
+   },
+   "xhigh|opus-medium": {
+    "tokens": 112,
+    "text": "; if ( it . type = = = 'fire' ) p . range = Math . min ( 6 , p . range + 1 ) ; else if ( it . type = = = 'bomb' ) p . maxBombs = Math . min ( 5 , p . maxBombs + 1 ) ; else if ( it . type = = = 'boots' ) p . boots = Math . min ( 3 , p . boots + 1 ) ; else if ( it . type = = = 'life' ) G . lives = Math . min ( 5 , G . lives + 1 ) ;"
+   },
+   "xhigh|fable-high": {
+    "tokens": 80,
+    "text": ") > > > 0 ; var t = s ; t = Math . imul ( t ^ ( t > > > 15 ) , t | 1 ) ; t ^ = t + Math . imul ( t ^ ( t > > > 7 ) , t | 61 ) ; return ( ( t ^ ( t > > > 14 ) ) > > > 0 ) / 4294967296 ; } ; }"
+   },
+   "max|opus-medium": {
+    "tokens": 85,
+    "text": "; } ) , enemies : G . enemies . map ( function ( e ) { return { type : e . type , col : Math . round ( e . x ) , row : Math . round ( e . y ) , x : e . x , y : e . y , hp : e . hp , alive : e . alive } ; } ) , items : G . items . map ( function ("
+   },
+   "max|fable-high": {
+    "tokens": 365,
+    "text": "] , 'J' : [ '..###' , '...#.' , '...#.' , '...#.' , '...#.' , '#..#.' , '.##..' ] , 'K' : [ '#...#' , '#..#.' , '#.#..' , '##...' , '#.#..' , '#..#.' , '#...#' ] , 'L' : [ '#....' , '#....' , '#....' , '#....' , '#....' , '#....' , '#####' ] , 'M' : [ '#...#' , '##.##' , '#.#.#' , '#.#.#' , '#...#' , '#...#' , '#...#' ] , 'N' : [ '#...#' , '##..#' , '#.#.#' , '#..##' , '#...#' , '#...#' , '#...#' "
+   },
+   "opus-medium|fable-high": {
+    "tokens": 150,
+    "text": "; } ) , enemies : G . enemies . map ( function ( e ) { return { type : e . type , col : Math . round ( e . x ) , row : Math . round ( e . y ) , x : e . x , y : e . y , hp : e . hp , alive : e . alive } ; } ) , items : G . items . map ( function ( it ) { return { type : it . type , col : it . col , row : it . row } ; } ) , exit : { col : G . exit . col , row : G . exit . row , revealed : G . exit ."
+   }
+  },
+  "existingPairs": {
+   "min": 69,
+   "median": 80,
+   "max": 254
+  }
+ },
+ "font": {
+  "glyphCounts": {
+   "low": 49,
+   "medium": 48,
+   "high": 50,
+   "xhigh": 54,
+   "max": 40,
+   "opus-medium": 48,
+   "fable-high": 49
+  },
+  "pairs": {
+   "low|medium": {
+    "commonChars": 48,
+    "identical": 44,
+    "rate": 0.917,
+    "differentChars": ",/2?"
+   },
+   "low|high": {
+    "commonChars": 49,
+    "identical": 44,
+    "rate": 0.898,
+    "differentChars": "-69?G"
+   },
+   "low|xhigh": {
+    "commonChars": 49,
+    "identical": 43,
+    "rate": 0.878,
+    "differentChars": "%,3CGI"
+   },
+   "low|max": {
+    "commonChars": 39,
+    "identical": 36,
+    "rate": 0.923,
+    "differentChars": "%3G"
+   },
+   "low|opus-medium": {
+    "commonChars": 48,
+    "identical": 43,
+    "rate": 0.896,
+    "differentChars": "%,-3W"
+   },
+   "low|fable-high": {
+    "commonChars": 48,
+    "identical": 41,
+    "rate": 0.854,
+    "differentChars": "%569CGI"
+   },
+   "medium|high": {
+    "commonChars": 48,
+    "identical": 41,
+    "rate": 0.854,
+    "differentChars": ",-/269G"
+   },
+   "medium|xhigh": {
+    "commonChars": 48,
+    "identical": 40,
+    "rate": 0.833,
+    "differentChars": "%/23?CGI"
+   },
+   "medium|max": {
+    "commonChars": 39,
+    "identical": 33,
+    "rate": 0.846,
+    "differentChars": "%/23?G"
+   },
+   "medium|opus-medium": {
+    "commonChars": 48,
+    "identical": 41,
+    "rate": 0.854,
+    "differentChars": "%-/23?W"
+   },
+   "medium|fable-high": {
+    "commonChars": 48,
+    "identical": 37,
+    "rate": 0.771,
+    "differentChars": "%,/2569?CGI"
+   },
+   "high|xhigh": {
+    "commonChars": 50,
+    "identical": 40,
+    "rate": 0.8,
+    "differentChars": "%,-369?CGI"
+   },
+   "high|max": {
+    "commonChars": 40,
+    "identical": 34,
+    "rate": 0.85,
+    "differentChars": "%369?G"
+   },
+   "high|opus-medium": {
+    "commonChars": 48,
+    "identical": 40,
+    "rate": 0.833,
+    "differentChars": "%,369?GW"
+   },
+   "high|fable-high": {
+    "commonChars": 49,
+    "identical": 42,
+    "rate": 0.857,
+    "differentChars": "%-5?CGI"
+   },
+   "xhigh|max": {
+    "commonChars": 40,
+    "identical": 37,
+    "rate": 0.925,
+    "differentChars": "3CG"
+   },
+   "xhigh|opus-medium": {
+    "commonChars": 48,
+    "identical": 42,
+    "rate": 0.875,
+    "differentChars": "-3CGIW"
+   },
+   "xhigh|fable-high": {
+    "commonChars": 49,
+    "identical": 43,
+    "rate": 0.878,
+    "differentChars": "%,3569"
+   },
+   "max|opus-medium": {
+    "commonChars": 39,
+    "identical": 37,
+    "rate": 0.949,
+    "differentChars": "GW"
+   },
+   "max|fable-high": {
+    "commonChars": 40,
+    "identical": 33,
+    "rate": 0.825,
+    "differentChars": "%3569CG"
+   },
+   "opus-medium|fable-high": {
+    "commonChars": 48,
+    "identical": 37,
+    "rate": 0.771,
+    "differentChars": "%,-3569CGIW"
+   }
+  },
+  "existingPairsRate": {
+   "min": 0.8,
+   "median": 0.878,
+   "max": 0.925
+  }
+ }
+}

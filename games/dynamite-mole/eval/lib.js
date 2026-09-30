@@ -2,7 +2,8 @@
 // 評価ハーネス共通ライブラリ。実装ディレクトリは読み取り(HTTP 配信)のみで、変更しない。
 const { chromium } = require('playwright');
 
-const EFFORT_PORT = { low: 5101, medium: 5102, high: 5103, xhigh: 5104, max: 5105 };
+const EFFORT_PORT = { low: 5101, medium: 5102, high: 5103, xhigh: 5104, max: 5105,
+  'opus-medium': 5106, 'fable-high': 5107 }; // 参考実装(Opus 5.5 / Fable 5.1)。既存 5 実装の測定には影響しない
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 // ---------- 仕様 3.3 の参照ジェネレータ ----------

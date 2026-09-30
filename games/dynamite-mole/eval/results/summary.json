@@ -3973,5 +3973,1597 @@
    }
   },
   "fillText": 0
+ },
+ "opus-medium": {
+  "effort": "opus-medium",
+  "ranAt": "2026-09-30T17:13:26.100Z",
+  "elapsedSec": 848.762,
+  "must": {
+   "pass": 40,
+   "fail": 0,
+   "unknown": 0,
+   "total": 40
+  },
+  "should": {
+   "pass": 14,
+   "fail": 1,
+   "unknown": 0,
+   "total": 15
+  },
+  "items": {
+   "M1": {
+    "pass": true,
+    "note": "ルート配信・深いサブパス(/x/y/dist/)とも title 表示・playing 到達・404/console error なし・favicon 200",
+    "src": "auto"
+   },
+   "M2": {
+    "pass": true,
+    "note": "全検証セッション(タイトル→ステージ 1〜5→gameClear、gameOver→リトライ、R/Esc/一時停止、ランダム入力 1030 イベント)を通して console error・未処理例外・404・外部リクエストが 0 件",
+    "src": "auto"
+   },
+   "M3": {
+    "pass": true,
+    "note": "localStorage が例外を投げる環境で title→play→mute→gameOver(state=gameOver)まで error なし",
+    "src": "auto"
+   },
+   "M4": {
+    "pass": true,
+    "note": "1280x720: canvas 480x416 表示 830x720 比1.153 スクロールなし image-rendering=pixelated 充填率100% OK / 800x600: canvas 480x416 表示 692x600 比1.153 スクロールなし image-rendering=pixelated 充填率100% OK / 390x844: canvas 480x416 表示 390x338 比1.154 スクロールなし image-rendering=pixelated 充填率100% OK",
+    "src": "auto"
+   },
+   "M5": {
+    "pass": true,
+    "note": "title texts 一式あり(ロゴ文字列は texts にあり)。texts=[\"DYNAMITE MOLE\",\"PRESS ENTER TO START\",\"HI-SCORE 000000\",\"ARROWS / WASD  MOVE\",\"SPACE / Z      BOMB\",\"P / ESC        PAUSE\",\"R              RESTART\",\"M              SOUND\",\"SND ON\"]",
+    "src": "auto"
+   },
+   "M6": {
+    "pass": true,
+    "note": "Enter→stageIntro 表示 texts=OK、stageIntro→playing 1.78s(1.8±0.3)、intro 中の移動入力 無効、timeLeft 停止",
+    "src": "auto"
+   },
+   "M7": {
+    "pass": true,
+    "note": "HUD 全項目が期待値どおり(ライフ表記は \"X3\"(大文字))。texts=[\"SCORE 000000\",\"HI 000000\",\"TIME 2:30\",\"STAGE 1/5\",\"X3\",\"SND ON\",\"BOMB 1\",\"FIRE 2\",\"SPD 0\"]",
+    "src": "auto"
+   },
+   "M8": {
+    "pass": true,
+    "note": "seed 1/7/12345 x stage 1-5 の 15 レイアウトすべてで 11x15・壁位置・安全地帯・岩の記号が正しい",
+    "src": "auto"
+   },
+   "M9": {
+    "pass": true,
+    "note": "15 レイアウトすべてで敵の数・種類が 3.11 の表どおり、開始位置から距離 7 以上、重複なし、岩の上でない、exit は S のマス",
+    "src": "auto"
+   },
+   "M10": {
+    "pass": true,
+    "note": "同一シード 2 回(stage 3 と stage 1): 完全一致、別シード: 異なる",
+    "src": "auto"
+   },
+   "M11": {
+    "pass": true,
+    "note": "速度 4.51 タイル/秒(1 タイル 0.222s、基準 0.222s ±20%)、移動中の中間 x 割合 90%、離した後 x=12.000(タイル中心)。外壁 通れない、柱 通れない、岩 通れない(爆弾のマスは M13)。",
+    "src": "auto"
+   },
+   "M12": {
+    "pass": true,
+    "note": "タップ(40ms x6 / 8ms x5)で毎回ちょうど 1 タイル: 11/11、Down 押しっぱなし中に Right を追加 → 後押し優先で (3,3) へ右折、後押しが塞がっているとき 止まる(col=3)",
+    "src": "auto"
+   },
+   "M13": {
+    "pass": true,
+    "note": "Space で所属タイルに置く(bombs=1, timeLeft≈2.5)、重ね置き不可、最大 1 のとき 2 個目不可、爆弾マスへ戻れない=true、爆弾の絵の変化 24 種(アニメあり)、Z キー OK。",
+    "src": "auto"
+   },
+   "M14": {
+    "pass": true,
+    "note": "位置(9,9) range2: 導火線 2.500s(2.5±0.3)、炎の寿命 0.500s(0.5±0.15)、炎マスが仕様の予測と一致(6 マス)、壁マスに炎なし、岩は予測どおり 壊れ(壊れる予定 10,9)。",
+    "src": "auto"
+   },
+   "M15": {
+    "pass": true,
+    "note": "A(1,1)→B(3,1) を置いた連鎖: A の爆発フレームで B(残り 1.12s)も同時に爆発=true、炎の範囲が連鎖後の予測(B の腕を含む)と一致。自爆(爆風がプレイヤーに当たる)は M16 で確認。",
+    "src": "auto"
+   },
+   "M16": {
+    "pass": true,
+    "note": "自爆(範囲内に立つ): ライフ 3→2、死亡演出 1.20s(1.2±0.15)、死亡中 timeLeft の変化 0.000s、死亡中の移動入力 無効・爆弾設置 無効、sfxLog に playerDie あり。",
+    "src": "auto"
+   },
+   "M17": {
+    "pass": true,
+    "note": "復活: (1,1)・invincible=2.00s、無敵の長さ 2.02s(2.0±0.2)、無敵中の点滅(見た目の変化回数)6、無敵中に B の炎が当たっても生存=true、無敵中に敵へ接触しても生存=true、岩・敵の保持=true。 ※パワーアップ低下は M17b で確認",
+    "src": "auto"
+   },
+   "M18": {
+    "pass": true,
+    "note": "無敵切れ後に生存中の敵へ接触 → ライフ 2→1(死亡)、敵は倒れない=true。",
+    "src": "auto"
+   },
+   "M19": {
+    "pass": true,
+    "note": "ライフ 0 → gameOver。texts=[\"GAME OVER\",\"SCORE 000000\",\"BEST  000000\",\"REACHED STAGE 1\",\"ENTER  RETRY\",\"ESC    TITLE\",\"SCORE 000000\",\"HI 000000\",\"TIME 2:28\",\"STAGE 1/5\",\"X0\",\"SND ON\",\"BOMB 1\",\"FIRE 2\",\"SPD 0\"]",
+    "src": "auto"
+   },
+   "M20": {
+    "pass": true,
+    "note": "ステージ 4(倍率 1.10)・岩なしで 6 秒測定(経路長/時間の中央値 タイル/秒): slime 2.20(期待 2.20)、bat 3.52(期待 3.52)、ghost 2.64(期待 2.64)、golem 1.65(期待 1.65)。bat は slime の 1.60 倍(>1.3 で速いと判定)。グリッド線から外れたフレーム 0、岩ありで 8 秒間に敵が壁/岩のマスに入ったフレーム 0(移動した敵 7/7)。見た目の違いは目視(スクリーンショット)で別途確認",
+    "src": "auto"
+   },
+   "M21": {
+    "pass": true,
+    "note": "ゴーストとスライム(ランダム徘徊の基準線)を、静止したプレイヤーから距離 3〜6 の 16 か所に出現させて 3 秒観察し、接近(最短距離 ≤1.5 か 2 以上縮小)した割合: ゴースト 13/16、スライム 4/16。ゴーストが 0.6 以上かつスライムより 0.25 以上高ければ「追跡して近づく」と判定。仕様の追跡は「逆走しない・25% 徘徊」なので確率的。ゴースト: 6,3:3.1→0 5,9:5.8→2.8 5,6:2.9→0 6,9:4.9→4 7,1:3.9→0 11,7:5.9→0 5,4:2.9→0 8,1:4.9→2 9,1:5.9→0 9,9:5.9→0 7,9:3.9→0 10,5:2.9→0 2,5:4.9→0 12,5:5.1→5.1 3,6:4.9→0 6,7:2.9→2",
+    "src": "auto"
+   },
+   "M22": {
+    "pass": true,
+    "note": "slime: hp/状態の遷移 1/A→0/D→gone、死亡演出→消滅 0.41s(0.4±0.15)、撃破時のスコア +100(期待 +100)、sfx enemyDie=true。 bat: hp/状態の遷移 1/A→0/D→gone、死亡演出→消滅 0.41s(0.4±0.15)、撃破時のスコア +200(期待 +200)、sfx enemyDie=true。 ghost: hp/状態の遷移 1/A→0/D→gone、死亡演出→消滅 0.42s(0.4±0.15)、撃破時のスコア +300(期待 +300)、sfx enemyDie=true。 golem: hp/状態の遷移 3/A→2/A→1/A→0/D→gone、死亡演出→消滅 0.42s(0.4±0.15)、撃破時のスコア +500(期待 +500)、sfx enemyDie=true hit=true 。 ゴーレムの被弾後の点滅(タイル中央の輝度の ON/OFF): 切替 11 回、点滅を観測できた時間 0.78s(参考。0.8s 前後が仕様。切替 4 回以上で合格)",
+    "src": "auto"
+   },
+   "M23": {
+    "pass": true,
+    "note": "岩 1 個で +10(= 10x1)、アイテム取得 +50(4 種とも)、HUD の SCORE は snapshot の値と一致。敵 4 種のスコアは M22 で実測(+100/+200/+300/+500)。",
+    "src": "auto"
+   },
+   "M24": {
+    "pass": true,
+    "note": "隠しアイテムは参照の予測どおり(爆風で壊したとき 出現OK(bomb)、clearBlocks 後の全 5 個が一致=true、未破壊時は items 空=true)。効果: fire: 値 3、スコア +50、HUD OK、sfx item / bomb: 値 2、スコア +50、HUD OK、sfx item / boots: 値 1、スコア +50、HUD OK、sfx item / life: 値 4、スコア +50、HUD OK、sfx life。速度 boots1=5.1(実測 5.10)、boots3=6.3(実測 6.30)。上限で取得しても超えず・+50・消費=true。",
+    "src": "auto"
+   },
+   "M25": {
+    "pass": true,
+    "note": "初期は隠れている(revealed=false, open=false, 出口のマスは岩)=true、爆風で岩を壊すと revealed=true、敵が生きている間は open=false で、乗っても state=playingのまま=true、敵全滅後 open=true で exitOpen が sfxLog にあり。",
+    "src": "auto"
+   },
+   "M26": {
+    "pass": true,
+    "note": "開いた出口へ歩いて乗ると stageClear(texts: STAGE CLEAR! / CLEAR BONUS +500 / TIME BONUS +1440 OK)。加算スコア=500+floor(残り秒)x10 を全 5 ステージで確認、約 3.0s 後に次の導入(ステージ名・ENEMIES 数を確認)/ステージ 5 は gameClear: S1: +1940(期待 1940)、クリア画面 3.02s、S2: +1990(期待 1990)、クリア画面 3.01s、S3: +2140(期待 2140)、クリア画面 3.02s、S4: +2290(期待 2290)、クリア画面 3.02s、S5: +2290(期待 2290)、クリア画面 3.01s。",
+    "src": "auto"
+   },
+   "M27": {
+    "pass": true,
+    "note": "gameClear の texts 一式 OK(CONGRATULATIONS! | YOU ESCAPED THE MINE | SCORE 017070 | BEST  017070 | NEW RECORD! | ENTER  PLAY AGAIN | ESC    TITLE | SCORE 017070)、突入 0.6 秒以内の Enter は無視、その後の Enter で stage 1・スコア 0・ライフ 3・パワーアップ初期値の新しいゲーム=true、Esc でタイトル=true。",
+    "src": "auto"
+   },
+   "M28": {
+    "pass": true,
+    "note": "5 ステージの色相が明確に別(茶 / 青緑+紫 / 青 / 暗い赤 / 藍。sheet-a.png)。自動の RGB 距離の最小値 43。",
+    "src": "manual"
+   },
+   "M29": {
+    "pass": true,
+    "note": "TIME 表示 150→149→148→147(m:ss は ceil と全フレーム一致=true、減少レート 1.002 秒/秒)。setTimeLeft(2) → 2.0s 後に死亡(ライフ 3→2)、復活後の timeLeft=60.0(60 にリセット=true)。ライフ 1 のタイムアップ → gameOver。",
+    "src": "auto"
+   },
+   "M30": {
+    "pass": true,
+    "note": "P で paused(PAUSED 表示=true)、3 秒間 timeLeft・爆弾の timeLeft・敵の位置が不変=true、再開後は続きから(0.5 秒で爆弾 0.55 減少)=true、Escape でも切替=true、stageIntro 中の P は無効=true。",
+    "src": "auto"
+   },
+   "M31": {
+    "pass": true,
+    "note": "R でリスタート(開始ステージの新しい stageIntro・スコア 0・ライフ 3・パワーアップ初期値・timeLeft 満タン・同じシードで同じレイアウト): playing○ paused○ stageClear○ stageIntro○ gameOver(R)○ gameOver(Enter)○ gameClear○(?stage=3 / ?stage=2 / ?stage=5 の開始ステージ保持も含む)。",
+    "src": "auto"
+   },
+   "M32": {
+    "pass": true,
+    "note": "localStorage['dynamiteMole.hiScore']: 初回 300 点で保存値=300、リロード後 タイトル HI-SCORE 000300=true・HUD HI 000300=true、初回は NEW RECORD! 表示=true、0 点の run では NEW RECORD! が出ない=true(BEST 維持=true)、超えた run(400 点)で NEW RECORD! 表示=true・保存値=400、R で放棄した run(600 点)も保存=600・リロード後のタイトルに反映=true。",
+    "src": "auto"
+   },
+   "M33": {
+    "pass": true,
+    "note": "audio.unlocked: 最初のキー入力前=false → 後=true。bgm: title=title、stageIntro=null playing=\"stage1\" paused=\"stage1\" stageClear=null stageIntro2=null playing2=\"stage2\" gameOver=null gameClear=null。",
+    "src": "auto"
+   },
+   "M34": {
+    "pass": true,
+    "note": "Must の 13 種すべてが sfxLog に残った(その他に観測: gameClear, warn)",
+    "src": "auto"
+   },
+   "M35": {
+    "pass": true,
+    "note": "M でトグル(title でも有効=true)、HUD SND OFF/ON 切替=true、ミュート中もゲーム進行=true・sfxLog に place が残る=true、リロード後もミュート維持=true、?mute=1 で保存値(ミュート解除)より優先=true・HUD=true。",
+    "src": "auto"
+   },
+   "M36": {
+    "pass": true,
+    "note": "Must のアセットがすべて画面に出ている(4 方向歩行・死亡 6 段階・敵 4 種と死亡パフ・5 テーマのタイル・出口 閉/開・爆弾・炎の中心/腕/先端・アイテム 4 種・ライフアイコン・ロゴ・背景・favicon.svg)。画像ファイルは favicon のみ、絵はコード生成。fillText 0 回、外部リクエスト 0 件。",
+    "src": "manual"
+   },
+   "M37": {
+    "pass": true,
+    "note": "ドットの大きさは 2px で統一(見出しの文字だけ 3x)。5 ステージのどの床でも、爆弾・炎・プレイヤー・敵・アイテムが見分けられる(stage-bomb-flame.png)。",
+    "src": "manual"
+   },
+   "M38": {
+    "pass": true,
+    "note": "CPU 4x スロットリング下: 導火線 2.474s(2.5±0.3)、TIME 減少レート 1.045 秒/秒(1±0.1)、1 タイル 0.224s(0.222±20%)",
+    "src": "auto"
+   },
+   "M39": {
+    "pass": true,
+    "note": "矢印/Space の keydown が preventDefault 済み: {\"title\":true,\"stageIntro\":true,\"playing\":true}、scroll=(0,0)。キー入力はキャンバスをクリックせずに全テストで有効",
+    "src": "auto"
+   },
+   "M40": {
+    "pass": true,
+    "note": "snapshot() の形式を 7 状態すべてで検証 OK、?debug=1 なしで __GAME__.debug は存在しない=true、?debug=1 で 10 関数すべて function=true、10 関数すべてが他の検証で実際に期待どおり動作=true。?stage=n で開始ステージ変更は M8/M31 で確認。",
+    "src": "auto"
+   },
+   "S1": {
+    "pass": true,
+    "note": "?touch=1・390x844: 十字/BOMB/PAUSE の DOM ボタン検出=true、押している間だけ移動・離すと止まる・BOMB で設置・PAUSE で paused、タイトルのタップで開始、キャンバス 390x338 とタッチ UI が縦に収まる=true。",
+    "src": "auto"
+   },
+   "S2": {
+    "pass": true,
+    "note": "爆発中に外壁/床の境界エッジの位置(論理 px)が動くか: 通常 静止時 1 種 → 爆発中 3 種(9,17 11,17 11,19)、reduced-motion 静止時 1 種 → 爆発中 1 種。揺れの検出=true、reduce で抑止=true",
+    "src": "auto"
+   },
+   "S3": {
+    "pass": true,
+    "note": "コードに、岩の破片(岩の色)・爆発の火花・歩行の土煙・取得のきらめきの 4 種。爆発の連続フレームで火花の粒を確認。",
+    "src": "manual"
+   },
+   "S4": {
+    "pass": true,
+    "note": "テキストのポップアップ(texts の \"+N\"): +50=0.77s +200=0.77s(敵撃破 +200 とアイテム +50 の両方が約 0.8s 表示されることを期待。範囲 0.55〜1.05s)",
+    "src": "auto"
+   },
+   "S5": {
+    "pass": true,
+    "note": "ゴーストは、遠いとき灰色で暗い目、近づくとピンクで赤い目・怒った口に変わる(ghost-far-near の連続フレーム)。",
+    "src": "manual"
+   },
+   "S6": {
+    "pass": true,
+    "note": "TIME 30 秒以下で HUD 全体の赤い画素数が時間で変動(点滅): 100 秒時 112〜112 px、25 秒時 112〜560 px(変動 30px 以上かつ 100 秒時は 12px 未満で点滅と判定)=true、残り 10 秒以下の 4.2 秒間で warn が 5 回(1 秒ごとなら 3〜5 回)=true",
+    "src": "auto"
+   },
+   "S7": {
+    "pass": true,
+    "note": "爆弾の絵の変化頻度(回/秒): 導火線 前半 9.29 → 残り 0.8 秒未満 15(1.3 倍以上で加速と判定)",
+    "src": "auto"
+   },
+   "S8": {
+    "pass": true,
+    "note": "ステージ 1〜5 の BGM のスペクトル時系列(先頭 8 秒)の相関から、別の曲とみなせる数(相関 0.9 以上を同一とみなす): 5 種。相関: title~stage1=0.17 title~stage2=0.23 title~stage3=0.25 title~stage4=0.25 title~stage5=0.29 stage1~stage2=0.12 stage1~stage3=0.23 stage1~stage4=0.25 stage1~stage5=-0.17 stage2~stage3=0.24 stage2~stage4=0.34 stage2~stage5=0.03 stage3~stage4=0.55 stage3~stage5=0.35 stage4~stage5=0.34 / 残り 25 秒時と通常時の BGM の音の立ち上がり頻度: 3.24回/秒 → 3.66回/秒(比 1.13、1.08 以上でテンポアップと判定)",
+    "src": "auto"
+   },
+   "S9": {
+    "pass": true,
+    "note": "visibilitychange(hidden)を発火 → state=paused(疑似的にプロパティを上書きして発火。実際のタブ切替は未計測)",
+    "src": "auto"
+   },
+   "S10": {
+    "pass": true,
+    "note": "タイトルの 3 秒間の画面変化(領域ごとの異なるフレーム数): 上 12・中 12・下 12(中央の PRESS ENTER の点滅を除き、上か下に変化があれば動くと判定)",
+    "src": "auto"
+   },
+   "S11": {
+    "pass": false,
+    "note": "既存 5 実装と同じ基準(敵を囲んで動けなくした待機中の実測)で、slime 3・bat 4・ghost 4・golem 1。ゴーレムは歩いている間だけ絵を切り替える実装(コードで確認)で、待機中は 1 フレーム。プレイヤーの待機の呼吸 2。補足の測定(supplement/walk-frames.json、歩行中に使われた絵の種類)では golem 4・slime 4・bat 4・ghost 6 で、歩行中を数える読み方なら満たす。",
+    "src": "manual"
+   },
+   "S12": {
+    "pass": true,
+    "note": "ビネット(周辺/中央の明るさ比 0.75)、壁の松明、プレイヤーのランタン光。",
+    "src": "manual"
+   },
+   "S13": {
+    "pass": true,
+    "note": "喜びポーズ(両腕を上げる)と、出口が開く瞬間のフラッシュ(clearfx の連続フレーム)。カウントアップなし(README にも記載、INFO-countup も 1 種)。",
+    "src": "manual"
+   },
+   "S14": {
+    "pass": true,
+    "note": "sfxLog に gameClear=true。stageClear と gameClear のジングルの相関 0.18(0.9 未満なら別の曲と判定)",
+    "src": "auto"
+   },
+   "S15": {
+    "pass": true,
+    "note": "導入画面の ENEMIES の下に、そのステージの敵アイコンが並ぶ(intro-1)。",
+    "src": "manual"
+   }
+  },
+  "issues": 0,
+  "extra": {
+   "fillTextCalls": 0,
+   "titleTexts": [
+    "DYNAMITE MOLE",
+    "PRESS ENTER TO START",
+    "HI-SCORE 000000",
+    "ARROWS / WASD  MOVE",
+    "SPACE / Z      BOMB",
+    "P / ESC        PAUSE",
+    "R              RESTART",
+    "M              SOUND",
+    "SND ON"
+   ],
+   "refMatch": {
+    "ok": 15,
+    "total": 15,
+    "fails": []
+   },
+   "moveSpeed": 4.508905087548327,
+   "warnings": 33,
+   "fuse": 2.500200000000186,
+   "flameLife": 0.49990000000037255,
+   "blinkInvincible": 6,
+   "invDur": 2.0157000000001863,
+   "deathInputCarry": {
+    "facingAtRespawn": "down",
+    "colAfter300ms": 2,
+    "carried": true
+   },
+   "invincibleBlink": {
+    "toggles": 20,
+    "halfPeriodMs": 66.29999999981374,
+    "range": 14.5552343749997
+   },
+   "ghostChase": {
+    "ghost": 0.8125,
+    "slime": 0.25
+   },
+   "golemBlink": {
+    "toggles": 11,
+    "blinkSpanSec": 0.78,
+    "hp": 2
+   },
+   "enemyScoreChecked": true,
+   "through": [
+    {
+     "stage": 1,
+     "clearDur": 3.0172000000001864,
+     "timeLeft": 144.78333333332918
+    },
+    {
+     "stage": 2,
+     "clearDur": 3.011299999999814,
+     "timeLeft": 149.59999999999968
+    },
+    {
+     "stage": 3,
+     "clearDur": 3.0163999999994413,
+     "timeLeft": 164.61666666666636
+    },
+    {
+     "stage": 4,
+     "clearDur": 3.015100000000559,
+     "timeLeft": 179.583333333333
+    },
+    {
+     "stage": 5,
+     "clearDur": 3.0145,
+     "timeLeft": 179.59999999999968
+    }
+   ],
+   "countUp": {
+    "distinct": 1,
+    "values": [
+     "CLEAR BONUS +500 | TIME BONUS +1490 | SCORE 002290 | HI 002290 | STAGE 1/5 | X3 | BOMB 1 | FIRE 2 | SPD 0"
+    ]
+   },
+   "ambient": {
+    "1": {
+     "inner": 87.9,
+     "outer": 65.6,
+     "ratio": 0.747,
+     "flickerCV": 0,
+     "flickerRange": 0
+    },
+    "5": {
+     "inner": 24.3,
+     "outer": 21.7,
+     "ratio": 0.89,
+     "flickerCV": 0,
+     "flickerRange": 0
+    }
+   },
+   "audio": {
+    "bgm": {
+     "title": {
+      "peak": 0.281,
+      "rms": 0.0217,
+      "samples": 284672,
+      "state": "title",
+      "bgm": "title"
+     },
+     "stage1": {
+      "peak": 0.196,
+      "rms": 0.0257,
+      "samples": 366592,
+      "beat": {
+       "period": 0.45,
+       "r": 0.592354508827874
+      },
+      "onsets": 3.24
+     },
+     "stage1_low": {
+      "peak": 0.197,
+      "rms": 0.0262,
+      "samples": 372736,
+      "beat": {
+       "period": 1.45,
+       "r": 0.6051386109282084
+      },
+      "onsets": 3.66,
+      "simToNormal": 0.25
+     },
+     "stage2": {
+      "peak": 0.202,
+      "rms": 0.0234,
+      "samples": 372736,
+      "beat": {
+       "period": 0.51,
+       "r": 0.6245409850439388
+      }
+     },
+     "stage3": {
+      "peak": 0.201,
+      "rms": 0.0283,
+      "samples": 372736,
+      "beat": {
+       "period": 0.48,
+       "r": 0.8150599374589376
+      }
+     },
+     "stage4": {
+      "peak": 0.619,
+      "rms": 0.0307,
+      "samples": 374784,
+      "beat": {
+       "period": 0.43,
+       "r": 0.795641968758357
+      }
+     },
+     "stage5": {
+      "peak": 0.19,
+      "rms": 0.0202,
+      "samples": 372736,
+      "beat": {
+       "period": 0.55,
+       "r": 0.6200741427537267
+      }
+     }
+    },
+    "sfx": {
+     "start": {
+      "peak": 0.219,
+      "rms": 0.0316,
+      "samples": 77824,
+      "dur": 0.38
+     },
+     "bomb_with_bgm": {
+      "peak": 0.595,
+      "rms": 0.0495,
+      "samples": 149504,
+      "bgmPeak": 0.196
+     },
+     "stageClear": {
+      "peak": 0.252,
+      "rms": 0.0497,
+      "samples": 157696,
+      "dur": 2.28
+     },
+     "gameClear": {
+      "peak": 0.342,
+      "rms": 0.0581,
+      "samples": 229376,
+      "dur": 2.66
+     },
+     "gameOver": {
+      "peak": 0.45,
+      "rms": 0.0662,
+      "samples": 198656,
+      "dur": 1.86
+     }
+    },
+    "similarity": {
+     "title~stage1": 0.17,
+     "title~stage2": 0.23,
+     "title~stage3": 0.25,
+     "title~stage4": 0.25,
+     "title~stage5": 0.29,
+     "stage1~stage2": 0.12,
+     "stage1~stage3": 0.23,
+     "stage1~stage4": 0.25,
+     "stage1~stage5": -0.17,
+     "stage2~stage3": 0.24,
+     "stage2~stage4": 0.34,
+     "stage2~stage5": 0.03,
+     "stage3~stage4": 0.55,
+     "stage3~stage5": 0.35,
+     "stage4~stage5": 0.34
+    },
+    "stageClusters": 5,
+    "jingleSimilarity": 0.18
+   },
+   "shotMetrics": {
+    "titleBands": {
+     "top": 12,
+     "mid": 12,
+     "bot": 12
+    },
+    "stageTiles": {
+     "1": {
+      "wall": [
+       43,
+       29,
+       20
+      ],
+      "pillar": [
+       108,
+       77,
+       48
+      ],
+      "rock": [
+       100,
+       79,
+       70
+      ],
+      "floorA": [
+       115,
+       81,
+       54
+      ],
+      "floorB": [
+       95,
+       67,
+       43
+      ]
+     },
+     "2": {
+      "wall": [
+       32,
+       22,
+       46
+      ],
+      "pillar": [
+       54,
+       42,
+       81
+      ],
+      "rock": [
+       51,
+       52,
+       74
+      ],
+      "floorA": [
+       33,
+       62,
+       60
+      ],
+      "floorB": [
+       28,
+       57,
+       54
+      ]
+     },
+     "3": {
+      "wall": [
+       13,
+       22,
+       44
+      ],
+      "pillar": [
+       44,
+       69,
+       113
+      ],
+      "rock": [
+       46,
+       62,
+       94
+      ],
+      "floorA": [
+       33,
+       54,
+       93
+      ],
+      "floorB": [
+       28,
+       49,
+       84
+      ]
+     },
+     "4": {
+      "wall": [
+       23,
+       10,
+       10
+      ],
+      "pillar": [
+       45,
+       31,
+       30
+      ],
+      "rock": [
+       48,
+       25,
+       24
+      ],
+      "floorA": [
+       62,
+       30,
+       25
+      ],
+      "floorB": [
+       51,
+       23,
+       20
+      ]
+     },
+     "5": {
+      "wall": [
+       6,
+       7,
+       16
+      ],
+      "pillar": [
+       25,
+       29,
+       59
+      ],
+      "rock": [
+       19,
+       21,
+       43
+      ],
+      "floorA": [
+       18,
+       20,
+       39
+      ],
+      "floorB": [
+       16,
+       18,
+       35
+      ]
+     }
+    },
+    "stagePairs": [
+     {
+      "pair": "1-2",
+      "wall": 29,
+      "pillar": 72,
+      "rock": 56,
+      "floorA": 84
+     },
+     {
+      "pair": "1-3",
+      "wall": 39,
+      "pillar": 92,
+      "rock": 61,
+      "floorA": 95
+     },
+     {
+      "pair": "1-4",
+      "wall": 29,
+      "pillar": 80,
+      "rock": 88,
+      "floorA": 79
+     },
+     {
+      "pair": "1-5",
+      "wall": 43,
+      "pillar": 97,
+      "rock": 103,
+      "floorA": 116
+     },
+     {
+      "pair": "2-3",
+      "wall": 19,
+      "pillar": 43,
+      "rock": 23,
+      "floorA": 34
+     },
+     {
+      "pair": "2-4",
+      "wall": 39,
+      "pillar": 53,
+      "rock": 57,
+      "floorA": 56
+     },
+     {
+      "pair": "2-5",
+      "wall": 42,
+      "pillar": 39,
+      "rock": 54,
+      "floorA": 49
+     },
+     {
+      "pair": "3-4",
+      "wall": 37,
+      "pillar": 91,
+      "rock": 79,
+      "floorA": 78
+     },
+     {
+      "pair": "3-5",
+      "wall": 33,
+      "pillar": 70,
+      "rock": 71,
+      "floorA": 66
+     },
+     {
+      "pair": "4-5",
+      "wall": 18,
+      "pillar": 35,
+      "rock": 35,
+      "floorA": 47
+     }
+    ],
+    "stageMinPairMax": 43,
+    "stagePerTypeMin": {
+     "wall": 18,
+     "pillar": 35,
+     "rock": 23,
+     "floorA": 34
+    },
+    "bombBlink": {
+     "earlyRate": 9.29,
+     "lateRate": 15,
+     "earlyFrames": 52,
+     "lateFrames": 20
+    },
+    "playerIdleFrames": 2,
+    "playerIdleFramesSensitive": 2,
+    "enemyIdleFrames": {
+     "slime": 3,
+     "bat": 4,
+     "ghost": 4,
+     "golem": 1
+    },
+    "enemyIdleFramesSensitive": {
+     "slime": 3,
+     "bat": 4,
+     "ghost": 4,
+     "golem": 1
+    }
+   },
+   "fuzz": {
+    "events": 1030,
+    "states": [
+     "stageIntro",
+     "playing",
+     "paused"
+    ],
+    "finalState": "stageIntro",
+    "issues": 0
+   }
+  },
+  "info": {
+   "EXTRA-REF": {
+    "pass": true,
+    "note": "仕様 3.3 の参照アルゴリズム(評価側で独自実装)との一致(grid・exit・敵スポーン): 15/15"
+   },
+   "INFO-deathInput": {
+    "pass": false,
+    "note": "死亡演出中に→キーを押して離した場合: 復活直後の向き=down、復活 0.3 秒後の位置=(2,1)。押した入力が復活後に持ち越される(向きが down にならない/勝手に 1 歩進む)=true(情報。仕様は死亡中は移動不可・復活時は向き down)"
+   },
+   "INFO-countup": {
+    "pass": false,
+    "note": "stageClear 中の数値テキストの変化: 1 種。3 種以上ならカウントアップと判定(情報。S13 は喜びポーズ・出口フラッシュ・カウントアップのうち 2 つ以上なので、他は目視)"
+   },
+   "INFO-ambient": {
+    "pass": true,
+    "note": "床の明るさの周辺/中央の比(ステージ 1: 0.747、ステージ 5: 0.89。0.92 未満でビネットありと判定)、中央床の輝度の時間変動係数(ステージ 1: 0、ステージ 5: 0。0.004 超で揺らぎありと判定)。ビネット=true 揺らぎ=false"
+   },
+   "AUDIO-level": {
+    "pass": false,
+    "note": "出力を捕捉して測定(聴取はしていない)。BGM のピーク(仕様 0.2 以下): title=0.281 stage1=0.196 stage2=0.202 stage3=0.201 stage4=0.619 stage5=0.19。ジングルのピーク(仕様 0.35 以下)と長さ(目安 start ≤0.4s / stageClear 1.5〜2.5s / gameOver 2〜3s / gameClear 3〜4s): start=0.219/0.38s stageClear=0.252/2.28s gameOver=0.45/1.86s gameClear=0.342/2.66s。無音の曲=なし BGM 超過: title=0.281,stage4=0.619 ジングル超過: gameOver=0.45。爆弾(BGM 込み)ピーク 0.595"
+   },
+   "AUDIO-bgm-variety": {
+    "pass": true,
+    "note": "ステージ 1〜5 の BGM のスペクトル時系列(先頭 8 秒)の相関から、別の曲とみなせる数(相関 0.9 以上を同一とみなす): 5 種。相関: title~stage1=0.17 title~stage2=0.23 title~stage3=0.25 title~stage4=0.25 title~stage5=0.29 stage1~stage2=0.12 stage1~stage3=0.23 stage1~stage4=0.25 stage1~stage5=-0.17 stage2~stage3=0.24 stage2~stage4=0.34 stage2~stage5=0.03 stage3~stage4=0.55 stage3~stage5=0.35 stage4~stage5=0.34"
+   },
+   "AUDIO-tempo": {
+    "pass": true,
+    "note": "残り 25 秒時と通常時の BGM の音の立ち上がり頻度: 3.24回/秒 → 3.66回/秒(比 1.13、1.08 以上でテンポアップと判定)"
+   },
+   "AUDIO-gameclear-jingle": {
+    "pass": true,
+    "note": "stageClear と gameClear のジングルの相関 0.18(0.9 未満なら別の曲と判定)"
+   }
+  },
+  "fillText": 0
+ },
+ "fable-high": {
+  "effort": "fable-high",
+  "ranAt": "2026-09-30T17:13:22.096Z",
+  "elapsedSec": 844.627,
+  "must": {
+   "pass": 40,
+   "fail": 0,
+   "unknown": 0,
+   "total": 40
+  },
+  "should": {
+   "pass": 14,
+   "fail": 1,
+   "unknown": 0,
+   "total": 15
+  },
+  "items": {
+   "M1": {
+    "pass": true,
+    "note": "ルート配信・深いサブパス(/x/y/dist/)とも title 表示・playing 到達・404/console error なし・favicon 200",
+    "src": "auto"
+   },
+   "M2": {
+    "pass": true,
+    "note": "全検証セッション(タイトル→ステージ 1〜5→gameClear、gameOver→リトライ、R/Esc/一時停止、ランダム入力 1034 イベント)を通して console error・未処理例外・404・外部リクエストが 0 件",
+    "src": "auto"
+   },
+   "M3": {
+    "pass": true,
+    "note": "localStorage が例外を投げる環境で title→play→mute→gameOver(state=gameOver)まで error なし",
+    "src": "auto"
+   },
+   "M4": {
+    "pass": true,
+    "note": "1280x720: canvas 480x416 表示 830x720 比1.153 スクロールなし image-rendering=pixelated 充填率100% OK / 800x600: canvas 480x416 表示 692x600 比1.153 スクロールなし image-rendering=pixelated 充填率100% OK / 390x844: canvas 480x416 表示 390x338 比1.154 スクロールなし image-rendering=pixelated 充填率100% OK",
+    "src": "auto"
+   },
+   "M5": {
+    "pass": true,
+    "note": "title texts 一式あり(ロゴ文字列は texts にあり)。texts=[\"DYNAMITE MOLE\",\"PRESS ENTER TO START\",\"HI-SCORE 000000\",\"ARROWS / WASD  MOVE\",\"SPACE / Z      BOMB\",\"P / ESC        PAUSE\",\"R              RESTART\",\"M              SOUND\",\"SND ON\"]",
+    "src": "auto"
+   },
+   "M6": {
+    "pass": true,
+    "note": "Enter→stageIntro 表示 texts=OK、stageIntro→playing 1.80s(1.8±0.3)、intro 中の移動入力 無効、timeLeft 停止",
+    "src": "auto"
+   },
+   "M7": {
+    "pass": true,
+    "note": "HUD 全項目が期待値どおり(ライフ表記は \"x3\")。texts=[\"SCORE 000000\",\"HI 000000\",\"TIME 2:30\",\"STAGE 1/5\",\"x3\",\"BOMB 1\",\"FIRE 2\",\"SPD 0\",\"SND ON\"]",
+    "src": "auto"
+   },
+   "M8": {
+    "pass": true,
+    "note": "seed 1/7/12345 x stage 1-5 の 15 レイアウトすべてで 11x15・壁位置・安全地帯・岩の記号が正しい",
+    "src": "auto"
+   },
+   "M9": {
+    "pass": true,
+    "note": "15 レイアウトすべてで敵の数・種類が 3.11 の表どおり、開始位置から距離 7 以上、重複なし、岩の上でない、exit は S のマス",
+    "src": "auto"
+   },
+   "M10": {
+    "pass": true,
+    "note": "同一シード 2 回(stage 3 と stage 1): 完全一致、別シード: 異なる",
+    "src": "auto"
+   },
+   "M11": {
+    "pass": true,
+    "note": "速度 4.50 タイル/秒(1 タイル 0.222s、基準 0.222s ±20%)、移動中の中間 x 割合 90%、離した後 x=12.000(タイル中心)。外壁 通れない、柱 通れない、岩 通れない(爆弾のマスは M13)。",
+    "src": "auto"
+   },
+   "M12": {
+    "pass": true,
+    "note": "タップ(40ms x6 / 8ms x5)で毎回ちょうど 1 タイル: 11/11、Down 押しっぱなし中に Right を追加 → 後押し優先で (3,3) へ右折、後押しが塞がっているとき 止まる(col=3)",
+    "src": "auto"
+   },
+   "M13": {
+    "pass": true,
+    "note": "Space で所属タイルに置く(bombs=1, timeLeft≈2.5)、重ね置き不可、最大 1 のとき 2 個目不可、爆弾マスへ戻れない=true、爆弾の絵の変化 50 種(アニメあり)、Z キー OK。",
+    "src": "auto"
+   },
+   "M14": {
+    "pass": true,
+    "note": "位置(9,9) range2: 導火線 2.500s(2.5±0.3)、炎の寿命 0.500s(0.5±0.15)、炎マスが仕様の予測と一致(6 マス)、壁マスに炎なし、岩は予測どおり 壊れ(壊れる予定 10,9)。",
+    "src": "auto"
+   },
+   "M15": {
+    "pass": true,
+    "note": "A(1,1)→B(3,1) を置いた連鎖: A の爆発フレームで B(残り 1.10s)も同時に爆発=true、炎の範囲が連鎖後の予測(B の腕を含む)と一致。自爆(爆風がプレイヤーに当たる)は M16 で確認。",
+    "src": "auto"
+   },
+   "M16": {
+    "pass": true,
+    "note": "自爆(範囲内に立つ): ライフ 3→2、死亡演出 1.20s(1.2±0.15)、死亡中 timeLeft の変化 0.000s、死亡中の移動入力 無効・爆弾設置 無効、sfxLog に playerDie あり。",
+    "src": "auto"
+   },
+   "M17": {
+    "pass": true,
+    "note": "復活: (1,1)・invincible=1.98s、無敵の長さ 2.01s(2.0±0.2)、無敵中の点滅(見た目の変化回数)20、無敵中に B の炎が当たっても生存=true、無敵中に敵へ接触しても生存=true、岩・敵の保持=true。 ※パワーアップ低下は M17b で確認",
+    "src": "auto"
+   },
+   "M18": {
+    "pass": true,
+    "note": "無敵切れ後に生存中の敵へ接触 → ライフ 2→1(死亡)、敵は倒れない=true。",
+    "src": "auto"
+   },
+   "M19": {
+    "pass": true,
+    "note": "ライフ 0 → gameOver。texts=[\"SCORE 000000\",\"HI 000000\",\"TIME 2:28\",\"STAGE 1/5\",\"x0\",\"BOMB 1\",\"FIRE 2\",\"SPD 0\",\"SND ON\",\"GAME OVER\",\"SCORE 000000\",\"BEST  000000\",\"REACHED STAGE 1\",\"ENTER  RETRY\",\"ESC    TITLE\"]",
+    "src": "auto"
+   },
+   "M20": {
+    "pass": true,
+    "note": "ステージ 4(倍率 1.10)・岩なしで 6 秒測定(経路長/時間の中央値 タイル/秒): slime 2.20(期待 2.20)、bat 3.52(期待 3.52)、ghost 2.64(期待 2.64)、golem 1.65(期待 1.65)。bat は slime の 1.60 倍(>1.3 で速いと判定)。グリッド線から外れたフレーム 0、岩ありで 8 秒間に敵が壁/岩のマスに入ったフレーム 0(移動した敵 7/7)。見た目の違いは目視(スクリーンショット)で別途確認",
+    "src": "auto"
+   },
+   "M21": {
+    "pass": true,
+    "note": "ゴーストとスライム(ランダム徘徊の基準線)を、静止したプレイヤーから距離 3〜6 の 16 か所に出現させて 3 秒観察し、接近(最短距離 ≤1.5 か 2 以上縮小)した割合: ゴースト 16/16、スライム 10/16。ゴーストが 0.6 以上かつスライムより 0.25 以上高ければ「追跡して近づく」と判定。仕様の追跡は「逆走しない・25% 徘徊」なので確率的。ゴースト: 6,3:3.1→0 5,9:5.9→0 5,6:3.1→0 6,9:4.8→0 7,1:4.1→2 11,7:5.8→2 5,4:2.9→0 8,1:4.9→0 9,1:5.9→0 9,9:5.9→0 7,9:3.9→0 10,5:2.9→0 2,5:4.9→0 12,5:4.9→0 3,6:4.9→0 6,7:2.9→0",
+    "src": "auto"
+   },
+   "M22": {
+    "pass": true,
+    "note": "slime: hp/状態の遷移 1/A→0/D→gone、死亡演出→消滅 0.42s(0.4±0.15)、撃破時のスコア +100(期待 +100)、sfx enemyDie=true。 bat: hp/状態の遷移 1/A→0/D→gone、死亡演出→消滅 0.41s(0.4±0.15)、撃破時のスコア +200(期待 +200)、sfx enemyDie=true。 ghost: hp/状態の遷移 1/A→0/D→gone、死亡演出→消滅 0.42s(0.4±0.15)、撃破時のスコア +300(期待 +300)、sfx enemyDie=true。 golem: hp/状態の遷移 3/A→2/A→1/A→0/D→gone、死亡演出→消滅 0.42s(0.4±0.15)、撃破時のスコア +500(期待 +500)、sfx enemyDie=true hit=true 。 ゴーレムの被弾後の点滅(タイル中央の輝度の ON/OFF): 切替 11 回、点滅を観測できた時間 0.75s(参考。0.8s 前後が仕様。切替 4 回以上で合格)",
+    "src": "auto"
+   },
+   "M23": {
+    "pass": true,
+    "note": "岩 1 個で +10(= 10x1)、アイテム取得 +50(4 種とも)、HUD の SCORE は snapshot の値と一致。敵 4 種のスコアは M22 で実測(+100/+200/+300/+500)。",
+    "src": "auto"
+   },
+   "M24": {
+    "pass": true,
+    "note": "隠しアイテムは参照の予測どおり(爆風で壊したとき 出現OK(bomb)、clearBlocks 後の全 5 個が一致=true、未破壊時は items 空=true)。効果: fire: 値 3、スコア +50、HUD OK、sfx item / bomb: 値 2、スコア +50、HUD OK、sfx item / boots: 値 1、スコア +50、HUD OK、sfx item / life: 値 4、スコア +50、HUD OK、sfx life。速度 boots1=5.1(実測 5.05)、boots3=6.3(実測 6.31)。上限で取得しても超えず・+50・消費=true。",
+    "src": "auto"
+   },
+   "M25": {
+    "pass": true,
+    "note": "初期は隠れている(revealed=false, open=false, 出口のマスは岩)=true、爆風で岩を壊すと revealed=true、敵が生きている間は open=false で、乗っても state=playingのまま=true、敵全滅後 open=true で exitOpen が sfxLog にあり。",
+    "src": "auto"
+   },
+   "M26": {
+    "pass": true,
+    "note": "開いた出口へ歩いて乗ると stageClear(texts: STAGE CLEAR! / CLEAR BONUS +500 / TIME BONUS +1440 OK)。加算スコア=500+floor(残り秒)x10 を全 5 ステージで確認、約 3.0s 後に次の導入(ステージ名・ENEMIES 数を確認)/ステージ 5 は gameClear: S1: +1940(期待 1940)、クリア画面 3.01s、S2: +1990(期待 1990)、クリア画面 3.01s、S3: +2140(期待 2140)、クリア画面 3.00s、S4: +2290(期待 2290)、クリア画面 3.02s、S5: +2290(期待 2290)、クリア画面 3.02s。",
+    "src": "auto"
+   },
+   "M27": {
+    "pass": true,
+    "note": "gameClear の texts 一式 OK(SCORE 017070 | CONGRATULATIONS! | YOU ESCAPED THE MINE | SCORE 017070 | BEST  017070 | NEW RECORD! | ENTER  PLAY AGAIN | ESC    TITLE)、突入 0.6 秒以内の Enter は無視、その後の Enter で stage 1・スコア 0・ライフ 3・パワーアップ初期値の新しいゲーム=true、Esc でタイトル=true。",
+    "src": "auto"
+   },
+   "M28": {
+    "pass": true,
+    "note": "5 ステージの色相が明確に別(黄土 / 青緑+紫 / 青 / 赤茶 / 暗い藍。sheet-a.png)。自動の RGB 距離の最小値 59。",
+    "src": "manual"
+   },
+   "M29": {
+    "pass": true,
+    "note": "TIME 表示 150→149→148→147(m:ss は ceil と全フレーム一致=true、減少レート 1.001 秒/秒)。setTimeLeft(2) → 2.0s 後に死亡(ライフ 3→2)、復活後の timeLeft=60.0(60 にリセット=true)。ライフ 1 のタイムアップ → gameOver。",
+    "src": "auto"
+   },
+   "M30": {
+    "pass": true,
+    "note": "P で paused(PAUSED 表示=true)、3 秒間 timeLeft・爆弾の timeLeft・敵の位置が不変=true、再開後は続きから(0.5 秒で爆弾 0.55 減少)=true、Escape でも切替=true、stageIntro 中の P は無効=true。",
+    "src": "auto"
+   },
+   "M31": {
+    "pass": true,
+    "note": "R でリスタート(開始ステージの新しい stageIntro・スコア 0・ライフ 3・パワーアップ初期値・timeLeft 満タン・同じシードで同じレイアウト): playing○ paused○ stageClear○ stageIntro○ gameOver(R)○ gameOver(Enter)○ gameClear○(?stage=3 / ?stage=2 / ?stage=5 の開始ステージ保持も含む)。",
+    "src": "auto"
+   },
+   "M32": {
+    "pass": true,
+    "note": "localStorage['dynamiteMole.hiScore']: 初回 300 点で保存値=300、リロード後 タイトル HI-SCORE 000300=true・HUD HI 000300=true、初回は NEW RECORD! 表示=true、0 点の run では NEW RECORD! が出ない=true(BEST 維持=true)、超えた run(400 点)で NEW RECORD! 表示=true・保存値=400、R で放棄した run(600 点)も保存=600・リロード後のタイトルに反映=true。",
+    "src": "auto"
+   },
+   "M33": {
+    "pass": true,
+    "note": "audio.unlocked: 最初のキー入力前=false → 後=true。bgm: title=title、stageIntro=null playing=\"stage1\" paused=\"stage1\" stageClear=null stageIntro2=null playing2=\"stage2\" gameOver=null gameClear=null。",
+    "src": "auto"
+   },
+   "M34": {
+    "pass": true,
+    "note": "Must の 13 種すべてが sfxLog に残った(その他に観測: gameClear, warn)",
+    "src": "auto"
+   },
+   "M35": {
+    "pass": true,
+    "note": "M でトグル(title でも有効=true)、HUD SND OFF/ON 切替=true、ミュート中もゲーム進行=true・sfxLog に place が残る=true、リロード後もミュート維持=true、?mute=1 で保存値(ミュート解除)より優先=true・HUD=true。",
+    "src": "auto"
+   },
+   "M36": {
+    "pass": true,
+    "note": "Must のアセットがすべて画面に出ている(4 方向歩行・死亡・敵 4 種と死亡パフ・5 テーマのタイル・出口 閉/開・爆弾・炎の中心/腕/先端・アイテム 4 種・ライフアイコン・ロゴ・背景・favicon.png)。画像ファイルは favicon のみ、絵はコード生成。fillText 0 回、外部リクエスト 0 件。",
+    "src": "manual"
+   },
+   "M37": {
+    "pass": true,
+    "note": "ドットの大きさは 1px で統一。5 ステージのどの床でも見分けがつく(stage-bomb-flame.png)。HUD と操作説明の文字は 1x(8px)で小さく、390 幅では読みにくい。",
+    "src": "manual"
+   },
+   "M38": {
+    "pass": true,
+    "note": "CPU 4x スロットリング下: 導火線 2.487s(2.5±0.3)、TIME 減少レート 1.002 秒/秒(1±0.1)、1 タイル 0.221s(0.222±20%)",
+    "src": "auto"
+   },
+   "M39": {
+    "pass": true,
+    "note": "矢印/Space の keydown が preventDefault 済み: {\"title\":true,\"stageIntro\":true,\"playing\":true}、scroll=(0,0)。キー入力はキャンバスをクリックせずに全テストで有効",
+    "src": "auto"
+   },
+   "M40": {
+    "pass": true,
+    "note": "snapshot() の形式を 7 状態すべてで検証 OK、?debug=1 なしで __GAME__.debug は存在しない=true、?debug=1 で 10 関数すべて function=true、10 関数すべてが他の検証で実際に期待どおり動作=true。?stage=n で開始ステージ変更は M8/M31 で確認。",
+    "src": "auto"
+   },
+   "S1": {
+    "pass": true,
+    "note": "?touch=1・390x844: 十字/BOMB/PAUSE の DOM ボタン検出=true、押している間だけ移動・離すと止まる・BOMB で設置・PAUSE で paused、タイトルのタップで開始、キャンバス 390x338 とタッチ UI が縦に収まる=true。",
+    "src": "auto"
+   },
+   "S2": {
+    "pass": true,
+    "note": "爆発中に外壁/床の境界エッジの位置(論理 px)が動くか: 通常 静止時 1 種 → 爆発中 8 種(14,12 8,11 10,11 9,14 12,11 13,13)、reduced-motion 静止時 1 種 → 爆発中 1 種。揺れの検出=true、reduce で抑止=true",
+    "src": "auto"
+   },
+   "S3": {
+    "pass": true,
+    "note": "コードに、岩の破片・爆発の火花・歩行の土煙・取得のきらめき・死亡時の星の 5 種。岩が壊れるフレームで破片の粒を確認。",
+    "src": "manual"
+   },
+   "S4": {
+    "pass": true,
+    "note": "テキストのポップアップ(texts の \"+N\"): +50=0.76s +200=0.76s(敵撃破 +200 とアイテム +50 の両方が約 0.8s 表示されることを期待。範囲 0.55〜1.05s)",
+    "src": "auto"
+   },
+   "S5": {
+    "pass": true,
+    "note": "ゴーストは、遠いとき青い目、近づくと赤い目で体が白く明るくなる(ghost-far-near の連続フレーム)。表情の変化は小さい。",
+    "src": "manual"
+   },
+   "S6": {
+    "pass": true,
+    "note": "TIME 30 秒以下で HUD 全体の赤い画素数が時間で変動(点滅): 100 秒時 70〜70 px、25 秒時 70〜534 px(変動 30px 以上かつ 100 秒時は 12px 未満で点滅と判定)=true、残り 10 秒以下の 4.2 秒間で warn が 4 回(1 秒ごとなら 3〜5 回)=true",
+    "src": "auto"
+   },
+   "S7": {
+    "pass": true,
+    "note": "爆弾の絵の変化頻度(回/秒): 導火線 前半 3.57 → 残り 0.8 秒未満 6.67(1.3 倍以上で加速と判定)",
+    "src": "auto"
+   },
+   "S8": {
+    "pass": true,
+    "note": "ステージ 1〜5 の BGM のスペクトル時系列(先頭 8 秒)の相関から、別の曲とみなせる数(相関 0.9 以上を同一とみなす): 5 種。相関: title~stage1=0.22 title~stage2=0.24 title~stage3=0.29 title~stage4=0.3 title~stage5=0.05 stage1~stage2=0.6 stage1~stage3=0.29 stage1~stage4=0.26 stage1~stage5=0.23 stage2~stage3=0.3 stage2~stage4=0.31 stage2~stage5=0.16 stage3~stage4=0.86 stage3~stage5=0.35 stage4~stage5=0.34 / 残り 25 秒時と通常時の BGM の音の立ち上がり頻度: 2.99回/秒 → 3.66回/秒(比 1.22、1.08 以上でテンポアップと判定)",
+    "src": "auto"
+   },
+   "S9": {
+    "pass": true,
+    "note": "visibilitychange(hidden)を発火 → state=paused(疑似的にプロパティを上書きして発火。実際のタブ切替は未計測)",
+    "src": "auto"
+   },
+   "S10": {
+    "pass": true,
+    "note": "タイトルの 3 秒間の画面変化(領域ごとの異なるフレーム数): 上 12・中 12・下 12(中央の PRESS ENTER の点滅を除き、上か下に変化があれば動くと判定)",
+    "src": "auto"
+   },
+   "S11": {
+    "pass": false,
+    "note": "既存 5 実装と同じ基準(敵を囲んで動けなくした待機中の実測)で、slime 3・bat 6・ghost 7・golem 1(感度を上げた測定で golem 2)。ゴーレムは歩いている間だけ絵を切り替える実装(コードで確認)。プレイヤーの待機の呼吸 2。補足の測定(supplement/walk-frames.json)では golem 4・slime 3・bat 3・ghost 4(通常 2+追跡 2。README の自己申告どおり)で、ゴーストは状態ごとには 2 枚。",
+    "src": "manual"
+   },
+   "S12": {
+    "pass": true,
+    "note": "ビネット(周辺/中央の明るさ比 0.91。弱い)と、プレイヤーの周りの揺れるランタン光、爆弾の火の光。",
+    "src": "manual"
+   },
+   "S13": {
+    "pass": true,
+    "note": "喜びポーズ(2 フレーム、stageClear と gameClear で表示。コードで確認)と、出口が開く瞬間の円形のフラッシュ(clearfx の連続フレーム)。カウントアップなし(README に記載、INFO-countup も 1 種)。",
+    "src": "manual"
+   },
+   "S14": {
+    "pass": true,
+    "note": "sfxLog に gameClear=true。stageClear と gameClear のジングルの相関 -0.12(0.9 未満なら別の曲と判定)",
+    "src": "auto"
+   },
+   "S15": {
+    "pass": true,
+    "note": "導入画面の ENEMIES の下に敵アイコンが並ぶ(intro-s5 で 8 体)。",
+    "src": "manual"
+   }
+  },
+  "issues": 0,
+  "extra": {
+   "fillTextCalls": 0,
+   "titleTexts": [
+    "DYNAMITE MOLE",
+    "PRESS ENTER TO START",
+    "HI-SCORE 000000",
+    "ARROWS / WASD  MOVE",
+    "SPACE / Z      BOMB",
+    "P / ESC        PAUSE",
+    "R              RESTART",
+    "M              SOUND",
+    "SND ON"
+   ],
+   "refMatch": {
+    "ok": 15,
+    "total": 15,
+    "fails": []
+   },
+   "moveSpeed": 4.496402877697633,
+   "warnings": 33,
+   "fuse": 2.499699999999255,
+   "flameLife": 0.5001000000005588,
+   "blinkInvincible": 20,
+   "invDur": 2.006600000000559,
+   "deathInputCarry": {
+    "facingAtRespawn": "down",
+    "colAfter300ms": 1,
+    "carried": false
+   },
+   "invincibleBlink": {
+    "toggles": 26,
+    "halfPeriodMs": 66.1000000005588,
+    "range": 24.48441406249958
+   },
+   "ghostChase": {
+    "ghost": 1,
+    "slime": 0.625
+   },
+   "golemBlink": {
+    "toggles": 11,
+    "blinkSpanSec": 0.75,
+    "hp": 2
+   },
+   "enemyScoreChecked": true,
+   "through": [
+    {
+     "stage": 1,
+     "clearDur": 3.007299999999814,
+     "timeLeft": 144.78333333332918
+    },
+    {
+     "stage": 2,
+     "clearDur": 3.011200000000186,
+     "timeLeft": 149.59999999999968
+    },
+    {
+     "stage": 3,
+     "clearDur": 2.997700000000186,
+     "timeLeft": 164.61666666666636
+    },
+    {
+     "stage": 4,
+     "clearDur": 3.0157000000001863,
+     "timeLeft": 179.61666666666636
+    },
+    {
+     "stage": 5,
+     "clearDur": 3.0202999999998137,
+     "timeLeft": 179.59999999999968
+    }
+   ],
+   "countUp": {
+    "distinct": 1,
+    "values": [
+     "SCORE 002290 | HI 002290 | STAGE 1/5 | x3 | BOMB 1 | FIRE 2 | SPD 0 | CLEAR BONUS +500 | TIME BONUS +1490"
+    ]
+   },
+   "ambient": {
+    "1": {
+     "inner": 138.3,
+     "outer": 126.1,
+     "ratio": 0.911,
+     "flickerCV": 0,
+     "flickerRange": 0
+    },
+    "5": {
+     "inner": 28.8,
+     "outer": 32.6,
+     "ratio": 1.131,
+     "flickerCV": 0,
+     "flickerRange": 0
+    }
+   },
+   "audio": {
+    "bgm": {
+     "title": {
+      "peak": 0.22,
+      "rms": 0.0742,
+      "samples": 284672,
+      "state": "title",
+      "bgm": "title"
+     },
+     "stage1": {
+      "peak": 0.276,
+      "rms": 0.0761,
+      "samples": 368640,
+      "beat": {
+       "period": 0.27,
+       "r": 0.6294670292741972
+      },
+      "onsets": 2.99
+     },
+     "stage1_low": {
+      "peak": 0.272,
+      "rms": 0.0745,
+      "samples": 372736,
+      "beat": {
+       "period": 0.21,
+       "r": 0.6476189255203267
+      },
+      "onsets": 3.66,
+      "simToNormal": 0.146
+     },
+     "stage2": {
+      "peak": 0.278,
+      "rms": 0.0759,
+      "samples": 372736,
+      "beat": {
+       "period": 0.27,
+       "r": 0.6397742362213442
+      }
+     },
+     "stage3": {
+      "peak": 0.282,
+      "rms": 0.0803,
+      "samples": 372736,
+      "beat": {
+       "period": 0.25,
+       "r": 0.8219256326441214
+      }
+     },
+     "stage4": {
+      "peak": 0.282,
+      "rms": 0.0804,
+      "samples": 372736,
+      "beat": {
+       "period": 0.25,
+       "r": 0.821785878331024
+      }
+     },
+     "stage5": {
+      "peak": 0.82,
+      "rms": 0.0777,
+      "samples": 374784,
+      "beat": {
+       "period": 1.2,
+       "r": 0.6487757274991314
+      }
+     }
+    },
+    "sfx": {
+     "start": {
+      "peak": 0.253,
+      "rms": 0.0242,
+      "samples": 73728,
+      "dur": 0.28
+     },
+     "bomb_with_bgm": {
+      "peak": 0.467,
+      "rms": 0.078,
+      "samples": 149504,
+      "bgmPeak": 0.276
+     },
+     "stageClear": {
+      "peak": 0.436,
+      "rms": 0.125,
+      "samples": 159744,
+      "dur": 1.94
+     },
+     "gameClear": {
+      "peak": 0.553,
+      "rms": 0.1447,
+      "samples": 227328,
+      "dur": 3.68
+     },
+     "gameOver": {
+      "peak": 0.399,
+      "rms": 0.1322,
+      "samples": 196608,
+      "dur": 2.74
+     }
+    },
+    "similarity": {
+     "title~stage1": 0.22,
+     "title~stage2": 0.24,
+     "title~stage3": 0.29,
+     "title~stage4": 0.3,
+     "title~stage5": 0.05,
+     "stage1~stage2": 0.6,
+     "stage1~stage3": 0.29,
+     "stage1~stage4": 0.26,
+     "stage1~stage5": 0.23,
+     "stage2~stage3": 0.3,
+     "stage2~stage4": 0.31,
+     "stage2~stage5": 0.16,
+     "stage3~stage4": 0.86,
+     "stage3~stage5": 0.35,
+     "stage4~stage5": 0.34
+    },
+    "stageClusters": 5,
+    "jingleSimilarity": -0.12
+   },
+   "shotMetrics": {
+    "titleBands": {
+     "top": 12,
+     "mid": 12,
+     "bot": 12
+    },
+    "stageTiles": {
+     "1": {
+      "wall": [
+       116,
+       76,
+       43
+      ],
+      "pillar": [
+       183,
+       127,
+       67
+      ],
+      "rock": [
+       186,
+       143,
+       91
+      ],
+      "floorA": [
+       181,
+       136,
+       88
+      ],
+      "floorB": [
+       179,
+       133,
+       83
+      ]
+     },
+     "2": {
+      "wall": [
+       50,
+       68,
+       71
+      ],
+      "pillar": [
+       78,
+       81,
+       96
+      ],
+      "rock": [
+       83,
+       138,
+       122
+      ],
+      "floorA": [
+       68,
+       106,
+       92
+      ],
+      "floorB": [
+       71,
+       104,
+       88
+      ]
+     },
+     "3": {
+      "wall": [
+       44,
+       52,
+       78
+      ],
+      "pillar": [
+       78,
+       100,
+       145
+      ],
+      "rock": [
+       99,
+       165,
+       208
+      ],
+      "floorA": [
+       68,
+       92,
+       141
+      ],
+      "floorB": [
+       71,
+       92,
+       133
+      ]
+     },
+     "4": {
+      "wall": [
+       66,
+       40,
+       27
+      ],
+      "pillar": [
+       99,
+       57,
+       43
+      ],
+      "rock": [
+       81,
+       63,
+       59
+      ],
+      "floorA": [
+       90,
+       48,
+       37
+      ],
+      "floorB": [
+       91,
+       51,
+       38
+      ]
+     },
+     "5": {
+      "wall": [
+       30,
+       28,
+       30
+      ],
+      "pillar": [
+       44,
+       45,
+       56
+      ],
+      "rock": [
+       53,
+       62,
+       99
+      ],
+      "floorA": [
+       34,
+       36,
+       51
+      ],
+      "floorB": [
+       40,
+       41,
+       48
+      ]
+     }
+    },
+    "stagePairs": [
+     {
+      "pair": "1-2",
+      "wall": 72,
+      "pillar": 118,
+      "rock": 108,
+      "floorA": 117
+     },
+     {
+      "pair": "1-3",
+      "wall": 84,
+      "pillar": 134,
+      "rock": 147,
+      "floorA": 132
+     },
+     {
+      "pair": "1-4",
+      "wall": 64,
+      "pillar": 112,
+      "rock": 136,
+      "floorA": 136
+     },
+     {
+      "pair": "1-5",
+      "wall": 99,
+      "pillar": 162,
+      "rock": 156,
+      "floorA": 182
+     },
+     {
+      "pair": "2-3",
+      "wall": 18,
+      "pillar": 53,
+      "rock": 92,
+      "floorA": 51
+     },
+     {
+      "pair": "2-4",
+      "wall": 55,
+      "pillar": 62,
+      "rock": 98,
+      "floorA": 83
+     },
+     {
+      "pair": "2-5",
+      "wall": 61,
+      "pillar": 64,
+      "rock": 85,
+      "floorA": 88
+     },
+     {
+      "pair": "3-4",
+      "wall": 57,
+      "pillar": 113,
+      "rock": 181,
+      "floorA": 115
+     },
+     {
+      "pair": "3-5",
+      "wall": 55,
+      "pillar": 110,
+      "rock": 157,
+      "floorA": 111
+     },
+     {
+      "pair": "4-5",
+      "wall": 38,
+      "pillar": 58,
+      "rock": 49,
+      "floorA": 59
+     }
+    ],
+    "stageMinPairMax": 59,
+    "stagePerTypeMin": {
+     "wall": 18,
+     "pillar": 53,
+     "rock": 49,
+     "floorA": 51
+    },
+    "bombBlink": {
+     "earlyRate": 3.57,
+     "lateRate": 6.67,
+     "earlyFrames": 54,
+     "lateFrames": 18
+    },
+    "playerIdleFrames": 2,
+    "playerIdleFramesSensitive": 2,
+    "enemyIdleFrames": {
+     "slime": 3,
+     "bat": 6,
+     "ghost": 7,
+     "golem": 1
+    },
+    "enemyIdleFramesSensitive": {
+     "slime": 4,
+     "bat": 6,
+     "ghost": 7,
+     "golem": 2
+    }
+   },
+   "fuzz": {
+    "events": 1034,
+    "states": [
+     "stageIntro",
+     "paused",
+     "playing"
+    ],
+    "finalState": "stageIntro",
+    "issues": 0
+   }
+  },
+  "info": {
+   "EXTRA-REF": {
+    "pass": true,
+    "note": "仕様 3.3 の参照アルゴリズム(評価側で独自実装)との一致(grid・exit・敵スポーン): 15/15"
+   },
+   "INFO-deathInput": {
+    "pass": true,
+    "note": "死亡演出中に→キーを押して離した場合: 復活直後の向き=down、復活 0.3 秒後の位置=(1,1)。押した入力が復活後に持ち越される(向きが down にならない/勝手に 1 歩進む)=false(情報。仕様は死亡中は移動不可・復活時は向き down)"
+   },
+   "INFO-countup": {
+    "pass": false,
+    "note": "stageClear 中の数値テキストの変化: 1 種。3 種以上ならカウントアップと判定(情報。S13 は喜びポーズ・出口フラッシュ・カウントアップのうち 2 つ以上なので、他は目視)"
+   },
+   "INFO-ambient": {
+    "pass": true,
+    "note": "床の明るさの周辺/中央の比(ステージ 1: 0.911、ステージ 5: 1.131。0.92 未満でビネットありと判定)、中央床の輝度の時間変動係数(ステージ 1: 0、ステージ 5: 0。0.004 超で揺らぎありと判定)。ビネット=true 揺らぎ=false"
+   },
+   "AUDIO-level": {
+    "pass": false,
+    "note": "出力を捕捉して測定(聴取はしていない)。BGM のピーク(仕様 0.2 以下): title=0.22 stage1=0.276 stage2=0.278 stage3=0.282 stage4=0.282 stage5=0.82。ジングルのピーク(仕様 0.35 以下)と長さ(目安 start ≤0.4s / stageClear 1.5〜2.5s / gameOver 2〜3s / gameClear 3〜4s): start=0.253/0.28s stageClear=0.436/1.94s gameOver=0.399/2.74s gameClear=0.553/3.68s。無音の曲=なし BGM 超過: title=0.22,stage1=0.276,stage2=0.278,stage3=0.282,stage4=0.282,stage5=0.82 ジングル超過: stageClear=0.436,gameOver=0.399,gameClear=0.553。爆弾(BGM 込み)ピーク 0.467"
+   },
+   "AUDIO-bgm-variety": {
+    "pass": true,
+    "note": "ステージ 1〜5 の BGM のスペクトル時系列(先頭 8 秒)の相関から、別の曲とみなせる数(相関 0.9 以上を同一とみなす): 5 種。相関: title~stage1=0.22 title~stage2=0.24 title~stage3=0.29 title~stage4=0.3 title~stage5=0.05 stage1~stage2=0.6 stage1~stage3=0.29 stage1~stage4=0.26 stage1~stage5=0.23 stage2~stage3=0.3 stage2~stage4=0.31 stage2~stage5=0.16 stage3~stage4=0.86 stage3~stage5=0.35 stage4~stage5=0.34"
+   },
+   "AUDIO-tempo": {
+    "pass": true,
+    "note": "残り 25 秒時と通常時の BGM の音の立ち上がり頻度: 2.99回/秒 → 3.66回/秒(比 1.22、1.08 以上でテンポアップと判定)"
+   },
+   "AUDIO-gameclear-jingle": {
+    "pass": true,
+    "note": "stageClear と gameClear のジングルの相関 -0.12(0.9 未満なら別の曲と判定)"
+   }
+  },
+  "fillText": 0
  }
 }

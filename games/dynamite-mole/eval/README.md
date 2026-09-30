@@ -43,3 +43,9 @@ node report.js                           # results/*.json と manual.json を集
 - 音は聴いていない。`AudioContext` の出力を捕捉して、数値(ピーク・相関・立ち上がり頻度)で測っている。
 - 画素の比較(点滅・フレーム数・環境光)は、火の粉や環境光のゆらぎに影響される。そのため、色に依存しない輝度の ON/OFF や、画素差の小さいフレームを同一とみなすクラスタリングで測っている。
 - 画づくり・演出の良し悪しは自動化できないので、スクリーンショットとコードを見て判定した(`manual.json`)。Chromium(ヘッドレス)以外・実機のタッチは未確認。
+
+## 参考実装(opus-medium / fable-high)の追加測定で足したもの
+
+- `lib.js` の `EFFORT_PORT` に `opus-medium`(5106)と `fable-high`(5107)、`report.js` の集計対象に同じ 2 つを足した。`sheets.js` は `node sheets.js opus-medium fable-high` のように対象を引数で絞れる(引数なしは従来どおり既存 5 実装)。判定ロジックは変えていない。
+- `similarity/`: 参考実装が既存 5 実装と酷似していないかの確認。`similarity.py`(ファイルのハッシュ・行・トークン 12-gram・識別子を置き換えた 12-gram・カラーコード・最長の共通トークン列・5x7 フォントの字形)、`asset-similarity.js`(7 実装に同じ操作列を流し、`drawImage` で描かれた絵を取り出して画素で比較。`capture` には 7 実装のサーバーが要る)。結果は `code-similarity.json`・`asset-similarity.json`。
+- `supplement/walk-frames.js`: 歩いている敵に使われた絵の種類を 7 実装で数える参考値(`walk-frames.json`)。S11 の判定には使っていない。

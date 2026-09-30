@@ -1,0 +1,324 @@
+{
+ "method": "drawImage の元(画像+矩形+反転)のうち、歩いている敵の位置にだけ描かれた種類の数。3 秒間。ステージ 1・seed=1・岩なし",
+ "results": {
+  "low": {
+   "slime": {
+    "frames": 181,
+    "movedFrames": 180,
+    "spriteKinds": 2,
+    "perKindDraws": [
+     89,
+     92
+    ]
+   },
+   "bat": {
+    "frames": 181,
+    "movedFrames": 180,
+    "spriteKinds": 2,
+    "perKindDraws": [
+     91,
+     90
+    ]
+   },
+   "ghost": {
+    "frames": 181,
+    "movedFrames": 180,
+    "spriteKinds": 4,
+    "perKindDraws": [
+     45,
+     49,
+     44,
+     43
+    ]
+   },
+   "golem": {
+    "frames": 180,
+    "movedFrames": 179,
+    "spriteKinds": 2,
+    "perKindDraws": [
+     89,
+     91
+    ]
+   }
+  },
+  "medium": {
+   "slime": {
+    "frames": 181,
+    "movedFrames": 180,
+    "spriteKinds": 4,
+    "perKindDraws": [
+     43,
+     50,
+     48,
+     40
+    ]
+   },
+   "bat": {
+    "frames": 181,
+    "movedFrames": 180,
+    "spriteKinds": 4,
+    "perKindDraws": [
+     46,
+     45,
+     45,
+     45
+    ]
+   },
+   "ghost": {
+    "frames": 181,
+    "movedFrames": 180,
+    "spriteKinds": 3,
+    "perKindDraws": [
+     61,
+     60,
+     60
+    ]
+   },
+   "golem": {
+    "frames": 181,
+    "movedFrames": 180,
+    "spriteKinds": 4,
+    "perKindDraws": [
+     45,
+     45,
+     45,
+     46
+    ]
+   }
+  },
+  "high": {
+   "slime": {
+    "frames": 181,
+    "movedFrames": 180,
+    "spriteKinds": 4,
+    "perKindDraws": [
+     46,
+     50,
+     45,
+     40
+    ]
+   },
+   "bat": {
+    "frames": 181,
+    "movedFrames": 180,
+    "spriteKinds": 4,
+    "perKindDraws": [
+     49,
+     44,
+     44,
+     44
+    ]
+   },
+   "ghost": {
+    "frames": 181,
+    "movedFrames": 180,
+    "spriteKinds": 8,
+    "perKindDraws": [
+     24,
+     24,
+     24,
+     22,
+     15,
+     24,
+     24,
+     24
+    ]
+   },
+   "golem": {
+    "frames": 181,
+    "movedFrames": 180,
+    "spriteKinds": 4,
+    "perKindDraws": [
+     39,
+     48,
+     48,
+     46
+    ]
+   }
+  },
+  "xhigh": {
+   "slime": {
+    "frames": 181,
+    "movedFrames": 179,
+    "spriteKinds": 4,
+    "perKindDraws": [
+     43,
+     50,
+     48,
+     40
+    ]
+   },
+   "bat": {
+    "frames": 181,
+    "movedFrames": 180,
+    "spriteKinds": 4,
+    "perKindDraws": [
+     46,
+     46,
+     44,
+     45
+    ]
+   },
+   "ghost": {
+    "frames": 181,
+    "movedFrames": 180,
+    "spriteKinds": 4,
+    "perKindDraws": [
+     44,
+     48,
+     48,
+     41
+    ]
+   },
+   "golem": {
+    "frames": 181,
+    "movedFrames": 180,
+    "spriteKinds": 4,
+    "perKindDraws": [
+     42,
+     48,
+     48,
+     43
+    ]
+   }
+  },
+  "max": {
+   "slime": {
+    "frames": 181,
+    "movedFrames": 179,
+    "spriteKinds": 4,
+    "perKindDraws": [
+     43,
+     52,
+     43,
+     43
+    ]
+   },
+   "bat": {
+    "frames": 181,
+    "movedFrames": 180,
+    "spriteKinds": 4,
+    "perKindDraws": [
+     50,
+     45,
+     43,
+     43
+    ]
+   },
+   "ghost": {
+    "frames": 181,
+    "movedFrames": 180,
+    "spriteKinds": 4,
+    "perKindDraws": [
+     51,
+     44,
+     43,
+     43
+    ]
+   },
+   "golem": {
+    "frames": 181,
+    "movedFrames": 180,
+    "spriteKinds": 4,
+    "perKindDraws": [
+     52,
+     43,
+     43,
+     43
+    ]
+   }
+  },
+  "opus-medium": {
+   "slime": {
+    "frames": 181,
+    "movedFrames": 180,
+    "spriteKinds": 4,
+    "perKindDraws": [
+     49,
+     50,
+     42,
+     40
+    ]
+   },
+   "bat": {
+    "frames": 181,
+    "movedFrames": 180,
+    "spriteKinds": 4,
+    "perKindDraws": [
+     47,
+     48,
+     44,
+     42
+    ]
+   },
+   "ghost": {
+    "frames": 181,
+    "movedFrames": 180,
+    "spriteKinds": 6,
+    "perKindDraws": [
+     26,
+     36,
+     30,
+     30,
+     35,
+     24
+    ]
+   },
+   "golem": {
+    "frames": 177,
+    "movedFrames": 176,
+    "spriteKinds": 4,
+    "perKindDraws": [
+     38,
+     44,
+     48,
+     47
+    ]
+   }
+  },
+  "fable-high": {
+   "slime": {
+    "frames": 181,
+    "movedFrames": 180,
+    "spriteKinds": 3,
+    "perKindDraws": [
+     49,
+     91,
+     41
+    ]
+   },
+   "bat": {
+    "frames": 181,
+    "movedFrames": 180,
+    "spriteKinds": 3,
+    "perKindDraws": [
+     90,
+     47,
+     44
+    ]
+   },
+   "ghost": {
+    "frames": 181,
+    "movedFrames": 180,
+    "spriteKinds": 4,
+    "perKindDraws": [
+     48,
+     46,
+     42,
+     45
+    ]
+   },
+   "golem": {
+    "frames": 181,
+    "movedFrames": 180,
+    "spriteKinds": 4,
+    "perKindDraws": [
+     48,
+     45,
+     48,
+     40
+    ]
+   }
+  }
+ }
+}
