@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Dynamite Mole</title>
+<link rel="icon" href="./favicon.png">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div id="wrap">
+  <canvas id="game" width="480" height="416"></canvas>
+  <div id="touch" hidden>
+    <div class="pad">
+      <button class="tb up" data-key="ArrowUp" aria-label="up"><span class="arrow a-up"></span></button>
+      <button class="tb left" data-key="ArrowLeft" aria-label="left"><span class="arrow a-left"></span></button>
+      <button class="tb right" data-key="ArrowRight" aria-label="right"><span class="arrow a-right"></span></button>
+      <button class="tb down" data-key="ArrowDown" aria-label="down"><span class="arrow a-down"></span></button>
+    </div>
+    <button class="tb pause" data-key="KeyP" data-label="PAUSE" aria-label="PAUSE"></button>
+    <button class="tb bomb" data-key="Space" data-label="BOMB" aria-label="BOMB"></button>
+  </div>
+</div>
+<script src="./js/font.js"></script>
+<script src="./js/sprites.js"></script>
+<script src="./js/audio.js"></script>
+<script src="./js/level.js"></script>
+<script src="./js/game.js"></script>
+<script src="./js/render.js"></script>
+<script src="./js/main.js"></script>
+</body>
+</html>
