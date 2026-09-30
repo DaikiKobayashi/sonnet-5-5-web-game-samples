@@ -1,0 +1,5325 @@
+{
+ "variants": [
+  "low",
+  "medium",
+  "high",
+  "xhigh",
+  "max",
+  "opus-medium",
+  "fable-high"
+ ],
+ "scale": {
+  "low": {
+   "font_pixel": [
+    2,
+    2,
+    0
+   ],
+   "car_player": [
+    5,
+    5,
+    0
+   ],
+   "car_player_brake": [
+    5,
+    5,
+    0
+   ],
+   "car_sedan": [
+    6,
+    6,
+    0
+   ],
+   "car_sedan_alt1": [
+    6,
+    6,
+    0
+   ],
+   "car_sedan_alt2": [
+    6,
+    6,
+    0
+   ],
+   "car_sports": [
+    6,
+    6,
+    0
+   ],
+   "car_sports_alt1": [
+    6,
+    6,
+    0
+   ],
+   "car_sports_alt2": [
+    6,
+    6,
+    0
+   ],
+   "car_truck": [
+    6,
+    6,
+    0
+   ],
+   "car_truck_alt1": [
+    6,
+    6,
+    0
+   ],
+   "car_truck_alt2": [
+    6,
+    6,
+    0
+   ],
+   "rs_palm": [
+    6,
+    6,
+    0
+   ],
+   "rs_rock": [
+    6,
+    6,
+    0
+   ],
+   "rs_shrub": [
+    6,
+    6,
+    0
+   ],
+   "rs_pine": [
+    6,
+    6,
+    0
+   ],
+   "rs_boulder": [
+    6,
+    6,
+    0
+   ],
+   "rs_fern": [
+    6,
+    6,
+    0
+   ],
+   "rs_lamp": [
+    6,
+    6,
+    0
+   ],
+   "rs_neon": [
+    6,
+    6,
+    0
+   ],
+   "rs_building": [
+    6,
+    6,
+    0
+   ],
+   "rs_building_b": [
+    6,
+    6,
+    0
+   ],
+   "rs_billboard": [
+    6,
+    6,
+    0
+   ],
+   "rs_signpost": [
+    6,
+    6,
+    0
+   ],
+   "rs_bollard": [
+    6,
+    6,
+    0
+   ],
+   "gate_checkpoint": [
+    3,
+    3,
+    0
+   ],
+   "gate_goal": [
+    3,
+    3,
+    0
+   ],
+   "gate_start": [
+    3,
+    3,
+    0
+   ],
+   "bg_sky_1": [
+    1,
+    1,
+    0
+   ],
+   "bg_sky_2": [
+    1,
+    1,
+    0
+   ],
+   "bg_sky_3": [
+    1,
+    1,
+    0
+   ],
+   "bg_far_1": [
+    1,
+    1,
+    0
+   ],
+   "bg_far_2": [
+    1,
+    1,
+    0
+   ],
+   "bg_far_3": [
+    1,
+    1,
+    0
+   ],
+   "bg_near_1": [
+    1,
+    1,
+    0
+   ],
+   "bg_near_2": [
+    1,
+    1,
+    0
+   ],
+   "bg_near_3": [
+    1,
+    1,
+    0
+   ],
+   "logo_title": [
+    2,
+    2,
+    0
+   ],
+   "fx_smoke": [
+    6,
+    6,
+    0
+   ]
+  },
+  "medium": {
+   "car_player": [
+    8,
+    8,
+    0
+   ],
+   "car_sedan": [
+    8,
+    8,
+    0
+   ],
+   "car_truck": [
+    8,
+    8,
+    0
+   ],
+   "car_sports": [
+    8,
+    8,
+    0
+   ],
+   "rs_palm": [
+    8,
+    8,
+    0
+   ],
+   "rs_rock": [
+    8,
+    8,
+    0
+   ],
+   "rs_shrub": [
+    8,
+    8,
+    0
+   ],
+   "rs_pine": [
+    8,
+    8,
+    0
+   ],
+   "rs_boulder": [
+    8,
+    8,
+    0
+   ],
+   "rs_fern": [
+    8,
+    8,
+    0
+   ],
+   "rs_lamp": [
+    8,
+    8,
+    0
+   ],
+   "rs_neon": [
+    8,
+    8,
+    0
+   ],
+   "rs_building": [
+    8,
+    8,
+    0
+   ],
+   "gate_checkpoint": [
+    7,
+    7,
+    0
+   ],
+   "gate_goal": [
+    7,
+    7,
+    0
+   ],
+   "bg_sky_1": [
+    2,
+    2,
+    0
+   ],
+   "bg_sky_2": [
+    2,
+    2,
+    0
+   ],
+   "bg_sky_3": [
+    2,
+    2,
+    0
+   ],
+   "bg_far_1": [
+    2,
+    2,
+    0
+   ],
+   "bg_far_2": [
+    2,
+    2,
+    0
+   ],
+   "bg_far_3": [
+    2,
+    2,
+    0
+   ],
+   "logo_title": [
+    5,
+    5,
+    0
+   ],
+   "font_pixel": [
+    4,
+    4,
+    0
+   ],
+   "fx_smoke": [
+    8,
+    8,
+    0
+   ],
+   "bg_near_1": [
+    2,
+    2,
+    0
+   ],
+   "bg_near_2": [
+    2,
+    2,
+    0
+   ],
+   "bg_near_3": [
+    2,
+    2,
+    0
+   ],
+   "rs_billboard": [
+    8,
+    8,
+    0
+   ],
+   "rs_signpost": [
+    8,
+    8,
+    0
+   ],
+   "rs_bollard": [
+    8,
+    8,
+    0
+   ],
+   "rs_building_b": [
+    8,
+    8,
+    0
+   ],
+   "gate_start": [
+    7,
+    7,
+    0
+   ],
+   "car_player_brake": [
+    8,
+    8,
+    0
+   ],
+   "fx_dust": [
+    8,
+    8,
+    0
+   ],
+   "fx_spark": [
+    8,
+    8,
+    0
+   ],
+   "car_sedan_v1": [
+    8,
+    8,
+    0
+   ],
+   "car_sedan_v2": [
+    8,
+    8,
+    0
+   ],
+   "car_truck_v1": [
+    8,
+    8,
+    0
+   ],
+   "car_truck_v2": [
+    8,
+    8,
+    0
+   ],
+   "car_sports_v1": [
+    8,
+    8,
+    0
+   ],
+   "car_sports_v2": [
+    8,
+    8,
+    0
+   ]
+  },
+  "high": {
+   "car_player": [
+    4,
+    4,
+    0
+   ],
+   "car_player_brake": [
+    4,
+    4,
+    0
+   ],
+   "car_player_wheel": [
+    3,
+    3,
+    0
+   ],
+   "car_sedan": [
+    6,
+    6,
+    0
+   ],
+   "car_sedan_v1": [
+    6,
+    6,
+    0
+   ],
+   "car_sedan_v2": [
+    6,
+    6,
+    0
+   ],
+   "car_truck": [
+    6,
+    6,
+    0
+   ],
+   "car_truck_v1": [
+    6,
+    6,
+    0
+   ],
+   "car_truck_v2": [
+    6,
+    6,
+    0
+   ],
+   "car_sports": [
+    6,
+    6,
+    0
+   ],
+   "car_sports_v1": [
+    6,
+    6,
+    0
+   ],
+   "car_sports_v2": [
+    6,
+    6,
+    0
+   ],
+   "rs_palm": [
+    6,
+    6,
+    0
+   ],
+   "rs_rock": [
+    6,
+    6,
+    0
+   ],
+   "rs_shrub": [
+    6,
+    6,
+    0
+   ],
+   "rs_billboard": [
+    6,
+    6,
+    0
+   ],
+   "rs_pine": [
+    6,
+    6,
+    0
+   ],
+   "rs_boulder": [
+    6,
+    6,
+    0
+   ],
+   "rs_fern": [
+    6,
+    6,
+    0
+   ],
+   "rs_signpost": [
+    6,
+    6,
+    0
+   ],
+   "rs_lamp": [
+    6,
+    6,
+    0
+   ],
+   "rs_neon": [
+    6,
+    6,
+    0
+   ],
+   "rs_bollard": [
+    6,
+    6,
+    0
+   ],
+   "rs_building": [
+    6,
+    6,
+    0
+   ],
+   "rs_building_b": [
+    6,
+    6,
+    0
+   ],
+   "gate_checkpoint": [
+    4,
+    4,
+    0
+   ],
+   "gate_goal": [
+    4,
+    4,
+    0
+   ],
+   "gate_start": [
+    4,
+    4,
+    0
+   ],
+   "bg_sky_1": [
+    2,
+    2,
+    0
+   ],
+   "bg_sky_2": [
+    2,
+    2,
+    0
+   ],
+   "bg_sky_3": [
+    2,
+    2,
+    0
+   ],
+   "bg_far_1": [
+    2,
+    2,
+    0
+   ],
+   "bg_far_2": [
+    2,
+    2,
+    0
+   ],
+   "bg_far_3": [
+    2,
+    2,
+    0
+   ],
+   "bg_near_1": [
+    2,
+    2,
+    0
+   ],
+   "bg_near_2": [
+    2,
+    2,
+    0
+   ],
+   "bg_near_3": [
+    2,
+    2,
+    0
+   ],
+   "logo_title": [
+    3,
+    3,
+    0
+   ],
+   "font_pixel": [
+    4,
+    4,
+    0
+   ],
+   "fx_smoke": [
+    6,
+    6,
+    0
+   ],
+   "fx_dust": [
+    6,
+    6,
+    0
+   ],
+   "fx_spark": [
+    6,
+    6,
+    0
+   ]
+  },
+  "xhigh": {
+   "car_player": [
+    7,
+    7,
+    0
+   ],
+   "car_player_brake": [
+    7,
+    7,
+    0
+   ],
+   "car_player_wheel": [
+    3,
+    3,
+    0
+   ],
+   "car_sedan": [
+    8,
+    8,
+    0
+   ],
+   "car_truck": [
+    8,
+    8,
+    0
+   ],
+   "car_sports": [
+    8,
+    8,
+    0
+   ],
+   "car_sedan_variants": [
+    8,
+    8,
+    0
+   ],
+   "car_truck_variants": [
+    6,
+    6,
+    0
+   ],
+   "car_sports_variants": [
+    7,
+    7,
+    0
+   ],
+   "rs_palm": [
+    6,
+    6,
+    0
+   ],
+   "rs_rock": [
+    8,
+    8,
+    0
+   ],
+   "rs_shrub": [
+    8,
+    8,
+    0
+   ],
+   "rs_billboard": [
+    8,
+    8,
+    0
+   ],
+   "rs_pine": [
+    5,
+    5,
+    0
+   ],
+   "rs_boulder": [
+    8,
+    8,
+    0
+   ],
+   "rs_fern": [
+    8,
+    8,
+    0
+   ],
+   "rs_signpost": [
+    8,
+    8,
+    0
+   ],
+   "rs_lamp": [
+    5,
+    5,
+    0
+   ],
+   "rs_neon": [
+    8,
+    8,
+    0
+   ],
+   "rs_bollard": [
+    8,
+    8,
+    0
+   ],
+   "rs_building": [
+    3,
+    3,
+    0
+   ],
+   "rs_building_b": [
+    4,
+    4,
+    0
+   ],
+   "gate_checkpoint": [
+    5,
+    5,
+    0
+   ],
+   "gate_goal": [
+    5,
+    5,
+    0
+   ],
+   "gate_start": [
+    5,
+    5,
+    0
+   ],
+   "bg_sky_1": [
+    2,
+    2,
+    0
+   ],
+   "bg_sky_2": [
+    2,
+    2,
+    0
+   ],
+   "bg_sky_3": [
+    2,
+    2,
+    0
+   ],
+   "bg_far_1": [
+    2,
+    2,
+    0
+   ],
+   "bg_far_2": [
+    2,
+    2,
+    0
+   ],
+   "bg_far_3": [
+    2,
+    2,
+    0
+   ],
+   "bg_near_1": [
+    2,
+    2,
+    0
+   ],
+   "bg_near_2": [
+    2,
+    2,
+    0
+   ],
+   "bg_near_3": [
+    2,
+    2,
+    0
+   ],
+   "logo_title": [
+    3,
+    3,
+    0
+   ],
+   "font_pixel": [
+    6,
+    6,
+    0
+   ],
+   "fx_smoke": [
+    8,
+    8,
+    0
+   ],
+   "fx_dust": [
+    8,
+    8,
+    0
+   ],
+   "fx_spark": [
+    8,
+    8,
+    0
+   ]
+  },
+  "max": {
+   "car_player": [
+    8,
+    8,
+    0
+   ],
+   "car_player_brake": [
+    8,
+    8,
+    0
+   ],
+   "car_player_wheel": [
+    5,
+    5,
+    0
+   ],
+   "car_sedan": [
+    8,
+    8,
+    0
+   ],
+   "car_sedan_v2": [
+    8,
+    8,
+    0
+   ],
+   "car_sedan_v3": [
+    8,
+    8,
+    0
+   ],
+   "car_truck": [
+    8,
+    8,
+    0
+   ],
+   "car_truck_v2": [
+    8,
+    8,
+    0
+   ],
+   "car_truck_v3": [
+    8,
+    8,
+    0
+   ],
+   "car_sports": [
+    8,
+    8,
+    0
+   ],
+   "car_sports_v2": [
+    8,
+    8,
+    0
+   ],
+   "car_sports_v3": [
+    8,
+    8,
+    0
+   ],
+   "rs_palm": [
+    8,
+    8,
+    0
+   ],
+   "rs_rock": [
+    8,
+    8,
+    0
+   ],
+   "rs_shrub": [
+    8,
+    8,
+    0
+   ],
+   "rs_pine": [
+    8,
+    8,
+    0
+   ],
+   "rs_boulder": [
+    8,
+    8,
+    0
+   ],
+   "rs_fern": [
+    8,
+    8,
+    0
+   ],
+   "rs_lamp": [
+    8,
+    8,
+    0
+   ],
+   "rs_neon": [
+    8,
+    8,
+    0
+   ],
+   "rs_building": [
+    8,
+    8,
+    0
+   ],
+   "rs_building_b": [
+    8,
+    8,
+    0
+   ],
+   "rs_billboard": [
+    8,
+    8,
+    0
+   ],
+   "rs_signpost": [
+    8,
+    8,
+    0
+   ],
+   "rs_bollard": [
+    8,
+    8,
+    0
+   ],
+   "gate_checkpoint": [
+    7,
+    7,
+    0
+   ],
+   "gate_goal": [
+    7,
+    7,
+    0
+   ],
+   "gate_start": [
+    7,
+    7,
+    0
+   ],
+   "bg_far_1": [
+    2,
+    2,
+    0
+   ],
+   "bg_far_2": [
+    2,
+    2,
+    0
+   ],
+   "bg_far_3": [
+    2,
+    2,
+    0
+   ],
+   "bg_near_1": [
+    2,
+    2,
+    0
+   ],
+   "bg_near_2": [
+    2,
+    2,
+    0
+   ],
+   "bg_near_3": [
+    2,
+    2,
+    0
+   ],
+   "bg_sky_1": [
+    2,
+    2,
+    0
+   ],
+   "bg_sky_2": [
+    2,
+    2,
+    0
+   ],
+   "bg_sky_3": [
+    2,
+    2,
+    0
+   ],
+   "logo_title": [
+    5,
+    5,
+    0
+   ],
+   "font_pixel": [
+    4,
+    4,
+    0
+   ],
+   "fx_smoke": [
+    8,
+    8,
+    0
+   ],
+   "fx_dust": [
+    8,
+    8,
+    0
+   ],
+   "fx_spark": [
+    8,
+    8,
+    0
+   ]
+  },
+  "opus-medium": {
+   "car_player": [
+    4,
+    4,
+    8
+   ],
+   "car_player_brake": [
+    4,
+    4,
+    8
+   ],
+   "car_player_wheel": [
+    4,
+    4,
+    8
+   ],
+   "car_sedan": [
+    4,
+    4,
+    8
+   ],
+   "car_truck": [
+    4,
+    4,
+    8
+   ],
+   "car_sports": [
+    4,
+    4,
+    8
+   ],
+   "rs_palm": [
+    4,
+    4,
+    0
+   ],
+   "rs_rock": [
+    4,
+    4,
+    0
+   ],
+   "rs_shrub": [
+    4,
+    4,
+    0
+   ],
+   "rs_billboard": [
+    4,
+    4,
+    0
+   ],
+   "rs_pine": [
+    4,
+    4,
+    0
+   ],
+   "rs_boulder": [
+    4,
+    4,
+    0
+   ],
+   "rs_fern": [
+    4,
+    4,
+    0
+   ],
+   "rs_signpost": [
+    4,
+    4,
+    0
+   ],
+   "rs_lamp": [
+    4,
+    4,
+    0
+   ],
+   "rs_neon": [
+    4,
+    4,
+    0
+   ],
+   "rs_building": [
+    4,
+    4,
+    0
+   ],
+   "rs_building_b": [
+    4,
+    4,
+    0
+   ],
+   "rs_bollard": [
+    4,
+    4,
+    0
+   ],
+   "gate_checkpoint": [
+    3,
+    3,
+    0
+   ],
+   "gate_goal": [
+    3,
+    3,
+    0
+   ],
+   "gate_start": [
+    3,
+    3,
+    0
+   ],
+   "bg_sky_1": [
+    2,
+    2,
+    0
+   ],
+   "bg_sky_2": [
+    2,
+    2,
+    0
+   ],
+   "bg_sky_3": [
+    2,
+    2,
+    0
+   ],
+   "bg_far_1": [
+    2,
+    2,
+    0
+   ],
+   "bg_far_2": [
+    2,
+    2,
+    0
+   ],
+   "bg_far_3": [
+    2,
+    2,
+    0
+   ],
+   "bg_near_1": [
+    2,
+    2,
+    0
+   ],
+   "bg_near_2": [
+    2,
+    2,
+    0
+   ],
+   "bg_near_3": [
+    2,
+    2,
+    0
+   ],
+   "logo_title": [
+    2,
+    2,
+    0
+   ],
+   "fx_smoke": [
+    4,
+    4,
+    8
+   ],
+   "fx_dust": [
+    4,
+    4,
+    8
+   ],
+   "fx_spark": [
+    4,
+    4,
+    8
+   ],
+   "font_pixel": [
+    4,
+    4,
+    8
+   ]
+  },
+  "fable-high": {
+   "car_player": [
+    3,
+    3,
+    0
+   ],
+   "car_sedan": [
+    3,
+    3,
+    0
+   ],
+   "car_truck": [
+    3,
+    3,
+    0
+   ],
+   "car_sports": [
+    3,
+    3,
+    0
+   ],
+   "rs_palm": [
+    3,
+    3,
+    0
+   ],
+   "rs_rock": [
+    3,
+    3,
+    0
+   ],
+   "rs_shrub": [
+    3,
+    3,
+    0
+   ],
+   "rs_pine": [
+    3,
+    3,
+    0
+   ],
+   "rs_boulder": [
+    3,
+    3,
+    0
+   ],
+   "rs_fern": [
+    3,
+    3,
+    0
+   ],
+   "rs_lamp": [
+    3,
+    3,
+    0
+   ],
+   "rs_neon": [
+    3,
+    3,
+    0
+   ],
+   "rs_building": [
+    3,
+    3,
+    0
+   ],
+   "gate_checkpoint": [
+    3,
+    3,
+    0
+   ],
+   "gate_goal": [
+    3,
+    3,
+    0
+   ],
+   "bg_sky_1": [
+    2,
+    2,
+    0
+   ],
+   "bg_sky_2": [
+    2,
+    2,
+    0
+   ],
+   "bg_sky_3": [
+    2,
+    2,
+    0
+   ],
+   "bg_far_1": [
+    2,
+    2,
+    0
+   ],
+   "bg_far_2": [
+    2,
+    2,
+    0
+   ],
+   "bg_far_3": [
+    2,
+    2,
+    0
+   ],
+   "logo_title": [
+    2,
+    2,
+    0
+   ],
+   "font_pixel": [
+    3,
+    3,
+    0
+   ],
+   "fx_smoke": [
+    3,
+    3,
+    0
+   ],
+   "bg_near_1": [
+    2,
+    2,
+    0
+   ],
+   "bg_near_2": [
+    2,
+    2,
+    0
+   ],
+   "bg_near_3": [
+    2,
+    2,
+    0
+   ],
+   "rs_billboard": [
+    3,
+    3,
+    0
+   ],
+   "rs_signpost": [
+    3,
+    3,
+    0
+   ],
+   "rs_bollard": [
+    3,
+    3,
+    0
+   ],
+   "rs_building_b": [
+    3,
+    3,
+    0
+   ],
+   "gate_start": [
+    3,
+    3,
+    0
+   ],
+   "car_player_brake": [
+    3,
+    3,
+    0
+   ],
+   "car_player_wheel": [
+    3,
+    3,
+    0
+   ],
+   "fx_dust": [
+    3,
+    3,
+    0
+   ],
+   "fx_spark": [
+    3,
+    3,
+    0
+   ]
+  }
+ },
+ "exactFrameMatches": [
+  [
+   "low:font_pixel#1",
+   "opus-medium:font_pixel#1",
+   "fable-high:font_pixel#27"
+  ],
+  [
+   "low:font_pixel#2",
+   "opus-medium:font_pixel#2",
+   "fable-high:font_pixel#28"
+  ],
+  [
+   "low:font_pixel#3",
+   "opus-medium:font_pixel#3",
+   "fable-high:font_pixel#29"
+  ],
+  [
+   "low:font_pixel#4",
+   "opus-medium:font_pixel#4",
+   "fable-high:font_pixel#30"
+  ],
+  [
+   "low:font_pixel#5",
+   "opus-medium:font_pixel#5"
+  ],
+  [
+   "low:font_pixel#6",
+   "opus-medium:font_pixel#6"
+  ],
+  [
+   "low:font_pixel#7",
+   "opus-medium:font_pixel#7",
+   "fable-high:font_pixel#33"
+  ],
+  [
+   "low:font_pixel#8",
+   "opus-medium:font_pixel#8",
+   "fable-high:font_pixel#34"
+  ],
+  [
+   "low:font_pixel#9",
+   "opus-medium:font_pixel#9"
+  ],
+  [
+   "low:font_pixel#10",
+   "opus-medium:font_pixel#10",
+   "fable-high:font_pixel#0"
+  ],
+  [
+   "low:font_pixel#11",
+   "opus-medium:font_pixel#11",
+   "fable-high:font_pixel#1"
+  ],
+  [
+   "low:font_pixel#12",
+   "opus-medium:font_pixel#12"
+  ],
+  [
+   "low:font_pixel#13",
+   "opus-medium:font_pixel#13",
+   "fable-high:font_pixel#3"
+  ],
+  [
+   "low:font_pixel#14",
+   "opus-medium:font_pixel#14",
+   "fable-high:font_pixel#4"
+  ],
+  [
+   "low:font_pixel#15",
+   "opus-medium:font_pixel#15",
+   "fable-high:font_pixel#5"
+  ],
+  [
+   "low:font_pixel#16",
+   "opus-medium:font_pixel#16"
+  ],
+  [
+   "low:font_pixel#17",
+   "opus-medium:font_pixel#17",
+   "fable-high:font_pixel#7"
+  ],
+  [
+   "low:font_pixel#18",
+   "opus-medium:font_pixel#18"
+  ],
+  [
+   "low:font_pixel#19",
+   "opus-medium:font_pixel#19",
+   "fable-high:font_pixel#9"
+  ],
+  [
+   "low:font_pixel#20",
+   "opus-medium:font_pixel#20",
+   "fable-high:font_pixel#10"
+  ],
+  [
+   "low:font_pixel#21",
+   "opus-medium:font_pixel#21",
+   "fable-high:font_pixel#11"
+  ],
+  [
+   "low:font_pixel#22",
+   "opus-medium:font_pixel#22",
+   "fable-high:font_pixel#12"
+  ],
+  [
+   "low:font_pixel#23",
+   "fable-high:font_pixel#13"
+  ],
+  [
+   "low:font_pixel#24",
+   "opus-medium:font_pixel#24",
+   "fable-high:font_pixel#14"
+  ],
+  [
+   "low:font_pixel#25",
+   "opus-medium:font_pixel#25",
+   "fable-high:font_pixel#15"
+  ],
+  [
+   "low:font_pixel#26",
+   "opus-medium:font_pixel#26",
+   "fable-high:font_pixel#16"
+  ],
+  [
+   "low:font_pixel#27",
+   "opus-medium:font_pixel#27",
+   "fable-high:font_pixel#17"
+  ],
+  [
+   "low:font_pixel#28",
+   "opus-medium:font_pixel#28",
+   "fable-high:font_pixel#18"
+  ],
+  [
+   "low:font_pixel#29",
+   "opus-medium:font_pixel#29",
+   "fable-high:font_pixel#19"
+  ],
+  [
+   "low:font_pixel#30",
+   "opus-medium:font_pixel#30",
+   "fable-high:font_pixel#20"
+  ],
+  [
+   "low:font_pixel#31",
+   "opus-medium:font_pixel#31",
+   "fable-high:font_pixel#21"
+  ],
+  [
+   "low:font_pixel#32",
+   "fable-high:font_pixel#22"
+  ],
+  [
+   "low:font_pixel#33",
+   "opus-medium:font_pixel#33",
+   "fable-high:font_pixel#23"
+  ],
+  [
+   "low:font_pixel#34",
+   "opus-medium:font_pixel#34",
+   "fable-high:font_pixel#24"
+  ],
+  [
+   "low:font_pixel#35",
+   "opus-medium:font_pixel#35",
+   "fable-high:font_pixel#25"
+  ],
+  [
+   "low:font_pixel#36",
+   "opus-medium:font_pixel#36",
+   "fable-high:font_pixel#36"
+  ],
+  [
+   "low:font_pixel#37",
+   "opus-medium:font_pixel#37",
+   "fable-high:font_pixel#37"
+  ],
+  [
+   "low:font_pixel#38",
+   "opus-medium:font_pixel#38",
+   "fable-high:font_pixel#38"
+  ],
+  [
+   "low:font_pixel#39",
+   "opus-medium:font_pixel#39",
+   "fable-high:font_pixel#39"
+  ],
+  [
+   "low:font_pixel#40",
+   "opus-medium:font_pixel#40",
+   "fable-high:font_pixel#40"
+  ],
+  [
+   "low:font_pixel#41",
+   "opus-medium:font_pixel#41",
+   "fable-high:font_pixel#41"
+  ],
+  [
+   "low:font_pixel#42",
+   "opus-medium:font_pixel#42",
+   "fable-high:font_pixel#42"
+  ],
+  [
+   "low:font_pixel#43",
+   "opus-medium:font_pixel#43",
+   "fable-high:font_pixel#43"
+  ],
+  [
+   "low:font_pixel#44",
+   "opus-medium:font_pixel#44",
+   "fable-high:font_pixel#44"
+  ],
+  [
+   "low:font_pixel#45",
+   "opus-medium:font_pixel#45",
+   "fable-high:font_pixel#45"
+  ],
+  [
+   "low:font_pixel#46",
+   "opus-medium:font_pixel#46",
+   "fable-high:font_pixel#46"
+  ],
+  [
+   "low:font_pixel#47",
+   "opus-medium:font_pixel#47",
+   "fable-high:font_pixel#47"
+  ],
+  [
+   "low:font_pixel#48",
+   "opus-medium:font_pixel#48",
+   "fable-high:font_pixel#48"
+  ],
+  [
+   "low:font_pixel#49",
+   "opus-medium:font_pixel#49",
+   "fable-high:font_pixel#49"
+  ],
+  [
+   "low:font_pixel#50",
+   "opus-medium:font_pixel#50",
+   "fable-high:font_pixel#50"
+  ],
+  [
+   "opus-medium:font_pixel#0",
+   "fable-high:font_pixel#26"
+  ]
+ ],
+ "pairs": {
+  "low|medium": {
+   "n": 31,
+   "iouMedian": 0.776,
+   "iouMax": 1,
+   "colorDiffMedian": 41.7,
+   "colorDiffMin": 7.9,
+   "highIou": [
+    "rs_neon(0.91/86.4)",
+    "rs_building(0.911/53)",
+    "rs_bollard(0.974/135.2)",
+    "bg_sky_1(1/20.1)",
+    "bg_sky_2(1/19.8)",
+    "bg_sky_3(1/17.7)"
+   ],
+   "per": {
+    "car_player": {
+     "iou": 0.8,
+     "colorDiff": 41.7
+    },
+    "car_player_brake": {
+     "iou": 0.799,
+     "colorDiff": 47.2
+    },
+    "car_sedan": {
+     "iou": 0.849,
+     "colorDiff": 34.7
+    },
+    "car_sports": {
+     "iou": 0.776,
+     "colorDiff": 65.4
+    },
+    "car_truck": {
+     "iou": 0.88,
+     "colorDiff": 43.1
+    },
+    "rs_palm": {
+     "iou": 0.356,
+     "colorDiff": 39.9
+    },
+    "rs_rock": {
+     "iou": 0.818,
+     "colorDiff": 35.1
+    },
+    "rs_shrub": {
+     "iou": 0.844,
+     "colorDiff": 31.6
+    },
+    "rs_pine": {
+     "iou": 0.631,
+     "colorDiff": 15
+    },
+    "rs_boulder": {
+     "iou": 0.875,
+     "colorDiff": 33.9
+    },
+    "rs_fern": {
+     "iou": 0.464,
+     "colorDiff": 27.1
+    },
+    "rs_lamp": {
+     "iou": 0.139,
+     "colorDiff": 74.6
+    },
+    "rs_neon": {
+     "iou": 0.91,
+     "colorDiff": 86.4
+    },
+    "rs_building": {
+     "iou": 0.911,
+     "colorDiff": 53
+    },
+    "rs_building_b": {
+     "iou": 0.843,
+     "colorDiff": 56.6
+    },
+    "rs_billboard": {
+     "iou": 0.745,
+     "colorDiff": 65.4
+    },
+    "rs_signpost": {
+     "iou": 0.705,
+     "colorDiff": 86.6
+    },
+    "rs_bollard": {
+     "iou": 0.974,
+     "colorDiff": 135.2
+    },
+    "gate_checkpoint": {
+     "iou": 0.728,
+     "colorDiff": 99.1
+    },
+    "gate_goal": {
+     "iou": 0.728,
+     "colorDiff": 103.5
+    },
+    "gate_start": {
+     "iou": 0.728,
+     "colorDiff": 85.4
+    },
+    "bg_sky_1": {
+     "iou": 1,
+     "colorDiff": 20.1
+    },
+    "bg_sky_2": {
+     "iou": 1,
+     "colorDiff": 19.8
+    },
+    "bg_sky_3": {
+     "iou": 1,
+     "colorDiff": 17.7
+    },
+    "bg_far_1": {
+     "iou": 0.773,
+     "colorDiff": 54.1
+    },
+    "bg_far_2": {
+     "iou": 0.832,
+     "colorDiff": 21.8
+    },
+    "bg_far_3": {
+     "iou": 0.733,
+     "colorDiff": 25.8
+    },
+    "bg_near_1": {
+     "iou": 0.587,
+     "colorDiff": 17
+    },
+    "bg_near_2": {
+     "iou": 0.475,
+     "colorDiff": 7.9
+    },
+    "bg_near_3": {
+     "iou": 0.616,
+     "colorDiff": 17.1
+    },
+    "fx_smoke": {
+     "iou": 0.364,
+     "colorDiff": 62.7
+    }
+   }
+  },
+  "low|high": {
+   "n": 31,
+   "iouMedian": 0.616,
+   "iouMax": 1,
+   "colorDiffMedian": 42.2,
+   "colorDiffMin": 12.7,
+   "highIou": [
+    "rs_building(0.961/60.9)",
+    "bg_sky_1(1/15.8)",
+    "bg_sky_2(1/12.7)",
+    "bg_sky_3(1/18.3)"
+   ],
+   "per": {
+    "car_player": {
+     "iou": 0.709,
+     "colorDiff": 50.1
+    },
+    "car_player_brake": {
+     "iou": 0.72,
+     "colorDiff": 57.7
+    },
+    "car_sedan": {
+     "iou": 0.708,
+     "colorDiff": 46.4
+    },
+    "car_sports": {
+     "iou": 0.667,
+     "colorDiff": 91
+    },
+    "car_truck": {
+     "iou": 0.842,
+     "colorDiff": 40.8
+    },
+    "rs_palm": {
+     "iou": 0.212,
+     "colorDiff": 38
+    },
+    "rs_rock": {
+     "iou": 0.619,
+     "colorDiff": 51.3
+    },
+    "rs_shrub": {
+     "iou": 0.672,
+     "colorDiff": 33.1
+    },
+    "rs_pine": {
+     "iou": 0.512,
+     "colorDiff": 28.8
+    },
+    "rs_boulder": {
+     "iou": 0.658,
+     "colorDiff": 37.6
+    },
+    "rs_fern": {
+     "iou": 0.406,
+     "colorDiff": 39.5
+    },
+    "rs_lamp": {
+     "iou": 0.202,
+     "colorDiff": 42.2
+    },
+    "rs_neon": {
+     "iou": 0.76,
+     "colorDiff": 82.1
+    },
+    "rs_building": {
+     "iou": 0.961,
+     "colorDiff": 60.9
+    },
+    "rs_building_b": {
+     "iou": 0.845,
+     "colorDiff": 66.6
+    },
+    "rs_billboard": {
+     "iou": 0.616,
+     "colorDiff": 44.7
+    },
+    "rs_signpost": {
+     "iou": 0.423,
+     "colorDiff": 78.1
+    },
+    "rs_bollard": {
+     "iou": 0.792,
+     "colorDiff": 105.8
+    },
+    "gate_checkpoint": {
+     "iou": 0.453,
+     "colorDiff": 78.3
+    },
+    "gate_goal": {
+     "iou": 0.453,
+     "colorDiff": 155
+    },
+    "gate_start": {
+     "iou": 0.453,
+     "colorDiff": 64.5
+    },
+    "bg_sky_1": {
+     "iou": 1,
+     "colorDiff": 15.8
+    },
+    "bg_sky_2": {
+     "iou": 1,
+     "colorDiff": 12.7
+    },
+    "bg_sky_3": {
+     "iou": 1,
+     "colorDiff": 18.3
+    },
+    "bg_far_1": {
+     "iou": 0.511,
+     "colorDiff": 28.7
+    },
+    "bg_far_2": {
+     "iou": 0.567,
+     "colorDiff": 21.3
+    },
+    "bg_far_3": {
+     "iou": 0.54,
+     "colorDiff": 30.3
+    },
+    "bg_near_1": {
+     "iou": 0.297,
+     "colorDiff": 48.8
+    },
+    "bg_near_2": {
+     "iou": 0.306,
+     "colorDiff": 14.7
+    },
+    "bg_near_3": {
+     "iou": 0.607,
+     "colorDiff": 36.2
+    },
+    "fx_smoke": {
+     "iou": 0.083,
+     "colorDiff": 30.8
+    }
+   }
+  },
+  "low|xhigh": {
+   "n": 31,
+   "iouMedian": 0.808,
+   "iouMax": 1,
+   "colorDiffMedian": 46.2,
+   "colorDiffMin": 17.3,
+   "highIou": [
+    "car_truck(0.9/46.2)",
+    "bg_sky_1(1/25.3)",
+    "bg_sky_2(1/18.8)",
+    "bg_sky_3(1/17.7)"
+   ],
+   "per": {
+    "car_player": {
+     "iou": 0.838,
+     "colorDiff": 57.5
+    },
+    "car_player_brake": {
+     "iou": 0.831,
+     "colorDiff": 63.5
+    },
+    "car_sedan": {
+     "iou": 0.801,
+     "colorDiff": 57.6
+    },
+    "car_sports": {
+     "iou": 0.656,
+     "colorDiff": 102.7
+    },
+    "car_truck": {
+     "iou": 0.9,
+     "colorDiff": 46.2
+    },
+    "rs_palm": {
+     "iou": 0.361,
+     "colorDiff": 40.7
+    },
+    "rs_rock": {
+     "iou": 0.82,
+     "colorDiff": 32.5
+    },
+    "rs_shrub": {
+     "iou": 0.896,
+     "colorDiff": 36.7
+    },
+    "rs_pine": {
+     "iou": 0.609,
+     "colorDiff": 22.7
+    },
+    "rs_boulder": {
+     "iou": 0.852,
+     "colorDiff": 28
+    },
+    "rs_fern": {
+     "iou": 0.547,
+     "colorDiff": 52.7
+    },
+    "rs_lamp": {
+     "iou": 0.564,
+     "colorDiff": 27.2
+    },
+    "rs_neon": {
+     "iou": 0.867,
+     "colorDiff": 93.8
+    },
+    "rs_building": {
+     "iou": 0.879,
+     "colorDiff": 52.2
+    },
+    "rs_building_b": {
+     "iou": 0.815,
+     "colorDiff": 57.1
+    },
+    "rs_billboard": {
+     "iou": 0.724,
+     "colorDiff": 66.7
+    },
+    "rs_signpost": {
+     "iou": 0.66,
+     "colorDiff": 71
+    },
+    "rs_bollard": {
+     "iou": 0.808,
+     "colorDiff": 111.3
+    },
+    "gate_checkpoint": {
+     "iou": 0.828,
+     "colorDiff": 69
+    },
+    "gate_goal": {
+     "iou": 0.828,
+     "colorDiff": 105.1
+    },
+    "gate_start": {
+     "iou": 0.828,
+     "colorDiff": 59.6
+    },
+    "bg_sky_1": {
+     "iou": 1,
+     "colorDiff": 25.3
+    },
+    "bg_sky_2": {
+     "iou": 1,
+     "colorDiff": 18.8
+    },
+    "bg_sky_3": {
+     "iou": 1,
+     "colorDiff": 17.7
+    },
+    "bg_far_1": {
+     "iou": 0.593,
+     "colorDiff": 54
+    },
+    "bg_far_2": {
+     "iou": 0.734,
+     "colorDiff": 32.6
+    },
+    "bg_far_3": {
+     "iou": 0.725,
+     "colorDiff": 25
+    },
+    "bg_near_1": {
+     "iou": 0.272,
+     "colorDiff": 21.8
+    },
+    "bg_near_2": {
+     "iou": 0.496,
+     "colorDiff": 21.1
+    },
+    "bg_near_3": {
+     "iou": 0.56,
+     "colorDiff": 17.3
+    },
+    "fx_smoke": {
+     "iou": 0.545,
+     "colorDiff": 28.6
+    }
+   }
+  },
+  "low|max": {
+   "n": 31,
+   "iouMedian": 0.737,
+   "iouMax": 1,
+   "colorDiffMedian": 48.1,
+   "colorDiffMin": 13.6,
+   "highIou": [
+    "car_truck(0.916/47.2)",
+    "bg_sky_1(1/26.4)",
+    "bg_sky_2(1/18.1)",
+    "bg_sky_3(1/13.6)"
+   ],
+   "per": {
+    "car_player": {
+     "iou": 0.8,
+     "colorDiff": 50.6
+    },
+    "car_player_brake": {
+     "iou": 0.813,
+     "colorDiff": 53.5
+    },
+    "car_sedan": {
+     "iou": 0.783,
+     "colorDiff": 66
+    },
+    "car_sports": {
+     "iou": 0.694,
+     "colorDiff": 87.4
+    },
+    "car_truck": {
+     "iou": 0.916,
+     "colorDiff": 47.2
+    },
+    "rs_palm": {
+     "iou": 0.349,
+     "colorDiff": 40.2
+    },
+    "rs_rock": {
+     "iou": 0.897,
+     "colorDiff": 48.1
+    },
+    "rs_shrub": {
+     "iou": 0.895,
+     "colorDiff": 32
+    },
+    "rs_pine": {
+     "iou": 0.659,
+     "colorDiff": 25
+    },
+    "rs_boulder": {
+     "iou": 0.899,
+     "colorDiff": 46.6
+    },
+    "rs_fern": {
+     "iou": 0.488,
+     "colorDiff": 43.1
+    },
+    "rs_lamp": {
+     "iou": 0.109,
+     "colorDiff": 51.6
+    },
+    "rs_neon": {
+     "iou": 0.773,
+     "colorDiff": 75.2
+    },
+    "rs_building": {
+     "iou": 0.825,
+     "colorDiff": 58.3
+    },
+    "rs_building_b": {
+     "iou": 0.801,
+     "colorDiff": 55.4
+    },
+    "rs_billboard": {
+     "iou": 0.737,
+     "colorDiff": 59.5
+    },
+    "rs_signpost": {
+     "iou": 0.667,
+     "colorDiff": 85.3
+    },
+    "rs_bollard": {
+     "iou": 0.831,
+     "colorDiff": 123.6
+    },
+    "gate_checkpoint": {
+     "iou": 0.722,
+     "colorDiff": 79.4
+    },
+    "gate_goal": {
+     "iou": 0.722,
+     "colorDiff": 98
+    },
+    "gate_start": {
+     "iou": 0.722,
+     "colorDiff": 69.9
+    },
+    "bg_sky_1": {
+     "iou": 1,
+     "colorDiff": 26.4
+    },
+    "bg_sky_2": {
+     "iou": 1,
+     "colorDiff": 18.1
+    },
+    "bg_sky_3": {
+     "iou": 1,
+     "colorDiff": 13.6
+    },
+    "bg_far_1": {
+     "iou": 0.527,
+     "colorDiff": 48.3
+    },
+    "bg_far_2": {
+     "iou": 0.764,
+     "colorDiff": 32.3
+    },
+    "bg_far_3": {
+     "iou": 0.727,
+     "colorDiff": 26.2
+    },
+    "bg_near_1": {
+     "iou": 0.337,
+     "colorDiff": 31.7
+    },
+    "bg_near_2": {
+     "iou": 0.574,
+     "colorDiff": 27.3
+    },
+    "bg_near_3": {
+     "iou": 0.501,
+     "colorDiff": 17.9
+    },
+    "fx_smoke": {
+     "iou": 0.387,
+     "colorDiff": 34
+    }
+   }
+  },
+  "low|opus-medium": {
+   "n": 31,
+   "iouMedian": 0.752,
+   "iouMax": 1,
+   "colorDiffMedian": 41.2,
+   "colorDiffMin": 10.3,
+   "highIou": [
+    "rs_building(0.973/43.6)",
+    "bg_sky_1(1/22.5)",
+    "bg_sky_2(1/29.5)",
+    "bg_sky_3(1/13.1)"
+   ],
+   "per": {
+    "car_player": {
+     "iou": 0.724,
+     "colorDiff": 61.1
+    },
+    "car_player_brake": {
+     "iou": 0.738,
+     "colorDiff": 67.8
+    },
+    "car_sedan": {
+     "iou": 0.799,
+     "colorDiff": 44.4
+    },
+    "car_sports": {
+     "iou": 0.749,
+     "colorDiff": 67.1
+    },
+    "car_truck": {
+     "iou": 0.87,
+     "colorDiff": 36.5
+    },
+    "rs_palm": {
+     "iou": 0.436,
+     "colorDiff": 39.3
+    },
+    "rs_rock": {
+     "iou": 0.829,
+     "colorDiff": 33
+    },
+    "rs_shrub": {
+     "iou": 0.818,
+     "colorDiff": 35.8
+    },
+    "rs_pine": {
+     "iou": 0.692,
+     "colorDiff": 32.5
+    },
+    "rs_boulder": {
+     "iou": 0.86,
+     "colorDiff": 28.1
+    },
+    "rs_fern": {
+     "iou": 0.513,
+     "colorDiff": 36.2
+    },
+    "rs_lamp": {
+     "iou": 0.585,
+     "colorDiff": 52
+    },
+    "rs_neon": {
+     "iou": 0.892,
+     "colorDiff": 82.6
+    },
+    "rs_building": {
+     "iou": 0.973,
+     "colorDiff": 43.6
+    },
+    "rs_building_b": {
+     "iou": 0.88,
+     "colorDiff": 46
+    },
+    "rs_billboard": {
+     "iou": 0.839,
+     "colorDiff": 66.6
+    },
+    "rs_signpost": {
+     "iou": 0.571,
+     "colorDiff": 75.6
+    },
+    "rs_bollard": {
+     "iou": 0.789,
+     "colorDiff": 96.8
+    },
+    "gate_checkpoint": {
+     "iou": 0.752,
+     "colorDiff": 77.9
+    },
+    "gate_goal": {
+     "iou": 0.752,
+     "colorDiff": 107.5
+    },
+    "gate_start": {
+     "iou": 0.752,
+     "colorDiff": 59.8
+    },
+    "bg_sky_1": {
+     "iou": 1,
+     "colorDiff": 22.5
+    },
+    "bg_sky_2": {
+     "iou": 1,
+     "colorDiff": 29.5
+    },
+    "bg_sky_3": {
+     "iou": 1,
+     "colorDiff": 13.1
+    },
+    "bg_far_1": {
+     "iou": 0.405,
+     "colorDiff": 41.2
+    },
+    "bg_far_2": {
+     "iou": 0.857,
+     "colorDiff": 14.8
+    },
+    "bg_far_3": {
+     "iou": 0.762,
+     "colorDiff": 23.4
+    },
+    "bg_near_1": {
+     "iou": 0.167,
+     "colorDiff": 24.6
+    },
+    "bg_near_2": {
+     "iou": 0.48,
+     "colorDiff": 10.3
+    },
+    "bg_near_3": {
+     "iou": 0.619,
+     "colorDiff": 16.2
+    },
+    "fx_smoke": {
+     "iou": 0.667,
+     "colorDiff": 78.4
+    }
+   }
+  },
+  "low|fable-high": {
+   "n": 31,
+   "iouMedian": 0.779,
+   "iouMax": 1,
+   "colorDiffMedian": 42.5,
+   "colorDiffMin": 12.3,
+   "highIou": [
+    "rs_boulder(0.915/28.7)",
+    "rs_neon(0.956/66.5)",
+    "bg_sky_1(1/24.1)",
+    "bg_sky_2(1/18.6)",
+    "bg_sky_3(1/14.2)"
+   ],
+   "per": {
+    "car_player": {
+     "iou": 0.818,
+     "colorDiff": 57.7
+    },
+    "car_player_brake": {
+     "iou": 0.805,
+     "colorDiff": 62.8
+    },
+    "car_sedan": {
+     "iou": 0.772,
+     "colorDiff": 98.2
+    },
+    "car_sports": {
+     "iou": 0.808,
+     "colorDiff": 67.7
+    },
+    "car_truck": {
+     "iou": 0.779,
+     "colorDiff": 100.1
+    },
+    "rs_palm": {
+     "iou": 0.403,
+     "colorDiff": 33.8
+    },
+    "rs_rock": {
+     "iou": 0.779,
+     "colorDiff": 39.1
+    },
+    "rs_shrub": {
+     "iou": 0.715,
+     "colorDiff": 29
+    },
+    "rs_pine": {
+     "iou": 0.662,
+     "colorDiff": 22.1
+    },
+    "rs_boulder": {
+     "iou": 0.915,
+     "colorDiff": 28.7
+    },
+    "rs_fern": {
+     "iou": 0.394,
+     "colorDiff": 31.1
+    },
+    "rs_lamp": {
+     "iou": 0.467,
+     "colorDiff": 28.3
+    },
+    "rs_neon": {
+     "iou": 0.956,
+     "colorDiff": 66.5
+    },
+    "rs_building": {
+     "iou": 0.895,
+     "colorDiff": 56.3
+    },
+    "rs_building_b": {
+     "iou": 0.884,
+     "colorDiff": 56.7
+    },
+    "rs_billboard": {
+     "iou": 0.783,
+     "colorDiff": 42.5
+    },
+    "rs_signpost": {
+     "iou": 0.666,
+     "colorDiff": 72.7
+    },
+    "rs_bollard": {
+     "iou": 0.682,
+     "colorDiff": 126.8
+    },
+    "gate_checkpoint": {
+     "iou": 0.859,
+     "colorDiff": 106.3
+    },
+    "gate_goal": {
+     "iou": 0.859,
+     "colorDiff": 157.8
+    },
+    "gate_start": {
+     "iou": 0.724,
+     "colorDiff": 91.4
+    },
+    "bg_sky_1": {
+     "iou": 1,
+     "colorDiff": 24.1
+    },
+    "bg_sky_2": {
+     "iou": 1,
+     "colorDiff": 18.6
+    },
+    "bg_sky_3": {
+     "iou": 1,
+     "colorDiff": 14.2
+    },
+    "bg_far_1": {
+     "iou": 0.768,
+     "colorDiff": 45.9
+    },
+    "bg_far_2": {
+     "iou": 0.791,
+     "colorDiff": 12.3
+    },
+    "bg_far_3": {
+     "iou": 0.717,
+     "colorDiff": 21
+    },
+    "bg_near_1": {
+     "iou": 0.478,
+     "colorDiff": 70
+    },
+    "bg_near_2": {
+     "iou": 0.515,
+     "colorDiff": 19.8
+    },
+    "bg_near_3": {
+     "iou": 0.669,
+     "colorDiff": 23
+    },
+    "fx_smoke": {
+     "iou": 0.5,
+     "colorDiff": 20.2
+    }
+   }
+  },
+  "medium|high": {
+   "n": 39,
+   "iouMedian": 0.714,
+   "iouMax": 1,
+   "colorDiffMedian": 49.5,
+   "colorDiffMin": 19.4,
+   "highIou": [
+    "rs_building(0.909/54.7)",
+    "bg_sky_1(1/20.4)",
+    "bg_sky_2(1/20.7)",
+    "bg_sky_3(1/19.4)",
+    "rs_building_b(0.926/64.2)"
+   ],
+   "per": {
+    "car_player": {
+     "iou": 0.764,
+     "colorDiff": 49.5
+    },
+    "car_sedan": {
+     "iou": 0.822,
+     "colorDiff": 43.3
+    },
+    "car_truck": {
+     "iou": 0.872,
+     "colorDiff": 46
+    },
+    "car_sports": {
+     "iou": 0.816,
+     "colorDiff": 77.6
+    },
+    "rs_palm": {
+     "iou": 0.204,
+     "colorDiff": 44.1
+    },
+    "rs_rock": {
+     "iou": 0.757,
+     "colorDiff": 40.3
+    },
+    "rs_shrub": {
+     "iou": 0.714,
+     "colorDiff": 41.9
+    },
+    "rs_pine": {
+     "iou": 0.448,
+     "colorDiff": 27.6
+    },
+    "rs_boulder": {
+     "iou": 0.746,
+     "colorDiff": 34.4
+    },
+    "rs_fern": {
+     "iou": 0.453,
+     "colorDiff": 44
+    },
+    "rs_lamp": {
+     "iou": 0.262,
+     "colorDiff": 55.4
+    },
+    "rs_neon": {
+     "iou": 0.691,
+     "colorDiff": 91.3
+    },
+    "rs_building": {
+     "iou": 0.909,
+     "colorDiff": 54.7
+    },
+    "gate_checkpoint": {
+     "iou": 0.472,
+     "colorDiff": 87.2
+    },
+    "gate_goal": {
+     "iou": 0.472,
+     "colorDiff": 97.5
+    },
+    "bg_sky_1": {
+     "iou": 1,
+     "colorDiff": 20.4
+    },
+    "bg_sky_2": {
+     "iou": 1,
+     "colorDiff": 20.7
+    },
+    "bg_sky_3": {
+     "iou": 1,
+     "colorDiff": 19.4
+    },
+    "bg_far_1": {
+     "iou": 0.425,
+     "colorDiff": 46.2
+    },
+    "bg_far_2": {
+     "iou": 0.473,
+     "colorDiff": 21.9
+    },
+    "bg_far_3": {
+     "iou": 0.543,
+     "colorDiff": 23
+    },
+    "fx_smoke": {
+     "iou": 0.229,
+     "colorDiff": 45.5
+    },
+    "bg_near_1": {
+     "iou": 0.275,
+     "colorDiff": 43.1
+    },
+    "bg_near_2": {
+     "iou": 0.457,
+     "colorDiff": 20
+    },
+    "bg_near_3": {
+     "iou": 0.558,
+     "colorDiff": 29.1
+    },
+    "rs_billboard": {
+     "iou": 0.583,
+     "colorDiff": 59.8
+    },
+    "rs_signpost": {
+     "iou": 0.405,
+     "colorDiff": 78.2
+    },
+    "rs_bollard": {
+     "iou": 0.813,
+     "colorDiff": 78.2
+    },
+    "rs_building_b": {
+     "iou": 0.926,
+     "colorDiff": 64.2
+    },
+    "gate_start": {
+     "iou": 0.472,
+     "colorDiff": 70.5
+    },
+    "car_player_brake": {
+     "iou": 0.764,
+     "colorDiff": 54.3
+    },
+    "fx_dust": {
+     "iou": 0.063,
+     "colorDiff": 63.8
+    },
+    "fx_spark": {
+     "iou": 0.222,
+     "colorDiff": 46.9
+    },
+    "car_sedan_v1": {
+     "iou": 0.822,
+     "colorDiff": 72.9
+    },
+    "car_sedan_v2": {
+     "iou": 0.822,
+     "colorDiff": 87.7
+    },
+    "car_truck_v1": {
+     "iou": 0.872,
+     "colorDiff": 51.8
+    },
+    "car_truck_v2": {
+     "iou": 0.872,
+     "colorDiff": 67.2
+    },
+    "car_sports_v1": {
+     "iou": 0.816,
+     "colorDiff": 82
+    },
+    "car_sports_v2": {
+     "iou": 0.816,
+     "colorDiff": 87.9
+    }
+   }
+  },
+  "medium|xhigh": {
+   "n": 33,
+   "iouMedian": 0.787,
+   "iouMax": 1,
+   "colorDiffMedian": 50.3,
+   "colorDiffMin": 5.3,
+   "highIou": [
+    "car_sedan(0.91/53.1)",
+    "rs_rock(0.914/31.6)",
+    "rs_shrub(0.921/27.6)",
+    "rs_boulder(0.934/37.5)",
+    "rs_neon(0.927/84.1)",
+    "rs_building(0.95/46.6)",
+    "bg_sky_1(1/20.5)",
+    "bg_sky_2(1/16.7)",
+    "bg_sky_3(1/19.3)"
+   ],
+   "per": {
+    "car_player": {
+     "iou": 0.884,
+     "colorDiff": 50.8
+    },
+    "car_sedan": {
+     "iou": 0.91,
+     "colorDiff": 53.1
+    },
+    "car_truck": {
+     "iou": 0.861,
+     "colorDiff": 50.3
+    },
+    "car_sports": {
+     "iou": 0.844,
+     "colorDiff": 63.7
+    },
+    "rs_palm": {
+     "iou": 0.364,
+     "colorDiff": 43.9
+    },
+    "rs_rock": {
+     "iou": 0.914,
+     "colorDiff": 31.6
+    },
+    "rs_shrub": {
+     "iou": 0.921,
+     "colorDiff": 27.6
+    },
+    "rs_pine": {
+     "iou": 0.764,
+     "colorDiff": 26.8
+    },
+    "rs_boulder": {
+     "iou": 0.934,
+     "colorDiff": 37.5
+    },
+    "rs_fern": {
+     "iou": 0.38,
+     "colorDiff": 60.7
+    },
+    "rs_lamp": {
+     "iou": 0.168,
+     "colorDiff": 101.4
+    },
+    "rs_neon": {
+     "iou": 0.927,
+     "colorDiff": 84.1
+    },
+    "rs_building": {
+     "iou": 0.95,
+     "colorDiff": 46.6
+    },
+    "gate_checkpoint": {
+     "iou": 0.821,
+     "colorDiff": 98.8
+    },
+    "gate_goal": {
+     "iou": 0.821,
+     "colorDiff": 101.5
+    },
+    "bg_sky_1": {
+     "iou": 1,
+     "colorDiff": 20.5
+    },
+    "bg_sky_2": {
+     "iou": 1,
+     "colorDiff": 16.7
+    },
+    "bg_sky_3": {
+     "iou": 1,
+     "colorDiff": 19.3
+    },
+    "bg_far_1": {
+     "iou": 0.714,
+     "colorDiff": 81.8
+    },
+    "bg_far_2": {
+     "iou": 0.697,
+     "colorDiff": 32.6
+    },
+    "bg_far_3": {
+     "iou": 0.754,
+     "colorDiff": 21.7
+    },
+    "fx_smoke": {
+     "iou": 0.618,
+     "colorDiff": 42.9
+    },
+    "bg_near_1": {
+     "iou": 0.282,
+     "colorDiff": 17.5
+    },
+    "bg_near_2": {
+     "iou": 0.532,
+     "colorDiff": 20.6
+    },
+    "bg_near_3": {
+     "iou": 0.551,
+     "colorDiff": 10.6
+    },
+    "rs_billboard": {
+     "iou": 0.752,
+     "colorDiff": 82.3
+    },
+    "rs_signpost": {
+     "iou": 0.564,
+     "colorDiff": 70.8
+    },
+    "rs_bollard": {
+     "iou": 0.787,
+     "colorDiff": 79.4
+    },
+    "rs_building_b": {
+     "iou": 0.755,
+     "colorDiff": 54.9
+    },
+    "gate_start": {
+     "iou": 0.821,
+     "colorDiff": 70.1
+    },
+    "car_player_brake": {
+     "iou": 0.884,
+     "colorDiff": 53.9
+    },
+    "fx_dust": {
+     "iou": 0.143,
+     "colorDiff": 5.3
+    },
+    "fx_spark": {
+     "iou": 0.25,
+     "colorDiff": 74
+    }
+   }
+  },
+  "medium|max": {
+   "n": 36,
+   "iouMedian": 0.839,
+   "iouMax": 1,
+   "colorDiffMedian": 47.6,
+   "colorDiffMin": 11.1,
+   "highIou": [
+    "car_sedan(0.904/54.6)",
+    "car_truck(0.909/47.6)",
+    "rs_shrub(0.908/30.6)",
+    "bg_sky_1(1/17.2)",
+    "bg_sky_2(1/18.1)",
+    "bg_sky_3(1/15.4)",
+    "car_sedan_v2(0.904/90.2)",
+    "car_truck_v2(0.909/84)"
+   ],
+   "per": {
+    "car_player": {
+     "iou": 0.857,
+     "colorDiff": 54
+    },
+    "car_sedan": {
+     "iou": 0.904,
+     "colorDiff": 54.6
+    },
+    "car_truck": {
+     "iou": 0.909,
+     "colorDiff": 47.6
+    },
+    "car_sports": {
+     "iou": 0.839,
+     "colorDiff": 55.3
+    },
+    "rs_palm": {
+     "iou": 0.441,
+     "colorDiff": 40.2
+    },
+    "rs_rock": {
+     "iou": 0.87,
+     "colorDiff": 37.2
+    },
+    "rs_shrub": {
+     "iou": 0.908,
+     "colorDiff": 30.6
+    },
+    "rs_pine": {
+     "iou": 0.821,
+     "colorDiff": 26.2
+    },
+    "rs_boulder": {
+     "iou": 0.858,
+     "colorDiff": 39.2
+    },
+    "rs_fern": {
+     "iou": 0.563,
+     "colorDiff": 44
+    },
+    "rs_lamp": {
+     "iou": 0.129,
+     "colorDiff": 127.8
+    },
+    "rs_neon": {
+     "iou": 0.832,
+     "colorDiff": 76.4
+    },
+    "rs_building": {
+     "iou": 0.866,
+     "colorDiff": 46.4
+    },
+    "gate_checkpoint": {
+     "iou": 0.846,
+     "colorDiff": 130.1
+    },
+    "gate_goal": {
+     "iou": 0.846,
+     "colorDiff": 130.8
+    },
+    "bg_sky_1": {
+     "iou": 1,
+     "colorDiff": 17.2
+    },
+    "bg_sky_2": {
+     "iou": 1,
+     "colorDiff": 18.1
+    },
+    "bg_sky_3": {
+     "iou": 1,
+     "colorDiff": 15.4
+    },
+    "bg_far_1": {
+     "iou": 0.641,
+     "colorDiff": 66.7
+    },
+    "bg_far_2": {
+     "iou": 0.792,
+     "colorDiff": 26.1
+    },
+    "bg_far_3": {
+     "iou": 0.687,
+     "colorDiff": 20.1
+    },
+    "fx_smoke": {
+     "iou": 0.73,
+     "colorDiff": 52.2
+    },
+    "bg_near_1": {
+     "iou": 0.378,
+     "colorDiff": 33.9
+    },
+    "bg_near_2": {
+     "iou": 0.561,
+     "colorDiff": 27.5
+    },
+    "bg_near_3": {
+     "iou": 0.479,
+     "colorDiff": 11.1
+    },
+    "rs_billboard": {
+     "iou": 0.841,
+     "colorDiff": 56.4
+    },
+    "rs_signpost": {
+     "iou": 0.549,
+     "colorDiff": 100.9
+    },
+    "rs_bollard": {
+     "iou": 0.833,
+     "colorDiff": 41.2
+    },
+    "rs_building_b": {
+     "iou": 0.715,
+     "colorDiff": 47.8
+    },
+    "gate_start": {
+     "iou": 0.846,
+     "colorDiff": 77.9
+    },
+    "car_player_brake": {
+     "iou": 0.857,
+     "colorDiff": 56.8
+    },
+    "fx_dust": {
+     "iou": 0.158,
+     "colorDiff": 40.7
+    },
+    "fx_spark": {
+     "iou": 0.667,
+     "colorDiff": 46.9
+    },
+    "car_sedan_v2": {
+     "iou": 0.904,
+     "colorDiff": 90.2
+    },
+    "car_truck_v2": {
+     "iou": 0.909,
+     "colorDiff": 84
+    },
+    "car_sports_v2": {
+     "iou": 0.839,
+     "colorDiff": 81.7
+    }
+   }
+  },
+  "medium|opus-medium": {
+   "n": 33,
+   "iouMedian": 0.789,
+   "iouMax": 1,
+   "colorDiffMedian": 44.3,
+   "colorDiffMin": 5.4,
+   "highIou": [
+    "car_sedan(0.904/45.1)",
+    "car_sports(0.924/46.7)",
+    "rs_neon(0.928/85.6)",
+    "rs_building(0.924/38.5)",
+    "gate_checkpoint(0.907/122.4)",
+    "gate_goal(0.907/113.5)",
+    "bg_sky_1(1/16.8)",
+    "bg_sky_2(1/23.9)",
+    "bg_sky_3(1/11.8)",
+    "rs_building_b(0.913/46.9)",
+    "gate_start(0.907/77.7)"
+   ],
+   "per": {
+    "car_player": {
+     "iou": 0.789,
+     "colorDiff": 50.1
+    },
+    "car_sedan": {
+     "iou": 0.904,
+     "colorDiff": 45.1
+    },
+    "car_truck": {
+     "iou": 0.856,
+     "colorDiff": 40.4
+    },
+    "car_sports": {
+     "iou": 0.924,
+     "colorDiff": 46.7
+    },
+    "rs_palm": {
+     "iou": 0.334,
+     "colorDiff": 44.3
+    },
+    "rs_rock": {
+     "iou": 0.819,
+     "colorDiff": 38.4
+    },
+    "rs_shrub": {
+     "iou": 0.853,
+     "colorDiff": 41.5
+    },
+    "rs_pine": {
+     "iou": 0.674,
+     "colorDiff": 33
+    },
+    "rs_boulder": {
+     "iou": 0.845,
+     "colorDiff": 43.6
+    },
+    "rs_fern": {
+     "iou": 0.309,
+     "colorDiff": 47.6
+    },
+    "rs_lamp": {
+     "iou": 0.16,
+     "colorDiff": 101
+    },
+    "rs_neon": {
+     "iou": 0.928,
+     "colorDiff": 85.6
+    },
+    "rs_building": {
+     "iou": 0.924,
+     "colorDiff": 38.5
+    },
+    "gate_checkpoint": {
+     "iou": 0.907,
+     "colorDiff": 122.4
+    },
+    "gate_goal": {
+     "iou": 0.907,
+     "colorDiff": 113.5
+    },
+    "bg_sky_1": {
+     "iou": 1,
+     "colorDiff": 16.8
+    },
+    "bg_sky_2": {
+     "iou": 1,
+     "colorDiff": 23.9
+    },
+    "bg_sky_3": {
+     "iou": 1,
+     "colorDiff": 11.8
+    },
+    "bg_far_1": {
+     "iou": 0.458,
+     "colorDiff": 49.7
+    },
+    "bg_far_2": {
+     "iou": 0.787,
+     "colorDiff": 20.2
+    },
+    "bg_far_3": {
+     "iou": 0.785,
+     "colorDiff": 17.1
+    },
+    "fx_smoke": {
+     "iou": 0.545,
+     "colorDiff": 22.6
+    },
+    "bg_near_1": {
+     "iou": 0.166,
+     "colorDiff": 12.5
+    },
+    "bg_near_2": {
+     "iou": 0.485,
+     "colorDiff": 5.4
+    },
+    "bg_near_3": {
+     "iou": 0.607,
+     "colorDiff": 6.9
+    },
+    "rs_billboard": {
+     "iou": 0.861,
+     "colorDiff": 57.6
+    },
+    "rs_signpost": {
+     "iou": 0.566,
+     "colorDiff": 67.1
+    },
+    "rs_bollard": {
+     "iou": 0.769,
+     "colorDiff": 82.9
+    },
+    "rs_building_b": {
+     "iou": 0.913,
+     "colorDiff": 46.9
+    },
+    "gate_start": {
+     "iou": 0.907,
+     "colorDiff": 77.7
+    },
+    "car_player_brake": {
+     "iou": 0.789,
+     "colorDiff": 54.8
+    },
+    "fx_dust": {
+     "iou": 0.083,
+     "colorDiff": 38.7
+    },
+    "fx_spark": {
+     "iou": 0.4,
+     "colorDiff": 47.3
+    }
+   }
+  },
+  "medium|fable-high": {
+   "n": 33,
+   "iouMedian": 0.732,
+   "iouMax": 1,
+   "colorDiffMedian": 57,
+   "colorDiffMin": 12,
+   "highIou": [
+    "rs_rock(0.904/33.4)",
+    "rs_building(0.935/51.3)",
+    "bg_sky_1(1/19.5)",
+    "bg_sky_2(1/17.1)",
+    "bg_sky_3(1/12)"
+   ],
+   "per": {
+    "car_player": {
+     "iou": 0.732,
+     "colorDiff": 59.4
+    },
+    "car_sedan": {
+     "iou": 0.732,
+     "colorDiff": 94.7
+    },
+    "car_truck": {
+     "iou": 0.773,
+     "colorDiff": 104.5
+    },
+    "car_sports": {
+     "iou": 0.712,
+     "colorDiff": 65.7
+    },
+    "rs_palm": {
+     "iou": 0.464,
+     "colorDiff": 37.3
+    },
+    "rs_rock": {
+     "iou": 0.904,
+     "colorDiff": 33.4
+    },
+    "rs_shrub": {
+     "iou": 0.731,
+     "colorDiff": 38.5
+    },
+    "rs_pine": {
+     "iou": 0.856,
+     "colorDiff": 25.4
+    },
+    "rs_boulder": {
+     "iou": 0.845,
+     "colorDiff": 29.2
+    },
+    "rs_fern": {
+     "iou": 0.575,
+     "colorDiff": 35.2
+    },
+    "rs_lamp": {
+     "iou": 0.315,
+     "colorDiff": 96
+    },
+    "rs_neon": {
+     "iou": 0.869,
+     "colorDiff": 66.9
+    },
+    "rs_building": {
+     "iou": 0.935,
+     "colorDiff": 51.3
+    },
+    "gate_checkpoint": {
+     "iou": 0.793,
+     "colorDiff": 124.2
+    },
+    "gate_goal": {
+     "iou": 0.793,
+     "colorDiff": 107.4
+    },
+    "bg_sky_1": {
+     "iou": 1,
+     "colorDiff": 19.5
+    },
+    "bg_sky_2": {
+     "iou": 1,
+     "colorDiff": 17.1
+    },
+    "bg_sky_3": {
+     "iou": 1,
+     "colorDiff": 12
+    },
+    "bg_far_1": {
+     "iou": 0.809,
+     "colorDiff": 26.8
+    },
+    "bg_far_2": {
+     "iou": 0.755,
+     "colorDiff": 22.2
+    },
+    "bg_far_3": {
+     "iou": 0.692,
+     "colorDiff": 17.9
+    },
+    "fx_smoke": {
+     "iou": 0.676,
+     "colorDiff": 73
+    },
+    "bg_near_1": {
+     "iou": 0.488,
+     "colorDiff": 80.4
+    },
+    "bg_near_2": {
+     "iou": 0.597,
+     "colorDiff": 23.2
+    },
+    "bg_near_3": {
+     "iou": 0.653,
+     "colorDiff": 18.3
+    },
+    "rs_billboard": {
+     "iou": 0.831,
+     "colorDiff": 57.7
+    },
+    "rs_signpost": {
+     "iou": 0.581,
+     "colorDiff": 66.6
+    },
+    "rs_bollard": {
+     "iou": 0.665,
+     "colorDiff": 74.7
+    },
+    "rs_building_b": {
+     "iou": 0.857,
+     "colorDiff": 57
+    },
+    "gate_start": {
+     "iou": 0.812,
+     "colorDiff": 72.9
+    },
+    "car_player_brake": {
+     "iou": 0.732,
+     "colorDiff": 66
+    },
+    "fx_dust": {
+     "iou": 0.19,
+     "colorDiff": 44.3
+    },
+    "fx_spark": {
+     "iou": 0.4,
+     "colorDiff": 63.6
+    }
+   }
+  },
+  "high|xhigh": {
+   "n": 34,
+   "iouMedian": 0.654,
+   "iouMax": 1,
+   "colorDiffMedian": 49.2,
+   "colorDiffMin": 20.4,
+   "highIou": [
+    "bg_sky_1(1/25.8)",
+    "bg_sky_2(1/20.4)",
+    "bg_sky_3(1/21.7)"
+   ],
+   "per": {
+    "car_player": {
+     "iou": 0.786,
+     "colorDiff": 47.7
+    },
+    "car_player_brake": {
+     "iou": 0.786,
+     "colorDiff": 50.7
+    },
+    "car_player_wheel": {
+     "iou": 0.786,
+     "colorDiff": 48.4
+    },
+    "car_sedan": {
+     "iou": 0.822,
+     "colorDiff": 51.3
+    },
+    "car_truck": {
+     "iou": 0.882,
+     "colorDiff": 47.2
+    },
+    "car_sports": {
+     "iou": 0.813,
+     "colorDiff": 65.3
+    },
+    "rs_palm": {
+     "iou": 0.359,
+     "colorDiff": 49.2
+    },
+    "rs_rock": {
+     "iou": 0.73,
+     "colorDiff": 49.8
+    },
+    "rs_shrub": {
+     "iou": 0.691,
+     "colorDiff": 45.3
+    },
+    "rs_billboard": {
+     "iou": 0.654,
+     "colorDiff": 61.7
+    },
+    "rs_pine": {
+     "iou": 0.511,
+     "colorDiff": 23
+    },
+    "rs_boulder": {
+     "iou": 0.762,
+     "colorDiff": 43
+    },
+    "rs_fern": {
+     "iou": 0.446,
+     "colorDiff": 56
+    },
+    "rs_signpost": {
+     "iou": 0.355,
+     "colorDiff": 70.5
+    },
+    "rs_lamp": {
+     "iou": 0.24,
+     "colorDiff": 42.9
+    },
+    "rs_neon": {
+     "iou": 0.723,
+     "colorDiff": 77.1
+    },
+    "rs_bollard": {
+     "iou": 0.677,
+     "colorDiff": 99.3
+    },
+    "rs_building": {
+     "iou": 0.873,
+     "colorDiff": 56.1
+    },
+    "rs_building_b": {
+     "iou": 0.699,
+     "colorDiff": 62
+    },
+    "gate_checkpoint": {
+     "iou": 0.503,
+     "colorDiff": 61.8
+    },
+    "gate_goal": {
+     "iou": 0.503,
+     "colorDiff": 98.3
+    },
+    "gate_start": {
+     "iou": 0.503,
+     "colorDiff": 60.1
+    },
+    "bg_sky_1": {
+     "iou": 1,
+     "colorDiff": 25.8
+    },
+    "bg_sky_2": {
+     "iou": 1,
+     "colorDiff": 20.4
+    },
+    "bg_sky_3": {
+     "iou": 1,
+     "colorDiff": 21.7
+    },
+    "bg_far_1": {
+     "iou": 0.304,
+     "colorDiff": 60.8
+    },
+    "bg_far_2": {
+     "iou": 0.588,
+     "colorDiff": 28.7
+    },
+    "bg_far_3": {
+     "iou": 0.609,
+     "colorDiff": 30.1
+    },
+    "bg_near_1": {
+     "iou": 0.107,
+     "colorDiff": 41.9
+    },
+    "bg_near_2": {
+     "iou": 0.36,
+     "colorDiff": 22.2
+    },
+    "bg_near_3": {
+     "iou": 0.524,
+     "colorDiff": 33.5
+    },
+    "fx_smoke": {
+     "iou": 0.153,
+     "colorDiff": 34.8
+    },
+    "fx_dust": {
+     "iou": 0.188,
+     "colorDiff": 67.9
+    },
+    "fx_spark": {
+     "iou": 0.333,
+     "colorDiff": 42.6
+    }
+   }
+  },
+  "high|max": {
+   "n": 37,
+   "iouMedian": 0.669,
+   "iouMax": 1,
+   "colorDiffMedian": 53.4,
+   "colorDiffMin": 0,
+   "highIou": [
+    "car_sedan(0.904/57.5)",
+    "car_sedan_v2(0.904/68.6)",
+    "car_truck(0.905/50.9)",
+    "car_truck_v2(0.905/72.1)",
+    "car_sports(0.953/58.1)",
+    "car_sports_v2(0.953/56.7)",
+    "bg_sky_1(1/25.3)",
+    "bg_sky_2(1/18.2)",
+    "bg_sky_3(1/20.9)"
+   ],
+   "per": {
+    "car_player": {
+     "iou": 0.886,
+     "colorDiff": 53.4
+    },
+    "car_player_brake": {
+     "iou": 0.886,
+     "colorDiff": 59.1
+    },
+    "car_player_wheel": {
+     "iou": 0.886,
+     "colorDiff": 53.2
+    },
+    "car_sedan": {
+     "iou": 0.904,
+     "colorDiff": 57.5
+    },
+    "car_sedan_v2": {
+     "iou": 0.904,
+     "colorDiff": 68.6
+    },
+    "car_truck": {
+     "iou": 0.905,
+     "colorDiff": 50.9
+    },
+    "car_truck_v2": {
+     "iou": 0.905,
+     "colorDiff": 72.1
+    },
+    "car_sports": {
+     "iou": 0.953,
+     "colorDiff": 58.1
+    },
+    "car_sports_v2": {
+     "iou": 0.953,
+     "colorDiff": 56.7
+    },
+    "rs_palm": {
+     "iou": 0.433,
+     "colorDiff": 47.3
+    },
+    "rs_rock": {
+     "iou": 0.669,
+     "colorDiff": 40.3
+    },
+    "rs_shrub": {
+     "iou": 0.711,
+     "colorDiff": 36.1
+    },
+    "rs_billboard": {
+     "iou": 0.653,
+     "colorDiff": 57.9
+    },
+    "rs_pine": {
+     "iou": 0.449,
+     "colorDiff": 22.4
+    },
+    "rs_boulder": {
+     "iou": 0.687,
+     "colorDiff": 45
+    },
+    "rs_fern": {
+     "iou": 0.792,
+     "colorDiff": 55.3
+    },
+    "rs_signpost": {
+     "iou": 0.532,
+     "colorDiff": 75.8
+    },
+    "rs_lamp": {
+     "iou": 0.3,
+     "colorDiff": 60.6
+    },
+    "rs_neon": {
+     "iou": 0.638,
+     "colorDiff": 67.5
+    },
+    "rs_bollard": {
+     "iou": 0.677,
+     "colorDiff": 77.4
+    },
+    "rs_building": {
+     "iou": 0.796,
+     "colorDiff": 56.2
+    },
+    "rs_building_b": {
+     "iou": 0.681,
+     "colorDiff": 59.7
+    },
+    "gate_checkpoint": {
+     "iou": 0.558,
+     "colorDiff": 74.6
+    },
+    "gate_goal": {
+     "iou": 0.558,
+     "colorDiff": 90.2
+    },
+    "gate_start": {
+     "iou": 0.558,
+     "colorDiff": 68.7
+    },
+    "bg_sky_1": {
+     "iou": 1,
+     "colorDiff": 25.3
+    },
+    "bg_sky_2": {
+     "iou": 1,
+     "colorDiff": 18.2
+    },
+    "bg_sky_3": {
+     "iou": 1,
+     "colorDiff": 20.9
+    },
+    "bg_far_1": {
+     "iou": 0.273,
+     "colorDiff": 52.2
+    },
+    "bg_far_2": {
+     "iou": 0.479,
+     "colorDiff": 28.7
+    },
+    "bg_far_3": {
+     "iou": 0.442,
+     "colorDiff": 22.8
+    },
+    "bg_near_1": {
+     "iou": 0.126,
+     "colorDiff": 51.8
+    },
+    "bg_near_2": {
+     "iou": 0.335,
+     "colorDiff": 27
+    },
+    "bg_near_3": {
+     "iou": 0.361,
+     "colorDiff": 26
+    },
+    "fx_smoke": {
+     "iou": 0.215,
+     "colorDiff": 35.6
+    },
+    "fx_dust": {
+     "iou": 0.281,
+     "colorDiff": 72.2
+    },
+    "fx_spark": {
+     "iou": 0.333,
+     "colorDiff": 0
+    }
+   }
+  },
+  "high|opus-medium": {
+   "n": 34,
+   "iouMedian": 0.623,
+   "iouMax": 1,
+   "colorDiffMedian": 50.7,
+   "colorDiffMin": 14.9,
+   "highIou": [
+    "car_truck(0.902/49.4)",
+    "rs_building(0.955/52.7)",
+    "rs_building_b(0.96/58.5)",
+    "bg_sky_1(1/24.9)",
+    "bg_sky_2(1/30.2)",
+    "bg_sky_3(1/19.4)"
+   ],
+   "per": {
+    "car_player": {
+     "iou": 0.747,
+     "colorDiff": 56.5
+    },
+    "car_player_brake": {
+     "iou": 0.747,
+     "colorDiff": 64.7
+    },
+    "car_player_wheel": {
+     "iou": 0.747,
+     "colorDiff": 56.5
+    },
+    "car_sedan": {
+     "iou": 0.886,
+     "colorDiff": 55.2
+    },
+    "car_truck": {
+     "iou": 0.902,
+     "colorDiff": 49.4
+    },
+    "car_sports": {
+     "iou": 0.822,
+     "colorDiff": 75.3
+    },
+    "rs_palm": {
+     "iou": 0.346,
+     "colorDiff": 50.7
+    },
+    "rs_rock": {
+     "iou": 0.672,
+     "colorDiff": 47.6
+    },
+    "rs_shrub": {
+     "iou": 0.623,
+     "colorDiff": 34.7
+    },
+    "rs_billboard": {
+     "iou": 0.641,
+     "colorDiff": 37.6
+    },
+    "rs_pine": {
+     "iou": 0.475,
+     "colorDiff": 46.8
+    },
+    "rs_boulder": {
+     "iou": 0.702,
+     "colorDiff": 41.9
+    },
+    "rs_fern": {
+     "iou": 0.397,
+     "colorDiff": 50.8
+    },
+    "rs_signpost": {
+     "iou": 0.243,
+     "colorDiff": 86
+    },
+    "rs_lamp": {
+     "iou": 0.167,
+     "colorDiff": 67.5
+    },
+    "rs_neon": {
+     "iou": 0.696,
+     "colorDiff": 85.1
+    },
+    "rs_bollard": {
+     "iou": 0.625,
+     "colorDiff": 80.7
+    },
+    "rs_building": {
+     "iou": 0.955,
+     "colorDiff": 52.7
+    },
+    "rs_building_b": {
+     "iou": 0.96,
+     "colorDiff": 58.5
+    },
+    "gate_checkpoint": {
+     "iou": 0.474,
+     "colorDiff": 86.4
+    },
+    "gate_goal": {
+     "iou": 0.474,
+     "colorDiff": 93.2
+    },
+    "gate_start": {
+     "iou": 0.474,
+     "colorDiff": 69
+    },
+    "bg_sky_1": {
+     "iou": 1,
+     "colorDiff": 24.9
+    },
+    "bg_sky_2": {
+     "iou": 1,
+     "colorDiff": 30.2
+    },
+    "bg_sky_3": {
+     "iou": 1,
+     "colorDiff": 19.4
+    },
+    "bg_far_1": {
+     "iou": 0.209,
+     "colorDiff": 43.1
+    },
+    "bg_far_2": {
+     "iou": 0.562,
+     "colorDiff": 18.7
+    },
+    "bg_far_3": {
+     "iou": 0.496,
+     "colorDiff": 22.2
+    },
+    "bg_near_1": {
+     "iou": 0.087,
+     "colorDiff": 46.3
+    },
+    "bg_near_2": {
+     "iou": 0.337,
+     "colorDiff": 14.9
+    },
+    "bg_near_3": {
+     "iou": 0.567,
+     "colorDiff": 29.5
+    },
+    "fx_smoke": {
+     "iou": 0.125,
+     "colorDiff": 62.9
+    },
+    "fx_dust": {
+     "iou": 0.141,
+     "colorDiff": 36.8
+    },
+    "fx_spark": {
+     "iou": 0.556,
+     "colorDiff": 18.7
+    }
+   }
+  },
+  "high|fable-high": {
+   "n": 34,
+   "iouMedian": 0.611,
+   "iouMax": 1,
+   "colorDiffMedian": 51.6,
+   "colorDiffMin": 18.5,
+   "highIou": [
+    "bg_sky_1(1/26.1)",
+    "bg_sky_2(1/21)",
+    "bg_sky_3(1/18.6)"
+   ],
+   "per": {
+    "car_player": {
+     "iou": 0.64,
+     "colorDiff": 51.7
+    },
+    "car_player_brake": {
+     "iou": 0.64,
+     "colorDiff": 60.7
+    },
+    "car_player_wheel": {
+     "iou": 0.64,
+     "colorDiff": 51.6
+    },
+    "car_sedan": {
+     "iou": 0.611,
+     "colorDiff": 85.1
+    },
+    "car_truck": {
+     "iou": 0.709,
+     "colorDiff": 95.2
+    },
+    "car_sports": {
+     "iou": 0.681,
+     "colorDiff": 58.4
+    },
+    "rs_palm": {
+     "iou": 0.258,
+     "colorDiff": 39.9
+    },
+    "rs_rock": {
+     "iou": 0.795,
+     "colorDiff": 46.9
+    },
+    "rs_shrub": {
+     "iou": 0.684,
+     "colorDiff": 42.5
+    },
+    "rs_billboard": {
+     "iou": 0.702,
+     "colorDiff": 52.3
+    },
+    "rs_pine": {
+     "iou": 0.474,
+     "colorDiff": 25.1
+    },
+    "rs_boulder": {
+     "iou": 0.682,
+     "colorDiff": 38.7
+    },
+    "rs_fern": {
+     "iou": 0.574,
+     "colorDiff": 51.5
+    },
+    "rs_signpost": {
+     "iou": 0.359,
+     "colorDiff": 79.3
+    },
+    "rs_lamp": {
+     "iou": 0.305,
+     "colorDiff": 57
+    },
+    "rs_neon": {
+     "iou": 0.795,
+     "colorDiff": 68
+    },
+    "rs_bollard": {
+     "iou": 0.557,
+     "colorDiff": 97.5
+    },
+    "rs_building": {
+     "iou": 0.891,
+     "colorDiff": 51.3
+    },
+    "rs_building_b": {
+     "iou": 0.837,
+     "colorDiff": 61.3
+    },
+    "gate_checkpoint": {
+     "iou": 0.477,
+     "colorDiff": 96.1
+    },
+    "gate_goal": {
+     "iou": 0.477,
+     "colorDiff": 64.1
+    },
+    "gate_start": {
+     "iou": 0.581,
+     "colorDiff": 78.1
+    },
+    "bg_sky_1": {
+     "iou": 1,
+     "colorDiff": 26.1
+    },
+    "bg_sky_2": {
+     "iou": 1,
+     "colorDiff": 21
+    },
+    "bg_sky_3": {
+     "iou": 1,
+     "colorDiff": 18.6
+    },
+    "bg_far_1": {
+     "iou": 0.397,
+     "colorDiff": 42.5
+    },
+    "bg_far_2": {
+     "iou": 0.583,
+     "colorDiff": 18.5
+    },
+    "bg_far_3": {
+     "iou": 0.646,
+     "colorDiff": 29
+    },
+    "bg_near_1": {
+     "iou": 0.473,
+     "colorDiff": 65.3
+    },
+    "bg_near_2": {
+     "iou": 0.456,
+     "colorDiff": 19.6
+    },
+    "bg_near_3": {
+     "iou": 0.554,
+     "colorDiff": 33.9
+    },
+    "fx_smoke": {
+     "iou": 0.167,
+     "colorDiff": 44
+    },
+    "fx_dust": {
+     "iou": 0.328,
+     "colorDiff": 75.1
+    },
+    "fx_spark": {
+     "iou": 0.556,
+     "colorDiff": 44.8
+    }
+   }
+  },
+  "xhigh|max": {
+   "n": 34,
+   "iouMedian": 0.79,
+   "iouMax": 1,
+   "colorDiffMedian": 52.4,
+   "colorDiffMin": 13.5,
+   "highIou": [
+    "car_sedan(0.909/63.6)",
+    "car_truck(0.91/56.5)",
+    "rs_shrub(0.933/34)",
+    "rs_bollard(0.912/59.8)",
+    "bg_sky_1(1/14.9)",
+    "bg_sky_2(1/16.7)",
+    "bg_sky_3(1/14.1)"
+   ],
+   "per": {
+    "car_player": {
+     "iou": 0.887,
+     "colorDiff": 54.5
+    },
+    "car_player_brake": {
+     "iou": 0.887,
+     "colorDiff": 58.4
+    },
+    "car_player_wheel": {
+     "iou": 0.887,
+     "colorDiff": 55.4
+    },
+    "car_sedan": {
+     "iou": 0.909,
+     "colorDiff": 63.6
+    },
+    "car_truck": {
+     "iou": 0.91,
+     "colorDiff": 56.5
+    },
+    "car_sports": {
+     "iou": 0.825,
+     "colorDiff": 57.6
+    },
+    "rs_palm": {
+     "iou": 0.578,
+     "colorDiff": 39.4
+    },
+    "rs_rock": {
+     "iou": 0.855,
+     "colorDiff": 48.1
+    },
+    "rs_shrub": {
+     "iou": 0.933,
+     "colorDiff": 34
+    },
+    "rs_billboard": {
+     "iou": 0.848,
+     "colorDiff": 80.5
+    },
+    "rs_pine": {
+     "iou": 0.716,
+     "colorDiff": 22.5
+    },
+    "rs_boulder": {
+     "iou": 0.859,
+     "colorDiff": 48.4
+    },
+    "rs_fern": {
+     "iou": 0.449,
+     "colorDiff": 59.3
+    },
+    "rs_signpost": {
+     "iou": 0.639,
+     "colorDiff": 78.2
+    },
+    "rs_lamp": {
+     "iou": 0.07,
+     "colorDiff": 58.1
+    },
+    "rs_neon": {
+     "iou": 0.79,
+     "colorDiff": 79.3
+    },
+    "rs_bollard": {
+     "iou": 0.912,
+     "colorDiff": 59.8
+    },
+    "rs_building": {
+     "iou": 0.895,
+     "colorDiff": 42.6
+    },
+    "rs_building_b": {
+     "iou": 0.87,
+     "colorDiff": 56.7
+    },
+    "gate_checkpoint": {
+     "iou": 0.769,
+     "colorDiff": 76.1
+    },
+    "gate_goal": {
+     "iou": 0.769,
+     "colorDiff": 103.7
+    },
+    "gate_start": {
+     "iou": 0.769,
+     "colorDiff": 70.3
+    },
+    "bg_sky_1": {
+     "iou": 1,
+     "colorDiff": 14.9
+    },
+    "bg_sky_2": {
+     "iou": 1,
+     "colorDiff": 16.7
+    },
+    "bg_sky_3": {
+     "iou": 1,
+     "colorDiff": 14.1
+    },
+    "bg_far_1": {
+     "iou": 0.751,
+     "colorDiff": 52.4
+    },
+    "bg_far_2": {
+     "iou": 0.761,
+     "colorDiff": 31.8
+    },
+    "bg_far_3": {
+     "iou": 0.664,
+     "colorDiff": 28.5
+    },
+    "bg_near_1": {
+     "iou": 0.515,
+     "colorDiff": 21.4
+    },
+    "bg_near_2": {
+     "iou": 0.591,
+     "colorDiff": 24.5
+    },
+    "bg_near_3": {
+     "iou": 0.439,
+     "colorDiff": 13.5
+    },
+    "fx_smoke": {
+     "iou": 0.656,
+     "colorDiff": 27.6
+    },
+    "fx_dust": {
+     "iou": 0.667,
+     "colorDiff": 48.3
+    },
+    "fx_spark": {
+     "iou": 0.2,
+     "colorDiff": 17
+    }
+   }
+  },
+  "xhigh|opus-medium": {
+   "n": 34,
+   "iouMedian": 0.792,
+   "iouMax": 1,
+   "colorDiffMedian": 52.3,
+   "colorDiffMin": 12.8,
+   "highIou": [
+    "car_sedan(0.928/54.4)",
+    "car_truck(0.932/58.3)",
+    "rs_neon(0.9/73.5)",
+    "rs_bollard(0.923/120.1)",
+    "bg_sky_1(1/22.6)",
+    "bg_sky_2(1/25.8)",
+    "bg_sky_3(1/18.9)"
+   ],
+   "per": {
+    "car_player": {
+     "iou": 0.792,
+     "colorDiff": 52.3
+    },
+    "car_player_brake": {
+     "iou": 0.792,
+     "colorDiff": 59.8
+    },
+    "car_player_wheel": {
+     "iou": 0.792,
+     "colorDiff": 52.9
+    },
+    "car_sedan": {
+     "iou": 0.928,
+     "colorDiff": 54.4
+    },
+    "car_truck": {
+     "iou": 0.932,
+     "colorDiff": 58.3
+    },
+    "car_sports": {
+     "iou": 0.857,
+     "colorDiff": 79
+    },
+    "rs_palm": {
+     "iou": 0.438,
+     "colorDiff": 47.5
+    },
+    "rs_rock": {
+     "iou": 0.811,
+     "colorDiff": 39.7
+    },
+    "rs_shrub": {
+     "iou": 0.857,
+     "colorDiff": 46.7
+    },
+    "rs_billboard": {
+     "iou": 0.824,
+     "colorDiff": 79.8
+    },
+    "rs_pine": {
+     "iou": 0.678,
+     "colorDiff": 42.7
+    },
+    "rs_boulder": {
+     "iou": 0.837,
+     "colorDiff": 32.6
+    },
+    "rs_fern": {
+     "iou": 0.783,
+     "colorDiff": 49.9
+    },
+    "rs_signpost": {
+     "iou": 0.686,
+     "colorDiff": 60.8
+    },
+    "rs_lamp": {
+     "iou": 0.469,
+     "colorDiff": 61.8
+    },
+    "rs_neon": {
+     "iou": 0.9,
+     "colorDiff": 73.5
+    },
+    "rs_bollard": {
+     "iou": 0.923,
+     "colorDiff": 120.1
+    },
+    "rs_building": {
+     "iou": 0.895,
+     "colorDiff": 39.3
+    },
+    "rs_building_b": {
+     "iou": 0.729,
+     "colorDiff": 50.5
+    },
+    "gate_checkpoint": {
+     "iou": 0.793,
+     "colorDiff": 73.2
+    },
+    "gate_goal": {
+     "iou": 0.793,
+     "colorDiff": 110
+    },
+    "gate_start": {
+     "iou": 0.793,
+     "colorDiff": 66.2
+    },
+    "bg_sky_1": {
+     "iou": 1,
+     "colorDiff": 22.6
+    },
+    "bg_sky_2": {
+     "iou": 1,
+     "colorDiff": 25.8
+    },
+    "bg_sky_3": {
+     "iou": 1,
+     "colorDiff": 18.9
+    },
+    "bg_far_1": {
+     "iou": 0.562,
+     "colorDiff": 62
+    },
+    "bg_far_2": {
+     "iou": 0.7,
+     "colorDiff": 28.5
+    },
+    "bg_far_3": {
+     "iou": 0.713,
+     "colorDiff": 24.1
+    },
+    "bg_near_1": {
+     "iou": 0.176,
+     "colorDiff": 20.3
+    },
+    "bg_near_2": {
+     "iou": 0.548,
+     "colorDiff": 21.7
+    },
+    "bg_near_3": {
+     "iou": 0.567,
+     "colorDiff": 12.8
+    },
+    "fx_smoke": {
+     "iou": 0.6,
+     "colorDiff": 58.5
+    },
+    "fx_dust": {
+     "iou": 0.615,
+     "colorDiff": 70.2
+    },
+    "fx_spark": {
+     "iou": 0.6,
+     "colorDiff": 27
+    }
+   }
+  },
+  "xhigh|fable-high": {
+   "n": 34,
+   "iouMedian": 0.766,
+   "iouMax": 1,
+   "colorDiffMedian": 47.4,
+   "colorDiffMin": 7,
+   "highIou": [
+    "rs_building(0.964/47.4)",
+    "bg_sky_1(1/29.2)",
+    "bg_sky_2(1/19.2)",
+    "bg_sky_3(1/19.1)"
+   ],
+   "per": {
+    "car_player": {
+     "iou": 0.795,
+     "colorDiff": 42.7
+    },
+    "car_player_brake": {
+     "iou": 0.795,
+     "colorDiff": 51.1
+    },
+    "car_player_wheel": {
+     "iou": 0.795,
+     "colorDiff": 42.7
+    },
+    "car_sedan": {
+     "iou": 0.711,
+     "colorDiff": 73.4
+    },
+    "car_truck": {
+     "iou": 0.766,
+     "colorDiff": 87.2
+    },
+    "car_sports": {
+     "iou": 0.651,
+     "colorDiff": 61.5
+    },
+    "rs_palm": {
+     "iou": 0.623,
+     "colorDiff": 38
+    },
+    "rs_rock": {
+     "iou": 0.874,
+     "colorDiff": 31.1
+    },
+    "rs_shrub": {
+     "iou": 0.732,
+     "colorDiff": 45.6
+    },
+    "rs_billboard": {
+     "iou": 0.815,
+     "colorDiff": 66.1
+    },
+    "rs_pine": {
+     "iou": 0.78,
+     "colorDiff": 24.4
+    },
+    "rs_boulder": {
+     "iou": 0.841,
+     "colorDiff": 31.6
+    },
+    "rs_fern": {
+     "iou": 0.381,
+     "colorDiff": 53
+    },
+    "rs_signpost": {
+     "iou": 0.826,
+     "colorDiff": 51.3
+    },
+    "rs_lamp": {
+     "iou": 0.731,
+     "colorDiff": 49.7
+    },
+    "rs_neon": {
+     "iou": 0.838,
+     "colorDiff": 75.8
+    },
+    "rs_bollard": {
+     "iou": 0.823,
+     "colorDiff": 85.9
+    },
+    "rs_building": {
+     "iou": 0.964,
+     "colorDiff": 47.4
+    },
+    "rs_building_b": {
+     "iou": 0.835,
+     "colorDiff": 56.1
+    },
+    "gate_checkpoint": {
+     "iou": 0.761,
+     "colorDiff": 92.8
+    },
+    "gate_goal": {
+     "iou": 0.761,
+     "colorDiff": 111.4
+    },
+    "gate_start": {
+     "iou": 0.758,
+     "colorDiff": 81
+    },
+    "bg_sky_1": {
+     "iou": 1,
+     "colorDiff": 29.2
+    },
+    "bg_sky_2": {
+     "iou": 1,
+     "colorDiff": 19.2
+    },
+    "bg_sky_3": {
+     "iou": 1,
+     "colorDiff": 19.1
+    },
+    "bg_far_1": {
+     "iou": 0.757,
+     "colorDiff": 74
+    },
+    "bg_far_2": {
+     "iou": 0.786,
+     "colorDiff": 31.7
+    },
+    "bg_far_3": {
+     "iou": 0.723,
+     "colorDiff": 20.6
+    },
+    "bg_near_1": {
+     "iou": 0.184,
+     "colorDiff": 82.5
+    },
+    "bg_near_2": {
+     "iou": 0.556,
+     "colorDiff": 21.2
+    },
+    "bg_near_3": {
+     "iou": 0.534,
+     "colorDiff": 20.1
+    },
+    "fx_smoke": {
+     "iou": 0.643,
+     "colorDiff": 21
+    },
+    "fx_dust": {
+     "iou": 0.571,
+     "colorDiff": 44.3
+    },
+    "fx_spark": {
+     "iou": 0.6,
+     "colorDiff": 7
+    }
+   }
+  },
+  "max|opus-medium": {
+   "n": 34,
+   "iouMedian": 0.82,
+   "iouMax": 1,
+   "colorDiffMedian": 52.3,
+   "colorDiffMin": 12,
+   "highIou": [
+    "car_sedan(0.959/52.3)",
+    "car_truck(0.918/47.1)",
+    "rs_bollard(0.923/95.3)",
+    "bg_sky_1(1/22)",
+    "bg_sky_2(1/20.8)",
+    "bg_sky_3(1/12.8)"
+   ],
+   "per": {
+    "car_player": {
+     "iou": 0.833,
+     "colorDiff": 57
+    },
+    "car_player_brake": {
+     "iou": 0.833,
+     "colorDiff": 59.4
+    },
+    "car_player_wheel": {
+     "iou": 0.833,
+     "colorDiff": 57.2
+    },
+    "car_sedan": {
+     "iou": 0.959,
+     "colorDiff": 52.3
+    },
+    "car_truck": {
+     "iou": 0.918,
+     "colorDiff": 47.1
+    },
+    "car_sports": {
+     "iou": 0.851,
+     "colorDiff": 60.9
+    },
+    "rs_palm": {
+     "iou": 0.446,
+     "colorDiff": 46.4
+    },
+    "rs_rock": {
+     "iou": 0.819,
+     "colorDiff": 49.6
+    },
+    "rs_shrub": {
+     "iou": 0.844,
+     "colorDiff": 39.7
+    },
+    "rs_pine": {
+     "iou": 0.725,
+     "colorDiff": 46.2
+    },
+    "rs_boulder": {
+     "iou": 0.847,
+     "colorDiff": 49.2
+    },
+    "rs_fern": {
+     "iou": 0.403,
+     "colorDiff": 52.9
+    },
+    "rs_lamp": {
+     "iou": 0.121,
+     "colorDiff": 77.9
+    },
+    "rs_neon": {
+     "iou": 0.792,
+     "colorDiff": 72.4
+    },
+    "rs_building": {
+     "iou": 0.82,
+     "colorDiff": 41.6
+    },
+    "rs_building_b": {
+     "iou": 0.71,
+     "colorDiff": 49.1
+    },
+    "rs_billboard": {
+     "iou": 0.85,
+     "colorDiff": 64.1
+    },
+    "rs_signpost": {
+     "iou": 0.451,
+     "colorDiff": 96.2
+    },
+    "rs_bollard": {
+     "iou": 0.923,
+     "colorDiff": 95.3
+    },
+    "gate_checkpoint": {
+     "iou": 0.833,
+     "colorDiff": 68.7
+    },
+    "gate_goal": {
+     "iou": 0.833,
+     "colorDiff": 101.2
+    },
+    "gate_start": {
+     "iou": 0.833,
+     "colorDiff": 53.6
+    },
+    "bg_far_1": {
+     "iou": 0.625,
+     "colorDiff": 56.7
+    },
+    "bg_far_2": {
+     "iou": 0.707,
+     "colorDiff": 26.5
+    },
+    "bg_far_3": {
+     "iou": 0.748,
+     "colorDiff": 19.9
+    },
+    "bg_near_1": {
+     "iou": 0.18,
+     "colorDiff": 39.6
+    },
+    "bg_near_2": {
+     "iou": 0.613,
+     "colorDiff": 27.5
+    },
+    "bg_near_3": {
+     "iou": 0.55,
+     "colorDiff": 12
+    },
+    "bg_sky_1": {
+     "iou": 1,
+     "colorDiff": 22
+    },
+    "bg_sky_2": {
+     "iou": 1,
+     "colorDiff": 20.8
+    },
+    "bg_sky_3": {
+     "iou": 1,
+     "colorDiff": 12.8
+    },
+    "fx_smoke": {
+     "iou": 0.581,
+     "colorDiff": 60.9
+    },
+    "fx_dust": {
+     "iou": 0.5,
+     "colorDiff": 81
+    },
+    "fx_spark": {
+     "iou": 0.6,
+     "colorDiff": 15.6
+    }
+   }
+  },
+  "max|fable-high": {
+   "n": 34,
+   "iouMedian": 0.744,
+   "iouMax": 1,
+   "colorDiffMedian": 52.5,
+   "colorDiffMin": 12.2,
+   "highIou": [
+    "rs_boulder(0.916/41.4)",
+    "gate_start(0.959/69.9)",
+    "bg_sky_1(1/26.9)",
+    "bg_sky_2(1/12.2)",
+    "bg_sky_3(1/16.7)"
+   ],
+   "per": {
+    "car_player": {
+     "iou": 0.722,
+     "colorDiff": 53.7
+    },
+    "car_player_brake": {
+     "iou": 0.722,
+     "colorDiff": 58.4
+    },
+    "car_player_wheel": {
+     "iou": 0.722,
+     "colorDiff": 53.8
+    },
+    "car_sedan": {
+     "iou": 0.676,
+     "colorDiff": 73.7
+    },
+    "car_truck": {
+     "iou": 0.772,
+     "colorDiff": 99.6
+    },
+    "car_sports": {
+     "iou": 0.709,
+     "colorDiff": 59.9
+    },
+    "rs_palm": {
+     "iou": 0.517,
+     "colorDiff": 34.4
+    },
+    "rs_rock": {
+     "iou": 0.812,
+     "colorDiff": 43.2
+    },
+    "rs_shrub": {
+     "iou": 0.744,
+     "colorDiff": 42.9
+    },
+    "rs_pine": {
+     "iou": 0.863,
+     "colorDiff": 20.9
+    },
+    "rs_boulder": {
+     "iou": 0.916,
+     "colorDiff": 41.4
+    },
+    "rs_fern": {
+     "iou": 0.636,
+     "colorDiff": 44.1
+    },
+    "rs_lamp": {
+     "iou": 0.094,
+     "colorDiff": 69.6
+    },
+    "rs_neon": {
+     "iou": 0.781,
+     "colorDiff": 77.4
+    },
+    "rs_building": {
+     "iou": 0.871,
+     "colorDiff": 50.1
+    },
+    "rs_building_b": {
+     "iou": 0.814,
+     "colorDiff": 52.5
+    },
+    "rs_billboard": {
+     "iou": 0.872,
+     "colorDiff": 56.5
+    },
+    "rs_signpost": {
+     "iou": 0.658,
+     "colorDiff": 88.5
+    },
+    "rs_bollard": {
+     "iou": 0.782,
+     "colorDiff": 81.8
+    },
+    "gate_checkpoint": {
+     "iou": 0.82,
+     "colorDiff": 80.2
+    },
+    "gate_goal": {
+     "iou": 0.82,
+     "colorDiff": 110.3
+    },
+    "gate_start": {
+     "iou": 0.959,
+     "colorDiff": 69.9
+    },
+    "bg_far_1": {
+     "iou": 0.644,
+     "colorDiff": 60
+    },
+    "bg_far_2": {
+     "iou": 0.748,
+     "colorDiff": 32.4
+    },
+    "bg_far_3": {
+     "iou": 0.622,
+     "colorDiff": 22.5
+    },
+    "bg_near_1": {
+     "iou": 0.235,
+     "colorDiff": 72.4
+    },
+    "bg_near_2": {
+     "iou": 0.651,
+     "colorDiff": 27.4
+    },
+    "bg_near_3": {
+     "iou": 0.58,
+     "colorDiff": 19.2
+    },
+    "bg_sky_1": {
+     "iou": 1,
+     "colorDiff": 26.9
+    },
+    "bg_sky_2": {
+     "iou": 1,
+     "colorDiff": 12.2
+    },
+    "bg_sky_3": {
+     "iou": 1,
+     "colorDiff": 16.7
+    },
+    "fx_smoke": {
+     "iou": 0.667,
+     "colorDiff": 31.5
+    },
+    "fx_dust": {
+     "iou": 0.696,
+     "colorDiff": 21.2
+    },
+    "fx_spark": {
+     "iou": 0.6,
+     "colorDiff": 37.3
+    }
+   }
+  },
+  "opus-medium|fable-high": {
+   "n": 34,
+   "iouMedian": 0.75,
+   "iouMax": 1,
+   "colorDiffMedian": 46.9,
+   "colorDiffMin": 9.8,
+   "highIou": [
+    "rs_billboard(0.913/59)",
+    "rs_boulder(0.907/35)",
+    "rs_building(0.911/45.5)",
+    "bg_sky_1(1/19.1)",
+    "bg_sky_2(1/15.1)",
+    "bg_sky_3(1/9.8)",
+    "fx_spark(1/26.1)"
+   ],
+   "per": {
+    "car_player": {
+     "iou": 0.685,
+     "colorDiff": 52.5
+    },
+    "car_player_brake": {
+     "iou": 0.685,
+     "colorDiff": 54.8
+    },
+    "car_player_wheel": {
+     "iou": 0.685,
+     "colorDiff": 52.5
+    },
+    "car_sedan": {
+     "iou": 0.684,
+     "colorDiff": 81.1
+    },
+    "car_truck": {
+     "iou": 0.762,
+     "colorDiff": 100.4
+    },
+    "car_sports": {
+     "iou": 0.696,
+     "colorDiff": 58.1
+    },
+    "rs_palm": {
+     "iou": 0.404,
+     "colorDiff": 44.1
+    },
+    "rs_rock": {
+     "iou": 0.797,
+     "colorDiff": 46.3
+    },
+    "rs_shrub": {
+     "iou": 0.698,
+     "colorDiff": 35.5
+    },
+    "rs_billboard": {
+     "iou": 0.913,
+     "colorDiff": 59
+    },
+    "rs_pine": {
+     "iou": 0.727,
+     "colorDiff": 42.4
+    },
+    "rs_boulder": {
+     "iou": 0.907,
+     "colorDiff": 35
+    },
+    "rs_fern": {
+     "iou": 0.291,
+     "colorDiff": 45.6
+    },
+    "rs_signpost": {
+     "iou": 0.677,
+     "colorDiff": 57
+    },
+    "rs_lamp": {
+     "iou": 0.407,
+     "colorDiff": 46.1
+    },
+    "rs_neon": {
+     "iou": 0.855,
+     "colorDiff": 76.8
+    },
+    "rs_building": {
+     "iou": 0.911,
+     "colorDiff": 45.5
+    },
+    "rs_building_b": {
+     "iou": 0.872,
+     "colorDiff": 46.9
+    },
+    "rs_bollard": {
+     "iou": 0.787,
+     "colorDiff": 93.8
+    },
+    "gate_checkpoint": {
+     "iou": 0.874,
+     "colorDiff": 81.7
+    },
+    "gate_goal": {
+     "iou": 0.874,
+     "colorDiff": 100.2
+    },
+    "gate_start": {
+     "iou": 0.816,
+     "colorDiff": 66
+    },
+    "bg_sky_1": {
+     "iou": 1,
+     "colorDiff": 19.1
+    },
+    "bg_sky_2": {
+     "iou": 1,
+     "colorDiff": 15.1
+    },
+    "bg_sky_3": {
+     "iou": 1,
+     "colorDiff": 9.8
+    },
+    "bg_far_1": {
+     "iou": 0.496,
+     "colorDiff": 37
+    },
+    "bg_far_2": {
+     "iou": 0.758,
+     "colorDiff": 13.5
+    },
+    "bg_far_3": {
+     "iou": 0.693,
+     "colorDiff": 17.5
+    },
+    "bg_near_1": {
+     "iou": 0.161,
+     "colorDiff": 89.5
+    },
+    "bg_near_2": {
+     "iou": 0.554,
+     "colorDiff": 24.9
+    },
+    "bg_near_3": {
+     "iou": 0.684,
+     "colorDiff": 18.5
+    },
+    "fx_smoke": {
+     "iou": 0.75,
+     "colorDiff": 80.2
+    },
+    "fx_dust": {
+     "iou": 0.429,
+     "colorDiff": 88
+    },
+    "fx_spark": {
+     "iou": 1,
+     "colorDiff": 26.1
+    }
+   }
+  }
+ },
+ "font": {
+  "low|medium": {
+   "glyphsA": 51,
+   "glyphsB": 51,
+   "commonMasks": 47,
+   "sameIndex": 15
+  },
+  "low|high": {
+   "glyphsA": 51,
+   "glyphsB": 51,
+   "commonMasks": 42,
+   "sameIndex": 12
+  },
+  "low|xhigh": {
+   "glyphsA": 51,
+   "glyphsB": 51,
+   "commonMasks": 49,
+   "sameIndex": 15
+  },
+  "low|max": {
+   "glyphsA": 51,
+   "glyphsB": 51,
+   "commonMasks": 48,
+   "sameIndex": 48
+  },
+  "low|opus-medium": {
+   "glyphsA": 51,
+   "glyphsB": 51,
+   "commonMasks": 48,
+   "sameIndex": 48
+  },
+  "low|fable-high": {
+   "glyphsA": 51,
+   "glyphsB": 51,
+   "commonMasks": 44,
+   "sameIndex": 15
+  },
+  "medium|high": {
+   "glyphsA": 51,
+   "glyphsB": 51,
+   "commonMasks": 45,
+   "sameIndex": 45
+  },
+  "medium|xhigh": {
+   "glyphsA": 51,
+   "glyphsB": 51,
+   "commonMasks": 47,
+   "sameIndex": 47
+  },
+  "medium|max": {
+   "glyphsA": 51,
+   "glyphsB": 51,
+   "commonMasks": 48,
+   "sameIndex": 15
+  },
+  "medium|opus-medium": {
+   "glyphsA": 51,
+   "glyphsB": 51,
+   "commonMasks": 46,
+   "sameIndex": 15
+  },
+  "medium|fable-high": {
+   "glyphsA": 51,
+   "glyphsB": 51,
+   "commonMasks": 47,
+   "sameIndex": 47
+  },
+  "high|xhigh": {
+   "glyphsA": 51,
+   "glyphsB": 51,
+   "commonMasks": 42,
+   "sameIndex": 42
+  },
+  "high|max": {
+   "glyphsA": 51,
+   "glyphsB": 51,
+   "commonMasks": 42,
+   "sameIndex": 12
+  },
+  "high|opus-medium": {
+   "glyphsA": 51,
+   "glyphsB": 51,
+   "commonMasks": 41,
+   "sameIndex": 12
+  },
+  "high|fable-high": {
+   "glyphsA": 51,
+   "glyphsB": 51,
+   "commonMasks": 46,
+   "sameIndex": 46
+  },
+  "xhigh|max": {
+   "glyphsA": 51,
+   "glyphsB": 51,
+   "commonMasks": 49,
+   "sameIndex": 15
+  },
+  "xhigh|opus-medium": {
+   "glyphsA": 51,
+   "glyphsB": 51,
+   "commonMasks": 48,
+   "sameIndex": 15
+  },
+  "xhigh|fable-high": {
+   "glyphsA": 51,
+   "glyphsB": 51,
+   "commonMasks": 44,
+   "sameIndex": 44
+  },
+  "max|opus-medium": {
+   "glyphsA": 51,
+   "glyphsB": 51,
+   "commonMasks": 47,
+   "sameIndex": 47
+  },
+  "max|fable-high": {
+   "glyphsA": 51,
+   "glyphsB": 51,
+   "commonMasks": 44,
+   "sameIndex": 15
+  },
+  "opus-medium|fable-high": {
+   "glyphsA": 51,
+   "glyphsB": 51,
+   "commonMasks": 43,
+   "sameIndex": 15
+  }
+ },
+ "glyphs": {
+  "low": [
+   ".###.#..###.#.##.#.###..##...#.###.",
+   "..#...##....#....#....#....#...###.",
+   ".###.#...#....#...#...#...#...#####",
+   "####.....#....#.###.....#....#####.",
+   "...#...##..#.#.#..#.#####...#....#.",
+   "######....####.....#....##...#.###.",
+   "..##..#...#....####.#...##...#.###.",
+   "#####....#...#...#...#....#....#...",
+   ".###.#...##...#.###.#...##...#.###.",
+   ".###.#...##...#.####....#...#..##..",
+   ".###.#...##...#######...##...##...#",
+   "####.#...##...#####.#...##...#####.",
+   ".###.#...##....#....#....#...#.###.",
+   "####.#...##...##...##...##...#####.",
+   "######....#....####.#....#....#####",
+   "######....#....####.#....#....#....",
+   ".###.#...##....#.####...##...#.####",
+   "#...##...##...#######...##...##...#",
+   ".###...#....#....#....#....#...###.",
+   "..###...#....#....#....#.#..#..##..",
+   "#...##..#.#.#..##...#.#..#..#.#...#",
+   "#....#....#....#....#....#....#####",
+   "#...###.###.#.##.#.##...##...##...#",
+   "#...###..##.#.##..###...##...##...#",
+   ".###.#...##...##...##...##...#.###.",
+   "####.#...##...#####.#....#....#....",
+   ".###.#...##...##...##.#.##..#..##.#",
+   "####.#...##...#####.#.#..#..#.#...#",
+   ".#####....#.....###.....#....#####.",
+   "#####..#....#....#....#....#....#..",
+   "#...##...##...##...##...##...#.###.",
+   "#...##...##...##...##...#.#.#...#..",
+   "#...##...##...##.#.##.#.###.###...#",
+   "#...##...#.#.#...#...#.#.#...##...#",
+   "#...##...#.#.#...#....#....#....#..",
+   "#####....#...#...#...#...#....#####",
+   "..........................##...##..",
+   ".....................##....#...#...",
+   "......##...##........##...##.......",
+   "..#....#....#....#....#.........#..",
+   ".###.#...#....#...#...#.........#..",
+   ".......#....#..#####..#....#.......",
+   "...............#####...............",
+   "....#....#...#...#...#...#....#....",
+   "##..###..#...#...#...#...#..###..##",
+   "..#....#...#.......................",
+   ".###..#....#....#....#....#....###.",
+   ".###....#....#....#....#....#..###.",
+   "...#...#...#...#.....#.....#.....#.",
+   ".#.....#.....#.....#...#...#...#...",
+   "..........#####.....#####..........",
+   "..................................."
+  ],
+  "medium": [
+   ".###.#...##...#######...##...##...#",
+   "####.#...##...#####.#...##...#####.",
+   ".###.#...##....#....#....#...#.###.",
+   "####.#...##...##...##...##...#####.",
+   "######....#....####.#....#....#####",
+   "######....#....####.#....#....#....",
+   ".###.#...##....#.####...##...#.###.",
+   "#...##...##...#######...##...##...#",
+   ".###...#....#....#....#....#...###.",
+   "..###...#....#....#....#.#..#..##..",
+   "#...##..#.#.#..##...#.#..#..#.#...#",
+   "#....#....#....#....#....#....#####",
+   "#...###.###.#.##.#.##...##...##...#",
+   "#...###..##.#.##..###...##...##...#",
+   ".###.#...##...##...##...##...#.###.",
+   "####.#...##...#####.#....#....#....",
+   ".###.#...##...##...##.#.##..#..##.#",
+   "####.#...##...#####.#.#..#..#.#...#",
+   ".#####....#.....###.....#....#####.",
+   "#####..#....#....#....#....#....#..",
+   "#...##...##...##...##...##...#.###.",
+   "#...##...##...##...##...#.#.#...#..",
+   "#...##...##...##.#.##.#.###.###...#",
+   "#...##...#.#.#...#...#.#.#...##...#",
+   "#...##...#.#.#...#....#....#....#..",
+   "#####....#...#...#...#...#....#####",
+   ".###.#...##..###.#.###..##...#.###.",
+   "..#...##....#....#....#....#...###.",
+   ".###.#...#....#...#...#...#...#####",
+   "####.....#....#.###.....#....#####.",
+   "...#...##..#.#.#..#.#####...#....#.",
+   "######....####.....#....##...#.###.",
+   ".###.#....#....####.#...##...#.###.",
+   "#####....#...#...#...#....#....#...",
+   ".###.#...##...#.###.#...##...#.###.",
+   ".###.#...##...#.####....#....#.###.",
+   "..........................##...##..",
+   ".....................##....#...#...",
+   "......##...##........##...##.......",
+   "..#....#....#....#....#.........#..",
+   ".###.#...#....#...#...#.........#..",
+   ".......#....#..#####..#....#.......",
+   "...............#####...............",
+   "....#....#...#...#...#...#....#....",
+   "##..###..#...#...#...#...#..###..##",
+   "..#....#...#.......................",
+   ".###..#....#....#....#....#....###.",
+   ".###....#....#....#....#....#..###.",
+   "...#...#...#...#.....#.....#.....#.",
+   ".#.....#.....#.....#...#...#...#...",
+   "..........#####.....#####..........",
+   "..................................."
+  ],
+  "high": [
+   ".###.#...##...#######...##...##...#",
+   "####.#...##...#####.#...##...#####.",
+   ".#####....#....#....#....#.....####",
+   "####.#...##...##...##...##...#####.",
+   "######....#....####.#....#....#####",
+   "######....#....####.#....#....#....",
+   ".#####....#....#..###...##...#.###.",
+   "#...##...##...#######...##...##...#",
+   "#####..#....#....#....#....#..#####",
+   "..###...#....#....#....#.#..#..##..",
+   "#...##..#.#.#..##...#.#..#..#.#...#",
+   "#....#....#....#....#....#....#####",
+   "#...###.###.#.##.#.##...##...##...#",
+   "#...###..##.#.##..###...##...##...#",
+   ".###.#...##...##...##...##...#.###.",
+   "####.#...##...#####.#....#....#....",
+   ".###.#...##...##...##.#.##..#..##.#",
+   "####.#...##...#####.#.#..#..#.#...#",
+   ".#####....#.....###.....#....#####.",
+   "#####..#....#....#....#....#....#..",
+   "#...##...##...##...##...##...#.###.",
+   "#...##...##...##...##...#.#.#...#..",
+   "#...##...##...##.#.##.#.###.###...#",
+   "#...##...#.#.#...#...#.#.#...##...#",
+   "#...##...#.#.#...#....#....#....#..",
+   "#####....#...#...#...#...#....#####",
+   ".###.#...##..###.#.###..##...#.###.",
+   "..#...##....#....#....#....#...###.",
+   ".###.#...#....#...#...#...#...#####",
+   "####.....#....#.###.....#....#####.",
+   "...#...##..#.#.#..#.#####...#....#.",
+   "######....####.....#....##...#.###.",
+   ".###.#....#....####.#...##...#.###.",
+   "#####....#...#...#...#....#....#...",
+   ".###.#...##...#.###.#...##...#.###.",
+   ".###.#...##...#.####....#....#.###.",
+   "................................#..",
+   "......................#....#...#...",
+   ".......#....#.........#....#.......",
+   "..#....#....#....#....#.........#..",
+   ".###.#...#....#...#...#.........#..",
+   ".......#....#..#####..#....#.......",
+   "...............#####...............",
+   "....#....#...#...#...#...#....#....",
+   "##..###..#...#...#...#...#..###..##",
+   "..#....#...#.......................",
+   ".###..#....#....#....#....#....###.",
+   ".###....#....#....#....#....#..###.",
+   "...#...#...#...#.....#.....#.....#.",
+   ".#.....#.....#.....#...#...#...#...",
+   "..........#####.....#####..........",
+   "..................................."
+  ],
+  "xhigh": [
+   ".###.#...##...#######...##...##...#",
+   "####.#...##...#####.#...##...#####.",
+   ".###.#...##....#....#....#...#.###.",
+   "####.#...##...##...##...##...#####.",
+   "######....#....####.#....#....#####",
+   "######....#....####.#....#....#....",
+   ".###.#...##....#.####...##...#.####",
+   "#...##...##...#######...##...##...#",
+   ".###...#....#....#....#....#...###.",
+   "..###...#....#....#....#.#..#..##..",
+   "#...##..#.#.#..##...#.#..#..#.#...#",
+   "#....#....#....#....#....#....#####",
+   "#...###.###.#.##.#.##...##...##...#",
+   "#...###..##.#.##..###...##...##...#",
+   ".###.#...##...##...##...##...#.###.",
+   "####.#...##...#####.#....#....#....",
+   ".###.#...##...##...##.#.##..#..##.#",
+   "####.#...##...#####.#.#..#..#.#...#",
+   ".#####....#.....###.....#....#####.",
+   "#####..#....#....#....#....#....#..",
+   "#...##...##...##...##...##...#.###.",
+   "#...##...##...##...##...#.#.#...#..",
+   "#...##...##...##.#.##.#.###.###...#",
+   "#...##...#.#.#...#...#.#.#...##...#",
+   "#...##...#.#.#...#....#....#....#..",
+   "#####....#...#...#...#...#....#####",
+   ".###.#...##..###.#.###..##...#.###.",
+   "..#...##....#....#....#....#...###.",
+   ".###.#...#....#...#...#...#...#####",
+   ".###.#...#....#..##.....##...#.###.",
+   "...#...##..#.#.#..#.#####...#....#.",
+   "######....####.....#....##...#.###.",
+   "..##..#...#....####.#...##...#.###.",
+   "#####....#...#...#...#....#....#...",
+   ".###.#...##...#.###.#...##...#.###.",
+   ".###.#...##...#.####....#...#..##..",
+   "..........................##...##..",
+   ".....................##....#...#...",
+   "......##...##........##...##.......",
+   "..#....#....#....#....#.........#..",
+   ".###.#...#....#...#...#.........#..",
+   ".......#....#..#####..#....#.......",
+   "...............#####...............",
+   "....#....#...#...#...#...#....#....",
+   "##..###..#...#...#...#...#..###..##",
+   "..#....#...#.......................",
+   ".###..#....#....#....#....#....###.",
+   ".###....#....#....#....#....#..###.",
+   "...#...#...#...#.....#.....#.....#.",
+   ".#.....#.....#.....#...#...#...#...",
+   "..........#####.....#####..........",
+   "..................................."
+  ],
+  "max": [
+   ".###.#...##..###.#.###..##...#.###.",
+   "..#...##....#....#....#....#...###.",
+   ".###.#...#....#...#...#...#...#####",
+   "#####...#...#.....#.....##...#.###.",
+   "...#...##..#.#.#..#.#####...#....#.",
+   "######....####.....#....##...#.###.",
+   "..##..#...#....####.#...##...#.###.",
+   "#####....#...#...#...#....#....#...",
+   ".###.#...##...#.###.#...##...#.###.",
+   ".###.#...##...#.####....#...#..##..",
+   ".###.#...##...#######...##...##...#",
+   "####.#...##...#####.#...##...#####.",
+   ".###.#...##....#....#....#...#.###.",
+   "####.#...##...##...##...##...#####.",
+   "######....#....####.#....#....#####",
+   "######....#....####.#....#....#....",
+   ".###.#...##....#.####...##...#.###.",
+   "#...##...##...#######...##...##...#",
+   ".###...#....#....#....#....#...###.",
+   "..###...#....#....#....#.#..#..##..",
+   "#...##..#.#.#..##...#.#..#..#.#...#",
+   "#....#....#....#....#....#....#####",
+   "#...###.###.#.##.#.##...##...##...#",
+   "#...###..##.#.##..###...##...##...#",
+   ".###.#...##...##...##...##...#.###.",
+   "####.#...##...#####.#....#....#....",
+   ".###.#...##...##...##.#.##..#..##.#",
+   "####.#...##...#####.#.#..#..#.#...#",
+   ".#####....#.....###.....#....#####.",
+   "#####..#....#....#....#....#....#..",
+   "#...##...##...##...##...##...#.###.",
+   "#...##...##...##...##...#.#.#...#..",
+   "#...##...##...##.#.##.#.###.###...#",
+   "#...##...#.#.#...#...#.#.#...##...#",
+   "#...##...#.#.#...#....#....#....#..",
+   "#####....#...#...#...#...#....#####",
+   "..........................##...##..",
+   ".....................##....#...#...",
+   "......##...##........##...##.......",
+   "..#....#....#....#....#.........#..",
+   ".###.#...#....#...#...#.........#..",
+   ".......#....#..#####..#....#.......",
+   "...............#####...............",
+   "....#....#...#...#...#...#....#....",
+   "##..###..#...#...#...#...#..###..##",
+   "..#....#...#.......................",
+   ".###..#....#....#....#....#....###.",
+   ".###....#....#....#....#....#..###.",
+   "...#...#...#...#.....#.....#.....#.",
+   ".#.....#.....#.....#...#...#...#...",
+   "..........#####.....#####..........",
+   "..................................."
+  ],
+  "opus-medium": [
+   ".###.#...##..###.#.###..##...#.###.",
+   "..#...##....#....#....#....#...###.",
+   ".###.#...#....#...#...#...#...#####",
+   "####.....#....#.###.....#....#####.",
+   "...#...##..#.#.#..#.#####...#....#.",
+   "######....####.....#....##...#.###.",
+   "..##..#...#....####.#...##...#.###.",
+   "#####....#...#...#...#....#....#...",
+   ".###.#...##...#.###.#...##...#.###.",
+   ".###.#...##...#.####....#...#..##..",
+   ".###.#...##...#######...##...##...#",
+   "####.#...##...#####.#...##...#####.",
+   ".###.#...##....#....#....#...#.###.",
+   "####.#...##...##...##...##...#####.",
+   "######....#....####.#....#....#####",
+   "######....#....####.#....#....#....",
+   ".###.#...##....#.####...##...#.####",
+   "#...##...##...#######...##...##...#",
+   ".###...#....#....#....#....#...###.",
+   "..###...#....#....#....#.#..#..##..",
+   "#...##..#.#.#..##...#.#..#..#.#...#",
+   "#....#....#....#....#....#....#####",
+   "#...###.###.#.##.#.##...##...##...#",
+   "#...##...###..##.#.##..###...##...#",
+   ".###.#...##...##...##...##...#.###.",
+   "####.#...##...#####.#....#....#....",
+   ".###.#...##...##...##.#.##..#..##.#",
+   "####.#...##...#####.#.#..#..#.#...#",
+   ".#####....#.....###.....#....#####.",
+   "#####..#....#....#....#....#....#..",
+   "#...##...##...##...##...##...#.###.",
+   "#...##...##...##...##...#.#.#...#..",
+   "#...##...##...##.#.##.#.##.#.#.#.#.",
+   "#...##...#.#.#...#...#.#.#...##...#",
+   "#...##...#.#.#...#....#....#....#..",
+   "#####....#...#...#...#...#....#####",
+   "..........................##...##..",
+   ".....................##....#...#...",
+   "......##...##........##...##.......",
+   "..#....#....#....#....#.........#..",
+   ".###.#...#....#...#...#.........#..",
+   ".......#....#..#####..#....#.......",
+   "...............#####...............",
+   "....#....#...#...#...#...#....#....",
+   "##..###..#...#...#...#...#..###..##",
+   "..#....#...#.......................",
+   ".###..#....#....#....#....#....###.",
+   ".###....#....#....#....#....#..###.",
+   "...#...#...#...#.....#.....#.....#.",
+   ".#.....#.....#.....#...#...#...#...",
+   "..........#####.....#####..........",
+   "..................................."
+  ],
+  "fable-high": [
+   ".###.#...##...#######...##...##...#",
+   "####.#...##...#####.#...##...#####.",
+   ".#####....#....#....#....#.....####",
+   "####.#...##...##...##...##...#####.",
+   "######....#....####.#....#....#####",
+   "######....#....####.#....#....#....",
+   ".#####....#....#.####...##...#.####",
+   "#...##...##...#######...##...##...#",
+   "#####..#....#....#....#....#..#####",
+   "..###...#....#....#....#.#..#..##..",
+   "#...##..#.#.#..##...#.#..#..#.#...#",
+   "#....#....#....#....#....#....#####",
+   "#...###.###.#.##.#.##...##...##...#",
+   "#...###..##.#.##..###...##...##...#",
+   ".###.#...##...##...##...##...#.###.",
+   "####.#...##...#####.#....#....#....",
+   ".###.#...##...##...##.#.##..#..##.#",
+   "####.#...##...#####.#.#..#..#.#...#",
+   ".#####....#.....###.....#....#####.",
+   "#####..#....#....#....#....#....#..",
+   "#...##...##...##...##...##...#.###.",
+   "#...##...##...##...##...#.#.#...#..",
+   "#...##...##...##.#.##.#.###.###...#",
+   "#...##...#.#.#...#...#.#.#...##...#",
+   "#...##...#.#.#...#....#....#....#..",
+   "#####....#...#...#...#...#....#####",
+   ".###.#...##..###.#.###..##...#.###.",
+   "..#...##....#....#....#....#...###.",
+   ".###.#...#....#...#...#...#...#####",
+   "####.....#....#.###.....#....#####.",
+   "...#...##..#.#.#..#.#####...#....#.",
+   "######....#....####.....#....#####.",
+   ".###.#....#....####.#...##...#.###.",
+   "#####....#...#...#...#....#....#...",
+   ".###.#...##...#.###.#...##...#.###.",
+   ".###.#...##...#.####....#....#.###.",
+   "..........................##...##..",
+   ".....................##....#...#...",
+   "......##...##........##...##.......",
+   "..#....#....#....#....#.........#..",
+   ".###.#...#....#...#...#.........#..",
+   ".......#....#..#####..#....#.......",
+   "...............#####...............",
+   "....#....#...#...#...#...#....#....",
+   "##..###..#...#...#...#...#..###..##",
+   "..#....#...#.......................",
+   ".###..#....#....#....#....#....###.",
+   ".###....#....#....#....#....#..###.",
+   "...#...#...#...#.....#.....#.....#.",
+   ".#.....#.....#.....#...#...#...#...",
+   "..........#####.....#####..........",
+   "..................................."
+  ]
+ }
+}

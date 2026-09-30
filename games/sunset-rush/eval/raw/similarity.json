@@ -1,0 +1,901 @@
+{
+ "variants": [
+  "low",
+  "medium",
+  "high",
+  "xhigh",
+  "max",
+  "opus-medium",
+  "fable-high"
+ ],
+ "hashMatchesAcrossVariants": {},
+ "hashMatchesInvolvingRefs": {},
+ "fileCounts": {
+  "low": 6,
+  "medium": 8,
+  "high": 17,
+  "xhigh": 37,
+  "max": 51,
+  "opus-medium": 9,
+  "fable-high": 15
+ },
+ "lines": {
+  "low": {
+   "medium": 0.049,
+   "high": 0.0408,
+   "xhigh": 0.034,
+   "max": 0.034,
+   "opus-medium": 0.0571,
+   "fable-high": 0.034
+  },
+  "medium": {
+   "low": 0.0289,
+   "high": 0.0963,
+   "xhigh": 0.0658,
+   "max": 0.0851,
+   "opus-medium": 0.0674,
+   "fable-high": 0.0546
+  },
+  "high": {
+   "low": 0.0174,
+   "medium": 0.0696,
+   "xhigh": 0.0714,
+   "max": 0.0894,
+   "opus-medium": 0.0412,
+   "fable-high": 0.0702
+  },
+  "xhigh": {
+   "low": 0.0106,
+   "medium": 0.0349,
+   "high": 0.0523,
+   "max": 0.0834,
+   "opus-medium": 0.0323,
+   "fable-high": 0.0634
+  },
+  "max": {
+   "low": 0.0087,
+   "medium": 0.037,
+   "high": 0.0538,
+   "xhigh": 0.0684,
+   "opus-medium": 0.0223,
+   "fable-high": 0.0468
+  },
+  "opus-medium": {
+   "low": 0.03,
+   "medium": 0.06,
+   "high": 0.0508,
+   "xhigh": 0.0543,
+   "max": 0.0457,
+   "fable-high": 0.0472
+  },
+  "fable-high": {
+   "low": 0.0142,
+   "medium": 0.0386,
+   "high": 0.0688,
+   "xhigh": 0.0847,
+   "max": 0.0761,
+   "opus-medium": 0.0375
+  }
+ },
+ "grams": {
+  "low": {
+   "medium": 0.0727,
+   "high": 0.0634,
+   "xhigh": 0.0507,
+   "max": 0.0567,
+   "opus-medium": 0.0745,
+   "fable-high": 0.0562
+  },
+  "medium": {
+   "low": 0.0578,
+   "high": 0.0804,
+   "xhigh": 0.0605,
+   "max": 0.0671,
+   "opus-medium": 0.0764,
+   "fable-high": 0.0578
+  },
+  "high": {
+   "low": 0.0387,
+   "medium": 0.0618,
+   "xhigh": 0.0597,
+   "max": 0.0607,
+   "opus-medium": 0.0547,
+   "fable-high": 0.0682
+  },
+  "xhigh": {
+   "low": 0.0238,
+   "medium": 0.0358,
+   "high": 0.0459,
+   "max": 0.0772,
+   "opus-medium": 0.0539,
+   "fable-high": 0.0575
+  },
+  "max": {
+   "low": 0.0224,
+   "medium": 0.0334,
+   "high": 0.0393,
+   "xhigh": 0.065,
+   "opus-medium": 0.0298,
+   "fable-high": 0.0461
+  },
+  "opus-medium": {
+   "low": 0.05,
+   "medium": 0.0645,
+   "high": 0.0601,
+   "xhigh": 0.077,
+   "max": 0.0506,
+   "fable-high": 0.0591
+  },
+  "fable-high": {
+   "low": 0.0366,
+   "medium": 0.0474,
+   "high": 0.0728,
+   "xhigh": 0.0799,
+   "max": 0.0761,
+   "opus-medium": 0.0574
+  }
+ },
+ "colors": {
+  "low": {
+   "medium": 0.1015,
+   "high": 0.0406,
+   "xhigh": 0.0711,
+   "max": 0.0457,
+   "opus-medium": 0.0964,
+   "fable-high": 0.0406
+  },
+  "medium": {
+   "low": 0.0826,
+   "high": 0.0537,
+   "xhigh": 0.0496,
+   "max": 0.0413,
+   "opus-medium": 0.0992,
+   "fable-high": 0.0455
+  },
+  "high": {
+   "low": 0.0229,
+   "medium": 0.0372,
+   "xhigh": 0.0372,
+   "max": 0.0573,
+   "opus-medium": 0.0201,
+   "fable-high": 0.0229
+  },
+  "xhigh": {
+   "low": 0.042,
+   "medium": 0.036,
+   "high": 0.039,
+   "max": 0.0541,
+   "opus-medium": 0.0601,
+   "fable-high": 0.036
+  },
+  "max": {
+   "low": 0.022,
+   "medium": 0.0244,
+   "high": 0.0489,
+   "xhigh": 0.044,
+   "opus-medium": 0.0244,
+   "fable-high": 0.0342
+  },
+  "opus-medium": {
+   "low": 0.0551,
+   "medium": 0.0696,
+   "high": 0.0203,
+   "xhigh": 0.058,
+   "max": 0.029,
+   "fable-high": 0.0319
+  },
+  "fable-high": {
+   "low": 0.0261,
+   "medium": 0.0358,
+   "high": 0.0261,
+   "xhigh": 0.0391,
+   "max": 0.0456,
+   "opus-medium": 0.0358
+  }
+ },
+ "lits": {
+  "low": {
+   "medium": 0.0137,
+   "high": 0.0068,
+   "xhigh": 0.0,
+   "max": 0.0068,
+   "opus-medium": 0.0205,
+   "fable-high": 0.0
+  },
+  "medium": {
+   "low": 0.0172,
+   "high": 0.3966,
+   "xhigh": 0.0086,
+   "max": 0.4138,
+   "opus-medium": 0.0259,
+   "fable-high": 0.0086
+  },
+  "high": {
+   "low": 0.0089,
+   "medium": 0.4107,
+   "xhigh": 0.0089,
+   "max": 0.4018,
+   "opus-medium": 0.0179,
+   "fable-high": 0.0268
+  },
+  "xhigh": {
+   "low": 0.0,
+   "medium": 0.0217,
+   "high": 0.0217,
+   "max": 0.087,
+   "opus-medium": 0.0,
+   "fable-high": 0.0652
+  },
+  "max": {
+   "low": 0.0075,
+   "medium": 0.3609,
+   "high": 0.3383,
+   "xhigh": 0.0301,
+   "opus-medium": 0.0,
+   "fable-high": 0.015
+  },
+  "opus-medium": {
+   "low": 0.0385,
+   "medium": 0.0385,
+   "high": 0.0256,
+   "xhigh": 0.0,
+   "max": 0.0,
+   "fable-high": 0.0
+  },
+  "fable-high": {
+   "low": 0.0,
+   "medium": 0.0122,
+   "high": 0.0366,
+   "xhigh": 0.0366,
+   "max": 0.0244,
+   "opus-medium": 0.0
+  }
+ },
+ "gramsNoSpec": {
+  "low": {
+   "medium": 0.0546,
+   "high": 0.0453,
+   "xhigh": 0.0321,
+   "max": 0.0379,
+   "opus-medium": 0.0571,
+   "fable-high": 0.0378
+  },
+  "medium": {
+   "low": 0.0422,
+   "high": 0.0659,
+   "xhigh": 0.0455,
+   "max": 0.0523,
+   "opus-medium": 0.0621,
+   "fable-high": 0.0427
+  },
+  "high": {
+   "low": 0.0268,
+   "medium": 0.0504,
+   "xhigh": 0.0482,
+   "max": 0.0481,
+   "opus-medium": 0.0434,
+   "fable-high": 0.0566
+  },
+  "xhigh": {
+   "low": 0.0147,
+   "medium": 0.0269,
+   "high": 0.0373,
+   "max": 0.0692,
+   "opus-medium": 0.0451,
+   "fable-high": 0.0493
+  },
+  "max": {
+   "low": 0.0145,
+   "medium": 0.0259,
+   "high": 0.0311,
+   "xhigh": 0.0579,
+   "opus-medium": 0.0223,
+   "fable-high": 0.037
+  },
+  "opus-medium": {
+   "low": 0.0372,
+   "medium": 0.0522,
+   "high": 0.0477,
+   "xhigh": 0.0642,
+   "max": 0.038,
+   "fable-high": 0.0467
+  },
+  "fable-high": {
+   "low": 0.0246,
+   "medium": 0.0359,
+   "high": 0.0622,
+   "xhigh": 0.07,
+   "max": 0.0629,
+   "opus-medium": 0.0467
+  }
+ },
+ "linesNoSpec": {
+  "low": {
+   "medium": 0.049,
+   "high": 0.0408,
+   "xhigh": 0.034,
+   "max": 0.034,
+   "opus-medium": 0.0571,
+   "fable-high": 0.034
+  },
+  "medium": {
+   "low": 0.0291,
+   "high": 0.0883,
+   "xhigh": 0.0575,
+   "max": 0.0769,
+   "opus-medium": 0.064,
+   "fable-high": 0.0462
+  },
+  "high": {
+   "low": 0.0175,
+   "medium": 0.0637,
+   "xhigh": 0.0654,
+   "max": 0.0835,
+   "opus-medium": 0.0386,
+   "fable-high": 0.0643
+  },
+  "xhigh": {
+   "low": 0.0107,
+   "medium": 0.0303,
+   "high": 0.0479,
+   "max": 0.0791,
+   "opus-medium": 0.0303,
+   "fable-high": 0.059
+  },
+  "max": {
+   "low": 0.0088,
+   "medium": 0.0333,
+   "high": 0.0501,
+   "xhigh": 0.0648,
+   "opus-medium": 0.0207,
+   "fable-high": 0.0431
+  },
+  "opus-medium": {
+   "low": 0.0302,
+   "medium": 0.0568,
+   "high": 0.0474,
+   "xhigh": 0.051,
+   "max": 0.0424,
+   "fable-high": 0.0439
+  },
+  "fable-high": {
+   "low": 0.0145,
+   "medium": 0.033,
+   "high": 0.0637,
+   "xhigh": 0.0799,
+   "max": 0.0712,
+   "opus-medium": 0.0353
+  }
+ },
+ "summary": {
+  "lines": {
+   "existingPairsMax": 0.0963,
+   "existingPairsMedian": 0.0523,
+   "refToExistingMax": {
+    "opus-medium": [
+     0.06,
+     "medium"
+    ],
+    "fable-high": [
+     0.0847,
+     "xhigh"
+    ]
+   },
+   "refToRef": {
+    "opus-medium": 0.0472,
+    "fable-high": 0.0375
+   }
+  },
+  "grams": {
+   "existingPairsMax": 0.0804,
+   "existingPairsMedian": 0.0597,
+   "refToExistingMax": {
+    "opus-medium": [
+     0.077,
+     "xhigh"
+    ],
+    "fable-high": [
+     0.0799,
+     "xhigh"
+    ]
+   },
+   "refToRef": {
+    "opus-medium": 0.0591,
+    "fable-high": 0.0574
+   }
+  },
+  "colors": {
+   "existingPairsMax": 0.1015,
+   "existingPairsMedian": 0.044,
+   "refToExistingMax": {
+    "opus-medium": [
+     0.0696,
+     "medium"
+    ],
+    "fable-high": [
+     0.0456,
+     "max"
+    ]
+   },
+   "refToRef": {
+    "opus-medium": 0.0319,
+    "fable-high": 0.0358
+   }
+  },
+  "lits": {
+   "existingPairsMax": 0.4138,
+   "existingPairsMedian": 0.0217,
+   "refToExistingMax": {
+    "opus-medium": [
+     0.0385,
+     "medium"
+    ],
+    "fable-high": [
+     0.0366,
+     "xhigh"
+    ]
+   },
+   "refToRef": {
+    "opus-medium": 0.0,
+    "fable-high": 0.0
+   }
+  },
+  "gramsNoSpec": {
+   "existingPairsMax": 0.0692,
+   "existingPairsMedian": 0.0453,
+   "refToExistingMax": {
+    "opus-medium": [
+     0.0642,
+     "xhigh"
+    ],
+    "fable-high": [
+     0.07,
+     "xhigh"
+    ]
+   },
+   "refToRef": {
+    "opus-medium": 0.0467,
+    "fable-high": 0.0467
+   }
+  },
+  "linesNoSpec": {
+   "existingPairsMax": 0.0883,
+   "existingPairsMedian": 0.049,
+   "refToExistingMax": {
+    "opus-medium": [
+     0.0568,
+     "medium"
+    ],
+    "fable-high": [
+     0.0799,
+     "xhigh"
+    ]
+   },
+   "refToRef": {
+    "opus-medium": 0.0439,
+    "fable-high": 0.0353
+   }
+  }
+ },
+ "examples": {
+  "opus-medium": {
+   "low": {
+    "commonLinesNoSpec": 42,
+    "longestCommonLinesNoSpec": [
+     "solids: ['rs_lamp', 'rs_neon', 'rs_bollard'], decors: ['rs_building', 'rs_building_b'],",
+     "const seg = Math.round(60 + (k + 0.5) * spacing + (rng() - 0.5) * 0.6 * spacing);",
+     "if (Math.abs(S.playerX) > 1 && S.speed > OFFROAD_LIMIT) a -= OFFROAD_DECEL;",
+     "solids: ['rs_pine', 'rs_boulder', 'rs_signpost'], decors: ['rs_fern'],",
+     "solids: ['rs_palm', 'rs_rock', 'rs_billboard'], decors: ['rs_shrub'],",
+     "window.addEventListener('keyup', (e) => { keys[e.code] = false; });",
+     "if (S.invuln > 0 && Math.floor(S.invuln / 0.05) % 2 === 1) return;",
+     "if (S.scene !== 'countdown' && S.scene !== 'playing') return;",
+     "const AC = window.AudioContext || window.webkitAudioContext;",
+     "if (S.invuln > 0) S.invuln = Math.max(0, S.invuln - dt);",
+     "const params = new URLSearchParams(location.search);",
+     "<canvas id=\"game\" width=\"640\" height=\"360\"></canvas>"
+    ],
+    "commonColors": [
+     "#000000",
+     "#0a1e1c",
+     "#2a2a34",
+     "#4a2c18",
+     "#6a6a80",
+     "#dddddd",
+     "#e8e0ff",
+     "#e8ecff",
+     "#eeeeee",
+     "#f0c020",
+     "#ffb040",
+     "#ffb060",
+     "#ffd060",
+     "#ffd070",
+     "#ffe070",
+     "#fff080",
+     "#fff0a0",
+     "#fff0b0",
+     "#ffffff"
+    ],
+    "commonLits": [
+     " && S.scene !== ",
+     " : sc >= 23000 ? ",
+     " : sc >= 28000 ? "
+    ]
+   },
+   "medium": {
+    "commonLinesNoSpec": 79,
+    "longestCommonLinesNoSpec": [
+     "export const SOUND_IDS = ['bgm_1', 'bgm_2', 'bgm_3', 'sfx_engine', 'sfx_beep', 'sfx_go', 'sfx_checkpoint', 'sfx_crash', 'sfx_goal', 'sfx_timeup', 'sfx_menu', 'sfx_overtake', 'sfx_offroad', 'sfx_timewarn', 'jingle_title'];",
+     "solids: ['rs_lamp', 'rs_neon', 'rs_bollard'], decors: ['rs_building', 'rs_building_b'],",
+     "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, user-scalable=no\">",
+     "if (p1.camZ <= CAM_DEPTH || p2.screenY >= p1.screenY || p2.screenY >= maxY) continue;",
+     "const seg = Math.round(60 + (k + 0.5) * spacing + (rng() - 0.5) * 0.6 * spacing);",
+     "ctx.moveTo(x1, y1); ctx.lineTo(x2, y2); ctx.lineTo(x3, y3); ctx.lineTo(x4, y4);",
+     "if (fpsT >= 0.5) { fps = Math.round(fpsN / fpsT); fpsN = 0; fpsT = 0; }",
+     "solids: ['rs_pine', 'rs_boulder', 'rs_signpost'], decors: ['rs_fern'],",
+     "solids: ['rs_palm', 'rs_rock', 'rs_billboard'], decors: ['rs_shrub'],",
+     "body { display: flex; align-items: center; justify-content: center; }",
+     "const lane = k === 0 ? randInt(3) : (prevLane + 1 + randInt(2)) % 3;",
+     "const AC = window.AudioContext || window.webkitAudioContext;"
+    ],
+    "commonColors": [
+     "#000000",
+     "#1a1a1a",
+     "#1c1c28",
+     "#2a0a3a",
+     "#2a2a34",
+     "#3a2214",
+     "#5a5a6a",
+     "#6a6a80",
+     "#b01818",
+     "#e8c020",
+     "#eeeeee",
+     "#f4f4f4",
+     "#ff3030",
+     "#ffb040",
+     "#ffd060",
+     "#ffe060",
+     "#ffe070",
+     "#ffe0a0",
+     "#fff080",
+     "#fff0a0",
+     "#fff0d0",
+     "#fff6b0",
+     "#fff8c0",
+     "#ffffff"
+    ],
+    "commonLits": [
+     " : sc >= 23000 ? ",
+     " : sc >= 28000 ? ",
+     "width=device-width, initial-scale=1, user-scalable=no"
+    ]
+   },
+   "high": {
+    "commonLinesNoSpec": 66,
+    "longestCommonLinesNoSpec": [
+     "const type = r < st.ratio[0] ? 'sedan' : r < st.ratio[0] + st.ratio[1] ? 'truck' : 'sports';",
+     "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1, user-scalable=no\">",
+     "const seg = Math.round(60 + (k + 0.5) * spacing + (rng() - 0.5) * 0.6 * spacing);",
+     "const touch = { left: false, right: false, gas: false, brake: false };",
+     "const lane = k === 0 ? randInt(3) : (prevLane + 1 + randInt(2)) % 3;",
+     "const AC = window.AudioContext || window.webkitAudioContext;",
+     "for (let i = 0; i < len; i++) d[i] = Math.random() * 2 - 1;",
+     "get state() { return this.ctx ? this.ctx.state : 'none'; }",
+     "if (!(startStage >= 1 && startStage <= 3)) startStage = 1;",
+     "let maxY = H, x = 0, dx = -baseSeg.curve * basePercent;",
+     "const ctx = canvas.getContext('2d', { alpha: false });",
+     "const playerY = lerp(pSeg.p1.y, pSeg.p2.y, pPercent);"
+    ],
+    "commonColors": [
+     "#000000",
+     "#d8d8e0",
+     "#ff6a6a",
+     "#ff6ad8",
+     "#ffe0b0",
+     "#fff0a0",
+     "#ffffff"
+    ],
+    "commonLits": [
+     " : r < st.ratio[0] + st.ratio[1] ? ",
+     "width=device-width, initial-scale=1, user-scalable=no"
+    ]
+   },
+   "xhigh": {
+    "commonLinesNoSpec": 71,
+    "longestCommonLinesNoSpec": [
+     "if (p1.camZ <= CAM_DEPTH || p2.screenY >= p1.screenY || p2.screenY >= maxY) continue;",
+     "const lane = k === 0 ? randInt(3) : (prevLane + 1 + randInt(2)) % 3;",
+     "if (ahead && ahead.z - c.z < 1000) eff = Math.min(eff, ahead.eff);",
+     "const AC = window.AudioContext || window.webkitAudioContext;",
+     "rs_billboard: { w: 48, h: 56, worldW: 0.60, hit: 0.16 },",
+     "rs_signpost: { w: 20, h: 44, worldW: 0.24, hit: 0.06 },",
+     "const ctx = canvas.getContext('2d', { alpha: false });",
+     "rs_boulder: { w: 40, h: 28, worldW: 0.45, hit: 0.16 },",
+     "rs_bollard: { w: 12, h: 16, worldW: 0.14, hit: 0.05 },",
+     "const params = new URLSearchParams(location.search);",
+     "rs_neon: { w: 56, h: 52, worldW: 0.70, hit: 0.18 },",
+     "rs_lamp: { w: 20, h: 88, worldW: 0.22, hit: 0.05 },"
+    ],
+    "commonColors": [
+     "#000000",
+     "#1a8aa0",
+     "#1c1c28",
+     "#5af0ff",
+     "#6a3a86",
+     "#c8c0ff",
+     "#ff8080",
+     "#ffb040",
+     "#ffb060",
+     "#ffd040",
+     "#ffd070",
+     "#ffd0e0",
+     "#ffd0f0",
+     "#ffd860",
+     "#ffe070",
+     "#fff0b0",
+     "#fff2b0",
+     "#fff2d8",
+     "#fff6b0",
+     "#ffffff"
+    ],
+    "commonLits": []
+   },
+   "max": {
+    "commonLinesNoSpec": 59,
+    "longestCommonLinesNoSpec": [
+     "const seg = Math.round(60 + (k + 0.5) * spacing + (rng() - 0.5) * 0.6 * spacing);",
+     "const flipped = (prev > 0 && rel <= 0) || (prev < 0 && rel >= 0);",
+     "const AC = window.AudioContext || window.webkitAudioContext;",
+     "const dx = (x + 0.5 - cx) / rx, dy = (y + 0.5 - cy) / ry;",
+     "const params = new URLSearchParams(location.search);",
+     "<script type=\"module\" src=\"./js/main.js\"></script>",
+     "if (prev > 0 && rel <= 0 && !c.hit && !c.passed) {",
+     "const sScale = lerp(p1.scale, p2.scale, percent);",
+     "const d = Math.hypot(x + 0.5 - cx, y + 0.5 - cy);",
+     "const canvas = document.getElementById('game');",
+     "for (const [len, curve, dy] of st.sections) {",
+     "return ((t ^ (t >>> 14)) >>> 0) / 4294967296;"
+    ],
+    "commonColors": [
+     "#000000",
+     "#2a2a3a",
+     "#6a6a80",
+     "#e8e0ff",
+     "#f0dcb0",
+     "#ff8a8a",
+     "#ffd0f0",
+     "#ffd86a",
+     "#fff0a0",
+     "#ffffff"
+    ],
+    "commonLits": []
+   }
+  },
+  "fable-high": {
+   "low": {
+    "commonLinesNoSpec": 25,
+    "longestCommonLinesNoSpec": [
+     "const PREVENT = new Set(['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'Space']);",
+     "const AC = window.AudioContext || window.webkitAudioContext;",
+     "let a = inp.throttle ? ACCEL : inp.brake ? -BRAKE : -COAST;",
+     "const params = new URLSearchParams(location.search);",
+     "<script type=\"module\" src=\"./js/main.js\"></script>",
+     "const canvas = document.getElementById('game');",
+     "for (let seg = 12; seg <= N + 60; seg += 6) {",
+     "const randInt = (n) => Math.floor(rng() * n);",
+     "if (PREVENT.has(e.code)) e.preventDefault();",
+     "const c = document.createElement('canvas');",
+     "window.addEventListener('keydown', (e) => {",
+     "const box = document.createElement('div');"
+    ],
+    "commonColors": [
+     "#000000",
+     "#0a1030",
+     "#1a1030",
+     "#e8e8f0",
+     "#ffd08a",
+     "#fff0a0",
+     "#fff2a0",
+     "#ffffff"
+    ],
+    "commonLits": []
+   },
+   "medium": {
+    "commonLinesNoSpec": 57,
+    "longestCommonLinesNoSpec": [
+     "// ---------------------------------------------------------------- backgrounds",
+     "// ---------------------------------------------------------------- persistence",
+     "// ---------------------------------------------------------------- audio sync",
+     "// ---------------------------------------------------------------- roadside",
+     "// ---------------------------------------------------------------- input",
+     "// ---------------------------------------------------------------- hooks",
+     "// ---------------------------------------------------------------- logo",
+     "// ---------------------------------------------------------------- cars",
+     "const lane = k === 0 ? randInt(3) : (prevLane + 1 + randInt(2)) % 3;",
+     "const AC = window.AudioContext || window.webkitAudioContext;",
+     "for (let i = 0; i < len; i++) d[i] = Math.random() * 2 - 1;",
+     "const steer = (inp.right ? 1 : 0) + (inp.left ? -1 : 0);"
+    ],
+    "commonColors": [
+     "#000000",
+     "#0a1030",
+     "#2a0a10",
+     "#3a3a48",
+     "#e8e8f0",
+     "#f0e8d8",
+     "#f4f4f4",
+     "#ff5050",
+     "#ffe060",
+     "#fff0a0",
+     "#ffffff"
+    ],
+    "commonLits": [
+     "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.,:!?+-/%'[]<>= "
+    ]
+   },
+   "high": {
+    "commonLinesNoSpec": 110,
+    "longestCommonLinesNoSpec": [
+     "const coarse = window.matchMedia && window.matchMedia('(pointer: coarse)').matches;",
+     "if (this.ctx && this.ctx.state === 'suspended') this.ctx.resume().catch(() => {});",
+     "if (this.ctx && this.ctx.state === 'running') this.ctx.suspend().catch(() => {});",
+     "if (this.invulnTimer > 0) this.invulnTimer = Math.max(0, this.invulnTimer - dt);",
+     "this.rank = s >= 33000 ? 'S' : s >= 28000 ? 'A' : s >= 23000 ? 'B' : 'C';",
+     "const yb = y0 + (dy * (1 - Math.cos((Math.PI * (k + 1)) / len))) / 2;",
+     "const lane = k === 0 ? randInt(3) : (prevLane + 1 + randInt(2)) % 3;",
+     "if (this.scene !== 'countdown' && this.scene !== 'playing') return;",
+     "const ya = y0 + (dy * (1 - Math.cos((Math.PI * k) / len))) / 2;",
+     "if (this.shake > 0) this.shake = Math.max(0, this.shake - dt);",
+     "export const clamp = (v, a, b) => (v < a ? a : v > b ? b : v);",
+     "const AC = window.AudioContext || window.webkitAudioContext;"
+    ],
+    "commonColors": [
+     "#000000",
+     "#0a1030",
+     "#ffe0c0",
+     "#ffe36a",
+     "#ffe9a0",
+     "#fff0a0",
+     "#fff6c0",
+     "#ffffff"
+    ],
+    "commonLits": [
+     " && this.scene !== ",
+     " : s >= 23000 ? ",
+     " : s >= 28000 ? "
+    ]
+   },
+   "xhigh": {
+    "commonLinesNoSpec": 138,
+    "longestCommonLinesNoSpec": [
+     "const PREVENT = new Set(['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'Space']);",
+     "if (this.ctx && this.ctx.state === 'suspended') this.ctx.resume().catch(() => {});",
+     "const seg = Math.round(60 + (k + 0.5) * spacing + (rand() - 0.5) * 0.6 * spacing);",
+     "if (this.ctx && this.ctx.state === 'running') this.ctx.suspend().catch(() => {});",
+     "// ---------------------------------------------------------------- HUD",
+     "this.playerX = clamp(this.playerX, -PLAYER_X_CLAMP, PLAYER_X_CLAMP);",
+     "const lane = k === 0 ? randInt(3) : (prevLane + 1 + randInt(2)) % 3;",
+     "if (this.scene !== 'countdown' && this.scene !== 'playing') return;",
+     "export const CAM_DEPTH = 1 / Math.tan((FOV / 2) * Math.PI / 180);",
+     "const AC = window.AudioContext || window.webkitAudioContext;",
+     "if (x < 0 || y < 0 || x >= this.w || y >= this.h) return 0;",
+     "if (x < 0 || y < 0 || x >= this.w || y >= this.h) return;"
+    ],
+    "commonColors": [
+     "#000000",
+     "#0c1030",
+     "#1a1030",
+     "#c8c0ff",
+     "#e8e8f0",
+     "#ff7a3c",
+     "#ffb070",
+     "#ffd23c",
+     "#ffe08a",
+     "#ffe36a",
+     "#fff2a0",
+     "#ffffff"
+    ],
+    "commonLits": [
+     " && this.scene !== ",
+     "); p.set(x + 1, y, ",
+     "); p.set(x, y + 1, "
+    ]
+   },
+   "max": {
+    "commonLinesNoSpec": 123,
+    "longestCommonLinesNoSpec": [
+     "'rs_palm', 'rs_rock', 'rs_shrub', 'rs_pine', 'rs_boulder', 'rs_fern', 'rs_lamp', 'rs_neon', 'rs_building',",
+     "#stage { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; }",
+     "const PREVENT = new Set(['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'Space']);",
+     "this.playerX = clamp(this.playerX, -PLAYER_X_CLAMP, PLAYER_X_CLAMP);",
+     "if (this.scene !== 'countdown' && this.scene !== 'playing') return;",
+     "export const clamp = (v, a, b) => (v < a ? a : v > b ? b : v);",
+     "const AC = window.AudioContext || window.webkitAudioContext;",
+     "if (x < 0 || y < 0 || x >= this.w || y >= this.h) return 0;",
+     "if (x < 0 || y < 0 || x >= this.w || y >= this.h) return;",
+     "const steer = (inp.right ? 1 : 0) + (inp.left ? -1 : 0);",
+     "const dx = Math.abs(x1 - x0), dy = -Math.abs(y1 - y0);",
+     "this.speed = clamp(this.speed + a * dt, 0, MAX_SPEED);"
+    ],
+    "commonColors": [
+     "#000000",
+     "#0a0614",
+     "#2a2a3a",
+     "#3a3448",
+     "#e8e8f0",
+     "#ffb070",
+     "#ffd36a",
+     "#ffe08a",
+     "#ffe38a",
+     "#ffe9a0",
+     "#fff0a0",
+     "#fff2a0",
+     "#fff6c0",
+     "#ffffff"
+    ],
+    "commonLits": [
+     " && this.scene !== ",
+     "[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]"
+    ]
+   }
+  }
+ },
+ "featureSizes": {
+  "low": {
+   "lines": 735,
+   "grams": 22504,
+   "colors": 197,
+   "lits": 146,
+   "gramsNoSpec": 21321,
+   "linesNoSpec": 735
+  },
+  "medium": {
+   "lines": 1246,
+   "grams": 28328,
+   "colors": 242,
+   "lits": 116,
+   "gramsNoSpec": 27552,
+   "linesNoSpec": 1235
+  },
+  "high": {
+   "lines": 1723,
+   "grams": 36856,
+   "colors": 349,
+   "lits": 112,
+   "gramsNoSpec": 36048,
+   "linesNoSpec": 1712
+  },
+  "xhigh": {
+   "lines": 2351,
+   "grams": 47942,
+   "colors": 333,
+   "lits": 46,
+   "gramsNoSpec": 46581,
+   "linesNoSpec": 2340
+  },
+  "max": {
+   "lines": 2864,
+   "grams": 56959,
+   "colors": 409,
+   "lits": 133,
+   "gramsNoSpec": 55685,
+   "linesNoSpec": 2853
+  },
+  "opus-medium": {
+   "lines": 1399,
+   "grams": 33537,
+   "colors": 345,
+   "lits": 78,
+   "gramsNoSpec": 32771,
+   "linesNoSpec": 1391
+  },
+  "fable-high": {
+   "lines": 1760,
+   "grams": 34538,
+   "colors": 307,
+   "lits": 82,
+   "gramsNoSpec": 32775,
+   "linesNoSpec": 1727
+  }
+ }
+}

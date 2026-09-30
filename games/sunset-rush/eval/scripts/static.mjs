@@ -4,8 +4,12 @@ import path from 'path';
 import { EFFORTS, GAME_ROOT, EVAL_DIR } from './config.mjs';
 
 const walk = (d) => fs.readdirSync(d, { withFileTypes: true }).flatMap((e) => (e.isDirectory() ? walk(path.join(d, e.name)) : [path.join(d, e.name)]));
+// 引数で variant を指定した場合はその variant だけを計算し、既存の static.json に追記する(既存キーは変えない)
+const ONLY = process.argv.slice(2);
+const OUT = path.join(EVAL_DIR, 'raw', 'static.json');
+const prev = ONLY.length && fs.existsSync(OUT) ? JSON.parse(fs.readFileSync(OUT, 'utf8')) : {};
 const out = {};
-for (const e of EFFORTS) {
+for (const e of ONLY.length ? ONLY : EFFORTS) {
   const base = path.join(GAME_ROOT, 'impl', e);
   const dist = path.join(base, 'dist');
   const files = walk(dist);
@@ -31,5 +35,5 @@ for (const e of EFFORTS) {
     rootAbsoluteRefs: absRefs, textApiHits: textHits,
   };
 }
-fs.writeFileSync(path.join(EVAL_DIR, 'raw', 'static.json'), JSON.stringify(out, null, 1));
+fs.writeFileSync(OUT, JSON.stringify({ ...prev, ...out }, null, 1));
 for (const [e, v] of Object.entries(out)) console.log(e, v.distFiles, v.distBytes, v.srcLines, v.srcNonEmptyLines, 'outside', v.outsideDistFiles, 'abs', v.rootAbsoluteRefs.length, 'text', v.textApiHits.length, v.textApiHits.slice(0, 5));

@@ -1,0 +1,80 @@
+{
+ "variant": "fable-high",
+ "crashes": [
+  {
+   "t": 36877,
+   "stage": 1,
+   "x": 0.473,
+   "xAfter": 0.358,
+   "speedBefore": 293.3,
+   "speedAfter": 60,
+   "distanceM": 2517.5,
+   "goalRemainingM": 476.7
+  },
+  {
+   "t": 62743,
+   "stage": 2,
+   "x": 0.168,
+   "xAfter": 0.284,
+   "speedBefore": 284.3,
+   "speedAfter": 60,
+   "distanceM": 900.5,
+   "goalRemainingM": 2693.7
+  },
+  {
+   "t": 71543,
+   "stage": 2,
+   "x": -0.073,
+   "xAfter": -0.196,
+   "speedBefore": 223.8,
+   "speedAfter": 60,
+   "distanceM": 1495.1,
+   "goalRemainingM": 2099.1
+  },
+  {
+   "t": 77742,
+   "stage": 2,
+   "x": 0.557,
+   "xAfter": 0.45,
+   "speedBefore": 283.8,
+   "speedAfter": 60,
+   "distanceM": 1810.6,
+   "goalRemainingM": 1783.6
+  },
+  {
+   "t": 101058,
+   "stage": 2,
+   "x": 0.148,
+   "xAfter": 0.27,
+   "speedBefore": 233.5,
+   "speedAfter": 60,
+   "distanceM": 3365.1,
+   "goalRemainingM": 229.1
+  },
+  {
+   "t": 135526,
+   "stage": 3,
+   "x": 0.145,
+   "xAfter": 0.264,
+   "speedBefore": 261.8,
+   "speedAfter": 60,
+   "distanceM": 1409.1,
+   "goalRemainingM": 2785.1
+  },
+  {
+   "t": 148689,
+   "stage": 3,
+   "x": 0.049,
+   "xAfter": 0.158,
+   "speedBefore": 273.8,
+   "speedAfter": 60,
+   "distanceM": 2111.9,
+   "goalRemainingM": 2082.2
+  }
+ ],
+ "final": {
+  "scene": "ending",
+  "score": 29073,
+  "crashes": 7
+ }
+}

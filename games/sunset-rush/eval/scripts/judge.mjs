@@ -14,8 +14,11 @@ const MUST_SOUNDS = ['bgm_1', 'sfx_engine', 'sfx_beep', 'sfx_go', 'sfx_checkpoin
 const SHOULD_SOUNDS = ['bgm_2', 'bgm_3', 'sfx_overtake', 'sfx_offroad', 'sfx_timewarn', 'jingle_title'];
 const rankOf = (s) => (s >= 33000 ? 'S' : s >= 28000 ? 'A' : s >= 23000 ? 'B' : 'C');
 
-const results = {};
-for (const e of EFFORTS) {
+// 引数で variant を指定した場合はその variant だけを判定し、既存の results.json に追記する(既存キーの値は変えない)
+const ONLY = process.argv.slice(2);
+const OUT = path.join(EVAL_DIR, 'results.json');
+const results = ONLY.length && fs.existsSync(OUT) ? JSON.parse(fs.readFileSync(OUT, 'utf8')) : {};
+for (const e of ONLY.length ? ONLY : EFFORTS) {
   if (!fs.existsSync(path.join(EVAL_DIR, 'raw', e + '.json'))) continue;
   const R = JSON.parse(fs.readFileSync(path.join(EVAL_DIR, 'raw', e + '.json'), 'utf8'));
   const V = VIS[e] || {};
@@ -170,4 +173,4 @@ for (const e of EFFORTS) {
   console.log('  fail M:', Object.entries(must).filter(([, v]) => v.pass === false).map(([k]) => k).join(' '), '| pending:', Object.entries(must).filter(([, v]) => v.pass === 'pending').map(([k]) => k).join(' '));
   console.log('  fail S:', Object.entries(should).filter(([, v]) => v.pass === false).map(([k]) => k).join(' '), '| pending:', Object.entries(should).filter(([, v]) => v.pass === 'pending').map(([k]) => k).join(' '));
 }
-fs.writeFileSync(path.join(EVAL_DIR, 'results.json'), JSON.stringify(results, null, 1));
+fs.writeFileSync(OUT, JSON.stringify(results, null, 1));

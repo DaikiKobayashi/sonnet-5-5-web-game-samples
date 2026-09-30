@@ -1,0 +1,50 @@
+{
+ "variant": "opus-medium",
+ "crashes": [
+  {
+   "t": 56862,
+   "stage": 2,
+   "x": 0.524,
+   "xAfter": 0.404,
+   "speedBefore": 251,
+   "speedAfter": 60,
+   "distanceM": 557.7,
+   "goalRemainingM": 3036.5
+  },
+  {
+   "t": 130209,
+   "stage": 3,
+   "x": 0.524,
+   "xAfter": 0.403,
+   "speedBefore": 241,
+   "speedAfter": 60,
+   "distanceM": 1202.6,
+   "goalRemainingM": 2991.6
+  },
+  {
+   "t": 138575,
+   "stage": 3,
+   "x": 0.477,
+   "xAfter": 0.376,
+   "speedBefore": 297,
+   "speedAfter": 60,
+   "distanceM": 1733.1,
+   "goalRemainingM": 2461.1
+  },
+  {
+   "t": 141112,
+   "stage": 3,
+   "x": 0.459,
+   "xAfter": 0.341,
+   "speedBefore": 181.3,
+   "speedAfter": 60,
+   "distanceM": 1827.8,
+   "goalRemainingM": 2366.4
+  }
+ ],
+ "final": {
+  "scene": "ending",
+  "score": 29574,
+  "crashes": 4
+ }
+}

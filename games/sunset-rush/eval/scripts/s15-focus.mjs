@@ -3,8 +3,11 @@ import fs from 'fs';
 import path from 'path';
 import { EFFORTS, PORTS, EVAL_DIR } from './config.mjs';
 import { launch, newPage, gameUrl, waitScene, toPlaying, sleep, st } from './lib.mjs';
-const b = await launch(); const out = {};
-for (const e of EFFORTS) {
+// 引数で variant を指定した場合はその variant だけを計算し、既存の s15-focus.json に追記する
+const ONLY = process.argv.slice(2);
+const OUTF = path.join(EVAL_DIR, 'raw', 's15-focus.json');
+const b = await launch(); const out = ONLY.length && fs.existsSync(OUTF) ? JSON.parse(fs.readFileSync(OUTF, 'utf8')) : {};
+for (const e of ONLY.length ? ONLY : EFFORTS) {
   const P = await newPage(b, { port: PORTS[e] });
   await P.page.goto(gameUrl(PORTS[e])); await waitScene(P.page, 'title'); await toPlaying(P.page); await sleep(500);
   const before = await P.page.evaluate(() => document.hasFocus());
@@ -14,5 +17,5 @@ for (const e of EFFORTS) {
   console.log(e, JSON.stringify(out[e]));
   await P.context.close();
 }
-fs.writeFileSync(path.join(EVAL_DIR, 'raw', 's15-focus.json'), JSON.stringify(out, null, 1));
+fs.writeFileSync(OUTF, JSON.stringify(out, null, 1));
 await b.close();

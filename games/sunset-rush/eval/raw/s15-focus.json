@@ -28,5 +28,17 @@
   "hasFocus": true,
   "hidden": false,
   "scene": "playing"
+ },
+ "opus-medium": {
+  "hasFocusBefore": true,
+  "hasFocus": true,
+  "hidden": false,
+  "scene": "playing"
+ },
+ "fable-high": {
+  "hasFocusBefore": true,
+  "hasFocus": true,
+  "hidden": false,
+  "scene": "playing"
  }
 }

@@ -2,9 +2,12 @@
 import fs from 'fs';
 import { launch } from './lib.mjs';
 const b = await launch(); const pg = await (await b.newContext()).newPage();
-const res = {};
+// 引数で variant を指定した場合はその variant だけを計算し、既存の s02-bands.json に追記する
+const ONLY = process.argv.slice(2);
+const OUTF = '/home/user/sonnet-5-5-web-game-samples/games/sunset-rush/eval/raw/s02-bands.json';
+const res = ONLY.length && fs.existsSync(OUTF) ? JSON.parse(fs.readFileSync(OUTF, 'utf8')) : {};
 const base='/home/user/sonnet-5-5-web-game-samples/games/sunset-rush/eval/screenshots/';
-for (const e of ['low','medium','high','xhigh','max']) {
+for (const e of ONLY.length ? ONLY : ['low','medium','high','xhigh','max']) {
   const a = 'data:image/png;base64,'+fs.readFileSync(base+e+'/raw-m14-run-0.png').toString('base64');
   const c = 'data:image/png;base64,'+fs.readFileSync(base+e+'/raw-m14-run-500.png').toString('base64');
   const r = await pg.evaluate(async ([a,c]) => {

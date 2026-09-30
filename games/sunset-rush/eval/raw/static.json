@@ -187,5 +187,57 @@
   "indexExists": true,
   "rootAbsoluteRefs": [],
   "textApiHits": []
+ },
+ "opus-medium": {
+  "distFiles": 8,
+  "distBytes": 103797,
+  "srcLines": 2396,
+  "srcNonEmptyLines": 2300,
+  "perFile": {
+   "index.html": 43,
+   "js/assets.js": 766,
+   "js/audio.js": 286,
+   "js/course.js": 146,
+   "js/font.js": 124,
+   "js/gallery.js": 89,
+   "js/game.js": 933,
+   "js/main.js": 9
+  },
+  "outsideDistFiles": 1,
+  "outsideList": [
+   "README.md"
+  ],
+  "indexExists": true,
+  "rootAbsoluteRefs": [],
+  "textApiHits": []
+ },
+ "fable-high": {
+  "distFiles": 14,
+  "distBytes": 123312,
+  "srcLines": 3306,
+  "srcNonEmptyLines": 3077,
+  "perFile": {
+   "index.html": 59,
+   "js/art.js": 248,
+   "js/assets.js": 755,
+   "js/audio.js": 380,
+   "js/const.js": 141,
+   "js/course.js": 100,
+   "js/font.js": 135,
+   "js/gallery.js": 74,
+   "js/game.js": 580,
+   "js/input.js": 64,
+   "js/main.js": 57,
+   "js/pix.js": 173,
+   "js/render.js": 487,
+   "js/util.js": 53
+  },
+  "outsideDistFiles": 1,
+  "outsideList": [
+   "README.md"
+  ],
+  "indexExists": true,
+  "rootAbsoluteRefs": [],
+  "textApiHits": []
  }
 }
